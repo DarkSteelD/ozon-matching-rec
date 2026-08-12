@@ -16,4 +16,17 @@ items_human.parquet    # 214.2 MB — товары, встречающиеся �
 Архивы базовых решений (`matching-baseline-submit.zip` 1.2 GB,
 `matching-baseline-lightweight.zip` 19.6 KB) складывать в `raw/baselines/`.
 
+## Скачивание `[V 2026-08-13, ссылки со страницы задачи]`
+
+Публичный бакет, авторизация не требуется:
+
+```bash
+cd data/raw
+BASE=https://storage.yandexcloud.net/ozon-ecup-2026/Matching
+wget "$BASE/matches.parquet" "$BASE/matches_llm.parquet" \
+     "$BASE/items.parquet" "$BASE/items_human.parquet"
+wget -P baselines "$BASE/matching-baseline-submit.zip" \
+     "$BASE/matching-baseline-lightweight.zip"
+```
+
 Производные датасеты и признаки — только внутри `members/<github-name>/data/`.
