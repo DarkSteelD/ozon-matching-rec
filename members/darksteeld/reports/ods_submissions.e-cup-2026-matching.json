@@ -1,0 +1,15 @@
+{
+ "limit": 100,
+ "metrics": [
+  {
+   "description": "",
+   "is_reversed": false,
+   "is_target": true,
+   "slug": "total_prauc",
+   "title": "Mean PR-AUC"
+  }
+ ],
+ "offset": 0,
+ "submissions": [],
+ "total": 0
+}
