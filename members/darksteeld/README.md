@@ -9,6 +9,8 @@
 
 - `src/validation_baselines.py` — пять дешёвых бейзлайнов на замороженных
   фолдах (`make darksteeld-baselines` из корня).
+- `src/lgbm_cheap.py` — первый обучаемый репер: LightGBM на 21 дешёвой фиче
+  пары, OOF строго по замороженным фолдам.
 - `baselines_ref/` (локально, вне Git) — распакованный
   `matching-baseline-lightweight.zip` организаторов для инспекции контракта
   контейнера.

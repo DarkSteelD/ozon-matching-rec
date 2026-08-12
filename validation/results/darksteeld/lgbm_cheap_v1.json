@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 1,
+  "member": "darksteeld",
+  "experiment": "lgbm_cheap_v1",
+  "mean_prauc": 0.6378662121786954,
+  "pooled_prauc": 0.6378385297466659,
+  "macro_category_prauc": 0.5602236485764698,
+  "min_fold_prauc": 0.6329619542860383,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91157,
+      "positives": 23262,
+      "prauc": 0.6329619542860383,
+      "macro_category_prauc": 0.5558708327910984,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91474,
+      "positives": 23600,
+      "prauc": 0.6418863134229028,
+      "macro_category_prauc": 0.5666495959806593,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91615,
+      "positives": 23476,
+      "prauc": 0.6341751488351768,
+      "macro_category_prauc": 0.5581914567586151,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91408,
+      "positives": 23552,
+      "prauc": 0.6424414321706637,
+      "macro_category_prauc": 0.5651099376334419,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.305761933479256
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.3133403188417644
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.33698628057681823
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.41889474873175003
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.46597549140633676
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.4923883627730097
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.5004665181316164
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.5052057368294183
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.5674517351136461
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.5755171899664105
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.5861510259881152
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.6024638462514599
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.6115900162889487
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.628492103989369
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.6312672031647284
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.6776602131875596
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.697236817627245
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.7051889648909582
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.7884806629080032
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.7939538013829835
+    }
+  ],
+  "worst_category": "Ювелирные изделия",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-12T23:20:22+00:00",
+  "commit": "dc45a0d",
+  "notes": "LightGBM OOF over frozen folds, 21 cheap pair features (tfidf cosine, jaccards, key/value agreement, number mismatch, lengths, category); fixed 400 trees, seed 20260813, no tuning"
+}
