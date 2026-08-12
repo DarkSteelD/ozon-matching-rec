@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "task": "e-cup-2026-matching",
+  "metric": "prauc",
+  "k": 4,
+  "seed": "ecup2026-matching-folds-v1",
+  "grouping": "connected components of the hand-labeled pair graph (matches.parquet); component key = min item id; fold = sha256(seed:key) mod k",
+  "folds": [
+    {
+      "id": "fold_01",
+      "sha256": "0e738aeeb2e1f1ad67eeb6e94b7db1f141f2aa622823266c714b17006901ac4c"
+    },
+    {
+      "id": "fold_02",
+      "sha256": "a4520aab865bc5c7f825d51f4ac6ae552c208e3a8cb799559a88c4b4c7bd99d5"
+    },
+    {
+      "id": "fold_03",
+      "sha256": "431d3bd9b2e2126ac8d18d3af84cb958cc47aa62ee98675ea722d6aef812811f"
+    },
+    {
+      "id": "fold_04",
+      "sha256": "fb82810403d3b1e2d1921da92f1578cbda119f8cd80eb85f196cf6d7edc8bf2e"
+    }
+  ]
+}

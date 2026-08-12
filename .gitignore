@@ -32,3 +32,12 @@ members/*/subs/
 members/*/artifacts/
 members/*/models/
 members/*/mlruns/
+
+# Organizer baseline unpacked for code inspection (contains model weights)
+members/*/baselines_ref/
+
+# Shared validation: labels and raw predictions stay local; only the builder,
+# pinned SHA256 hashes, result JSONs, and leaderboards are committed
+validation/targets/
+validation/predictions/
+__MACOSX/

@@ -60,13 +60,50 @@ JSON атрибутов текстом), `category` (категория това
 1. ~~Даны ли candidate pairs~~ — **решено: даны** `[V]`; пайплайн = pair
    classification, как в 2024.
 2. **Контейнерный envelope** — лимит времени известен (20 мин `[V]`); CPU, RAM,
-   GPU/VRAM — уточнить по документации проверяющей системы.
+   GPU/VRAM — уточнить по документации проверяющей системы. **Контракт запуска
+   снят с `matching-baseline-lightweight.zip`** `[V 2026-08-13]`:
+   - `metadata.json`: `{"image": "odsai/ecup26-matching-baseline:1.0",
+     "entry_point": "python -u run.py"}` — образ + одна команда;
+   - `run.py` получает CLI-аргументы `--items_path` (parquet: `id`, `name`,
+     `attributes`, `category`), `--matches_path` (parquet: `id1`, `id2` —
+     **без target**) и `--output_path`;
+   - выход — CSV `id1,id2,predict` (вероятность/скор пары);
+   - все модели — локальными файлами внутри архива (в lightweight лежит
+     `baseline_logreg_l12.joblib`, полный дополнительно несёт
+     `models/cross-encoder-ms-marco-MiniLM-L12-v2`); сети нет;
+   - код бейзлайна: CE-эмбеддинги CLS-токена пар текстов «Name: … Category: …
+     Attributes: …» → LogReg; распакован для инспекции в
+     `members/darksteeld/baselines_ref/` (в Git не попадает — содержит веса).
 3. ~~Метрика~~ — **решено: PR-AUC** (`total_prauc` `[V]`). Открыт только вопрос агрегации — прецедент 2024: скор считался
    **по категориям** (см. `members/darksteeld/reports/PUBLISHED_SOLUTIONS.md`),
-   оптимизировать per-category, если подтвердится.
-4. **Связь ручной и LLM-разметки** — измерить согласованность
-   `matches_llm` с `matches` до того, как учиться на LLM-метках (правило
-   oracle-first из `CAMPAIGN_RULES.md`).
+   оптимизировать per-category, если подтвердится; evaluate считает обе
+   агрегации (см. «Валидация»).
+4. ~~Связь ручной и LLM-разметки~~ — **измерено `[V 2026-08-13]`: пересечение
+   пустое.** Ни одного общего товара (0 из 12.4M/711K) и ни одной общей пары —
+   прямая калибровка LLM→hand невозможна, зато обучение на `matches_llm` не
+   течёт в фолды ручной валидации. Сдвиг LLM-меток оценивается только модельным
+   экспериментом (train-on-LLM → eval-on-hand). Числа:
+   `members/darksteeld/reports/DATA_EDA.md` §3.
+
+## Валидация
+
+Командный контракт зафиксирован: **grouped K=4** по компонентам связности
+графа ручных пар (товар никогда не встречается в двух фолдах), метрика PR-AUC
+в трёх агрегациях (mean по фолдам — первичная, pooled OOF, macro по
+категориям). Полный контракт, SHA256-пины фолдов и команды —
+`validation/README.md`; текущие результаты — `validation/leaderboard.md`.
+
+```bash
+make validation-targets                     # построить локальные цели фолдов из data/raw
+make score MEMBER=<gh> EXPERIMENT=<slug> \
+  NOTES="..."                               # оценить validation/predictions/<gh>/<slug>/fold_0K.csv
+make leaderboard                            # пересобрать таблицу из results/*.json
+```
+
+Данные и выводы EDA (баланс, структура графа пар, LLM-разметка, категории,
+тексты): `members/darksteeld/reports/DATA_EDA.md`. Реперные бейзлайны и их
+place относительно публичного LB:
+`members/darksteeld/reports/VALIDATION_BASELINES.md`.
 
 ## Структура репозитория
 
@@ -75,8 +112,9 @@ data/
   raw/                    # единая неизменяемая копия данных задачи, не хранится в Git
 members/
   darksteeld/             # рабочая область участника: evidence base исследований, далее код
-  <github-name>/          # рабочая область следующего участника
-validation/               # командный контракт валидации — фиксируется после пиновки метрики и данных
+  <github-name>/         # рабочая область следующего участника
+validation/               # командный контракт валидации: замороженные фолды, evaluate, leaderboard
+Makefile                  # score / leaderboard / leaderboard-md / validation-targets
 ```
 
 Evidence base перенесена из мета-исследования `ozon-ecup-2026`:

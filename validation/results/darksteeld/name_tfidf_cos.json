@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 1,
+  "member": "darksteeld",
+  "experiment": "name_tfidf_cos",
+  "mean_prauc": 0.32913087484987624,
+  "pooled_prauc": 0.32909854430319707,
+  "macro_category_prauc": 0.34673884305004254,
+  "min_fold_prauc": 0.3259303714347524,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91157,
+      "positives": 23262,
+      "prauc": 0.3263227302460321,
+      "macro_category_prauc": 0.34441763235041467,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91474,
+      "positives": 23600,
+      "prauc": 0.33265590538262707,
+      "macro_category_prauc": 0.35167288846717826,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91615,
+      "positives": 23476,
+      "prauc": 0.3259303714347524,
+      "macro_category_prauc": 0.34216697114412314,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91408,
+      "positives": 23552,
+      "prauc": 0.33161449233609347,
+      "macro_category_prauc": 0.35252822850377324,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.0928814593115242
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.12708807009360842
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.13514558293569395
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.13938951951002454
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.14474215556777656
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.19553121985947305
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.2684505400345262
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.30806479176621604
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.31703408665758037
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.32054770350535955
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.34465881791466724
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.3992831671939513
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.42216807721439564
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.4382757465897839
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.45341615711099736
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.5261389999031512
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.5387533350618517
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.550181692824899
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.5622646618105576
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.6507610761348119
+    }
+  ],
+  "worst_category": "Обувь",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-12T23:12:53+00:00",
+  "commit": "20da09c",
+  "notes": "char_wb 3-5gram TF-IDF cosine of names; fit on items_human names only (test-legal transductive fit)"
+}

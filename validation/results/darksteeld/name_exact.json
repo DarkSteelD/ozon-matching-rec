@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 1,
+  "member": "darksteeld",
+  "experiment": "name_exact",
+  "mean_prauc": 0.25992351681773157,
+  "pooled_prauc": 0.25992275388044905,
+  "macro_category_prauc": 0.26955793233880676,
+  "min_fold_prauc": 0.25800001597546346,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91157,
+      "positives": 23262,
+      "prauc": 0.25800001597546346,
+      "macro_category_prauc": 0.26705238100229034,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91474,
+      "positives": 23600,
+      "prauc": 0.2614643193697559,
+      "macro_category_prauc": 0.2723568138735177,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91615,
+      "positives": 23476,
+      "prauc": 0.25920902722294303,
+      "macro_category_prauc": 0.26769256776800204,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91408,
+      "positives": 23552,
+      "prauc": 0.2610207047027639,
+      "macro_category_prauc": 0.27217348501008487,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.08504762281282638
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.09763132027902438
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.11788100662266954
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.12393688151912276
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.15836905939517007
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.1660547770087652
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.17559980643292072
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.18257884295074017
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.23067263828672807
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.2623600441325149
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.2683529432480234
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.2775221765937849
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.28921014193105354
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.3471201977847335
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.36202688949469075
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.36748815219290687
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.3692304997846807
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.46915141305544933
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.4750125587380042
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.5659116745123257
+    }
+  ],
+  "worst_category": "Аптека",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-12T23:12:48+00:00",
+  "commit": "20da09c",
+  "notes": "1.0 if normalized names are equal else 0.0 (lowercase, yo->ye, non-alnum->space)"
+}
