@@ -66,10 +66,13 @@ def write_top5(rows: list[dict]) -> Path:
         return v
     ranked = sorted(rows, key=key, reverse=not REVERSED)[:5]
     arrow = "меньше = лучше" if REVERSED else "больше = лучше"
-    out = [f"# TOP-5 — {TRACK}", "",
+    out = [f"# TOP-5 — {TRACK} (внутренняя валидация / CV)", "",
            f"Обновлено бенчем {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}. "
            f"Первичная метрика `{PRIMARY}` ({arrow}). "
-           f"Источник: `{CFG['leaderboard']}`. Не редактировать руками.", "",
+           f"Источник: `{CFG['leaderboard']}`. Не редактировать руками.",
+           "",
+           "> Это **наша валидация на CV-фолдах**, не реальный ЛБ соревнования. "
+           "Реальные места всех команд — в `PUBLIC_LEADERBOARD.md`.", "",
            f"| # | member | experiment | {PRIMARY} | public | notes |",
            "|---:|---|---|---:|---:|---|"]
     for i, r in enumerate(ranked, 1):
