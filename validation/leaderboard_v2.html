@@ -1,0 +1,296 @@
+<title>Validation Leaderboard v2</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --gridline: #e1e0d9;
+    --baseline: #c3c2b7;
+    --border: rgba(11, 11, 11, 0.10);
+    --series-1: #2a78d6;
+    --series-wash: rgba(42, 120, 214, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --gridline: #2c2c2a;
+      --baseline: #383835;
+      --border: rgba(255, 255, 255, 0.10);
+      --series-1: #3987e5;
+      --series-wash: rgba(57, 135, 229, 0.14);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --gridline: #2c2c2a;
+    --baseline: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --series-1: #3987e5;
+    --series-wash: rgba(57, 135, 229, 0.14);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 24px 64px;
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 4px; }
+  h1 { font-size: 22px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--text-secondary); font-size: 13px; margin: 0; }
+  .sub code { font-size: 12px; background: var(--series-wash); padding: 1px 5px; border-radius: 4px; }
+
+  button.toggle {
+    flex: none; cursor: pointer; font: inherit; font-size: 12px;
+    color: var(--text-secondary); background: var(--surface-1);
+    border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px;
+  }
+  button.toggle:hover { color: var(--text-primary); }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 22px; margin-top: 20px;
+  }
+  h2 { font-size: 14px; font-weight: 600; margin: 0 0 2px; }
+  .cap { color: var(--text-muted); font-size: 12px; margin: 0 0 18px; }
+
+  /* KPI row */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 20px; }
+  .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .tile .label { color: var(--text-secondary); font-size: 12px; }
+  .tile .value { font-size: 26px; font-weight: 600; margin-top: 4px; letter-spacing: -0.01em; }
+  .tile .foot { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+
+  /* Bar chart */
+  .plot { position: relative; }
+  .row { display: grid; grid-template-columns: 186px 1fr; align-items: center; gap: 14px; height: 34px; }
+  .row .name { font-size: 13px; text-align: right; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row .name .tag { display: block; font-size: 10.5px; color: var(--text-muted); letter-spacing: 0.02em; }
+  .track { position: relative; height: 100%; display: flex; align-items: center; }
+  .bar { height: 20px; background: var(--series-1); border-radius: 0 4px 4px 0; }
+  .val { position: absolute; font-size: 12px; color: var(--text-primary); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .grid { position: absolute; inset: 0 0 22px 200px; pointer-events: none; }
+  .gl { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--gridline); }
+  .gl.zero { background: var(--baseline); }
+  .gl.ref { background: var(--text-muted); }
+  .axis { display: grid; grid-template-columns: 186px 1fr; gap: 14px; margin-top: 6px; }
+  .ticks { position: relative; height: 16px; }
+  .tick { position: absolute; font-size: 11px; color: var(--text-muted); transform: translateX(-50%); font-variant-numeric: tabular-nums; }
+  .reflabel { position: absolute; font-size: 11px; color: var(--text-muted); transform: translateX(-50%); top: 0; }
+
+  /* tooltip */
+  .tip {
+    position: fixed; z-index: 20; pointer-events: none; opacity: 0;
+    background: var(--surface-1); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.16); font-size: 12px; min-width: 210px;
+    transition: opacity .1s;
+  }
+  .tip.on { opacity: 1; }
+  .tip .t { font-weight: 600; margin-bottom: 6px; }
+  .tip dl { display: grid; grid-template-columns: auto auto; gap: 2px 14px; margin: 0; }
+  .tip dt { color: var(--text-secondary); }
+  .tip dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+  .hit { position: absolute; inset: -7px 0; cursor: default; }
+
+  /* table */
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  th, td { padding: 8px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--gridline); }
+  th { color: var(--text-secondary); font-weight: 600; font-size: 11.5px; text-align: right; position: sticky; top: 0; background: var(--surface-1); }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+  td { font-variant-numeric: tabular-nums; }
+  td.txt { font-variant-numeric: normal; }
+  tbody tr:hover { background: var(--series-wash); }
+  td.best { font-weight: 600; }
+  .note { color: var(--text-muted); font-size: 12px; margin-top: 14px; }
+  .note code { font-size: 11.5px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Локальный лидерборд валидации</h1>
+      <p class="sub">
+        e-cup-2026-matching · спецификация фолдов <code>v2</code> — grouped K=4 по компонентам
+        связности, стратификация по категории и метке · 365 654 пары ручной разметки · метрика PR-AUC
+      </p>
+    </div>
+    <button class="toggle" id="toggle">Тема</button>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="card">
+    <h2>Ранжирование по mean PR-AUC</h2>
+    <p class="cap">Среднее четырёх фолдовых PR-AUC — первичный ключ лидерборда. Наведите на строку для всех метрик.</p>
+    <div class="plot">
+      <div class="grid" id="grid"></div>
+      <div id="bars"></div>
+    </div>
+    <div class="axis">
+      <div></div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Все метрики</h2>
+    <p class="cap">Табличное представление тех же данных, включая пофолдовые значения и разброс.</p>
+    <div class="scroll"><table id="table"></table></div>
+    <p class="note">
+      <code>pooled</code> — PR-AUC по объединению OOF всех фолдов · <code>macro_cat</code> — макро-среднее
+      по 20 категориям · <code>разброс</code> — max−min по фолдам. Источник:
+      <code>validation/leaderboard_v2.csv</code>, сгенерировано из
+      <code>validation/results_v2/*.json</code>. Публичные скоры ODS не записаны ни для одного
+      эксперимента — колонки <code>public_*</code> пусты.
+    </p>
+  </div>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = [
+  {rank:1, exp:"lgbm_cheap_v1", kind:"обучаемая", mean:0.63817140, pooled:0.63808959, macro:0.56084640,
+   folds:[0.63561180,0.63977356,0.63928897,0.63801128], worst:"Ювелирные изделия",
+   notes:"LightGBM OOF, 21 дешёвая парная фича, 400 деревьев, seed 20260813, без тюнинга"},
+  {rank:2, exp:"knrm_name_v2", kind:"обучаемая", mean:0.53077533, pooled:0.52909653, macro:0.45119223,
+   folds:[0.53825952,0.54417235,0.50685019,0.53381925], worst:"Одежда",
+   notes:"KNRM: нормированные kernel-фичи + BatchNorm, early stopping patience 1, предобученные navec hudlit"},
+  {rank:3, exp:"knrm_name", kind:"обучаемая", mean:0.40506282, pooled:0.40635270, macro:0.36478249,
+   folds:[0.43715121,0.37005765,0.39965913,0.41338328], worst:"Обувь",
+   notes:"KNRM v1: сырые суммы кернелов, случайная инициализация, фиксированные 3 эпохи"},
+  {rank:4, exp:"name_tfidf_cos", kind:"без обучения", mean:0.32916734, pooled:0.32912649, macro:0.34672675,
+   folds:[0.32630656,0.32951549,0.32942344,0.33142387], worst:"Обувь",
+   notes:"char_wb 3-5gram TF-IDF косинус названий"},
+  {rank:5, exp:"name_tfidf_attr_blend", kind:"без обучения", mean:0.32657790, pooled:0.32649495, macro:0.33834144,
+   folds:[0.32340867,0.32667187,0.32725334,0.32897773], worst:"Обувь",
+   notes:"0.5 × TF-IDF косинус имени + 0.5 × Jaccard атрибутов"},
+  {rank:6, exp:"name_exact", kind:"без обучения", mean:0.25992979, pooled:0.25992275, macro:0.26955793,
+   folds:[0.25961496,0.26055634,0.25966271,0.25988517], worst:"Аптека",
+   notes:"1.0 при точном совпадении нормализованных названий"},
+  {rank:7, exp:"const_prior", kind:"без обучения", mean:0.25677280, pooled:0.25677280, macro:0.26111262,
+   folds:[0.25683748,0.25679874,0.25676030,0.25669467], worst:"Аптека",
+   notes:"Константа = глобальный prior 0.2568; PR-AUC константы равен prevalence фолда"},
+  {rank:8, exp:"attr_jaccard", kind:"без обучения", mean:0.25468886, pooled:0.25463355, macro:0.27260572,
+   folds:[0.25428892,0.25486648,0.25577148,0.25382856], worst:"Аптека",
+   notes:"Jaccard по множествам key=value из JSON атрибутов"},
+];
+
+const PRIOR = 0.25677280;              // PR-AUC floor: a constant scores the prevalence
+const DOMAIN = 0.70;                   // axis max, with headroom over the best score
+const f = (x, n = 5) => x.toFixed(n);
+const pct = x => (100 * x / DOMAIN) + "%";
+
+/* ---- KPI tiles ---------------------------------------------------------- */
+const spread = d => Math.max(...d.folds) - Math.min(...d.folds);
+const best = DATA[0];
+const bestMacro = DATA.reduce((a, b) => (b.macro > a.macro ? b : a));
+const labelFree = DATA.filter(d => d.kind === "без обучения").map(spread);
+document.getElementById("kpis").innerHTML = [
+  {label: "Лучший mean PR-AUC", value: f(best.mean, 4), foot: best.exp},
+  {label: "Лучший macro по категориям", value: f(bestMacro.macro, 4), foot: bestMacro.exp},
+  {label: "Шум канала — разброс фолдов", value: f(Math.min(...labelFree), 4) + "–" + f(Math.max(...labelFree), 4),
+   foot: "бейзлайны без обучения, " + labelFree.length + " шт."},
+].map(t => `<div class="tile"><div class="label">${t.label}</div>
+  <div class="value">${t.value}</div><div class="foot">${t.foot}</div></div>`).join("");
+
+/* ---- gridlines & ticks -------------------------------------------------- */
+const TICKS = [0, 0.2, 0.4, 0.6];
+document.getElementById("grid").innerHTML =
+  TICKS.map(t => `<div class="gl${t === 0 ? " zero" : ""}" style="left:${pct(t)}"></div>`).join("") +
+  `<div class="gl ref" style="left:${pct(PRIOR)}"></div>`;
+document.getElementById("ticks").innerHTML =
+  TICKS.map(t => `<div class="tick" style="left:${pct(t)}">${t.toFixed(1)}</div>`).join("") +
+  `<div class="reflabel" style="left:${pct(PRIOR)}">prior ${f(PRIOR, 4)}</div>`;
+
+/* ---- bars --------------------------------------------------------------- */
+document.getElementById("bars").innerHTML = DATA.map((d, i) => `
+  <div class="row" data-i="${i}" tabindex="0" role="img"
+       aria-label="${d.exp}: mean PR-AUC ${f(d.mean, 4)}, ранг ${d.rank}">
+    <div class="name">${d.exp}<span class="tag">${d.kind}</span></div>
+    <div class="track">
+      <div class="hit"></div>
+      <div class="bar" style="width:${pct(d.mean)}"></div>
+      <span class="val" style="left:calc(${pct(d.mean)} + 8px)">${f(d.mean, 4)}</span>
+    </div>
+  </div>`).join("");
+
+/* ---- tooltip ------------------------------------------------------------ */
+const tip = document.getElementById("tip");
+const show = (d, e) => {
+  tip.innerHTML = `<div class="t">${d.exp}</div><dl>
+    <dt>mean</dt><dd>${f(d.mean)}</dd>
+    <dt>pooled</dt><dd>${f(d.pooled)}</dd>
+    <dt>macro по категориям</dt><dd>${f(d.macro)}</dd>
+    ${d.folds.map((v, k) => `<dt>fold_0${k + 1}</dt><dd>${f(v)}</dd>`).join("")}
+    <dt>разброс</dt><dd>${f(spread(d))}</dd>
+    <dt>худшая категория</dt><dd>${d.worst}</dd></dl>`;
+  tip.classList.add("on");
+  const r = tip.getBoundingClientRect();
+  const x = Math.min(e.clientX + 16, window.innerWidth - r.width - 12);
+  const y = Math.min(e.clientY + 16, window.innerHeight - r.height - 12);
+  tip.style.left = x + "px";
+  tip.style.top = Math.max(12, y) + "px";
+};
+document.querySelectorAll(".row").forEach(row => {
+  const d = DATA[+row.dataset.i];
+  row.addEventListener("mousemove", e => show(d, e));
+  row.addEventListener("mouseleave", () => tip.classList.remove("on"));
+  row.addEventListener("focus", () => {
+    const b = row.getBoundingClientRect();
+    show(d, {clientX: b.left + 200, clientY: b.top});
+  });
+  row.addEventListener("blur", () => tip.classList.remove("on"));
+});
+
+/* ---- table -------------------------------------------------------------- */
+const maxOf = key => Math.max(...DATA.map(d => d[key]));
+const bests = {mean: maxOf("mean"), pooled: maxOf("pooled"), macro: maxOf("macro")};
+document.getElementById("table").innerHTML = `
+  <thead><tr>
+    <th>#</th><th>эксперимент</th><th>mean</th><th>pooled</th><th>macro_cat</th>
+    <th>fold_01</th><th>fold_02</th><th>fold_03</th><th>fold_04</th>
+    <th>разброс</th><th>худшая категория</th><th>примечание</th>
+  </tr></thead>
+  <tbody>${DATA.map(d => `<tr>
+    <td>${d.rank}</td>
+    <td class="txt">${d.exp}</td>
+    <td class="${d.mean === bests.mean ? "best" : ""}">${f(d.mean)}</td>
+    <td class="${d.pooled === bests.pooled ? "best" : ""}">${f(d.pooled)}</td>
+    <td class="${d.macro === bests.macro ? "best" : ""}">${f(d.macro)}</td>
+    ${d.folds.map(v => `<td>${f(v)}</td>`).join("")}
+    <td>${f(spread(d))}</td>
+    <td class="txt">${d.worst}</td>
+    <td class="txt" style="color:var(--text-muted);white-space:normal;min-width:280px">${d.notes}</td>
+  </tr>`).join("")}</tbody>`;
+
+/* ---- theme toggle ------------------------------------------------------- */
+document.getElementById("toggle").addEventListener("click", () => {
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const cur = document.documentElement.getAttribute("data-theme") || (dark ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+});
+</script>

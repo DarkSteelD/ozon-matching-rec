@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "knrm_name",
+  "mean_prauc": 0.40506281709558084,
+  "pooled_prauc": 0.40635270089750314,
+  "macro_category_prauc": 0.364782491619899,
+  "min_fold_prauc": 0.3700576548085971,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.4371512061214502,
+      "macro_category_prauc": 0.38657380094810906,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.3700576548085971,
+      "macro_category_prauc": 0.3548622804468953,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.39965912578570556,
+      "macro_category_prauc": 0.3606005153175746,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.4133832816665706,
+      "macro_category_prauc": 0.3669011653626895,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.10130251957114647
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.1331776844677118
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.20119095966869896
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.2239742988846838
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.22568086830670434
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.25288477241198515
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.30179471069552466
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.3044049364193683
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.32809312177654965
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.37129809314629436
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.37495385321436897
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.3854533888305628
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.4169022492769033
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.44465445558939476
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.4565444880872042
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.4585095464763311
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.47362262943008526
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.5536713765072793
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.6413812999750537
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.6461545796621291
+    }
+  ],
+  "worst_category": "Обувь",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T13:02:35+00:00",
+  "commit": "b91dc15",
+  "notes": "KNRM v1 on names: raw kernel sums, random init, fixed 3 epochs; rebuilt on stratified spec-v2 folds"
+}

@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 1,
+  "member": "darksteeld",
+  "experiment": "knrm_name_v2",
+  "mean_prauc": 0.529870933532528,
+  "pooled_prauc": 0.5219910075967159,
+  "macro_category_prauc": 0.4451759053694757,
+  "min_fold_prauc": 0.4996347292309615,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91157,
+      "positives": 23262,
+      "prauc": 0.5393603305988744,
+      "macro_category_prauc": 0.46797103290561104,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91474,
+      "positives": 23600,
+      "prauc": 0.5492540620974179,
+      "macro_category_prauc": 0.4735471509224903,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91615,
+      "positives": 23476,
+      "prauc": 0.4996347292309615,
+      "macro_category_prauc": 0.42913444232303577,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91408,
+      "positives": 23552,
+      "prauc": 0.5312346122028582,
+      "macro_category_prauc": 0.45135304968103435,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.21214204720709037
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.23055276675729655
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.26713196373084463
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.28948482792258
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.3326133015182742
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.37556495724041217
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.3831103161851449
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.3992160347533671
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.412692256751412
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.4238526130689471
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.451769583498383
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.474680152676253
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.48985580973164766
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.5071047718152152
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.5155321307134372
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.536423055501536
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.5488145044163257
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.6034591298864521
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.7121552751037229
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.7373626089111737
+    }
+  ],
+  "worst_category": "Обувь",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T12:42:57+00:00",
+  "commit": "b91dc15",
+  "notes": "KNRM v2 on names: length-normalized kernel features (mean over tokens, clamp floor 1e-4) + BatchNorm before the head; early stopping patience 1 on a component-grouped 10% validation slice carved from the training folds; navec hudlit GloVe 300d pretrained init (MIT), 50,191 of 263,740 tokens covered; full vocabulary, no OOV hashing; symmetric, BCE, sparse embeddings"
+}

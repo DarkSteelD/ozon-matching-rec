@@ -1,0 +1,171 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "lgbm_cheap_v1",
+  "mean_prauc": 0.6381714012829427,
+  "pooled_prauc": 0.6380895912207383,
+  "macro_category_prauc": 0.5608463970961016,
+  "min_fold_prauc": 0.6356118041415046,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.6356118041415046,
+      "macro_category_prauc": 0.5595008408253429,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.6397735566839516,
+      "macro_category_prauc": 0.5630695050918774,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.6392889678851836,
+      "macro_category_prauc": 0.5612641702674706,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.6380112764211311,
+      "macro_category_prauc": 0.5638247541308977,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.2981190799606533
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.31606949012147817
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.3497089543944231
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.4145003954065119
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.4682488622131794
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.49504446599266616
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.5003286234218288
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.5057351285161537
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.5709254057596893
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.5750825358957876
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.5853445912884521
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.6025140084941305
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.6121286752756885
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.6285071010054846
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.6336919560882233
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.6795729399758993
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.69614661647714
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.7035158180047308
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.7884184194391859
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.7933248741907267
+    }
+  ],
+  "worst_category": "Ювелирные изделия",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T13:58:22+00:00",
+  "commit": "b91dc15",
+  "notes": "LightGBM OOF, 21 cheap pair features, 400 trees, seed 20260813; spec-v2 folds. Submitted as lgbm_cheap.zip",
+  "public_prauc": 0.2572816582
+}
