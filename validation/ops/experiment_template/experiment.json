@@ -1,0 +1,7 @@
+{
+  "description": "Шаблон: константное предсказание. Замени predict_fold в train.py.",
+  "entry": "python train.py",
+  "requirements": [],
+  "gpus": 0,
+  "timeout_min": 30
+}

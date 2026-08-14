@@ -1,4 +1,4 @@
-.PHONY: validation-targets score leaderboard leaderboard-md darksteeld-baselines
+.PHONY: validation-targets score leaderboard leaderboard-md darksteeld-baselines train train-list
 
 # Any Python with polars + numpy (builder) and numpy (evaluator) works.
 # Default: repo-local .venv if present, else python3. Override: make score PY=...
@@ -42,3 +42,12 @@ darksteeld-baselines:
 		NOTES="Jaccard over attributes key=value token sets parsed from the attributes JSON"
 	$(MAKE) score PY=$(PY) MEMBER=darksteeld EXPERIMENT=name_tfidf_attr_blend \
 		NOTES="0.5 * name TF-IDF cosine + 0.5 * attributes key=value Jaccard"
+
+train:
+	@test -n "$(MEMBER)" || (echo "MEMBER is required" && exit 2)
+	@test -n "$(EXPERIMENT)" || (echo "EXPERIMENT is required" && exit 2)
+	$(PY) validation/ops/train.py \
+		--member "$(MEMBER)" --experiment "$(EXPERIMENT)" $(if $(strip $(GPUS)),--gpus "$(GPUS)",) $(if $(strip $(DRY)),--dry-run,)
+
+train-list:
+	$(PY) validation/ops/train.py --list
