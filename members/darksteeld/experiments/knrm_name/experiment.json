@@ -1,0 +1,7 @@
+{
+  "description": "KNRM on names: RBF kernel pooling over the token cosine matrix, symmetric, full-vocabulary embeddings (no OOV hashing), BCE, per-fold OOF",
+  "entry": "python train.py",
+  "requirements": ["torch", "polars", "numpy"],
+  "gpus": 0,
+  "timeout_min": 120
+}
