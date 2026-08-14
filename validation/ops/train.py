@@ -26,7 +26,10 @@
             --repo <repo> --folds fold_01,fold_02,fold_03,fold_04
 
 Он обязан записать `<out-dir>/fold_0K.csv` на каждый фолд в формате трека
-(см. validation/README.md). Обучать одну модель на все фолды или по модели на
+(см. validation/README.md). Если передан `--submission-dir`, туда же можно
+положить готовый артефакт для отправки на ODS (CSV предсказаний на реальном
+тесте или zip-контейнер) — CV-предсказания по фолдам таким артефактом не
+являются. Флаг опциональный: эксперимент вправе его игнорировать. Обучать одну модель на все фолды или по модели на
 фолд — дело эксперимента; правило одно: предсказывая фолд K, не использовать
 его данные.
 
@@ -123,7 +126,8 @@ def ensure_env(requirements: list[str], base_python: str) -> str:
 
 
 def run_experiment(member: str, experiment: str, manifest: dict, out_dir: Path,
-                   base_python: str, gpus: str | None) -> int:
+                   base_python: str, gpus: str | None,
+                   submission_dir: Path | None = None) -> int:
     entry = manifest.get("entry")
     if not entry:
         raise SystemExit(f"{member}/{experiment}: в experiment.json нет обязательного поля entry")
@@ -136,6 +140,8 @@ def run_experiment(member: str, experiment: str, manifest: dict, out_dir: Path,
         command[0] = python
     command += ["--out-dir", str(out_dir), "--data-dir", str(REPO / "data" / "raw"),
                 "--repo", str(REPO), "--folds", ",".join(fold_ids())]
+    if submission_dir is not None:
+        command += ["--submission-dir", str(submission_dir)]
 
     env = dict(os.environ)
     env["PYTHONPATH"] = os.pathsep.join(filter(None, [str(REPO), env.get("PYTHONPATH", "")]))
@@ -188,6 +194,9 @@ def main() -> None:
                         help="во временный каталог, без регистрации результата")
     parser.add_argument("--out-dir", type=Path, help="переопределить каталог предсказаний")
     parser.add_argument("--gpus", help="значение CUDA_VISIBLE_DEVICES, напр. 0 или 0,1")
+    parser.add_argument("--submission-dir", type=Path,
+                        help="куда эксперимент кладёт готовый артефакт решения "
+                             "(CSV или zip); без флага артефакт не собирается")
     parser.add_argument("--python", default=sys.executable, help="базовый интерпретатор")
     parser.add_argument("--notes", default="")
     args = parser.parse_args()
@@ -222,7 +231,11 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     log(f"предсказания -> {out_dir}")
 
-    code = run_experiment(args.member, args.experiment, manifest, out_dir, args.python, args.gpus)
+    if args.submission_dir:
+        args.submission_dir.mkdir(parents=True, exist_ok=True)
+        log(f"артефакт решения -> {args.submission_dir}")
+    code = run_experiment(args.member, args.experiment, manifest, out_dir, args.python,
+                          args.gpus, args.submission_dir)
     if code != 0:
         raise SystemExit(code)
 
@@ -230,6 +243,11 @@ def main() -> None:
     if missing:
         raise SystemExit(f"эксперимент не записал фолды: {', '.join(missing)}")
     log("все фолды на месте")
+
+    if args.submission_dir:
+        produced = [p.name for p in sorted(args.submission_dir.iterdir()) if p.is_file()]
+        log(f"артефакт решения: {', '.join(produced)}" if produced
+            else "артефакт решения не записан — эксперимент не поддерживает --submission-dir")
 
     if args.dry_run:
         log("dry-run: результат не регистрирую")
