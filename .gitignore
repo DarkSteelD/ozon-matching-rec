@@ -36,8 +36,19 @@ members/*/mlruns/
 # Organizer baseline unpacked for code inspection (contains model weights)
 members/*/baselines_ref/
 
+# Container build output. The source is tracked (run.py, metadata.json,
+# build_artifact.py, artifact.json); everything the build steps generate is not:
+# trained weights, vendored wheels, and the copies of shared modules that
+# build_zip.py drops into src/.
+members/*/container/*/model.*
+members/*/container/*/vendor/
+members/*/container/*/src/
+
 # Shared validation: labels and raw predictions stay local; only the builder,
 # pinned SHA256 hashes, result JSONs, and leaderboards are committed
 validation/targets/
 validation/predictions/
+# same rule for every later fold specification (targets_v2, predictions_v2, ...)
+validation/targets_*/
+validation/predictions_*/
 __MACOSX/

@@ -1,4 +1,5 @@
-.PHONY: validation-targets score leaderboard leaderboard-md darksteeld-baselines train train-list
+.PHONY: validation-targets validation-targets-v2 score score-v2 leaderboard leaderboard-v2 \
+	leaderboard-md darksteeld-baselines train train-list
 
 # Any Python with polars + numpy (builder) and numpy (evaluator) works.
 # Default: repo-local .venv if present, else python3. Override: make score PY=...
@@ -6,12 +7,28 @@ PY ?= $(or $(wildcard .venv/bin/python), python3)
 
 MEMBER ?=
 EXPERIMENT ?=
-PREDICTIONS ?= validation/predictions/$(MEMBER)/$(EXPERIMENT)
 NOTES ?=
 PUBLIC_PRAUC ?=
 
+# Fold specification in use. v1 = hashed components (no stratification);
+# v2 = stratified by category and label. Switching specs is a validation
+# version change, not a tweak: OOF predictions belong to the partition they
+# were produced on, so an experiment must be RE-RUN, never re-scored, when the
+# spec changes. Override the whole set together, or use the *-v2 targets.
+SPEC ?= validation/folds.json
+TARGETS ?= validation/targets
+RESULTS ?= validation/results
+LEADERBOARD ?= validation/leaderboard.csv
+PREDICTIONS ?= validation/predictions/$(MEMBER)/$(EXPERIMENT)
+
+V2 = SPEC=validation/folds_v2.json TARGETS=validation/targets_v2 \
+     RESULTS=validation/results_v2 LEADERBOARD=validation/leaderboard_v2.csv
+
 validation-targets:
-	$(PY) -m validation.build_folds
+	$(PY) -m validation.build_folds --spec "$(SPEC)" --targets-dir "$(TARGETS)"
+
+validation-targets-v2:
+	$(MAKE) validation-targets PY=$(PY) $(V2)
 
 score:
 	@test -n "$(MEMBER)" || (echo "MEMBER is required" && exit 2)
@@ -20,10 +37,21 @@ score:
 		--member "$(MEMBER)" \
 		--experiment "$(EXPERIMENT)" \
 		--predictions-dir "$(PREDICTIONS)" \
+		--spec "$(SPEC)" --targets-dir "$(TARGETS)" \
+		--results-dir "$(RESULTS)" --leaderboard "$(LEADERBOARD)" \
 		--notes "$(NOTES)" $(if $(strip $(PUBLIC_PRAUC)),--public-prauc "$(PUBLIC_PRAUC)",)
 
+score-v2:
+	$(MAKE) score PY=$(PY) MEMBER="$(MEMBER)" EXPERIMENT="$(EXPERIMENT)" \
+		PREDICTIONS="$(PREDICTIONS)" NOTES="$(NOTES)" $(V2)
+
 leaderboard:
-	$(PY) -m validation.evaluate --rebuild-only
+	$(PY) -m validation.evaluate --rebuild-only \
+		--spec "$(SPEC)" --targets-dir "$(TARGETS)" \
+		--results-dir "$(RESULTS)" --leaderboard "$(LEADERBOARD)"
+
+leaderboard-v2:
+	$(MAKE) leaderboard PY=$(PY) $(V2)
 
 leaderboard-md:
 	$(PY) -m validation.render_leaderboard

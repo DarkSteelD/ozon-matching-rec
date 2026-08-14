@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "task": "e-cup-2026-matching",
+  "metric": "prauc",
+  "k": 4,
+  "seed": "ecup2026-matching-folds-v2-stratified",
+  "assignment": "stratified-by-category",
+  "grouping": "connected components of the hand-labeled pair graph (matches.parquet); component key = min item id; every component is intra-category, so components are distributed per category, largest first with sha256(seed:key) tie-break, each to the fold holding the fewest pairs of that category then the fewest positives",
+  "folds": [
+    {
+      "id": "fold_01",
+      "sha256": "375f98142487369fefd26aa211f0e338cbae3a14bb92be33b085878da4f7046c"
+    },
+    {
+      "id": "fold_02",
+      "sha256": "c9315b8876fec512cce7be5793f41d7de4136d00f426889cb2c3ad054a7ad7db"
+    },
+    {
+      "id": "fold_03",
+      "sha256": "bf68c4c91730eccb71fd2aeb97681f92daaac5a4ba31b4e366d302e4a4131cad"
+    },
+    {
+      "id": "fold_04",
+      "sha256": "2f02571d635b66fc63c929b71c85d735920fdcca7eeb90bf0c3333e0aea82439"
+    }
+  ]
+}
