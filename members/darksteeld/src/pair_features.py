@@ -66,6 +66,18 @@ def build_category_codes(categories: list[str]) -> dict[str, int]:
     return {name: code for code, name in enumerate(sorted(set(categories)))}
 
 
+def fit_name_vectorizer(names: list[str]):
+    """Fit the char n-gram vectorizer once so two item universes can share it.
+
+    Needed when training mixes the hand-labeled items with the LLM-labeled ones:
+    fitting a separate vectorizer per universe would put the cosine feature on
+    two different scales and the model would see one column meaning two things.
+    """
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    return TfidfVectorizer(dtype=np.float32, **TFIDF_KWARGS).fit(names)
+
+
 def build_features(
     item_ids: list[int],
     names: list[str],
@@ -75,6 +87,7 @@ def build_features(
     pair_id2: np.ndarray,
     category_codes: dict[str, int],
     *,
+    vectorizer=None,
     log=print,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Feature matrix for every pair, plus a mask of pairs whose items were found.
@@ -103,17 +116,17 @@ def build_features(
     name_tokens = [frozenset(name.split()) for name in normalized]
     name_numbers = [number_tokens(name) for name in normalized]
 
-    from sklearn.feature_extraction.text import TfidfVectorizer
-
-    vectorizer = TfidfVectorizer(dtype=np.float32, **TFIDF_KWARGS)
-    matrix = vectorizer.fit_transform(names)  # rows are L2-normalized
+    if vectorizer is None:
+        matrix = fit_name_vectorizer(names).transform(names)  # rows are L2-normalized
+    else:
+        matrix = vectorizer.transform(names)  # shared fit across universes
     cosine = np.zeros(pair_count, dtype=np.float64)
     for start in range(0, pair_count, 200_000):
         stop = min(start + 200_000, pair_count)
         cosine[start:stop] = np.asarray(
             matrix[index1[start:stop]].multiply(matrix[index2[start:stop]]).sum(axis=1)
         ).ravel()
-    del matrix, vectorizer
+    del matrix  # the caller may still need the vectorizer for another universe
 
     log("  attribute features...")
     kv_interner: dict[str, int] = {}

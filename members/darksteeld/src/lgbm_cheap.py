@@ -35,6 +35,36 @@ EXPERIMENT = "lgbm_cheap_v1"
 PREDICTIONS_DIR = REPOSITORY_ROOT / "validation" / "predictions" / "darksteeld" / EXPERIMENT
 SEED = 20260813
 
+AUDIT_FILE = REPOSITORY_ROOT / "members" / "darksteeld" / "data" / "label_audit.jsonl"
+
+
+def load_audit() -> dict[tuple[int, int], int]:
+    """Ручные исправления меток; последнее судейство по паре побеждает."""
+    import json
+
+    if not AUDIT_FILE.is_file():
+        return {}
+    latest: dict[tuple[int, int], dict] = {}
+    for line in AUDIT_FILE.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            r = json.loads(line)
+            latest[(r["id1"], r["id2"])] = r
+    return {k: v["audited_label"] for k, v in latest.items()
+            if v["audited_label"] >= 0 and v["audited_label"] != v["original_target"]}
+
+
+def average_precision(target: np.ndarray, score: np.ndarray) -> float:
+    order = np.argsort(-score, kind="mergesort")
+    labels, ranked = target[order], score[order]
+    cumulative = np.cumsum(labels)
+    if cumulative[-1] == 0:
+        return float("nan")
+    last = np.r_[ranked[1:] != ranked[:-1], True]
+    precision = cumulative[last] / (np.arange(len(labels))[last] + 1)
+    recall = cumulative[last] / cumulative[-1]
+    return float(np.sum(np.diff(np.r_[0.0, recall]) * precision))
+
+
 def load_folds(targets_dir: Path = TARGETS_DIR) -> dict[str, tuple[list[tuple[int, int]], np.ndarray, list[str]]]:
     folds: dict[str, tuple[list[tuple[int, int]], np.ndarray, list[str]]] = {}
     paths = sorted(targets_dir.glob("fold_*.csv"))
@@ -62,6 +92,8 @@ def main() -> None:
     parser.add_argument("--targets-dir", type=Path, default=TARGETS_DIR,
                         help="fold targets; use validation/targets_v2 for the stratified spec v2")
     parser.add_argument("--predictions-dir", type=Path, default=PREDICTIONS_DIR)
+    parser.add_argument("--audit", action="store_true",
+                        help="обучать на метках, исправленных в label_audit.jsonl")
     args = parser.parse_args()
     predictions_dir = args.predictions_dir
 
@@ -75,6 +107,17 @@ def main() -> None:
     categories_all = [category for fold_id in fold_ids for category in folds[fold_id][2]]
     category_codes = {name: code for code, name in enumerate(sorted(set(categories_all)))}
     print(f"pairs={len(all_pairs)} folds={ {f: len(folds[f][0]) for f in fold_ids} }")
+
+    y_original = y.copy()
+    if args.audit:
+        corrections = load_audit()
+        applied = 0
+        for position, pair in enumerate(all_pairs):
+            if pair in corrections:
+                y[position] = corrections[pair]; applied += 1
+        print(f"доразметка: применено {applied} исправлений из {len(corrections)} в журнале")
+    else:
+        print("доразметка: не применяется (--audit чтобы включить)")
 
     items = pl.read_parquet(
         RAW_DIR / "items_human.parquet", columns=["id", "name", "attributes", "category"]
@@ -106,6 +149,7 @@ def main() -> None:
         "verbosity": -1,
     }
     predictions_dir.mkdir(parents=True, exist_ok=True)
+    fold_scores = []
     for fold_index, fold_id in enumerate(fold_ids):
         train_mask = fold_of_row != fold_index
         dataset = lgb.Dataset(
@@ -123,11 +167,21 @@ def main() -> None:
             writer.writerow(["id1", "id2", "predict"])
             for (id1, id2), score in zip(pairs, scores.tolist(), strict=True):
                 writer.writerow([id1, id2, f"{score:.8f}"])
-        print(f"{fold_id}: trained on {int(train_mask.sum())} pairs, predicted {len(pairs)}")
+        on_original = average_precision(y_original[~train_mask], scores)
+        on_corrected = average_precision(y[~train_mask], scores)
+        fold_scores.append((on_original, on_corrected))
+        print(f"{fold_id}: trained on {int(train_mask.sum())} pairs, predicted {len(pairs)}"
+              f"  |  PR-AUC на исходных метках {on_original:.6f}, на исправленных {on_corrected:.6f}")
         if fold_index == 0:
             gains = booster.feature_importance("gain")
             order = np.argsort(-gains)[:10]
             print("  top gain:", [(feature_names[k], round(float(gains[k]), 1)) for k in order])
+
+
+    import numpy as _np
+    a = _np.mean([x for x, _ in fold_scores]); b = _np.mean([x for _, x in fold_scores])
+    print(f"\nmean PR-AUC: на исходных метках {a:.6f}, на исправленных {b:.6f}")
+    print("контроль lgbm_cheap_v1 (обучен на исходных, spec-v2): 0.638171")
 
 
 if __name__ == "__main__":
