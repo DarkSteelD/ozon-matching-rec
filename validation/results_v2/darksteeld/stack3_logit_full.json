@@ -1,0 +1,171 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "stack3_logit_full",
+  "mean_prauc": 0.683971251361881,
+  "pooled_prauc": 0.6839019215904368,
+  "macro_category_prauc": 0.6238942284007629,
+  "min_fold_prauc": 0.6825166077511738,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.6836167403497134,
+      "macro_category_prauc": 0.6260205024838447,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.6825166077511738,
+      "macro_category_prauc": 0.6219696188659727,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.684093284917574,
+      "macro_category_prauc": 0.6236179423860714,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.6856583724290627,
+      "macro_category_prauc": 0.62796285781476,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.36407587046228523
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.4032420167033808
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.42728437772202277
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.5081212088068604
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.5261495450846644
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.5524799484517958
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.5697023451145662
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.5810756637396701
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.6351502978242672
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.6372320224140263
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.6513306446929005
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.6745523599670441
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.6823080417113349
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.697770175159158
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.699820626469521
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.7095508220401957
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.7343598871072787
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.7374294787260894
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.8378273569975286
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.8484218788206671
+    }
+  ],
+  "worst_category": "Ювелирные изделия",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-15T16:29:55+00:00",
+  "commit": "9bfb33f",
+  "notes": "Обучаемый стак трёх на ОТГРУЖАЕМОМ рецепте атрибутного KNRM: логрегрессия по логитам knrm_llm_pretrain, knrm_attrs_llm_full, lgbm_cheap_v1, мета-модель leave-one-fold-out. Контейнер stack3 везёт knrm_attrs_llm_full (предобучение на всех 11.19M пар), поэтому коэффициенты подобраны на его OOF, а не на OOF варианта с 4M. Разница против stack3_logit микроскопическая: 0.683971 против 0.683375, нормированные веса 0.205/0.317/0.478 против 0.204/0.316/0.479 — то есть выбор варианта атрибутного KNRM на стак не влияет",
+  "public_prauc": 0.33007804088882026
+}

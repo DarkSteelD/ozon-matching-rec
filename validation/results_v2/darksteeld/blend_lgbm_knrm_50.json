@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "blend_lgbm_knrm_50",
+  "mean_prauc": 0.6631202427274431,
+  "pooled_prauc": 0.6630436535714437,
+  "macro_category_prauc": 0.5882654178023909,
+  "min_fold_prauc": 0.6608367152840673,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.6608367152840673,
+      "macro_category_prauc": 0.587172288587046,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.6622925881444472,
+      "macro_category_prauc": 0.5862465167584651,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.6630221193783188,
+      "macro_category_prauc": 0.5895513315026404,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.666329548102939,
+      "macro_category_prauc": 0.5934359774567246,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.3016706572299211
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.3306825257119053
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.3336849942004031
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.45967495645953077
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.4752967214642167
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.5115449801974747
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.5461826181666262
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.5559630689572231
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.5987586602484438
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.6110029322755959
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.6122975915175123
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.639945201312346
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.6528955790233149
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.6701679928264417
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.6800007723722916
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.7032780912707687
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.7128717034434674
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.7165990312524231
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.8190299512631591
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.8337603268547551
+    }
+  ],
+  "worst_category": "Одежда",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T14:57:51+00:00",
+  "commit": "9bfb33f",
+  "notes": "0.5 * lgbm_cheap_v1 + 0.5 * knrm_llm_pretrain, plain average of the two OOF probability columns on the same spec-v2 folds"
+}
