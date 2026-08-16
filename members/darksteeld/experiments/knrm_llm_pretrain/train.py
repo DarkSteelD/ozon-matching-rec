@@ -182,6 +182,24 @@ def run_epoch(model, optimizers, loss_function, encoded, rows1, rows2, target,
     return running / max(batches, 1)
 
 
+AUDIT_FILE = REPOSITORY_ROOT / "members" / "darksteeld" / "data" / "label_audit.jsonl"
+
+
+def load_audit() -> dict[tuple[int, int], int]:
+    """Исправленные вручную метки; последнее судейство по паре побеждает."""
+    import json as _json
+
+    if not AUDIT_FILE.is_file():
+        return {}
+    latest: dict[tuple[int, int], dict] = {}
+    for line in AUDIT_FILE.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            r = _json.loads(line)
+            latest[(r["id1"], r["id2"])] = r
+    return {k: v["audited_label"] for k, v in latest.items()
+            if v["audited_label"] >= 0 and v["audited_label"] != v["original_target"]}
+
+
 def load_folds(targets_dir: Path, fold_ids: list[str]) -> dict[str, dict[str, np.ndarray]]:
     folds = {}
     for fold_id in fold_ids:
@@ -210,7 +228,17 @@ def main() -> None:
                         default=REPOSITORY_ROOT / "validation" / "predictions_v2" / "darksteeld" / "knrm_llm_pretrain")
     parser.add_argument("--cache-dir", type=Path, required=True,
                         help="where the encoded LLM items are cached between runs")
-    parser.add_argument("--folds", default="fold_01,fold_02,fold_03,fold_04")
+    parser.add_argument("--folds", default="fold_01,fold_02,fold_03,fold_04",
+                        help="каждый фолд списка по очереди held-out, обучение на ОСТАЛЬНЫХ "
+                             "ИЗ СПИСКА; передав три фолда, получаем модели, не видевшие "
+                             "четвёртый — это и есть вложенный OOF")
+    parser.add_argument("--pretrained-cache", type=Path,
+                        help="файл состояния после фазы 1; пишется, если нет, и читается, "
+                             "если есть — предобучение от состава фолдов не зависит")
+    parser.add_argument("--dump-all-folds", type=Path,
+                        help="дополнительно писать in-sample предсказания на обучающих фолдах "
+                             "в <путь>/trained_without_<held>/<fold>.csv")
+    parser.add_argument("--no-audit", action="store_true", help="игнорировать доразметку")
     parser.add_argument("--min-count", type=int, default=5,
                         help="occurrences required for a big-file token; hand tokens always kept")
     parser.add_argument("--pretrain-epochs", type=int, default=1)
@@ -270,48 +298,73 @@ def main() -> None:
         f"rest deterministic from the token string | setup {time.time() - started:.0f}s")
 
     # ---------------- phase 1: pretrain on matches_llm -----------------------
-    llm = pl.read_parquet(args.data_dir / "matches_llm.parquet")
-    llm_ids = np.unique(np.concatenate([llm["id1"].to_numpy(), llm["id2"].to_numpy()]))
-    overlap = np.intersect1d(llm_ids, hand_items["id"].to_numpy()).size
-    if overlap:
-        raise AssertionError(f"LLM and hand universes overlap in {overlap} items — pretraining would leak")
-    log(f"LLM pairs {llm.height:,} over {len(llm_ids):,} items | "
-        f"overlap with the hand universe: {overlap} (verified, not assumed)")
-
-    encoded_path = args.cache_dir / f"llm_encoded_mc{args.min_count}.npy"
-    if encoded_path.is_file():
-        llm_encoded = np.load(encoded_path)
-        log(f"encoded LLM items from cache {llm_encoded.shape}")
-    else:
-        log("encoding LLM item names (streaming items.parquet)...")
-        llm_encoded = encode_stream(args.data_dir / "items.parquet", llm_ids, token_id, MAX_LEN)
-        np.save(encoded_path, llm_encoded)
-    llm_rows1 = np.searchsorted(llm_ids, llm["id1"].to_numpy()).astype(np.int32)
-    llm_rows2 = np.searchsorted(llm_ids, llm["id2"].to_numpy()).astype(np.int32)
-    llm_target = llm["target"].to_numpy().astype(np.float32)
-    if args.pretrain_pairs and args.pretrain_pairs < len(llm_target):
-        pick = np.random.default_rng(SEED).choice(len(llm_target), args.pretrain_pairs, replace=False)
-        llm_rows1, llm_rows2, llm_target = llm_rows1[pick], llm_rows2[pick], llm_target[pick]
-        log(f"subsampled to {len(llm_target):,} LLM pairs")
-    del llm
-
-    model = KNRM(weight, sparse=True)
-    del weight  # the table is ~2 GB; SparseAdam adds two dense moments its size
-    optimizers = [
-        torch.optim.SparseAdam(model.embedding.parameters(), lr=args.learning_rate),
-        torch.optim.Adam(list(model.norm.parameters()) + list(model.head.parameters()),
-                         lr=args.learning_rate),
-    ]
+    # Предобучение не зависит от разбиения ручных пар на фолды: вселенные
+    # непересекающиеся, поэтому его результат один и тот же для любого набора
+    # обучающих фолдов. С ``--pretrained-cache`` фаза 1 считается один раз и
+    # переиспользуется прогонами, которые отличаются только составом фолдов —
+    # вложенному OOF таких прогонов нужна дюжина. Без флага поведение прежнее.
     loss_function = nn.BCEWithLogitsLoss()
-    generator = torch.Generator().manual_seed(SEED)
-    encoded_llm_t = torch.from_numpy(llm_encoded)
-    for epoch in range(1, args.pretrain_epochs + 1):
-        loss = run_epoch(model, optimizers, loss_function, encoded_llm_t,
-                         llm_rows1, llm_rows2, llm_target, args.batch_size, generator,
-                         f"pretrain e{epoch}")
-        log(f"  pretrain epoch {epoch}: loss {loss:.5f}")
-    pretrained_state = copy.deepcopy(model.state_dict())
-    del encoded_llm_t, llm_encoded, llm_rows1, llm_rows2, llm_target
+    if args.pretrained_cache and args.pretrained_cache.is_file():
+        blob = torch.load(args.pretrained_cache, map_location="cpu", weights_only=True)
+        if int(blob["vocabulary"]) != len(token_id):
+            raise SystemExit(
+                f"{args.pretrained_cache}: словарь {int(blob['vocabulary']):,} против "
+                f"{len(token_id):,}; строки эмбеддинга адресуются по id токена, "
+                "кэш от другого словаря встал бы не на свои места")
+        model = KNRM(weight, sparse=True)
+        del weight
+        model.load_state_dict(blob["state"])
+        pretrained_state = copy.deepcopy(model.state_dict())
+        log(f"предобучение из кэша {args.pretrained_cache} "
+            f"(словарь {len(token_id):,}), фаза 1 пропущена")
+    else:
+        llm = pl.read_parquet(args.data_dir / "matches_llm.parquet")
+        llm_ids = np.unique(np.concatenate([llm["id1"].to_numpy(), llm["id2"].to_numpy()]))
+        overlap = np.intersect1d(llm_ids, hand_items["id"].to_numpy()).size
+        if overlap:
+            raise AssertionError(f"LLM and hand universes overlap in {overlap} items — pretraining would leak")
+        log(f"LLM pairs {llm.height:,} over {len(llm_ids):,} items | "
+            f"overlap with the hand universe: {overlap} (verified, not assumed)")
+
+        encoded_path = args.cache_dir / f"llm_encoded_mc{args.min_count}.npy"
+        if encoded_path.is_file():
+            llm_encoded = np.load(encoded_path)
+            log(f"encoded LLM items from cache {llm_encoded.shape}")
+        else:
+            log("encoding LLM item names (streaming items.parquet)...")
+            llm_encoded = encode_stream(args.data_dir / "items.parquet", llm_ids, token_id, MAX_LEN)
+            np.save(encoded_path, llm_encoded)
+        llm_rows1 = np.searchsorted(llm_ids, llm["id1"].to_numpy()).astype(np.int32)
+        llm_rows2 = np.searchsorted(llm_ids, llm["id2"].to_numpy()).astype(np.int32)
+        llm_target = llm["target"].to_numpy().astype(np.float32)
+        if args.pretrain_pairs and args.pretrain_pairs < len(llm_target):
+            pick = np.random.default_rng(SEED).choice(len(llm_target), args.pretrain_pairs, replace=False)
+            llm_rows1, llm_rows2, llm_target = llm_rows1[pick], llm_rows2[pick], llm_target[pick]
+            log(f"subsampled to {len(llm_target):,} LLM pairs")
+        del llm
+
+        model = KNRM(weight, sparse=True)
+        del weight  # the table is ~2 GB; SparseAdam adds two dense moments its size
+        optimizers = [
+            torch.optim.SparseAdam(model.embedding.parameters(), lr=args.learning_rate),
+            torch.optim.Adam(list(model.norm.parameters()) + list(model.head.parameters()),
+                             lr=args.learning_rate),
+        ]
+        loss_function = nn.BCEWithLogitsLoss()
+        generator = torch.Generator().manual_seed(SEED)
+        encoded_llm_t = torch.from_numpy(llm_encoded)
+        for epoch in range(1, args.pretrain_epochs + 1):
+            loss = run_epoch(model, optimizers, loss_function, encoded_llm_t,
+                             llm_rows1, llm_rows2, llm_target, args.batch_size, generator,
+                             f"pretrain e{epoch}")
+            log(f"  pretrain epoch {epoch}: loss {loss:.5f}")
+        pretrained_state = copy.deepcopy(model.state_dict())
+        del encoded_llm_t, llm_encoded, llm_rows1, llm_rows2, llm_target
+        if args.pretrained_cache:
+            args.pretrained_cache.parent.mkdir(parents=True, exist_ok=True)
+            torch.save({"vocabulary": len(token_id), "state": pretrained_state},
+                       args.pretrained_cache)
+            log(f"предобучение сохранено в {args.pretrained_cache}")
 
     # ---------------- phase 2: hand folds ------------------------------------
     hand_encoded = np.zeros((len(hand_names), MAX_LEN), dtype=np.int32)
@@ -322,6 +375,17 @@ def main() -> None:
     row_of_id = {int(i): r for r, i in enumerate(hand_items["id"].to_list())}
 
     folds = load_folds(args.targets_dir, fold_ids)
+    corrections = {} if args.no_audit else load_audit()
+    if corrections:
+        applied = 0
+        for fold_id in fold_ids:
+            f = folds[fold_id]
+            for position, key in enumerate(zip(f["id1"].tolist(), f["id2"].tolist())):
+                if key in corrections:
+                    f["target"][position] = corrections[key]; applied += 1
+        log(f"доразметка: применено {applied} исправлений из {len(corrections)} в журнале")
+    else:
+        log("доразметка: журнал пуст или отключён")
     rows1 = {f: np.array([row_of_id[i] for i in folds[f]["id1"].tolist()], dtype=np.int32) for f in fold_ids}
     rows2 = {f: np.array([row_of_id[i] for i in folds[f]["id2"].tolist()], dtype=np.int32) for f in fold_ids}
 
@@ -400,6 +464,27 @@ def main() -> None:
                                scores.tolist(), strict=True):
                 writer.writerow([a, b, f"{s:.8f}"])
         log(f"  {held_out} fine-tuned (best epoch {best_epoch}): PR-AUC {finetuned[held_out]:.6f}")
+
+        if args.dump_all_folds:
+            # Та же модель, но предсказанная на ОБУЧАЮЩИХ фолдах. Эти числа
+            # in-sample и метрикой быть не могут; они нужны как признак для
+            # модели второго уровня, которой иначе нечего положить в свои
+            # обучающие строки. Кладём отдельно от out-of-fold файла, чтобы
+            # ни один скоринг не подобрал их по ошибке.
+            dump_dir = args.dump_all_folds / f"trained_without_{held_out}"
+            dump_dir.mkdir(parents=True, exist_ok=True)
+            for other in fold_ids:
+                if other == held_out:
+                    continue
+                in_sample = predict(model, hand_encoded_t, rows1[other], rows2[other])
+                with (dump_dir / f"{other}.csv").open("w", newline="", encoding="utf-8") as sink:
+                    writer = csv.writer(sink, lineterminator="\n")
+                    writer.writerow(["id1", "id2", "predict"])
+                    for a, b, s in zip(folds[other]["id1"].tolist(),
+                                       folds[other]["id2"].tolist(),
+                                       in_sample.tolist(), strict=True):
+                        writer.writerow([a, b, f"{s:.8f}"])
+            log(f"    in-sample предсказания на обучающих фолдах -> {dump_dir}")
 
     log("\n" + "=" * 62)
     log(f"zero-shot  mean {np.mean(list(zero_shot.values())):.6f}  "

@@ -1,0 +1,8 @@
+{
+  "mode": "stack",
+  "note": "логит-стак из meta.json; LOFO mean PR-AUC 0.683971 на spec-v2 (эксперимент stack3_logit_full)",
+  "alternatives": {
+    "conservative": {"mode": "weights", "weights": [0.3333333333, 0.3333333333, 0.3333333333]},
+    "grid_optimal": {"mode": "weights", "weights": [0.25, 0.25, 0.50]}
+  }
+}

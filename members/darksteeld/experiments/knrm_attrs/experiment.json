@@ -1,0 +1,14 @@
+{
+  "description": "KNRM over the attribute dictionary: separate embedding layers for attribute keys and values, combined per attribute by element-wise product, then RBF kernel pooling over the attribute cosine matrix. Names are not used — built as a decorrelated third blend member",
+  "entry": "python train.py --targets-dir validation/targets_v2 --out-dir validation/predictions_v2/darksteeld/knrm_attrs",
+  "requirements": ["torch", "polars", "numpy", "navec"],
+  "gpus": 0,
+  "timeout_min": 180,
+  "licenses": {
+    "torch": "BSD-3-Clause",
+    "polars": "MIT",
+    "numpy": "BSD-3-Clause",
+    "navec": "MIT",
+    "navec_hudlit_v1_12B_500K_300d_100q": "MIT (github.com/natasha/navec)"
+  }
+}

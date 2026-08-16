@@ -1,0 +1,88 @@
+{
+  "experiment": "lgbm_cheap_audit",
+  "trained_on": "data/raw/matches.parquet, all pairs, метки с ручной доразметкой",
+  "corrections_applied": 97,
+  "audit_journal_sha256": "087c3cc013d0272eab5eb12d2e200f0717a49874517981473aafdd54b5a7a38c",
+  "pairs": 365654,
+  "positives": 93883,
+  "prior": 0.2567536523598812,
+  "seed": 20260813,
+  "num_boost_round": 400,
+  "params": {
+    "objective": "binary",
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "min_data_in_leaf": 100,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.9,
+    "bagging_freq": 1,
+    "seed": 20260813,
+    "deterministic": true,
+    "force_row_wise": true,
+    "verbosity": -1
+  },
+  "feature_names": [
+    "name_cosine",
+    "name_token_jaccard",
+    "name_exact",
+    "prefix_ratio",
+    "len1",
+    "len2",
+    "len_absdiff",
+    "len_ratio",
+    "num_jaccard",
+    "num_equal",
+    "num_left_only",
+    "num_right_only",
+    "num_any",
+    "kv_jaccard",
+    "key_jaccard",
+    "n_shared_keys",
+    "n_agree_keys",
+    "n_conflict_keys",
+    "kv_size_min",
+    "kv_size_absdiff",
+    "category"
+  ],
+  "categorical_features": [
+    "category"
+  ],
+  "tfidf_kwargs": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "min_df": 2,
+    "sublinear_tf": true
+  },
+  "category_codes": {
+    "Автотовары": 0,
+    "Аптека": 1,
+    "Бытовая техника": 2,
+    "Бытовая химия": 3,
+    "Галантерея и аксессуары": 4,
+    "Детские товары": 5,
+    "Дом и сад": 6,
+    "Канцелярские товары": 7,
+    "Красота и гигиена": 8,
+    "Мебель": 9,
+    "Музыкальные инструменты": 10,
+    "Обувь": 11,
+    "Одежда": 12,
+    "Продукты питания": 13,
+    "Спорт и отдых": 14,
+    "Строительство и ремонт": 15,
+    "Товары для животных": 16,
+    "Хобби и творчество": 17,
+    "Электроника": 18,
+    "Ювелирные изделия": 19
+  },
+  "lightgbm_version": "4.7.0",
+  "repo_commit": "9bfb33f",
+  "local_cv": {
+    "spec_v1_mean_prauc": null,
+    "spec_v2_mean_prauc": 0.63807684,
+    "note": "out-of-fold on the frozen folds, оценка по ИСХОДНЫМ целям; отгружаемая модель обучена на всех парах"
+  }
+}

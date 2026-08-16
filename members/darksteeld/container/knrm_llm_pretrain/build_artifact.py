@@ -55,6 +55,7 @@ from knrm_model import DIM, KNRM, MAX_LEN, PAD_ID, tokenize, vector_for_unknown 
 from train import (  # noqa: E402  — reuse the validated experiment's own code
     average_precision, build_vocabulary, encode_stream, initial_weight, predict, run_epoch,
 )
+from lgbm_cheap import AUDIT_FILE, load_audit  # noqa: E402  — один журнал доразметки на все модели
 
 SEED = 20260814
 BATCH_SIZE = 512
@@ -80,6 +81,8 @@ def main() -> None:
     parser.add_argument("--pretrain-epochs", type=int, default=1)
     parser.add_argument("--finetune-epochs", type=int, default=20)
     parser.add_argument("--patience", type=int, default=1)
+    parser.add_argument("--audit", action="store_true",
+                        help="обучать на метках, исправленных в label_audit.jsonl")
     parser.add_argument("--ship-min-count", type=int, default=5,
                         help="catalogue-frequency cut for shipped vectors; hand tokens always ship")
     args = parser.parse_args()
@@ -155,6 +158,25 @@ def main() -> None:
     rows1 = np.array([row_of_id[int(i)] for i in id1], dtype=np.int32)
     rows2 = np.array([row_of_id[int(i)] for i in id2], dtype=np.int32)
     labels = matches["target"].to_numpy().astype(np.float32)
+
+    # Ручная доразметка: правки применяются и к обучающей части, и к валидационной,
+    # по которой работает ранняя остановка — иначе остановка ориентировалась бы на
+    # метки, часть которых мы сами признали ошибочными.
+    corrections_applied = 0
+    audit_digest = None
+    if args.audit:
+        corrections = load_audit()
+        for position, pair in enumerate(zip(id1.tolist(), id2.tolist())):
+            if pair in corrections:
+                labels[position] = corrections[pair]
+                corrections_applied += 1
+        audit_digest = hashlib.sha256(AUDIT_FILE.read_bytes()).hexdigest()
+        print(f"доразметка: применено {corrections_applied} из {len(corrections)} в журнале "
+              f"(sha256 {audit_digest[:12]})", flush=True)
+        if corrections_applied != len(corrections):
+            raise AssertionError("в matches.parquet нашлись не все исправленные пары")
+    else:
+        print("доразметка: не применяется (--audit чтобы включить)", flush=True)
 
     component_of_item = connected_component_keys(id1, id2)
     bucket: dict[int, int] = {}
@@ -239,7 +261,9 @@ def main() -> None:
         bn_eps=np.float32(model.norm.eps),
     )
     artifact = {
-        "experiment": "knrm_llm_pretrain",
+        "experiment": "knrm_llm_audit" if args.audit else "knrm_llm_pretrain",
+        "corrections_applied": corrections_applied,
+        "audit_journal_sha256": audit_digest,
         "pairs_pretrain": 11_187_780,
         "pairs_finetune": int(len(labels)),
         "vocabulary_trained": len(token_id),

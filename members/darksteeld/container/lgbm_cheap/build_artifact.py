@@ -25,6 +25,7 @@ What gets pinned, and why each matters:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import subprocess
 import sys
@@ -40,6 +41,7 @@ sys.path.insert(0, str(REPOSITORY_ROOT / "members" / "darksteeld" / "src"))
 from pair_features import (  # noqa: E402
     CATEGORICAL_FEATURES, FEATURE_NAMES, TFIDF_KWARGS, build_category_codes, build_features,
 )
+from lgbm_cheap import AUDIT_FILE, load_audit  # noqa: E402
 
 SEED = 20260813
 NUM_BOOST_ROUND = 400
@@ -72,6 +74,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-dir", type=Path, default=REPOSITORY_ROOT / "data" / "raw")
     parser.add_argument("--out-dir", type=Path, default=HERE)
+    parser.add_argument("--audit", action="store_true",
+                        help="обучать на метках, исправленных в label_audit.jsonl")
     args = parser.parse_args()
 
     import lightgbm as lgb
@@ -103,6 +107,26 @@ def main() -> None:
     if not known.all():
         raise AssertionError("items_human must cover every hand pair")
     labels = matches["target"].to_numpy().astype(np.float64)
+
+    # Ручная доразметка. Правки применяются к обучающим меткам того же файла
+    # matches.parquet, поэтому доля позитивов (prior) считается уже после них.
+    corrections_applied = 0
+    audit_digest = None
+    if args.audit:
+        corrections = load_audit()
+        pairs = zip(matches["id1"].to_list(), matches["id2"].to_list())
+        for position, pair in enumerate(pairs):
+            if pair in corrections:
+                labels[position] = corrections[pair]
+                corrections_applied += 1
+        audit_digest = hashlib.sha256(AUDIT_FILE.read_bytes()).hexdigest()
+        print(f"доразметка: применено {corrections_applied} из {len(corrections)} в журнале "
+              f"(sha256 {audit_digest[:12]})")
+        if corrections_applied != len(corrections):
+            raise AssertionError("в matches.parquet нашлись не все исправленные пары")
+    else:
+        print("доразметка: не применяется (--audit чтобы включить)")
+
     prior = float(labels.mean())
 
     print(f"training on all {len(labels):,} pairs, {NUM_BOOST_ROUND} rounds...", flush=True)
@@ -117,8 +141,11 @@ def main() -> None:
     booster.save_model(str(model_path))
 
     artifact = {
-        "experiment": "lgbm_cheap_v1",
-        "trained_on": "data/raw/matches.parquet, all pairs",
+        "experiment": "lgbm_cheap_audit" if args.audit else "lgbm_cheap_v1",
+        "trained_on": "data/raw/matches.parquet, all pairs"
+                      + (", метки с ручной доразметкой" if args.audit else ""),
+        "corrections_applied": corrections_applied,
+        "audit_journal_sha256": audit_digest,
         "pairs": int(len(labels)),
         "positives": int(labels.sum()),
         "prior": prior,
@@ -132,9 +159,10 @@ def main() -> None:
         "lightgbm_version": lgb.__version__,
         "repo_commit": git_commit(REPOSITORY_ROOT),
         "local_cv": {
-            "spec_v1_mean_prauc": 0.63786621,
-            "spec_v2_mean_prauc": 0.63817140,
-            "note": "out-of-fold on the frozen folds; the shipped model is trained on all pairs",
+            "spec_v1_mean_prauc": None if args.audit else 0.63786621,
+            "spec_v2_mean_prauc": 0.63807684 if args.audit else 0.63817140,
+            "note": "out-of-fold on the frozen folds, оценка по ИСХОДНЫМ целям; "
+                    "отгружаемая модель обучена на всех парах",
         },
     }
     (args.out_dir / "artifact.json").write_text(
