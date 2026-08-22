@@ -26,6 +26,7 @@ import numpy as np
 import polars as pl
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from closure_pairs import build_closure  # noqa: E402
 from pair_features import CATEGORICAL_FEATURES, FEATURE_NAMES, build_features  # noqa: E402
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
@@ -94,6 +95,14 @@ def main() -> None:
     parser.add_argument("--predictions-dir", type=Path, default=PREDICTIONS_DIR)
     parser.add_argument("--audit", action="store_true",
                         help="обучать на метках, исправленных в label_audit.jsonl")
+    parser.add_argument("--closure", action="store_true",
+                        help="добавить в ОБУЧЕНИЕ пары, выводимые транзитивностью")
+    parser.add_argument("--closure-weight", type=float, default=1.0,
+                        help="вес выведенной строки против размеченной")
+    parser.add_argument("--closure-fraction", type=float, default=1.0,
+                        help="доля выведенных пар, взятая случайно (seed фиксирован)")
+    parser.add_argument("--closure-kind", choices=["both", "pos", "neg"], default="both",
+                        help="какие выведенные пары брать")
     args = parser.parse_args()
     predictions_dir = args.predictions_dir
 
@@ -119,6 +128,50 @@ def main() -> None:
     else:
         print("доразметка: не применяется (--audit чтобы включить)")
 
+    extra_pairs: list[tuple[int, int]] = []
+    extra_y = np.zeros(0)
+    extra_fold = np.zeros(0, dtype=int)
+    if args.closure:
+        # выведенные пары, отсуженные вручную как «не дубль», рвут свою цепочку
+        import json as _json
+        rejected = set()
+        if AUDIT_FILE.is_file():
+            for line in AUDIT_FILE.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    r = _json.loads(line)
+                    if r.get("mode") == "closure" and r["audited_label"] == 0:
+                        rejected.add((r["id1"], r["id2"]))
+        if rejected:
+            print(f"замыкание: {len(rejected)} выведенных пар отсужены как «не дубль» — "
+                  f"их компоненты исключаются")
+        produced, produced_y, produced_fold, contradictions = build_closure(
+            all_pairs, y.tolist(), fold_of_row.tolist(), rejected)
+        if contradictions:
+            print(f"замыкание: {len(contradictions)} противоречий после исправлений — "
+                  f"их компоненты исключены целиком")
+        if args.closure_kind != "both":
+            want = 1.0 if args.closure_kind == "pos" else 0.0
+            keep = [v == want for v in produced_y]
+            produced = [p for p, k in zip(produced, keep) if k]
+            produced_y = [v for v, k in zip(produced_y, keep) if k]
+            produced_fold = [f for f, k in zip(produced_fold, keep) if k]
+        if args.closure_fraction < 1.0:
+            rng = np.random.default_rng(SEED)
+            keep = rng.random(len(produced)) < args.closure_fraction
+            produced = [p for p, k in zip(produced, keep) if k]
+            produced_y = [v for v, k in zip(produced_y, keep) if k]
+            produced_fold = [f for f, k in zip(produced_fold, keep) if k]
+        extra_pairs = produced
+        extra_y = np.asarray(produced_y, dtype=np.float64)
+        extra_fold = np.asarray(produced_fold, dtype=int)
+        positives = int(extra_y.sum())
+        print(f"замыкание: {len(extra_pairs)} выведенных пар "
+              f"(+{positives} положительных, +{len(extra_pairs) - positives} отрицательных), "
+              f"вес {args.closure_weight}, доля {args.closure_fraction}")
+        print(f"  по фолдам: { {k: int((extra_fold == k).sum()) for k in range(len(fold_ids))} }")
+    else:
+        print("замыкание: не применяется (--closure чтобы включить)")
+
     items = pl.read_parquet(
         RAW_DIR / "items_human.parquet", columns=["id", "name", "attributes", "category"]
     )
@@ -127,13 +180,21 @@ def main() -> None:
         items["name"].to_list(),
         items["attributes"].to_list(),
         items["category"].to_list(),
-        np.asarray([a for a, _ in all_pairs], dtype=np.int64),
-        np.asarray([b for _, b in all_pairs], dtype=np.int64),
+        np.asarray([a for a, _ in all_pairs + extra_pairs], dtype=np.int64),
+        np.asarray([b for _, b in all_pairs + extra_pairs], dtype=np.int64),
         category_codes,
     )
     if not known.all():
         raise AssertionError("items_human must cover every hand pair")
     feature_names = FEATURE_NAMES
+
+    # выведенные строки идут ТОЛЬКО в обучение: маска отделяет их от размеченных,
+    # по которым считается метрика
+    n_labelled = len(all_pairs)
+    y_train = np.concatenate([y, extra_y])
+    fold_train = np.concatenate([fold_of_row, extra_fold])
+    weights = np.concatenate([np.ones(n_labelled), np.full(len(extra_pairs), args.closure_weight)])
+    is_labelled = np.arange(len(fold_train)) < n_labelled
 
     params = {
         "objective": "binary",
@@ -151,26 +212,30 @@ def main() -> None:
     predictions_dir.mkdir(parents=True, exist_ok=True)
     fold_scores = []
     for fold_index, fold_id in enumerate(fold_ids):
-        train_mask = fold_of_row != fold_index
+        train_mask = fold_train != fold_index
+        evaluate_mask = (fold_train == fold_index) & is_labelled
         dataset = lgb.Dataset(
             features[train_mask],
-            label=y[train_mask],
+            label=y_train[train_mask],
+            weight=weights[train_mask],
             feature_name=feature_names,
             categorical_feature=CATEGORICAL_FEATURES,
             free_raw_data=True,
         )
         booster = lgb.train(params, dataset, num_boost_round=400)
-        scores = booster.predict(features[~train_mask])
+        scores = booster.predict(features[evaluate_mask])
         pairs = folds[fold_id][0]
         with (predictions_dir / f"{fold_id}.csv").open("w", newline="", encoding="utf-8") as sink:
             writer = csv.writer(sink, lineterminator="\n")
             writer.writerow(["id1", "id2", "predict"])
             for (id1, id2), score in zip(pairs, scores.tolist(), strict=True):
                 writer.writerow([id1, id2, f"{score:.8f}"])
-        on_original = average_precision(y_original[~train_mask], scores)
-        on_corrected = average_precision(y[~train_mask], scores)
+        fold_rows = fold_of_row == fold_index
+        on_original = average_precision(y_original[fold_rows], scores)
+        on_corrected = average_precision(y[fold_rows], scores)
         fold_scores.append((on_original, on_corrected))
-        print(f"{fold_id}: trained on {int(train_mask.sum())} pairs, predicted {len(pairs)}"
+        print(f"{fold_id}: trained on {int(train_mask.sum())} rows "
+              f"({int((train_mask & ~is_labelled).sum())} выведенных), predicted {len(pairs)}"
               f"  |  PR-AUC на исходных метках {on_original:.6f}, на исправленных {on_corrected:.6f}")
         if fold_index == 0:
             gains = booster.feature_importance("gain")
