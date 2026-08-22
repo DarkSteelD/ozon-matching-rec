@@ -52,7 +52,17 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(REPOSITORY_ROOT))
 sys.path.insert(0, str(REPOSITORY_ROOT / "members" / "darksteeld" / "src"))
 
-from knrm_model import DIM, KNRM, MAX_LEN, PAD_ID, tokenize, vector_for_unknown  # noqa: E402
+from knrm_joint_tokens import tokenize as _tokenize_maybe_stem  # noqa: E402
+from knrm_model import DIM, KNRM, MAX_LEN, PAD_ID, vector_for_unknown  # noqa: E402
+
+STEMMING = False        # ставится из аргументов в main, читается токенизатором
+
+
+def tokenize(name: str):
+    """Токенизация модели. Стемминг — глобальный переключатель, а не аргумент:
+    он обязан быть одинаковым в словаре, кодировании корпуса и кодировании
+    ручной вселенной, а протаскивать флаг в пять мест значит однажды забыть."""
+    return _tokenize_maybe_stem(name, STEMMING)
 
 SEED = 20260814
 VALIDATION_BUCKETS = 10
@@ -72,6 +82,14 @@ def average_precision(target: np.ndarray, score: np.ndarray) -> float:
     precision = cumulative[last] / (np.arange(len(labels))[last] + 1)
     recall = cumulative[last] / cumulative[-1]
     return float(np.sum(np.diff(np.r_[0.0, recall]) * precision))
+
+
+def stemmed_counts(path: Path, field: str) -> Counter:
+    """Частоты стеммов из build_vocabulary.py: тот же файл, что у совместной сети."""
+    blob = np.load(path, allow_pickle=True)
+    tokens = blob[f"stem_{field}_tokens"].tolist()
+    counts = blob[f"stem_{field}_counts"].tolist()
+    return Counter(dict(zip(tokens, counts)))
 
 
 def build_vocabulary(counts_big: Counter, tokens_hand: set[str], min_count: int) -> dict[str, int]:
@@ -146,13 +164,14 @@ def initial_weight(token_id: dict[str, int], dim: int, navec_path: Path | None) 
 def predict(model: KNRM, encoded: torch.Tensor, rows1: np.ndarray, rows2: np.ndarray,
             batch_size: int = 4096) -> np.ndarray:
     model.eval()
+    device = next(model.parameters()).device
     out = np.empty(len(rows1), dtype=np.float64)
     for start in range(0, len(rows1), batch_size):
         stop = min(start + batch_size, len(rows1))
         out[start:stop] = torch.sigmoid(model(
-            encoded[torch.from_numpy(rows1[start:stop].astype(np.int64))].long(),
-            encoded[torch.from_numpy(rows2[start:stop].astype(np.int64))].long(),
-        )).numpy()
+            encoded[torch.from_numpy(rows1[start:stop].astype(np.int64))].long().to(device),
+            encoded[torch.from_numpy(rows2[start:stop].astype(np.int64))].long().to(device),
+        )).cpu().numpy()
     return out
 
 
@@ -164,10 +183,11 @@ def run_epoch(model, optimizers, loss_function, encoded, rows1, rows2, target,
     report = max(1, len(target) // batch_size // 10)
     for step, start in enumerate(range(0, len(target), batch_size)):
         pick = permutation[start : start + batch_size].numpy()
+        _device = next(model.parameters()).device
         loss = loss_function(
-            model(encoded[torch.from_numpy(rows1[pick].astype(np.int64))].long(),
-                  encoded[torch.from_numpy(rows2[pick].astype(np.int64))].long()),
-            torch.from_numpy(target[pick]),
+            model(encoded[torch.from_numpy(rows1[pick].astype(np.int64))].long().to(_device),
+                  encoded[torch.from_numpy(rows2[pick].astype(np.int64))].long().to(_device)),
+            torch.from_numpy(target[pick]).to(_device),
         )
         for optimizer in optimizers:
             optimizer.zero_grad(set_to_none=True)
@@ -239,6 +259,10 @@ def main() -> None:
                         help="дополнительно писать in-sample предсказания на обучающих фолдах "
                              "в <путь>/trained_without_<held>/<fold>.csv")
     parser.add_argument("--no-audit", action="store_true", help="игнорировать доразметку")
+    parser.add_argument("--vocabulary", type=Path,
+                        help="npz от build_vocabulary.py; со --stem берутся стеммы")
+    parser.add_argument("--stem", action="store_true")
+    parser.add_argument("--device", default="cpu", help="cpu или cuda")
     parser.add_argument("--min-count", type=int, default=5,
                         help="occurrences required for a big-file token; hand tokens always kept")
     parser.add_argument("--pretrain-epochs", type=int, default=1)
@@ -254,9 +278,15 @@ def main() -> None:
                         / "navec_hudlit_v1_12B_500K_300d_100q.tar")
     args = parser.parse_args()
 
+    global STEMMING
+    STEMMING = bool(args.stem)
     torch.manual_seed(SEED)
     np.random.seed(SEED)
     args.cache_dir.mkdir(parents=True, exist_ok=True)
+    device = torch.device(args.device)
+    if device.type == "cuda":
+        log(f"устройство: cuda ({torch.cuda.get_device_name(0)})")
+    log(f"токенизация: {'стеммы' if STEMMING else 'сырые токены'}")
     fold_ids = [f.strip() for f in args.folds.split(",") if f.strip()]
     import polars as pl
     from validation.build_folds import connected_component_keys
@@ -267,7 +297,12 @@ def main() -> None:
     hand_items = pl.read_parquet(args.data_dir / "items_human.parquet", columns=["id", "name"])
     hand_names = hand_items["name"].to_list()
     tokens_hand = {t for name in hand_names for t in tokenize(name)}
-    if counts_path.is_file():
+    if args.vocabulary:
+        counts_big = stemmed_counts(args.vocabulary, "name") if STEMMING else \
+            Counter(dict(zip(np.load(args.vocabulary, allow_pickle=True)["raw_name_tokens"].tolist(),
+                             np.load(args.vocabulary, allow_pickle=True)["raw_name_counts"].tolist())))
+        log(f"частоты из {args.vocabulary.name}: {len(counts_big):,} токенов")
+    elif counts_path.is_file():
         blob = np.load(counts_path, allow_pickle=True)
         counts_big = Counter(dict(zip(blob["tokens"].tolist(), blob["counts"].tolist())))
         log(f"big-file token counts from cache: {len(counts_big):,}")
@@ -311,8 +346,9 @@ def main() -> None:
                 f"{args.pretrained_cache}: словарь {int(blob['vocabulary']):,} против "
                 f"{len(token_id):,}; строки эмбеддинга адресуются по id токена, "
                 "кэш от другого словаря встал бы не на свои места")
-        model = KNRM(weight, sparse=True)
+        model = KNRM(weight, sparse=(device.type != 'cuda'))
         del weight
+        model.to(device)
         model.load_state_dict(blob["state"])
         pretrained_state = copy.deepcopy(model.state_dict())
         log(f"предобучение из кэша {args.pretrained_cache} "
@@ -343,10 +379,13 @@ def main() -> None:
             log(f"subsampled to {len(llm_target):,} LLM pairs")
         del llm
 
-        model = KNRM(weight, sparse=True)
+        model = KNRM(weight, sparse=(device.type != 'cuda'))
+        model.to(device)
         del weight  # the table is ~2 GB; SparseAdam adds two dense moments its size
         optimizers = [
-            torch.optim.SparseAdam(model.embedding.parameters(), lr=args.learning_rate),
+            (torch.optim.SparseAdam(model.embedding.parameters(), lr=args.learning_rate)
+         if model.embedding.sparse else
+         torch.optim.Adam(model.embedding.parameters(), lr=args.learning_rate)),
             torch.optim.Adam(list(model.norm.parameters()) + list(model.head.parameters()),
                              lr=args.learning_rate),
         ]
@@ -417,7 +456,9 @@ def main() -> None:
             is_validation[position] = bucket[key] == 0
 
         optimizers = [
-            torch.optim.SparseAdam(model.embedding.parameters(), lr=args.finetune_lr),
+            (torch.optim.SparseAdam(model.embedding.parameters(), lr=args.finetune_lr)
+             if model.embedding.sparse else
+             torch.optim.Adam(model.embedding.parameters(), lr=args.finetune_lr)),
             torch.optim.Adam(list(model.norm.parameters()) + list(model.head.parameters()),
                              lr=args.finetune_lr),
         ]

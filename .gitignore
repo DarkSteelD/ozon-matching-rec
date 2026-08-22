@@ -52,6 +52,9 @@ members/*/baselines_ref/
 members/*/container/**/model.*
 members/*/container/**/vendor/
 members/*/container/**/src/
+# отображение «сырой токен -> индекс» на 18 МБ; пересобирается
+# скриптом members/darksteeld/src/build_stem_map.py
+members/*/container/**/stem_map.npz
 
 # Shared validation: labels and raw predictions stay local; only the builder,
 # pinned SHA256 hashes, result JSONs, and leaderboards are committed
