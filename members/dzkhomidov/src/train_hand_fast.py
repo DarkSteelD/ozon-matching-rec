@@ -34,22 +34,30 @@ def build_tokens(args, tok):
     t1 = mk(df["name1"].to_list(), df["attrs1"].to_list(), df["category"].to_list())
     t2 = mk(df["name2"].to_list(), df["attrs2"].to_list(), df["category"].to_list())
     n = df.height
-    ids = np.zeros((n, args.max_len), dtype=np.int32)
-    tt = np.zeros((n, args.max_len), dtype=np.uint8)
     t0 = time.time()
-    for s in range(0, n, 20000):
-        e = min(s + 20000, n)
-        enc = tok(t1[s:e], t2[s:e], truncation=True, max_length=args.max_len,
-                  padding="max_length", return_tensors="np")
-        ids[s:e] = enc["input_ids"].astype(np.int32)
-        if "token_type_ids" in enc:
-            tt[s:e] = enc["token_type_ids"].astype(np.uint8)
+
+    def encode(a, b):
+        ids = np.zeros((n, args.max_len), dtype=np.int32)
+        tt = np.zeros((n, args.max_len), dtype=np.uint8)
+        for s in range(0, n, 20000):
+            e = min(s + 20000, n)
+            enc = tok(a[s:e], b[s:e], truncation=True, max_length=args.max_len,
+                      padding="max_length", return_tensors="np")
+            ids[s:e] = enc["input_ids"].astype(np.int32)
+            if "token_type_ids" in enc:
+                tt[s:e] = enc["token_type_ids"].astype(np.uint8)
+        return ids, tt
+
+    ids, tt = encode(t1, t2)
+    ids_r = tt_r = None
+    if getattr(args, "sym", False):
+        ids_r, tt_r = encode(t2, t1)
     print(f"tokenized {n} in {time.time()-t0:.0f}s", flush=True)
     return (df["fold"].to_numpy(), df["id1"].to_numpy(), df["id2"].to_numpy(),
-            df["target"].to_numpy().astype(np.float32), ids, tt)
+            df["target"].to_numpy().astype(np.float32), ids, tt, ids_r, tt_r)
 
 
-def run_fold(args, fold, tr_idx, ev_idx, ids, tt, y, pad_id=0):
+def run_fold(args, fold, tr_idx, ev_idx, ids, tt, y, pad_id=0, ids_r=None, tt_r=None):
     model = AutoModelForSequenceClassification.from_pretrained(
         args.init or args.model, num_labels=1, ignore_mismatched_sizes=True).cuda()
     use_tt = getattr(model.config, "type_vocab_size", 0) > 1
@@ -67,8 +75,14 @@ def run_fold(args, fold, tr_idx, ev_idx, ids, tt, y, pad_id=0):
         perm = rng.permutation(n)
         for s in range(0, n - args.bs + 1, args.bs):
             idx = tr_idx[np.sort(perm[s:s + args.bs])]
-            bi = torch.from_numpy(ids[idx].astype(np.int64)).cuda()
-            bt = torch.from_numpy(tt[idx].astype(np.int64)).cuda()
+            if ids_r is not None:
+                mask = rng.random(len(idx)) < 0.5
+                bi_np = np.where(mask[:, None], ids_r[idx], ids[idx])
+                bt_np = np.where(mask[:, None], tt_r[idx], tt[idx])
+            else:
+                bi_np, bt_np = ids[idx], tt[idx]
+            bi = torch.from_numpy(bi_np.astype(np.int64)).cuda()
+            bt = torch.from_numpy(bt_np.astype(np.int64)).cuda()
             by = torch.from_numpy(y[idx]).cuda()
             with torch.autocast("cuda", dtype=torch.bfloat16):
                 loss = lossf(model(input_ids=bi, attention_mask=(bi != pad_id).long(),
@@ -87,13 +101,18 @@ def run_fold(args, fold, tr_idx, ev_idx, ids, tt, y, pad_id=0):
     with torch.no_grad():
         for s in range(0, len(ev_idx), args.bs * 4):
             idx = ev_idx[s:s + args.bs * 4]
-            bi = torch.from_numpy(ids[idx].astype(np.int64)).cuda()
-            bt = torch.from_numpy(tt[idx].astype(np.int64)).cuda()
-            with torch.autocast("cuda", dtype=torch.bfloat16):
-                logits = model(input_ids=bi, attention_mask=(bi != pad_id).long(),
-                               token_type_ids=bt if use_tt else None
-                               ).logits.squeeze(-1)
-            out[s:s + len(idx)] = torch.sigmoid(logits.float()).cpu().numpy()
+            probs = None
+            variants = [(ids, tt)] if ids_r is None else [(ids, tt), (ids_r, tt_r)]
+            for vi, vt in variants:
+                bi = torch.from_numpy(vi[idx].astype(np.int64)).cuda()
+                bt = torch.from_numpy(vt[idx].astype(np.int64)).cuda()
+                with torch.autocast("cuda", dtype=torch.bfloat16):
+                    logits = model(input_ids=bi, attention_mask=(bi != pad_id).long(),
+                                   token_type_ids=bt if use_tt else None
+                                   ).logits.squeeze(-1)
+                p = torch.sigmoid(logits.float()).cpu().numpy()
+                probs = p if probs is None else probs + p
+            out[s:s + len(idx)] = probs / len(variants)
     del model
     torch.cuda.empty_cache()
     return out
@@ -112,6 +131,8 @@ def main():
     ap.add_argument("--cat", action="store_true")
     ap.add_argument("--folds", default="")
     ap.add_argument("--data", default=None)
+    ap.add_argument("--sym", action="store_true",
+                    help="random pair-order swap in train + both-direction averaging in eval")
     ap.add_argument("--seed", type=int, default=20260814)
     args = ap.parse_args()
     torch.backends.cuda.matmul.allow_tf32 = True
@@ -119,14 +140,15 @@ def main():
     os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
     tok = AutoTokenizer.from_pretrained(args.model)
-    fold_col, id1, id2, y, ids, tt = build_tokens(args, tok)
+    fold_col, id1, id2, y, ids, tt, ids_r, tt_r = build_tokens(args, tok)
     outdir = WORK / "preds" / args.exp
     outdir.mkdir(parents=True, exist_ok=True)
     for fold in (args.folds.split(",") if args.folds else FOLDS):
         ev = np.flatnonzero(fold_col == fold)
         tr = np.flatnonzero(fold_col != fold)
         print(f"{fold}: train {len(tr)}", flush=True)
-        scores = run_fold(args, fold, tr, ev, ids, tt, y, tok.pad_token_id)
+        scores = run_fold(args, fold, tr, ev, ids, tt, y, tok.pad_token_id,
+                          ids_r=ids_r, tt_r=tt_r)
         with (outdir / f"{fold}.csv").open("w", newline="", encoding="utf-8") as f:
             f.write("id1,id2,predict\n")
             for a, b, s in zip(id1[ev], id2[ev], scores.tolist()):

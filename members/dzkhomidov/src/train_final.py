@@ -34,13 +34,14 @@ def main():
     ap.add_argument("--cat", action="store_true")
     ap.add_argument("--seed", type=int, default=20260814)
     ap.add_argument("--data", default=None)
+    ap.add_argument("--sym", action="store_true")
     args = ap.parse_args()
     torch.backends.cuda.matmul.allow_tf32 = True
     torch.backends.cudnn.allow_tf32 = True
     os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
     tok = AutoTokenizer.from_pretrained(args.model)
-    _, _, _, y, ids, tt = thf.build_tokens(args, tok)
+    _, _, _, y, ids, tt, ids_r, tt_r = thf.build_tokens(args, tok)
     pad_id = tok.pad_token_id
     n = len(y)
 
@@ -60,8 +61,14 @@ def main():
         perm = rng.permutation(n)
         for s in range(0, n - args.bs + 1, args.bs):
             idx = np.sort(perm[s:s + args.bs])
-            bi = torch.from_numpy(ids[idx].astype(np.int64)).cuda()
-            bt = torch.from_numpy(tt[idx].astype(np.int64)).cuda()
+            if ids_r is not None:
+                mask = rng.random(len(idx)) < 0.5
+                bi_np = np.where(mask[:, None], ids_r[idx], ids[idx])
+                bt_np = np.where(mask[:, None], tt_r[idx], tt[idx])
+            else:
+                bi_np, bt_np = ids[idx], tt[idx]
+            bi = torch.from_numpy(bi_np.astype(np.int64)).cuda()
+            bt = torch.from_numpy(bt_np.astype(np.int64)).cuda()
             by = torch.from_numpy(y[idx]).cuda()
             with torch.autocast("cuda", dtype=torch.bfloat16):
                 loss = lossf(model(input_ids=bi, attention_mask=(bi != pad_id).long(),
