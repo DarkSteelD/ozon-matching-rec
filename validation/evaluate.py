@@ -1,10 +1,9 @@
 """Validate shared-fold predictions and update the team leaderboard.
 
 Metric: PR-AUC as ``average_precision_score`` (step-wise interpolation, ties
-handled as score blocks — numerically identical to scikit-learn). Reported per
-fold, pooled over the out-of-fold union, and macro-averaged over categories,
-because the official ``total_prauc`` aggregation (pooled vs per-category) is
-still unconfirmed.
+handled as score blocks — numerically identical to scikit-learn). The official
+``total_prauc`` is the macro-average over the 20 categories; per-fold and pooled
+scores are retained as diagnostics.
 """
 
 from __future__ import annotations
@@ -235,7 +234,7 @@ def rebuild_leaderboard(results_dir: Path, leaderboard_path: Path, spec: FoldSpe
             results.append(payload)
     results.sort(
         key=lambda item: (
-            -float(item["mean_prauc"]),
+            -float(item["macro_category_prauc"]),
             str(item["member"]),
             str(item["experiment"]),
         )
@@ -303,7 +302,7 @@ def rebuild_leaderboard(results_dir: Path, leaderboard_path: Path, spec: FoldSpe
                         else ""
                     ),
                     "public_delta": (
-                        f'{public_score - float(result["mean_prauc"]):.8f}'
+                        f'{public_score - float(result["macro_category_prauc"]):.8f}'
                         if public_score is not None
                         else ""
                     ),

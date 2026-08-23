@@ -9,7 +9,7 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = REPOSITORY_ROOT / "validation" / "leaderboard.csv"
-DEFAULT_SORT_COLUMN = "mean_prauc"
+DEFAULT_SORT_COLUMN = "macro_cat_prauc"
 
 
 def _numeric_sort_key(row: dict[str, str], column: str) -> tuple[bool, float]:
