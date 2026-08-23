@@ -14,6 +14,26 @@ Features per pair (items_human texts only, label-free):
   conflicting keys (same key, no common value); attribute set sizes; category.
 
 Writes ``validation/predictions/darksteeld/lgbm_cheap_v1/fold_0K.csv``.
+
+**Шумовой пол этого пайплайна — 0.0003.** Пять прогонов одного и того же кода на
+одних и тех же данных, различающихся только сидом бустинга, дали 0.637553,
+0.637751, 0.637908, 0.638185, 0.638309: размах 0.00076, σ 0.00031. Любая дельта
+меньше примерно 0.0006 здесь неотличима от перестановки сида, и мерить её надо
+парно по нескольким сидам, а не одним прогоном. Измеренные так:
+
+    доразметка нашим журналом (106 испр.)   +0.000024 +- 0.000095   не значимо
+    доразметка журналом команды (244 испр.) +0.000069 +- 0.000097   не значимо
+    транзитивное замыкание, вес 1.0         -0.000112               в пределах шума
+    транзитивное замыкание, вес 3.0         -0.001568               значимо, во вред
+
+Зарегистрированный ``lgbm_cheap_v1`` = 0.638171 (среднее по фолдам) воспроизводится
+побитово только кодом ревизии 2ff04b5. Начиная с b8ae5d6 тот же расчёт даёт
+0.637751. Причина не в логике: ``fit_transform`` отдавал разреженную матрицу с
+несортированными индексами, а пришедший ему на смену ``fit().transform()`` — с
+сортированными, и порядок накопления суммы менял косинус в последнем знаке
+float32. Теперь порядок канонизируется явно (см. pair_features.py), так что
+расчёт больше не зависит от того, каким путём получена матрица; цена перехода
+0.00042 — внутри шумового пола выше.
 """
 
 from __future__ import annotations
@@ -39,14 +59,14 @@ SEED = 20260813
 AUDIT_FILE = REPOSITORY_ROOT / "members" / "darksteeld" / "data" / "label_audit.jsonl"
 
 
-def load_audit() -> dict[tuple[int, int], int]:
+def load_audit(path: Path = AUDIT_FILE) -> dict[tuple[int, int], int]:
     """Ручные исправления меток; последнее судейство по паре побеждает."""
     import json
 
-    if not AUDIT_FILE.is_file():
+    if not path.is_file():
         return {}
     latest: dict[tuple[int, int], dict] = {}
-    for line in AUDIT_FILE.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         if line.strip():
             r = json.loads(line)
             latest[(r["id1"], r["id2"])] = r
@@ -95,6 +115,10 @@ def main() -> None:
     parser.add_argument("--predictions-dir", type=Path, default=PREDICTIONS_DIR)
     parser.add_argument("--audit", action="store_true",
                         help="обучать на метках, исправленных в label_audit.jsonl")
+    parser.add_argument("--seed", type=int, default=SEED,
+                        help="сид бустинга; варьируя его, меряют шумовой пол пайплайна")
+    parser.add_argument("--audit-file", type=Path, default=AUDIT_FILE,
+                        help="другой журнал: например общий с разметкой всей команды")
     parser.add_argument("--closure", action="store_true",
                         help="добавить в ОБУЧЕНИЕ пары, выводимые транзитивностью")
     parser.add_argument("--closure-weight", type=float, default=1.0,
@@ -119,12 +143,13 @@ def main() -> None:
 
     y_original = y.copy()
     if args.audit:
-        corrections = load_audit()
+        corrections = load_audit(args.audit_file)
         applied = 0
         for position, pair in enumerate(all_pairs):
             if pair in corrections:
                 y[position] = corrections[pair]; applied += 1
-        print(f"доразметка: применено {applied} исправлений из {len(corrections)} в журнале")
+        print(f"доразметка: применено {applied} исправлений из {len(corrections)} "
+              f"в журнале {args.audit_file.name}")
     else:
         print("доразметка: не применяется (--audit чтобы включить)")
 
@@ -204,7 +229,7 @@ def main() -> None:
         "feature_fraction": 0.9,
         "bagging_fraction": 0.9,
         "bagging_freq": 1,
-        "seed": SEED,
+        "seed": args.seed,
         "deterministic": True,
         "force_row_wise": True,
         "verbosity": -1,
@@ -217,7 +242,9 @@ def main() -> None:
         dataset = lgb.Dataset(
             features[train_mask],
             label=y_train[train_mask],
-            weight=weights[train_mask],
+            # None, а не вектор единиц: LightGBM по-разному считает границы листа
+            # для взвешенной и невзвешенной задачи, и вектор единиц сдвигает скор
+            weight=(weights[train_mask] if extra_pairs else None),
             feature_name=feature_names,
             categorical_feature=CATEGORICAL_FEATURES,
             free_raw_data=True,
@@ -246,7 +273,8 @@ def main() -> None:
     import numpy as _np
     a = _np.mean([x for x, _ in fold_scores]); b = _np.mean([x for _, x in fold_scores])
     print(f"\nmean PR-AUC: на исходных метках {a:.6f}, на исправленных {b:.6f}")
-    print("контроль lgbm_cheap_v1 (обучен на исходных, spec-v2): 0.638171")
+    print("контроль lgbm_cheap_v1 (обучен на исходных, spec-v2): 0.638171 — "
+          "воспроизводится только кодом ревизии 2ff04b5, см. docstring")
 
 
 if __name__ == "__main__":

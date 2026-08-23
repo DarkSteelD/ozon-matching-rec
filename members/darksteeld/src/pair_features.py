@@ -120,6 +120,16 @@ def build_features(
         matrix = fit_name_vectorizer(names).transform(names)  # rows are L2-normalized
     else:
         matrix = vectorizer.transform(names)  # shared fit across universes
+    # Канонизируем порядок колонок. ``fit_transform`` возвращает матрицу с
+    # НЕсортированными индексами, ``fit().transform()`` — с сортированными;
+    # значения при этом совпадают, а порядок хранения различается почти везде.
+    # Сумма ниже накапливается именно в этом порядке, поэтому в float32 косинус
+    # расходится на ~2e-07 у пятой части пар. Само по себе это ничто, но
+    # LightGBM раскладывает признак по гистограммным корзинам, значение у
+    # границы уходит в соседнюю, и итоговый PR-AUC гуляет на 0.0004 — столько же,
+    # сколько даёт смена сида. Сортировка убирает зависимость от того, каким
+    # путём получена матрица.
+    matrix.sort_indices()
     cosine = np.zeros(pair_count, dtype=np.float64)
     for start in range(0, pair_count, 200_000):
         stop = min(start + 200_000, pair_count)
