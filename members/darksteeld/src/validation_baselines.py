@@ -51,12 +51,12 @@ def normalize_name(name: str) -> str:
     return NON_ALNUM.sub(" ", text).strip()
 
 
-def load_fold_pairs() -> dict[str, list[tuple[int, int]]]:
+def load_fold_pairs(targets_dir: Path = TARGETS_DIR) -> dict[str, list[tuple[int, int]]]:
     folds: dict[str, list[tuple[int, int]]] = {}
-    paths = sorted(TARGETS_DIR.glob("fold_*.csv"))
+    paths = sorted(targets_dir.glob("fold_*.csv"))
     if not paths:
         raise FileNotFoundError(
-            f"No fold targets in {TARGETS_DIR}; run: make validation-targets"
+            f"No fold targets in {targets_dir}; run: make validation-targets"
         )
     for path in paths:
         with path.open(newline="", encoding="utf-8") as source:
@@ -65,8 +65,9 @@ def load_fold_pairs() -> dict[str, list[tuple[int, int]]]:
     return folds
 
 
-def write_fold(experiment: str, fold_id: str, pairs: list[tuple[int, int]], scores: np.ndarray) -> None:
-    destination = PREDICTIONS_DIR / experiment / f"{fold_id}.csv"
+def write_fold(experiment: str, fold_id: str, pairs: list[tuple[int, int]], scores: np.ndarray,
+               predictions_dir: Path = PREDICTIONS_DIR) -> None:
+    destination = predictions_dir / experiment / f"{fold_id}.csv"
     destination.parent.mkdir(parents=True, exist_ok=True)
     with destination.open("w", newline="", encoding="utf-8") as sink:
         writer = csv.writer(sink, lineterminator="\n")
@@ -98,16 +99,20 @@ def attribute_token_set(raw: str, interner: dict[str, int]) -> frozenset[int]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--baseline", choices=[*BASELINES, "all"], default="all")
+    parser.add_argument("--targets-dir", type=Path, default=TARGETS_DIR,
+                        help="fold targets to predict; use validation/targets_v2 for spec v2")
+    parser.add_argument("--predictions-dir", type=Path, default=PREDICTIONS_DIR)
     args = parser.parse_args()
     wanted = set(BASELINES) if args.baseline == "all" else {args.baseline}
 
-    folds = load_fold_pairs()
+    folds = load_fold_pairs(args.targets_dir)
     all_pairs = [pair for pairs in folds.values() for pair in pairs]
     print(f"Folds: { {fold_id: len(pairs) for fold_id, pairs in folds.items()} }")
 
     if "const_prior" in wanted:
         for fold_id, pairs in folds.items():
-            write_fold("const_prior", fold_id, pairs, np.full(len(pairs), GLOBAL_PRIOR))
+            write_fold("const_prior", fold_id, pairs, np.full(len(pairs), GLOBAL_PRIOR),
+                       args.predictions_dir)
         print("const_prior written")
         wanted.discard("const_prior")
     if not wanted:
@@ -124,7 +129,8 @@ def main() -> None:
     def distribute(experiment: str, scores: np.ndarray) -> None:
         offset = 0
         for fold_id, pairs in folds.items():
-            write_fold(experiment, fold_id, pairs, scores[offset : offset + len(pairs)])
+            write_fold(experiment, fold_id, pairs, scores[offset : offset + len(pairs)],
+                       args.predictions_dir)
             offset += len(pairs)
         print(f"{experiment} written")
 

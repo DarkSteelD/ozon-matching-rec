@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "lgbm_knrm_insample",
+  "mean_prauc": 0.6660969398113891,
+  "pooled_prauc": 0.6660738959295004,
+  "macro_category_prauc": 0.6028126302795831,
+  "min_fold_prauc": 0.6637673175232559,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.6681139087209835,
+      "macro_category_prauc": 0.6067085124938066,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.6637673175232559,
+      "macro_category_prauc": 0.6013220646768829,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.6665128433885966,
+      "macro_category_prauc": 0.6028475466743083,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.6659936896127201,
+      "macro_category_prauc": 0.60474006198019,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.3865149330667907
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.40110876393749234
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.42464133246905317
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.4491237986423565
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.5030930699838695
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.5264744386395886
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.5554040585279971
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.567478371890608
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.5833416744980561
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.6238031897935048
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.6334223635764835
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.6485162215058287
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.6575942703556745
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.6582439487238276
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.678276343026741
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.679884980439615
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.6911099306459952
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.7239583328479492
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.8248521053064386
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.8394104777137912
+    }
+  ],
+  "worst_category": "Ювелирные изделия",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-15T18:40:54+00:00",
+  "commit": "9bfb33f",
+  "notes": "ОТРИЦАТЕЛЬНЫЙ РЕЗУЛЬТАТ, буквальная схема. Выходы двух KNRM поданы признаками в lgbm_cheap (21+2 признака). Для фолда K обе KNRM обучены на folds!=K, но признак ОБУЧАЮЩЕЙ строки берётся у той же модели, что на её фолде обучалась, то есть in-sample. LightGBM переоценивает такой признак: knrm_attrs забирает 56 проц. gain, тогда как при вложенном OOF ему достаётся 45. Итог 0.666097 против 0.704896 у вложенного варианта — цена in-sample признака 0.0388"
+}

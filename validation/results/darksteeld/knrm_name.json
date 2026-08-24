@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 1,
+  "member": "darksteeld",
+  "experiment": "knrm_name",
+  "mean_prauc": 0.4054291674320082,
+  "pooled_prauc": 0.40575898707055225,
+  "macro_category_prauc": 0.3618965513830862,
+  "min_fold_prauc": 0.38033730629705786,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91157,
+      "positives": 23262,
+      "prauc": 0.4318472915470077,
+      "macro_category_prauc": 0.3819505417399563,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91474,
+      "positives": 23600,
+      "prauc": 0.38033730629705786,
+      "macro_category_prauc": 0.35561410618118294,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91615,
+      "positives": 23476,
+      "prauc": 0.3963598257165686,
+      "macro_category_prauc": 0.3591668146535977,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91408,
+      "positives": 23552,
+      "prauc": 0.41317224616739845,
+      "macro_category_prauc": 0.36203865857283307,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.10340909053337588
+    },
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.13766426925390485
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.20382760654738893
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.22319747623817288
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.2321957136541168
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.2579852826858168
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.2944333496950548
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.29555941719420326
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.3318229245204498
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.35608256739676036
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.3720797476965626
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.3793468145825599
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.4143215929474368
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.43388347839095576
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.4394157941906095
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.45619067402523916
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.47292792937147266
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.5549785170698749
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.6284216909716951
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.6501870906960734
+    }
+  ],
+  "worst_category": "Обувь",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T12:13:49+00:00",
+  "commit": "b91dc15",
+  "notes": "KNRM on names: 11 RBF kernels over the token cosine matrix, symmetric (both pooling directions averaged), full 263,740-token vocabulary with no OOV hashing, 64d sparse embeddings trained end-to-end, BCE, 3 epochs, seed 20260814; per-fold OOF, trained on the other three folds"
+}

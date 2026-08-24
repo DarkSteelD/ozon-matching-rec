@@ -32,7 +32,7 @@ from pathlib import Path
 import numpy as np
 import polars as pl
 
-from validation.spec import load_spec
+from validation.spec import HASH_ASSIGNMENT, STRATIFIED_ASSIGNMENT, load_spec
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_RAW = REPOSITORY_ROOT / "data" / "raw"
@@ -73,6 +73,85 @@ def fold_of_component(seed: str, component_key: int, k: int) -> int:
     return int.from_bytes(digest[:8], "big") % k
 
 
+def stratified_fold_of_component(
+    seed: str,
+    k: int,
+    component_of_item: dict[int, int],
+    id1: np.ndarray,
+    target: np.ndarray,
+    category: list[str],
+) -> dict[int, int]:
+    """Assign whole components to folds, balancing each category separately.
+
+    Spec version 2. Every pair is intra-category (the builder rejects
+    cross-category pairs), so a connected component lies entirely inside one
+    category and stratification never has to split a leakage group.
+
+    Stratification is two-dimensional, on category *and* label: PR-AUC depends
+    mechanically on prevalence, so equalising pairs per fold while letting the
+    positive rate drift would trade one source of fold-to-fold variance for
+    another. Balancing pairs alone measurably does that — it drives the
+    per-category count spread to <=1 pair but leaves the per-category positive
+    rate no slack to settle.
+
+    Deterministic and RNG-free, like the v1 hash: within a category components
+    are processed largest-first, ties broken by ``sha256(seed:key)``, and each
+    goes to the fold whose *worst* relative load after the assignment would be
+    smallest, where load is measured against the per-fold target on both axes
+    (pairs and positives), ties by lowest fold index. Largest-first is the
+    standard greedy that keeps residual imbalance below one component.
+    """
+    components: dict[int, dict[str, object]] = {}
+    for item, label, name in zip(id1.tolist(), target.tolist(), category, strict=True):
+        key = component_of_item[item]
+        entry = components.get(key)
+        if entry is None:
+            entry = components[key] = {"pairs": 0, "positives": 0, "category": name}
+        entry["pairs"] = int(entry["pairs"]) + 1
+        entry["positives"] = int(entry["positives"]) + int(label)
+        if entry["category"] != name:
+            raise AssertionError(
+                f"component {key} spans categories {entry['category']!r} and {name!r}"
+            )
+
+    by_category: dict[str, list[int]] = {}
+    for key, entry in components.items():
+        by_category.setdefault(str(entry["category"]), []).append(key)
+
+    fold_of_key: dict[int, int] = {}
+    for name in sorted(by_category):
+        keys = sorted(
+            by_category[name],
+            key=lambda key: (
+                -int(components[key]["pairs"]),
+                hashlib.sha256(f"{seed}:{key}".encode()).digest(),
+            ),
+        )
+        pairs_target = max(sum(int(components[key]["pairs"]) for key in keys) / k, 1.0)
+        positives_target = max(sum(int(components[key]["positives"]) for key in keys) / k, 1.0)
+        pairs_load = [0] * k
+        positives_load = [0] * k
+
+        def cost(index: int, added_pairs: int, added_positives: int) -> tuple[float, int]:
+            return (
+                max(
+                    (pairs_load[index] + added_pairs) / pairs_target,
+                    (positives_load[index] + added_positives) / positives_target,
+                ),
+                index,
+            )
+
+        for key in keys:
+            entry = components[key]
+            added_pairs = int(entry["pairs"])
+            added_positives = int(entry["positives"])
+            fold = min(range(k), key=lambda index: cost(index, added_pairs, added_positives))
+            fold_of_key[key] = fold
+            pairs_load[fold] += added_pairs
+            positives_load[fold] += added_positives
+    return fold_of_key
+
+
 def sha256_of_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as source:
@@ -81,7 +160,13 @@ def sha256_of_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def build(raw_dir: Path, targets_dir: Path, seed: str, k: int) -> dict[str, dict[str, object]]:
+def build(
+    raw_dir: Path,
+    targets_dir: Path,
+    seed: str,
+    k: int,
+    assignment: str = HASH_ASSIGNMENT,
+) -> dict[str, dict[str, object]]:
     matches = pl.read_parquet(raw_dir / "matches.parquet")
     if matches.columns != ["id1", "id2", "target"]:
         raise ValueError(f"matches.parquet: unexpected columns {matches.columns}")
@@ -102,8 +187,18 @@ def build(raw_dir: Path, targets_dir: Path, seed: str, k: int) -> dict[str, dict
     id2 = matches["id2"].to_numpy()
     component_of_item = connected_component_keys(id1, id2)
 
-    component_keys = sorted(set(component_of_item.values()))
-    fold_of_key = {key: fold_of_component(seed, key, k) for key in component_keys}
+    if assignment == STRATIFIED_ASSIGNMENT:
+        fold_of_key = stratified_fold_of_component(
+            seed,
+            k,
+            component_of_item,
+            id1,
+            matches["target"].to_numpy(),
+            matches["cat1"].to_list(),
+        )
+    else:
+        component_keys = sorted(set(component_of_item.values()))
+        fold_of_key = {key: fold_of_component(seed, key, k) for key in component_keys}
     pair_fold = np.fromiter(
         (fold_of_key[component_of_item[int(item)]] for item in id1),
         dtype=np.int64,
@@ -162,7 +257,8 @@ def main() -> None:
     args = parser.parse_args()
 
     spec = load_spec(args.spec)
-    summary = build(args.raw_dir, args.targets_dir, spec.seed, spec.k)
+    print(f"spec v{spec.version}, assignment={spec.assignment}, targets -> {args.targets_dir}")
+    summary = build(args.raw_dir, args.targets_dir, spec.seed, spec.k, spec.assignment)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
 
     pinned = {fold.id: fold.sha256 for fold in spec.folds}

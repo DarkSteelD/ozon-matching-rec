@@ -14,18 +14,40 @@ Features per pair (items_human texts only, label-free):
   conflicting keys (same key, no common value); attribute set sizes; category.
 
 Writes ``validation/predictions/darksteeld/lgbm_cheap_v1/fold_0K.csv``.
+
+**Шумовой пол этого пайплайна — 0.0003.** Пять прогонов одного и того же кода на
+одних и тех же данных, различающихся только сидом бустинга, дали 0.637553,
+0.637751, 0.637908, 0.638185, 0.638309: размах 0.00076, σ 0.00031. Любая дельта
+меньше примерно 0.0006 здесь неотличима от перестановки сида, и мерить её надо
+парно по нескольким сидам, а не одним прогоном. Измеренные так:
+
+    доразметка нашим журналом (106 испр.)   +0.000024 +- 0.000095   не значимо
+    доразметка журналом команды (244 испр.) +0.000069 +- 0.000097   не значимо
+    транзитивное замыкание, вес 1.0         -0.000112               в пределах шума
+    транзитивное замыкание, вес 3.0         -0.001568               значимо, во вред
+
+Зарегистрированный ``lgbm_cheap_v1`` = 0.638171 (среднее по фолдам) воспроизводится
+побитово только кодом ревизии 2ff04b5. Начиная с b8ae5d6 тот же расчёт даёт
+0.637751. Причина не в логике: ``fit_transform`` отдавал разреженную матрицу с
+несортированными индексами, а пришедший ему на смену ``fit().transform()`` — с
+сортированными, и порядок накопления суммы менял косинус в последнем знаке
+float32. Теперь порядок канонизируется явно (см. pair_features.py), так что
+расчёт больше не зависит от того, каким путём получена матрица; цена перехода
+0.00042 — внутри шумового пола выше.
 """
 
 from __future__ import annotations
 
 import csv
-import json
-import re
-import unicodedata
+import sys
 from pathlib import Path
 
 import numpy as np
 import polars as pl
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from closure_pairs import build_closure  # noqa: E402
+from pair_features import CATEGORICAL_FEATURES, FEATURE_NAMES, build_features  # noqa: E402
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 RAW_DIR = REPOSITORY_ROOT / "data" / "raw"
@@ -34,35 +56,41 @@ EXPERIMENT = "lgbm_cheap_v1"
 PREDICTIONS_DIR = REPOSITORY_ROOT / "validation" / "predictions" / "darksteeld" / EXPERIMENT
 SEED = 20260813
 
-NON_ALNUM = re.compile(r"[^0-9a-zа-я]+")
-NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
+AUDIT_FILE = REPOSITORY_ROOT / "members" / "darksteeld" / "data" / "label_audit.jsonl"
 
 
-def normalize_name(name: str) -> str:
-    text = unicodedata.normalize("NFKC", name).lower().replace("ё", "е")
-    return NON_ALNUM.sub(" ", text).strip()
+def load_audit(path: Path = AUDIT_FILE) -> dict[tuple[int, int], int]:
+    """Ручные исправления меток; последнее судейство по паре побеждает."""
+    import json
+
+    if not path.is_file():
+        return {}
+    latest: dict[tuple[int, int], dict] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            r = json.loads(line)
+            latest[(r["id1"], r["id2"])] = r
+    return {k: v["audited_label"] for k, v in latest.items()
+            if v["audited_label"] >= 0 and v["audited_label"] != v["original_target"]}
 
 
-def number_tokens(text: str) -> frozenset[str]:
-    return frozenset(
-        token.replace(",", ".").lstrip("0") or "0" for token in NUMBER.findall(text)
-    )
+def average_precision(target: np.ndarray, score: np.ndarray) -> float:
+    order = np.argsort(-score, kind="mergesort")
+    labels, ranked = target[order], score[order]
+    cumulative = np.cumsum(labels)
+    if cumulative[-1] == 0:
+        return float("nan")
+    last = np.r_[ranked[1:] != ranked[:-1], True]
+    precision = cumulative[last] / (np.arange(len(labels))[last] + 1)
+    recall = cumulative[last] / cumulative[-1]
+    return float(np.sum(np.diff(np.r_[0.0, recall]) * precision))
 
 
-def jaccard(left: frozenset, right: frozenset) -> float:
-    if not left or not right:
-        return 0.0
-    intersection = len(left & right)
-    if not intersection:
-        return 0.0
-    return intersection / (len(left) + len(right) - intersection)
-
-
-def load_folds() -> dict[str, tuple[list[tuple[int, int]], np.ndarray, list[str]]]:
+def load_folds(targets_dir: Path = TARGETS_DIR) -> dict[str, tuple[list[tuple[int, int]], np.ndarray, list[str]]]:
     folds: dict[str, tuple[list[tuple[int, int]], np.ndarray, list[str]]] = {}
-    paths = sorted(TARGETS_DIR.glob("fold_*.csv"))
+    paths = sorted(targets_dir.glob("fold_*.csv"))
     if not paths:
-        raise FileNotFoundError(f"No fold targets in {TARGETS_DIR}; run make validation-targets")
+        raise FileNotFoundError(f"No fold targets in {targets_dir}; run make validation-targets")
     for path in paths:
         pairs: list[tuple[int, int]] = []
         targets: list[int] = []
@@ -77,9 +105,32 @@ def load_folds() -> dict[str, tuple[list[tuple[int, int]], np.ndarray, list[str]
 
 
 def main() -> None:
+    import argparse
+
     import lightgbm as lgb
 
-    folds = load_folds()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--targets-dir", type=Path, default=TARGETS_DIR,
+                        help="fold targets; use validation/targets_v2 for the stratified spec v2")
+    parser.add_argument("--predictions-dir", type=Path, default=PREDICTIONS_DIR)
+    parser.add_argument("--audit", action="store_true",
+                        help="обучать на метках, исправленных в label_audit.jsonl")
+    parser.add_argument("--seed", type=int, default=SEED,
+                        help="сид бустинга; варьируя его, меряют шумовой пол пайплайна")
+    parser.add_argument("--audit-file", type=Path, default=AUDIT_FILE,
+                        help="другой журнал: например общий с разметкой всей команды")
+    parser.add_argument("--closure", action="store_true",
+                        help="добавить в ОБУЧЕНИЕ пары, выводимые транзитивностью")
+    parser.add_argument("--closure-weight", type=float, default=1.0,
+                        help="вес выведенной строки против размеченной")
+    parser.add_argument("--closure-fraction", type=float, default=1.0,
+                        help="доля выведенных пар, взятая случайно (seed фиксирован)")
+    parser.add_argument("--closure-kind", choices=["both", "pos", "neg"], default="both",
+                        help="какие выведенные пары брать")
+    args = parser.parse_args()
+    predictions_dir = args.predictions_dir
+
+    folds = load_folds(args.targets_dir)
     fold_ids = list(folds)
     all_pairs = [pair for fold_id in fold_ids for pair in folds[fold_id][0]]
     y = np.concatenate([folds[fold_id][1] for fold_id in fold_ids])
@@ -90,105 +141,85 @@ def main() -> None:
     category_codes = {name: code for code, name in enumerate(sorted(set(categories_all)))}
     print(f"pairs={len(all_pairs)} folds={ {f: len(folds[f][0]) for f in fold_ids} }")
 
-    items = pl.read_parquet(RAW_DIR / "items_human.parquet", columns=["id", "name", "attributes"])
-    row_of_id = {int(item): row for row, item in enumerate(items["id"].to_list())}
-    index1 = np.fromiter((row_of_id[a] for a, _ in all_pairs), dtype=np.int64, count=len(all_pairs))
-    index2 = np.fromiter((row_of_id[b] for _, b in all_pairs), dtype=np.int64, count=len(all_pairs))
+    y_original = y.copy()
+    if args.audit:
+        corrections = load_audit(args.audit_file)
+        applied = 0
+        for position, pair in enumerate(all_pairs):
+            if pair in corrections:
+                y[position] = corrections[pair]; applied += 1
+        print(f"доразметка: применено {applied} исправлений из {len(corrections)} "
+              f"в журнале {args.audit_file.name}")
+    else:
+        print("доразметка: не применяется (--audit чтобы включить)")
 
-    print("name features...")
-    names = items["name"].to_list()
-    normalized = [normalize_name(name) for name in names]
-    name_tokens = [frozenset(name.split()) for name in normalized]
-    name_numbers = [number_tokens(name) for name in normalized]
+    extra_pairs: list[tuple[int, int]] = []
+    extra_y = np.zeros(0)
+    extra_fold = np.zeros(0, dtype=int)
+    if args.closure:
+        # выведенные пары, отсуженные вручную как «не дубль», рвут свою цепочку
+        import json as _json
+        rejected = set()
+        if AUDIT_FILE.is_file():
+            for line in AUDIT_FILE.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    r = _json.loads(line)
+                    if r.get("mode") == "closure" and r["audited_label"] == 0:
+                        rejected.add((r["id1"], r["id2"]))
+        if rejected:
+            print(f"замыкание: {len(rejected)} выведенных пар отсужены как «не дубль» — "
+                  f"их компоненты исключаются")
+        produced, produced_y, produced_fold, contradictions = build_closure(
+            all_pairs, y.tolist(), fold_of_row.tolist(), rejected)
+        if contradictions:
+            print(f"замыкание: {len(contradictions)} противоречий после исправлений — "
+                  f"их компоненты исключены целиком")
+        if args.closure_kind != "both":
+            want = 1.0 if args.closure_kind == "pos" else 0.0
+            keep = [v == want for v in produced_y]
+            produced = [p for p, k in zip(produced, keep) if k]
+            produced_y = [v for v, k in zip(produced_y, keep) if k]
+            produced_fold = [f for f, k in zip(produced_fold, keep) if k]
+        if args.closure_fraction < 1.0:
+            rng = np.random.default_rng(SEED)
+            keep = rng.random(len(produced)) < args.closure_fraction
+            produced = [p for p, k in zip(produced, keep) if k]
+            produced_y = [v for v, k in zip(produced_y, keep) if k]
+            produced_fold = [f for f, k in zip(produced_fold, keep) if k]
+        extra_pairs = produced
+        extra_y = np.asarray(produced_y, dtype=np.float64)
+        extra_fold = np.asarray(produced_fold, dtype=int)
+        positives = int(extra_y.sum())
+        print(f"замыкание: {len(extra_pairs)} выведенных пар "
+              f"(+{positives} положительных, +{len(extra_pairs) - positives} отрицательных), "
+              f"вес {args.closure_weight}, доля {args.closure_fraction}")
+        print(f"  по фолдам: { {k: int((extra_fold == k).sum()) for k in range(len(fold_ids))} }")
+    else:
+        print("замыкание: не применяется (--closure чтобы включить)")
 
-    from sklearn.feature_extraction.text import TfidfVectorizer
-
-    vectorizer = TfidfVectorizer(
-        analyzer="char_wb", ngram_range=(3, 5), min_df=2, sublinear_tf=True, dtype=np.float32
+    items = pl.read_parquet(
+        RAW_DIR / "items_human.parquet", columns=["id", "name", "attributes", "category"]
     )
-    matrix = vectorizer.fit_transform(names)
-    cosine = np.zeros(len(all_pairs), dtype=np.float64)
-    for start in range(0, len(all_pairs), 200_000):
-        stop = min(start + 200_000, len(all_pairs))
-        cosine[start:stop] = np.asarray(
-            matrix[index1[start:stop]].multiply(matrix[index2[start:stop]]).sum(axis=1)
-        ).ravel()
-    del matrix, vectorizer
+    features, known = build_features(
+        items["id"].to_list(),
+        items["name"].to_list(),
+        items["attributes"].to_list(),
+        items["category"].to_list(),
+        np.asarray([a for a, _ in all_pairs + extra_pairs], dtype=np.int64),
+        np.asarray([b for _, b in all_pairs + extra_pairs], dtype=np.int64),
+        category_codes,
+    )
+    if not known.all():
+        raise AssertionError("items_human must cover every hand pair")
+    feature_names = FEATURE_NAMES
 
-    print("attribute features...")
-    kv_interner: dict[str, int] = {}
-    key_interner: dict[str, int] = {}
-    kv_key_of: list[int] = []
-    kv_sets: list[frozenset[int]] = []
-    key_sets: list[frozenset[int]] = []
-    for raw in items["attributes"].to_list():
-        try:
-            attributes = json.loads(raw)
-        except (json.JSONDecodeError, TypeError):
-            attributes = None
-        kv_tokens: set[int] = set()
-        key_tokens: set[int] = set()
-        if isinstance(attributes, dict):
-            for key, value in attributes.items():
-                key_lower = str(key).lower()
-                key_id = key_interner.setdefault(key_lower, len(key_interner))
-                key_tokens.add(key_id)
-                for element in value if isinstance(value, list) else [value]:
-                    kv = f"{key_lower}={str(element).lower()}"
-                    kv_id = kv_interner.get(kv)
-                    if kv_id is None:
-                        kv_id = len(kv_interner)
-                        kv_interner[kv] = kv_id
-                        kv_key_of.append(key_id)
-                    kv_tokens.add(kv_id)
-        kv_sets.append(frozenset(kv_tokens))
-        key_sets.append(frozenset(key_tokens))
-    kv_key_array = np.asarray(kv_key_of, dtype=np.int64)
-    del kv_interner, key_interner, kv_key_of
-
-    print("pair feature matrix...")
-    n_pairs = len(all_pairs)
-    feature_names = [
-        "name_cosine", "name_token_jaccard", "name_exact", "prefix_ratio",
-        "len1", "len2", "len_absdiff", "len_ratio",
-        "num_jaccard", "num_equal", "num_left_only", "num_right_only", "num_any",
-        "kv_jaccard", "key_jaccard", "n_shared_keys", "n_agree_keys", "n_conflict_keys",
-        "kv_size_min", "kv_size_absdiff", "category",
-    ]
-    features = np.zeros((n_pairs, len(feature_names)), dtype=np.float64)
-    features[:, 0] = cosine
-    for position in range(n_pairs):
-        i, j = index1[position], index2[position]
-        n1, n2 = normalized[i], normalized[j]
-        features[position, 1] = jaccard(name_tokens[i], name_tokens[j])
-        features[position, 2] = 1.0 if n1 == n2 and n1 else 0.0
-        limit = min(len(n1), len(n2))
-        common = 0
-        while common < limit and n1[common] == n2[common]:
-            common += 1
-        features[position, 3] = common / max(len(n1), len(n2), 1)
-        features[position, 4] = len(n1)
-        features[position, 5] = len(n2)
-        features[position, 6] = abs(len(n1) - len(n2))
-        features[position, 7] = min(len(n1), len(n2)) / max(len(n1), len(n2), 1)
-        numbers1, numbers2 = name_numbers[i], name_numbers[j]
-        features[position, 8] = jaccard(numbers1, numbers2)
-        features[position, 9] = 1.0 if numbers1 == numbers2 else 0.0
-        features[position, 10] = len(numbers1 - numbers2)
-        features[position, 11] = len(numbers2 - numbers1)
-        features[position, 12] = 1.0 if (numbers1 or numbers2) else 0.0
-        kv1, kv2 = kv_sets[i], kv_sets[j]
-        keys1, keys2 = key_sets[i], key_sets[j]
-        features[position, 13] = jaccard(kv1, kv2)
-        features[position, 14] = jaccard(keys1, keys2)
-        shared_keys = keys1 & keys2
-        agree_keys = {int(kv_key_array[token]) for token in kv1 & kv2}
-        features[position, 15] = len(shared_keys)
-        features[position, 16] = len(agree_keys)
-        features[position, 17] = len(shared_keys) - len(agree_keys)
-        features[position, 18] = min(len(kv1), len(kv2))
-        features[position, 19] = abs(len(kv1) - len(kv2))
-        features[position, 20] = category_codes[categories_all[position]]
+    # выведенные строки идут ТОЛЬКО в обучение: маска отделяет их от размеченных,
+    # по которым считается метрика
+    n_labelled = len(all_pairs)
+    y_train = np.concatenate([y, extra_y])
+    fold_train = np.concatenate([fold_of_row, extra_fold])
+    weights = np.concatenate([np.ones(n_labelled), np.full(len(extra_pairs), args.closure_weight)])
+    is_labelled = np.arange(len(fold_train)) < n_labelled
 
     params = {
         "objective": "binary",
@@ -198,34 +229,52 @@ def main() -> None:
         "feature_fraction": 0.9,
         "bagging_fraction": 0.9,
         "bagging_freq": 1,
-        "seed": SEED,
+        "seed": args.seed,
         "deterministic": True,
         "force_row_wise": True,
         "verbosity": -1,
     }
-    PREDICTIONS_DIR.mkdir(parents=True, exist_ok=True)
+    predictions_dir.mkdir(parents=True, exist_ok=True)
+    fold_scores = []
     for fold_index, fold_id in enumerate(fold_ids):
-        train_mask = fold_of_row != fold_index
+        train_mask = fold_train != fold_index
+        evaluate_mask = (fold_train == fold_index) & is_labelled
         dataset = lgb.Dataset(
             features[train_mask],
-            label=y[train_mask],
+            label=y_train[train_mask],
+            # None, а не вектор единиц: LightGBM по-разному считает границы листа
+            # для взвешенной и невзвешенной задачи, и вектор единиц сдвигает скор
+            weight=(weights[train_mask] if extra_pairs else None),
             feature_name=feature_names,
-            categorical_feature=["category"],
+            categorical_feature=CATEGORICAL_FEATURES,
             free_raw_data=True,
         )
         booster = lgb.train(params, dataset, num_boost_round=400)
-        scores = booster.predict(features[~train_mask])
+        scores = booster.predict(features[evaluate_mask])
         pairs = folds[fold_id][0]
-        with (PREDICTIONS_DIR / f"{fold_id}.csv").open("w", newline="", encoding="utf-8") as sink:
+        with (predictions_dir / f"{fold_id}.csv").open("w", newline="", encoding="utf-8") as sink:
             writer = csv.writer(sink, lineterminator="\n")
             writer.writerow(["id1", "id2", "predict"])
             for (id1, id2), score in zip(pairs, scores.tolist(), strict=True):
                 writer.writerow([id1, id2, f"{score:.8f}"])
-        print(f"{fold_id}: trained on {int(train_mask.sum())} pairs, predicted {len(pairs)}")
+        fold_rows = fold_of_row == fold_index
+        on_original = average_precision(y_original[fold_rows], scores)
+        on_corrected = average_precision(y[fold_rows], scores)
+        fold_scores.append((on_original, on_corrected))
+        print(f"{fold_id}: trained on {int(train_mask.sum())} rows "
+              f"({int((train_mask & ~is_labelled).sum())} выведенных), predicted {len(pairs)}"
+              f"  |  PR-AUC на исходных метках {on_original:.6f}, на исправленных {on_corrected:.6f}")
         if fold_index == 0:
             gains = booster.feature_importance("gain")
             order = np.argsort(-gains)[:10]
             print("  top gain:", [(feature_names[k], round(float(gains[k]), 1)) for k in order])
+
+
+    import numpy as _np
+    a = _np.mean([x for x, _ in fold_scores]); b = _np.mean([x for _, x in fold_scores])
+    print(f"\nmean PR-AUC: на исходных метках {a:.6f}, на исправленных {b:.6f}")
+    print("контроль lgbm_cheap_v1 (обучен на исходных, spec-v2): 0.638171 — "
+          "воспроизводится только кодом ревизии 2ff04b5, см. docstring")
 
 
 if __name__ == "__main__":

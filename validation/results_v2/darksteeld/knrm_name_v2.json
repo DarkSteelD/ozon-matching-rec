@@ -1,0 +1,171 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "knrm_name_v2",
+  "mean_prauc": 0.5307753274066574,
+  "pooled_prauc": 0.5290965267391383,
+  "macro_category_prauc": 0.4511922332786439,
+  "min_fold_prauc": 0.5068501936492876,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.5382595166299445,
+      "macro_category_prauc": 0.4666124673598312,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.5441723537831465,
+      "macro_category_prauc": 0.4702006039705219,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.5068501936492876,
+      "macro_category_prauc": 0.4312585947100803,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.5338192455642509,
+      "macro_category_prauc": 0.45292204472192077,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.22953722319873482
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.23201521406496722
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.26934005829840146
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.28847748792001915
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.3344660675881613
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.3762803286980876
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.39008418378944115
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.3993666216862849
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.4293539498474044
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.44506572452545634
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.4632354660183391
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.4738750507937634
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.5030928890211208
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.5139862225854046
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.5206719701694802
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.5453220080638885
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.5686750102124676
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.5965797816007314
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.7102210132475133
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.7341983942432097
+    }
+  ],
+  "worst_category": "Одежда",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T13:58:24+00:00",
+  "commit": "b91dc15",
+  "notes": "KNRM v2: normalized kernel features + BatchNorm, early stopping patience 1, navec hudlit init; spec-v2 folds. Submitted as knrm_name_v2.zip",
+  "public_prauc": 0.2303398535441153
+}

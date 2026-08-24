@@ -1,0 +1,31 @@
+{
+  "components": [
+    "knrm_llm_pretrain",
+    "knrm_attrs_llm",
+    "lgbm_cheap_v1"
+  ],
+  "transform": "logit",
+  "epsilon": 1e-06,
+  "C": 1.0,
+  "coefficients": [
+    0.2978325627947817,
+    0.46105475459155953,
+    0.6953740727594463
+  ],
+  "intercept": 0.4409985938432448,
+  "fitted_on": [
+    "fold_01",
+    "fold_02",
+    "fold_03",
+    "fold_04"
+  ],
+  "leave_one_fold_out_mean_prauc": 0.6839712533372864,
+  "leave_one_fold_out_per_fold": {
+    "fold_01": 0.6836167381505486,
+    "fold_02": 0.6825166038459376,
+    "fold_03": 0.684093297307571,
+    "fold_04": 0.6856583740450881
+  },
+  "shipped_attrs_recipe": "knrm_attrs_llm_full",
+  "note": "коэффициенты подобраны на OOF эксперимента stack3_logit_full, то есть на том рецепте атрибутного KNRM, который лежит в контейнере (предобучение на всех 11,187,780 парах matches_llm)"
+}

@@ -1,0 +1,32 @@
+{
+  "experiment": "knrm_attrs_llm_full",
+  "reads": "attributes only; product name is not used",
+  "corrections_applied": 0,
+  "audit_journal_sha256": null,
+  "pairs_pretrain": 11187780,
+  "pairs_finetune": 365654,
+  "key_vocabulary_trained": 17096,
+  "value_vocabulary_trained": 654694,
+  "key_vocabulary_shipped": 17050,
+  "value_vocabulary_shipped": 638385,
+  "min_count": 5,
+  "dim": 300,
+  "max_attrs": 24,
+  "max_key_tokens": 4,
+  "max_value_tokens": 6,
+  "seed": 20260815,
+  "pretrain_epochs": 1,
+  "best_finetune_epoch": 1,
+  "validation_prauc": 0.5708443098614722,
+  "navec_key_rows": 12853,
+  "navec_value_rows": 71910,
+  "torch_version": "2.13.0",
+  "repo_commit": "9bfb33f",
+  "local_cv": {
+    "spec_v2_mean_prauc": 0.57033477,
+    "spec_v2_zero_shot_mean_prauc": 0.455377,
+    "control_knrm_attrs_no_pretrain": 0.551883,
+    "control_knrm_llm_pretrain_on_names": 0.565568,
+    "note": "out-of-fold на замороженных фолдах; отгружаемая модель обучена на всех парах"
+  }
+}

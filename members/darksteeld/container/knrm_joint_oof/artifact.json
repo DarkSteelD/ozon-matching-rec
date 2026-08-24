@@ -1,0 +1,49 @@
+{
+  "experiment": "knrm_joint_stem",
+  "reads": "название и атрибуты; четыре канала взаимодействия",
+  "ensemble": [
+    "fold_01"
+  ],
+  "trained_on_folds": [
+    "fold_02",
+    "fold_03",
+    "fold_04"
+  ],
+  "best_epoch": 2,
+  "vocabulary": 1568883,
+  "stemming": true,
+  "min_count": 2,
+  "embedding_dtype": "float32",
+  "unknown_token_policy": "stem_map.npz, затем PyStemmer если доступен, иначе PAD",
+  "max_shapes": {
+    "title": 20,
+    "attrs": 24,
+    "key_tokens": 4,
+    "value_tokens": 6
+  },
+  "config": {
+    "embedding_dim": 300,
+    "num_kernels": 11,
+    "mu": null,
+    "sigma": null,
+    "exact_sigma": 0.001,
+    "hidden_dim": 64,
+    "dropout": 0.1,
+    "gate_hidden_dim": 64,
+    "gate_bias_init": 2.0,
+    "freeze_embeddings": false,
+    "sparse_embedding": false,
+    "attribute_chunk_size": 8,
+    "eps": 1e-12
+  },
+  "torch_version": "2.13.0",
+  "local_cv": {
+    "spec_v2_mean_prauc": 0.6235161,
+    "spec_v2_zero_shot": 0.520923,
+    "fold_of_this_model": 0.620755,
+    "control_knrm_joint_prev_vocabulary": 0.61915363,
+    "control_blend_name_attrs_50_50": 0.617125,
+    "note": "отгружается ОДНА модель фолда (обучена на трёх фолдах из четырёх). mean_prauc 0.623516 — среднее четырёх таких моделей, каждая на своём held-out фолде; у этой конкретной на её фолде 0.620755"
+  },
+  "timing_warning": "инференс не измерен на боевом объёме; прежняя версия этой сети с меньшим словарём уложилась в лимит и получила публичный скор"
+}

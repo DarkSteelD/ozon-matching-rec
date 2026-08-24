@@ -1,0 +1,170 @@
+{
+  "fold_spec_version": 2,
+  "member": "darksteeld",
+  "experiment": "lgbm_llm",
+  "mean_prauc": 0.5966830448632847,
+  "pooled_prauc": 0.5966607829088224,
+  "macro_category_prauc": 0.5255685772750301,
+  "min_fold_prauc": 0.5943183595281276,
+  "folds": [
+    {
+      "id": "fold_01",
+      "rows": 91408,
+      "positives": 23477,
+      "prauc": 0.5943183595281276,
+      "macro_category_prauc": 0.5249367489538266,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_02",
+      "rows": 91414,
+      "positives": 23475,
+      "prauc": 0.5969726820808078,
+      "macro_category_prauc": 0.5253867838237407,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_03",
+      "rows": 91416,
+      "positives": 23472,
+      "prauc": 0.5975017226542212,
+      "macro_category_prauc": 0.52544625500646,
+      "categories_skipped": 0
+    },
+    {
+      "id": "fold_04",
+      "rows": 91416,
+      "positives": 23466,
+      "prauc": 0.5979394151899821,
+      "macro_category_prauc": 0.5299979817058131,
+      "categories_skipped": 0
+    }
+  ],
+  "per_category": [
+    {
+      "category": "Одежда",
+      "rows": 23357,
+      "positives": 2751,
+      "prauc": 0.27012288086451947
+    },
+    {
+      "category": "Ювелирные изделия",
+      "rows": 18695,
+      "positives": 2317,
+      "prauc": 0.2778805897991675
+    },
+    {
+      "category": "Обувь",
+      "rows": 18362,
+      "positives": 1813,
+      "prauc": 0.28674682351564623
+    },
+    {
+      "category": "Галантерея и аксессуары",
+      "rows": 17984,
+      "positives": 3015,
+      "prauc": 0.37681766428995456
+    },
+    {
+      "category": "Мебель",
+      "rows": 18366,
+      "positives": 2756,
+      "prauc": 0.3818044471554994
+    },
+    {
+      "category": "Электроника",
+      "rows": 18681,
+      "positives": 3227,
+      "prauc": 0.4640833654559202
+    },
+    {
+      "category": "Автотовары",
+      "rows": 19010,
+      "positives": 3326,
+      "prauc": 0.4647372974949235
+    },
+    {
+      "category": "Спорт и отдых",
+      "rows": 17717,
+      "positives": 4600,
+      "prauc": 0.4654058750217709
+    },
+    {
+      "category": "Канцелярские товары",
+      "rows": 17435,
+      "positives": 5903,
+      "prauc": 0.5391212724687484
+    },
+    {
+      "category": "Дом и сад",
+      "rows": 17574,
+      "positives": 4608,
+      "prauc": 0.5504459310421476
+    },
+    {
+      "category": "Строительство и ремонт",
+      "rows": 18102,
+      "positives": 3929,
+      "prauc": 0.5523759461253258
+    },
+    {
+      "category": "Аптека",
+      "rows": 18285,
+      "positives": 1328,
+      "prauc": 0.5584797594155153
+    },
+    {
+      "category": "Красота и гигиена",
+      "rows": 17286,
+      "positives": 6283,
+      "prauc": 0.587018579062776
+    },
+    {
+      "category": "Продукты питания",
+      "rows": 18284,
+      "positives": 4946,
+      "prauc": 0.5892029644295697
+    },
+    {
+      "category": "Товары для животных",
+      "rows": 18211,
+      "positives": 6480,
+      "prauc": 0.6219005126956266
+    },
+    {
+      "category": "Бытовая химия",
+      "rows": 17436,
+      "positives": 8183,
+      "prauc": 0.6600257396697546
+    },
+    {
+      "category": "Музыкальные инструменты",
+      "rows": 17817,
+      "positives": 3950,
+      "prauc": 0.6718626529717414
+    },
+    {
+      "category": "Бытовая техника",
+      "rows": 17814,
+      "positives": 6404,
+      "prauc": 0.6880773901171269
+    },
+    {
+      "category": "Хобби и творчество",
+      "rows": 17677,
+      "positives": 8202,
+      "prauc": 0.749359372343608
+    },
+    {
+      "category": "Детские товары",
+      "rows": 17561,
+      "positives": 9869,
+      "prauc": 0.7559024815612614
+    }
+  ],
+  "worst_category": "Одежда",
+  "pooled_categories_skipped": 0,
+  "evaluated_at": "2026-08-14T17:07:17+00:00",
+  "commit": "9bfb33f",
+  "notes": "ОТРИЦАТЕЛЬНЫЙ РЕЗУЛЬТАТ. LightGBM на 1M matches_llm (бинаризовано по 0.5) + три тренировочных фолда, предсказание held-out; общий TF-IDF, закреплённые коды категорий, 32 ручных исправления. Свип веса LLM-строк монотонен и весь ниже контроля 0.63817: w=0.05 -> 0.63487, 0.1 -> 0.63180, 0.2 -> 0.62457, 0.4 -> 0.61396, 1.0 -> 0.59668. Оптимум w=0, то есть одностадийное подмешивание LLM в lgbm вредит при любой дозе"
+}

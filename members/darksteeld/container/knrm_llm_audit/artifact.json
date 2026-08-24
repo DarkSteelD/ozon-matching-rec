@@ -1,0 +1,24 @@
+{
+  "experiment": "knrm_llm_audit",
+  "corrections_applied": 97,
+  "audit_journal_sha256": "087c3cc013d0272eab5eb12d2e200f0717a49874517981473aafdd54b5a7a38c",
+  "pairs_pretrain": 11187780,
+  "pairs_finetune": 365654,
+  "vocabulary_trained": 1603850,
+  "vocabulary_shipped": 451199,
+  "ship_min_count": 5,
+  "dim": 300,
+  "max_len": 20,
+  "seed": 20260814,
+  "pretrain_epochs": 1,
+  "best_finetune_epoch": 1,
+  "validation_prauc": 0.569805359399798,
+  "navec_rows": 121401,
+  "torch_version": "2.13.0",
+  "repo_commit": "9bfb33f",
+  "local_cv": {
+    "spec_v2_mean_prauc": 0.56556775,
+    "spec_v2_zero_shot_mean_prauc": 0.474411,
+    "control_knrm_name_v2": 0.53077533
+  }
+}
