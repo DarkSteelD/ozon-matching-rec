@@ -2,13 +2,13 @@
   "track_slug": "e-cup-2026-matching",
   "leaderboard": "validation/leaderboard.csv",
   "top5_out": "validation/TOP5.md",
-  "primary": "mean_prauc",
+  "primary": "macro_cat_prauc",
   "reversed": false,
   "public_col": "public_prauc",
   "metric_fields": [
+    "macro_cat_prauc",
     "mean_prauc",
-    "pooled_prauc",
-    "macro_cat_prauc"
+    "pooled_prauc"
   ],
   "prediction_columns": [
     "id1",
