@@ -1,0 +1,32 @@
+{
+  "status": "checked",
+  "rows": 78398,
+  "categories": [
+    "Галантерея и аксессуары",
+    "Обувь",
+    "Одежда",
+    "Ювелирные изделия"
+  ],
+  "folds": [
+    "fold_01",
+    "fold_02",
+    "fold_03",
+    "fold_04"
+  ],
+  "positive": 9896,
+  "negative": 68502,
+  "components": 73611,
+  "multi_edge_components": 3770,
+  "max_component_edges": 15,
+  "fashion_audited_rows": 203,
+  "baseline": "final_stack_all",
+  "alternatives": [
+    "zs_llm_blend",
+    "knrm_name_v2",
+    "ce_priodistill",
+    "ce_fashion_specialist"
+  ],
+  "bootstrap_reps_requested": 1000,
+  "seed": 20260824,
+  "raw_fashion_audit_records": 203
+}

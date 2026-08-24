@@ -1,0 +1,18 @@
+{
+  "source": "single_direction_metrics_4fold.json",
+  "source_sha256": "f835a2c3931157e336b2ac68f82e14dde8fda2b09f0c43a5617ef2c2f4ad5bfa",
+  "canonical_direction": "id1_to_id2",
+  "e3_len384_minus_e2_len224_macro_ap_by_fold": {
+    "fold_01": 0.0048509169792106,
+    "fold_02": 0.0046833917122527,
+    "fold_03": 0.0051469485691151,
+    "fold_04": 0.0019053578464808
+  },
+  "mean_delta_macro_ap": 0.0041466537767650,
+  "positive_folds": 4,
+  "folds": 4,
+  "e3_len384_single_macro_ap": 0.8041266721999905,
+  "e2_len224_single_macro_ap": 0.7999800184232255,
+  "e3_len384_single_minus_two_direction_macro_ap": -0.0014437355697800,
+  "runtime_seconds_h100": 391.0382351875305
+}

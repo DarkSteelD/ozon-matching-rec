@@ -1,0 +1,14 @@
+{
+  "source_fp32_model_bytes": 711440380,
+  "source_fp32_model_sha256": "066d7ee67c3dd62a9d5eb2ee869b950e4a3b4b8bf798e0956f64ed3bcf893942",
+  "package_fp16_model_bytes": 355731962,
+  "package_fp16_model_sha256": "77c0617a0b966d870d6a92877ad803e15788ebda8b2708466e617bcb14668c50",
+  "state_tensor_count": 201,
+  "state_tensor_mismatches_after_source_half_vs_saved_half": 0,
+  "config_source_sha256": "708d0cbea1a5e433c3a1a0ad637272eb77ab279bb3946488fc5cf90021b6c500",
+  "config_package_sha256": "708d0cbea1a5e433c3a1a0ad637272eb77ab279bb3946488fc5cf90021b6c500",
+  "tokenizer_source_sha256": "0056bd523ec76698e322acfbd03277cc7b21ed9f61186cc996a80f7bb0067a50",
+  "tokenizer_package_sha256": "0056bd523ec76698e322acfbd03277cc7b21ed9f61186cc996a80f7bb0067a50",
+  "sample_prediction_bit_equal": true,
+  "sample_prediction_max_abs": 0.0
+}

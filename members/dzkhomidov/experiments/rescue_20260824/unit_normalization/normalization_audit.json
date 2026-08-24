@@ -1,0 +1,714 @@
+{
+  "rows": 365654,
+  "edited_rows": 282394,
+  "edits": 829585,
+  "family_rows": {
+    "mass": 142253,
+    "volume": 35832,
+    "dimension": 27087,
+    "count": 156897,
+    "fashion_size": 60458
+  },
+  "examples": [
+    {
+      "field": "name1",
+      "source": "2,6 кг",
+      "normalized": "2600g ",
+      "corrupted": "7600g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "21 × 29.7 см",
+      "normalized": "21x29.7cm   ",
+      "corrupted": "71x29.7cm   ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "2 кг",
+      "normalized": "2e3g",
+      "corrupted": "7e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "4 x 4 м",
+      "normalized": "4x4m   ",
+      "corrupted": "9x4m   ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "1,5 г",
+      "normalized": "1.5g ",
+      "corrupted": "6.5g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "30 г",
+      "normalized": "30g ",
+      "corrupted": "80g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "20 мл",
+      "normalized": "20ml ",
+      "corrupted": "70ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "1,5 кг",
+      "normalized": "1500g ",
+      "corrupted": "6500g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "1 шт.",
+      "normalized": "1pc  ",
+      "corrupted": "6pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "90г",
+      "normalized": "90g",
+      "corrupted": "40g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "90г",
+      "normalized": "90g",
+      "corrupted": "40g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "6 шт",
+      "normalized": "6pc ",
+      "corrupted": "1pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "12х8 м",
+      "normalized": "12x8m ",
+      "corrupted": "62x8m ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "3,7г",
+      "normalized": "3.7g",
+      "corrupted": "8.7g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "40 г",
+      "normalized": "40g ",
+      "corrupted": "90g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "3,8 кг",
+      "normalized": "3800g ",
+      "corrupted": "8800g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "140 мл",
+      "normalized": "140ml ",
+      "corrupted": "640ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "5 литров",
+      "normalized": "5e3ml   ",
+      "corrupted": "0e3ml   ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "10кг",
+      "normalized": "1e4g",
+      "corrupted": "6e4g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "500 г",
+      "normalized": "500g ",
+      "corrupted": "000g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "15 кг",
+      "normalized": "15e3g",
+      "corrupted": "65e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "15 кг",
+      "normalized": "15e3g",
+      "corrupted": "65e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "380 мл",
+      "normalized": "380ml ",
+      "corrupted": "880ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "12шт",
+      "normalized": "12pc",
+      "corrupted": "62pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "85 гр",
+      "normalized": "85g  ",
+      "corrupted": "35g  ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "6 кг",
+      "normalized": "6e3g",
+      "corrupted": "1e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "100 мл",
+      "normalized": "100ml ",
+      "corrupted": "600ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "1 кг",
+      "normalized": "1e3g",
+      "corrupted": "6e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "1 кг",
+      "normalized": "1e3g",
+      "corrupted": "6e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "100 мл",
+      "normalized": "100ml ",
+      "corrupted": "600ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "2,5 кг",
+      "normalized": "2500g ",
+      "corrupted": "7500g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "11,5г",
+      "normalized": "11.5g",
+      "corrupted": "61.5g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "1 шт.",
+      "normalized": "1pc  ",
+      "corrupted": "6pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "100 мл",
+      "normalized": "100ml ",
+      "corrupted": "600ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "240 мл",
+      "normalized": "240ml ",
+      "corrupted": "740ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "36гр",
+      "normalized": "36g ",
+      "corrupted": "86g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "20шт",
+      "normalized": "20pc",
+      "corrupted": "70pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "25 гр",
+      "normalized": "25g  ",
+      "corrupted": "75g  ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "150 гр",
+      "normalized": "150g  ",
+      "corrupted": "650g  ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "12шт",
+      "normalized": "12pc",
+      "corrupted": "62pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "1шт",
+      "normalized": "1pc",
+      "corrupted": "6pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "180г",
+      "normalized": "180g",
+      "corrupted": "680g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "180шт",
+      "normalized": "180pc",
+      "corrupted": "680pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "8,5×2 см",
+      "normalized": "8.5x2cm ",
+      "corrupted": "3.5x2cm ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "30 шт.",
+      "normalized": "30pc  ",
+      "corrupted": "80pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "50 мл",
+      "normalized": "50ml ",
+      "corrupted": "00ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "106,2х212,4 см",
+      "normalized": "106.2x212.4cm ",
+      "corrupted": "606.2x212.4cm ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "25х25 см",
+      "normalized": "25x25cm ",
+      "corrupted": "75x25cm ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "5 шт",
+      "normalized": "5pc ",
+      "corrupted": "0pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "12 кг",
+      "normalized": "12e3g",
+      "corrupted": "62e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "400 г",
+      "normalized": "400g ",
+      "corrupted": "900g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "5 шт",
+      "normalized": "5pc ",
+      "corrupted": "0pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "размер 1",
+      "normalized": "sz=1    ",
+      "corrupted": "sz=6    ",
+      "family": "fashion_size"
+    },
+    {
+      "field": "name1",
+      "source": "75г",
+      "normalized": "75g",
+      "corrupted": "25g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "28шт",
+      "normalized": "28pc",
+      "corrupted": "78pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "430 г",
+      "normalized": "430g ",
+      "corrupted": "930g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "400 мл",
+      "normalized": "400ml ",
+      "corrupted": "900ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "2 кг",
+      "normalized": "2e3g",
+      "corrupted": "7e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "2 шт",
+      "normalized": "2pc ",
+      "corrupted": "7pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "15 мл",
+      "normalized": "15ml ",
+      "corrupted": "65ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "9шт",
+      "normalized": "9pc",
+      "corrupted": "4pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "30 г",
+      "normalized": "30g ",
+      "corrupted": "80g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "2 шт",
+      "normalized": "2pc ",
+      "corrupted": "7pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "10 шт",
+      "normalized": "10pc ",
+      "corrupted": "60pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "10 шт",
+      "normalized": "10pc ",
+      "corrupted": "60pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "10 шт",
+      "normalized": "10pc ",
+      "corrupted": "60pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "15х15 см",
+      "normalized": "15x15cm ",
+      "corrupted": "65x15cm ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "30х38см",
+      "normalized": "30x38cm",
+      "corrupted": "80x38cm",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "12 гр",
+      "normalized": "12g  ",
+      "corrupted": "62g  ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "410 г",
+      "normalized": "410g ",
+      "corrupted": "910g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "50 шт.",
+      "normalized": "50pc  ",
+      "corrupted": "00pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "3 шт.",
+      "normalized": "3pc  ",
+      "corrupted": "8pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "размер 21",
+      "normalized": "sz=21    ",
+      "corrupted": "sz=71    ",
+      "family": "fashion_size"
+    },
+    {
+      "field": "name1",
+      "source": "140г",
+      "normalized": "140g",
+      "corrupted": "640g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "1000 г",
+      "normalized": "1e3g  ",
+      "corrupted": "6e3g  ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "420 мл",
+      "normalized": "420ml ",
+      "corrupted": "920ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "10 шт.",
+      "normalized": "10pc  ",
+      "corrupted": "60pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "35 х 35 см",
+      "normalized": "35x35cm   ",
+      "corrupted": "85x35cm   ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "2 шт.",
+      "normalized": "2pc  ",
+      "corrupted": "7pc  ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "размер 41",
+      "normalized": "sz=41    ",
+      "corrupted": "sz=91    ",
+      "family": "fashion_size"
+    },
+    {
+      "field": "name1",
+      "source": "размер 5",
+      "normalized": "sz=5    ",
+      "corrupted": "sz=0    ",
+      "family": "fashion_size"
+    },
+    {
+      "field": "name1",
+      "source": "160х280 см",
+      "normalized": "160x280cm ",
+      "corrupted": "660x280cm ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "370 г",
+      "normalized": "370g ",
+      "corrupted": "870g ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "1шт",
+      "normalized": "1pc",
+      "corrupted": "6pc",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "160г",
+      "normalized": "160g",
+      "corrupted": "660g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "1 кг",
+      "normalized": "1e3g",
+      "corrupted": "6e3g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "размер 17",
+      "normalized": "sz=17    ",
+      "corrupted": "sz=67    ",
+      "family": "fashion_size"
+    },
+    {
+      "field": "name1",
+      "source": "269 мл",
+      "normalized": "269ml ",
+      "corrupted": "769ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "500 мл",
+      "normalized": "500ml ",
+      "corrupted": "000ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "500 мл",
+      "normalized": "500ml ",
+      "corrupted": "000ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "240 мл",
+      "normalized": "240ml ",
+      "corrupted": "740ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "1000 гр",
+      "normalized": "1e3g   ",
+      "corrupted": "6e3g   ",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "375 мл",
+      "normalized": "375ml ",
+      "corrupted": "875ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "1 штука",
+      "normalized": "1pc    ",
+      "corrupted": "6pc    ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "60 мл",
+      "normalized": "60ml ",
+      "corrupted": "10ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "31х31 см",
+      "normalized": "31x31cm ",
+      "corrupted": "81x31cm ",
+      "family": "dimension"
+    },
+    {
+      "field": "name1",
+      "source": "250 мл",
+      "normalized": "250ml ",
+      "corrupted": "750ml ",
+      "family": "volume"
+    },
+    {
+      "field": "name1",
+      "source": "10кг",
+      "normalized": "1e4g",
+      "corrupted": "6e4g",
+      "family": "mass"
+    },
+    {
+      "field": "name1",
+      "source": "3 шт",
+      "normalized": "3pc ",
+      "corrupted": "8pc ",
+      "family": "count"
+    },
+    {
+      "field": "name1",
+      "source": "15г",
+      "normalized": "15g",
+      "corrupted": "65g",
+      "family": "mass"
+    }
+  ]
+}

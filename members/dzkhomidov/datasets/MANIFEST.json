@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-08-24",
+  "source_root": "/home/dzkhomidov/matching-work/data",
+  "files": [
+    {
+      "path": "hand_pairs.parquet",
+      "bytes": 121525891,
+      "rows": 365654,
+      "sha256": "d84e08e5a434fef6a5a1e96a269be021cedc37867fb3cdb12bfc257018fe9d31",
+      "columns": ["fold", "id1", "id2", "target", "category", "name1", "attrs1", "name2", "attrs2"]
+    },
+    {
+      "path": "hand_pairs_pd_v3cal.parquet",
+      "bytes": 118255428,
+      "rows": 365654,
+      "sha256": "b9ebd015f1881c1ac58b5966233b74390a25f13bf751af9a72dafc803c106af9",
+      "columns": ["fold", "id1", "id2", "target", "category", "name1", "attrs1", "name2", "attrs2"]
+    },
+    {
+      "path": "hand_pairs_prio_distill.parquet",
+      "bytes": 120537211,
+      "rows": 365654,
+      "sha256": "787ba14cd7c74689852a28098d745ef4bfdac41ce2997dc8aef3a62fe3ec9611",
+      "columns": ["fold", "id1", "id2", "category", "name1", "attrs1", "name2", "attrs2", "target"]
+    },
+    {
+      "path": "llm_pairs_full/part-00000.parquet",
+      "bytes": 619187844,
+      "rows": 2827689,
+      "sha256": "3279a18bc1474c77e13a0b685f17c4b288488c7896b3cecb9967161461df5fca"
+    },
+    {
+      "path": "llm_pairs_full/part-00001.parquet",
+      "bytes": 619952517,
+      "rows": 2827689,
+      "sha256": "07a26436a926c6c37d7362706aa2ca4dc874e150b1700603f762e1a0d1d5a88a"
+    },
+    {
+      "path": "llm_pairs_full/part-00002.parquet",
+      "bytes": 619276731,
+      "rows": 2827678,
+      "sha256": "9bf83393ba0b8561460bbdb310988a25971717a727315b93ae32c2bc3398c1bb"
+    },
+    {
+      "path": "llm_pairs_full/part-00003.parquet",
+      "bytes": 592671604,
+      "rows": 2704724,
+      "sha256": "95c7ce0aef1407be262dd4daa18d6f1531a2b8eab18f5ffff5e7e423bee4aa9f"
+    }
+  ],
+  "llm_pairs_full_source": {
+    "bytes": 2368157697,
+    "rows": 11187780,
+    "row_groups": 91,
+    "sha256": "47aa9ab675078a6b2074138d8a106ece48460fcdfbf4619efe60d9c21660028f",
+    "columns": ["id1", "id2", "target", "name1", "category1", "attrs1", "name2", "attrs2"],
+    "verification": "Each ordered shard was compared with its exact source row-group range using pyarrow.Table.equals(check_metadata=false); all four comparisons passed and the row total matched."
+  }
+}

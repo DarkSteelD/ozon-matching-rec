@@ -1,0 +1,22 @@
+{
+  "input": "/home/dzkhomidov/ozon-hack/repos/ozon-matching-rec/members/dzkhomidov/preds/all_model_predictions_oof.parquet",
+  "input_sha256": "2dd369a0032891246c9dd0181414b7506a5c33e93e622f6bed2112ba1bf84083",
+  "rows": 365654,
+  "folds": [
+    "fold_01",
+    "fold_02",
+    "fold_03",
+    "fold_04"
+  ],
+  "categories": 20,
+  "models": {
+    "rubase": "ce_rubase_len384",
+    "e5": "ce_e5_len288",
+    "mdeb": "ce_mdeb_len224",
+    "zs": "zs_llm_blend",
+    "distill": "ce_priodistill"
+  },
+  "grid_size": 70,
+  "seed": 20260824,
+  "runtime_seconds": 469.8027822971344
+}

@@ -1,0 +1,37 @@
+{
+  "gate_threshold_each_fold": 0.001,
+  "stage1_complete": false,
+  "fgm05_primary_gate_pass": null,
+  "fgm05_mechanism_controls_pass": null,
+  "bootstrap95_category_delta": null,
+  "metrics": [
+    {
+      "fold": "fold_01",
+      "variant": "bce",
+      "macro_category_ap": 0.7994000011424561,
+      "pooled_ap": 0.849524582545922,
+      "brier": 0.08357665468799759,
+      "logloss": 0.2762074853095696,
+      "ece15": 0.013371301368858102,
+      "delta_macro_category_ap": 0.0,
+      "delta_pooled_ap": 0.0,
+      "delta_brier": 0.0,
+      "delta_logloss": 0.0,
+      "delta_ece15": 0.0
+    },
+    {
+      "fold": "fold_02",
+      "variant": "bce",
+      "macro_category_ap": 0.8047863386255907,
+      "pooled_ap": 0.858216967474909,
+      "brier": 0.08198529644637165,
+      "logloss": 0.2716985582353844,
+      "ece15": 0.015161030521875054,
+      "delta_macro_category_ap": 0.0,
+      "delta_pooled_ap": 0.0,
+      "delta_brier": 0.0,
+      "delta_logloss": 0.0,
+      "delta_ece15": 0.0
+    }
+  ]
+}

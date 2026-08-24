@@ -1,0 +1,14 @@
+{
+  "status": "paused_for_submission_priority",
+  "host": "avi-ix-devbox02",
+  "physical_gpu": 0,
+  "gpu_released": true,
+  "lock_released": true,
+  "fold_01_complete": true,
+  "selected_label": "full",
+  "selected_fold_01_delta": -0.00006838727597846539,
+  "fold_01_gate_gt_0.001": false,
+  "fold_02_started": false,
+  "head_only_started": false,
+  "fsk35_used": false
+}

@@ -1,0 +1,7 @@
+variant,fold,prauc,delta_prauc_vs_baseline,macro_category_prauc,delta_macro_vs_baseline,worst_fashion_prauc,delta_worst_fashion_vs_baseline,mean_fashion_prauc,delta_mean_fashion_vs_baseline,runtime_seconds,status,artifact
+baseline,fold_01,0.849689050,0,0.799681844,0,0.577834309,0,0.632600103,0,530.438,checked,predictions/baseline/fold_01.csv
+category_balanced,fold_01,0.849857860,0.000168811,0.799648263,-0.000033581,0.577649500,-0.000184809,0.631680693,-0.000919410,531.412,checked,predictions/category_balanced/fold_01.csv
+baseline,fold_02,0.858357598,0,0.804719015,0,0.573707868,0,0.619277214,0,531.796,checked,predictions/baseline/fold_02.csv
+category_balanced,fold_02,0.858258826,-0.000098772,0.804091254,-0.000627760,0.569002489,-0.004705379,0.615745643,-0.003531571,530.456,checked,predictions/category_balanced/fold_02.csv
+baseline,mean_2fold,0.854023324,0,0.801946056,0,0.574924317,0,0.625286674,0,531.117,checked,metrics/metrics.json
+category_balanced,mean_2fold,0.854058343,0.000035019,0.801569949,-0.000376107,0.576790829,0.001866512,0.623172039,-0.002114634,530.934,checked,metrics/metrics.json

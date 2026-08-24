@@ -1,0 +1,60 @@
+{
+  "metrics": [
+    {
+      "variant": "baseline",
+      "fold": "fold_01",
+      "prauc": 0.8496890497104598,
+      "macro_category_prauc": 0.7996818437367808,
+      "worst_fashion_prauc": 0.5778343088293286,
+      "mean_fashion_prauc": 0.6326001030289727
+    },
+    {
+      "variant": "category_balanced",
+      "fold": "fold_01",
+      "prauc": 0.8498578603901585,
+      "macro_category_prauc": 0.7996482629449482,
+      "worst_fashion_prauc": 0.577649499806539,
+      "mean_fashion_prauc": 0.6316806933212988
+    },
+    {
+      "variant": "baseline",
+      "fold": "fold_02",
+      "prauc": 0.8583575984526934,
+      "macro_category_prauc": 0.8047190147766636,
+      "worst_fashion_prauc": 0.5737078676092485,
+      "mean_fashion_prauc": 0.6192772141488483
+    },
+    {
+      "variant": "category_balanced",
+      "fold": "fold_02",
+      "prauc": 0.8582588263951691,
+      "macro_category_prauc": 0.8040912543230748,
+      "worst_fashion_prauc": 0.5690024886563119,
+      "mean_fashion_prauc": 0.6157456426899012
+    },
+    {
+      "variant": "baseline",
+      "fold": "mean_2fold",
+      "prauc": 0.8540233240815767,
+      "macro_category_prauc": 0.8019460555219748,
+      "worst_fashion_prauc": 0.5749243167784033,
+      "mean_fashion_prauc": 0.6252866736476396
+    },
+    {
+      "variant": "category_balanced",
+      "fold": "mean_2fold",
+      "prauc": 0.8540583433926638,
+      "macro_category_prauc": 0.8015699489848565,
+      "worst_fashion_prauc": 0.5767908292397117,
+      "mean_fashion_prauc": 0.623172039421241
+    }
+  ],
+  "ranking_pooled_2fold": {
+    "spearman": 0.9983501513630862,
+    "mean_absolute_rank_change": 2097.764913952177,
+    "median_absolute_rank_change": 1450.0,
+    "rows_moved_at_least_1pct": 75361,
+    "rows_moved_at_least_1pct_fraction": 0.41264078935120546,
+    "top_decile_jaccard": 0.9342335186656077
+  }
+}

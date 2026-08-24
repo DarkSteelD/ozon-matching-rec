@@ -1,0 +1,82 @@
+{
+  "mix": 0.1,
+  "rows": 365654,
+  "input_sha256": {
+    "/home/dzkhomidov/matching-work/data/hand_pairs_pd_v3cal.parquet": "b9ebd015f1881c1ac58b5966233b74390a25f13bf751af9a72dafc803c106af9",
+    "/home/dzkhomidov/ozon-hack/repos/ozon-matching-rec/members/dzkhomidov/preds/all_model_predictions_oof.parquet": "2dd369a0032891246c9dd0181414b7506a5c33e93e622f6bed2112ba1bf84083",
+    "/home/dzkhomidov/matching-work/rescue_20260824/category_blend/artifacts_v2/heldout_predictions.parquet": "beb578ea928fb35253022190ff180d7239369e3e2aea445391e095e471668deb"
+  },
+  "base_target": {
+    "min": 0.0007,
+    "q01": 0.0007,
+    "mean": 0.25680371334649693,
+    "std": 0.34251611085653333,
+    "q99": 0.9845654993514914,
+    "max": 0.9992999999999999
+  },
+  "recovered_old_teacher": {
+    "min": 0.0009999999999999692,
+    "q01": 0.001,
+    "mean": 0.25681696357758976,
+    "std": 0.3317230270018591,
+    "q99": 0.9779507133592734,
+    "max": 0.9989999999999998
+  },
+  "global_teacher_calibrated": {
+    "min": 0.0010000000474974513,
+    "q01": 0.0039840638637542725,
+    "mean": 0.2567729383603595,
+    "std": 0.2785378476567946,
+    "q99": 0.9418960213661194,
+    "max": 0.9990000128746033
+  },
+  "category_teacher_calibrated": {
+    "min": 0.0010000000474974513,
+    "q01": 0.004297994077205658,
+    "mean": 0.256773570830302,
+    "std": 0.28008570932474786,
+    "q99": 0.9455535411834717,
+    "max": 0.9990000128746033
+  },
+  "global_target": {
+    "min": 0.0007000000047497451,
+    "q01": 0.0012181318778544665,
+    "mean": 0.2567993108247739,
+    "std": 0.33333065369347625,
+    "q99": 0.9785529413790564,
+    "max": 0.9993000012874601
+  },
+  "category_target": {
+    "min": 0.0007000000047497451,
+    "q01": 0.0012648936308920383,
+    "mean": 0.2567993740717681,
+    "std": 0.33354436566873685,
+    "q99": 0.9789272912281494,
+    "max": 0.9993000012874601
+  },
+  "category_minus_base": {
+    "min": -0.06838176886349812,
+    "q01": -0.05487330548985059,
+    "mean": -4.339274728782066e-06,
+    "std": 0.01806357436240485,
+    "q99": 0.043353417621991866,
+    "max": 0.06954199961293112
+  },
+  "category_minus_global": {
+    "min": -0.04287667274475093,
+    "q01": -0.009161841869354204,
+    "mean": 6.324699424292259e-08,
+    "std": 0.003057320449927428,
+    "q99": 0.009070181846618647,
+    "max": 0.027818182110786432
+  },
+  "target_correlations": {
+    "base_global": 0.9989185635226839,
+    "base_category": 0.9989242331288782,
+    "global_category": 0.9999581692365829
+  },
+  "output_sha256": {
+    "/home/dzkhomidov/matching-work/rescue_20260824/category_blend_distill/data/hand_pairs_pd_v3cal_global10.parquet": "ea696630615953a31df7de3e31d06a9af49126e7a34389868ba1b93b10b59659",
+    "/home/dzkhomidov/matching-work/rescue_20260824/category_blend_distill/data/hand_pairs_pd_v3cal_category10.parquet": "91d436c87c8fd6c227d700c8c5dd6e9288eae4cacd4dc4a743ccfcac834ae94e"
+  }
+}

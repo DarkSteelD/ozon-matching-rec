@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "device": "local_physical_gpu1_a100",
+  "input_matches_rows": 365654,
+  "retained_item_ids": 711304,
+  "timings_seconds": {
+    "needed_item_filter": 24,
+    "texts_ready": 97,
+    "student_inference": 302,
+    "total": 400
+  },
+  "gpu_memory_mib": {
+    "board_baseline": 5220,
+    "board_peak": 15868,
+    "process_increment": 10648
+  },
+  "output": {
+    "path": "primary_full_run/predictions.csv",
+    "sha256": "5a7d517b8b73446b0813553a1318524dd00f758e8f7bf89132f6ee4d0b05eb61",
+    "columns": ["id1", "id2", "predict"],
+    "rows": 365654,
+    "nulls": 0,
+    "duplicate_pairs": 0,
+    "predict_min": 0.000006837064547358979,
+    "predict_max": 1.0
+  },
+  "pair_order_validation": {
+    "mismatches": 0,
+    "extra_output_rows": 0,
+    "exact_order_match": true,
+    "input_pair_stream_sha256": "b089a456d45d1547aeaa6d68f3f9783e76543bde93345c64b2e4e9afe6b9644f",
+    "output_pair_stream_sha256": "b089a456d45d1547aeaa6d68f3f9783e76543bde93345c64b2e4e9afe6b9644f"
+  },
+  "fashion_size_penalty_pairs": 25686,
+  "degradation_triggered": false,
+  "zip": {
+    "path": "ecup_matching_e3_len384_student_runv5.zip",
+    "bytes": 327732321,
+    "sha256": "fefd9f7ed5c05a846df0f7311bb5cbf4941e4b1693a1014630eb9561c70aec1b",
+    "testzip": null
+  },
+  "model_fp16_sha256": "77c0617a0b966d870d6a92877ad803e15788ebda8b2708466e617bcb14668c50",
+  "run_py_sha256": "79261ab3531c416fb29f07181179a358cc8268b613f5e011a8ba381fb983b49b",
+  "runtime_scope": "Exact full A100 run; actual ODS/T4 runtime remains unchecked."
+}

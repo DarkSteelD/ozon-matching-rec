@@ -1,0 +1,12 @@
+{
+  "variant": "bottom6",
+  "fold": "fold_01",
+  "steps": 2144,
+  "train_rows": 274497,
+  "eval_rows": 91157,
+  "max_len": 224,
+  "freeze": "bottom6",
+  "trainable_params": 135326977,
+  "total_params": 177854209,
+  "runtime_seconds": 502.5031704902649
+}

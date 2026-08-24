@@ -1,0 +1,15 @@
+{
+  "base_macro": 0.8057246305372832,
+  "candidates": [
+    "ce_final_combo",
+    "ce_ens9",
+    "ce_rubase_len224",
+    "ce_e5_len160",
+    "final_stack_all",
+    "zs_gemma4_e4b",
+    "zs_qwen35_4b",
+    "knrm_name_v2",
+    "ce_distill"
+  ],
+  "rows": 365654
+}

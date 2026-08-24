@@ -1,0 +1,324 @@
+{
+  "batch_audit": [
+    {
+      "fold": "fold_01",
+      "train_rows": 274497,
+      "eval_rows": 91157,
+      "leak_rows": 0,
+      "batches": 2144,
+      "valid_pair_batches": 2144,
+      "pairs_total": 128952,
+      "pairs_per_batch_mean": 60.1455223880597,
+      "pairs_per_batch_min": 31,
+      "pairs_per_batch_max": 80
+    }
+  ],
+  "scores": [
+    {
+      "variant": "bce",
+      "folds": [
+        {
+          "variant": "bce",
+          "fold": "fold_01",
+          "macro_category_ap": 0.7787685501283982
+        }
+      ],
+      "per_category": [
+        {
+          "variant": "bce",
+          "category": "Автотовары",
+          "rows": 4786,
+          "positives": 856,
+          "ap": 0.706984035994572
+        },
+        {
+          "variant": "bce",
+          "category": "Аптека",
+          "rows": 4621,
+          "positives": 333,
+          "ap": 0.8706956038506375
+        },
+        {
+          "variant": "bce",
+          "category": "Бытовая техника",
+          "rows": 4467,
+          "positives": 1615,
+          "ap": 0.8390975478693564
+        },
+        {
+          "variant": "bce",
+          "category": "Бытовая химия",
+          "rows": 4337,
+          "positives": 1983,
+          "ap": 0.8969498530771622
+        },
+        {
+          "variant": "bce",
+          "category": "Галантерея и аксессуары",
+          "rows": 4428,
+          "positives": 715,
+          "ap": 0.7061831218637074
+        },
+        {
+          "variant": "bce",
+          "category": "Детские товары",
+          "rows": 4430,
+          "positives": 2460,
+          "ap": 0.9129456302870979
+        },
+        {
+          "variant": "bce",
+          "category": "Дом и сад",
+          "rows": 4573,
+          "positives": 1164,
+          "ap": 0.828723102249349
+        },
+        {
+          "variant": "bce",
+          "category": "Канцелярские товары",
+          "rows": 4381,
+          "positives": 1468,
+          "ap": 0.7948838947630503
+        },
+        {
+          "variant": "bce",
+          "category": "Красота и гигиена",
+          "rows": 4295,
+          "positives": 1595,
+          "ap": 0.8281271812606925
+        },
+        {
+          "variant": "bce",
+          "category": "Мебель",
+          "rows": 4583,
+          "positives": 680,
+          "ap": 0.7020202777342897
+        },
+        {
+          "variant": "bce",
+          "category": "Музыкальные инструменты",
+          "rows": 4436,
+          "positives": 944,
+          "ap": 0.8544991044668704
+        },
+        {
+          "variant": "bce",
+          "category": "Обувь",
+          "rows": 4482,
+          "positives": 446,
+          "ap": 0.508586278800611
+        },
+        {
+          "variant": "bce",
+          "category": "Одежда",
+          "rows": 5946,
+          "positives": 691,
+          "ap": 0.5528398268964612
+        },
+        {
+          "variant": "bce",
+          "category": "Продукты питания",
+          "rows": 4549,
+          "positives": 1272,
+          "ap": 0.8848641679269009
+        },
+        {
+          "variant": "bce",
+          "category": "Спорт и отдых",
+          "rows": 4319,
+          "positives": 1122,
+          "ap": 0.7267783204617326
+        },
+        {
+          "variant": "bce",
+          "category": "Строительство и ремонт",
+          "rows": 4559,
+          "positives": 979,
+          "ap": 0.786426748547162
+        },
+        {
+          "variant": "bce",
+          "category": "Товары для животных",
+          "rows": 4560,
+          "positives": 1611,
+          "ap": 0.9005485500323583
+        },
+        {
+          "variant": "bce",
+          "category": "Хобби и творчество",
+          "rows": 4339,
+          "positives": 1990,
+          "ap": 0.9232259050595711
+        },
+        {
+          "variant": "bce",
+          "category": "Электроника",
+          "rows": 4526,
+          "positives": 760,
+          "ap": 0.7536597220719756
+        },
+        {
+          "variant": "bce",
+          "category": "Ювелирные изделия",
+          "rows": 4540,
+          "positives": 578,
+          "ap": 0.5973321293544065
+        }
+      ],
+      "macro_category_ap": 0.7787685501283982
+    },
+    {
+      "variant": "rank03",
+      "folds": [
+        {
+          "variant": "rank03",
+          "fold": "fold_01",
+          "macro_category_ap": 0.7773227174196632
+        }
+      ],
+      "per_category": [
+        {
+          "variant": "rank03",
+          "category": "Автотовары",
+          "rows": 4786,
+          "positives": 856,
+          "ap": 0.7055709947137678
+        },
+        {
+          "variant": "rank03",
+          "category": "Аптека",
+          "rows": 4621,
+          "positives": 333,
+          "ap": 0.867430936062159
+        },
+        {
+          "variant": "rank03",
+          "category": "Бытовая техника",
+          "rows": 4467,
+          "positives": 1615,
+          "ap": 0.8376741830573465
+        },
+        {
+          "variant": "rank03",
+          "category": "Бытовая химия",
+          "rows": 4337,
+          "positives": 1983,
+          "ap": 0.8957371250065187
+        },
+        {
+          "variant": "rank03",
+          "category": "Галантерея и аксессуары",
+          "rows": 4428,
+          "positives": 715,
+          "ap": 0.7039948675003024
+        },
+        {
+          "variant": "rank03",
+          "category": "Детские товары",
+          "rows": 4430,
+          "positives": 2460,
+          "ap": 0.9122614014382266
+        },
+        {
+          "variant": "rank03",
+          "category": "Дом и сад",
+          "rows": 4573,
+          "positives": 1164,
+          "ap": 0.8269670339849455
+        },
+        {
+          "variant": "rank03",
+          "category": "Канцелярские товары",
+          "rows": 4381,
+          "positives": 1468,
+          "ap": 0.7942002017445386
+        },
+        {
+          "variant": "rank03",
+          "category": "Красота и гигиена",
+          "rows": 4295,
+          "positives": 1595,
+          "ap": 0.8266823785514233
+        },
+        {
+          "variant": "rank03",
+          "category": "Мебель",
+          "rows": 4583,
+          "positives": 680,
+          "ap": 0.703495499582125
+        },
+        {
+          "variant": "rank03",
+          "category": "Музыкальные инструменты",
+          "rows": 4436,
+          "positives": 944,
+          "ap": 0.8530874893184293
+        },
+        {
+          "variant": "rank03",
+          "category": "Обувь",
+          "rows": 4482,
+          "positives": 446,
+          "ap": 0.5045032845373412
+        },
+        {
+          "variant": "rank03",
+          "category": "Одежда",
+          "rows": 5946,
+          "positives": 691,
+          "ap": 0.550317537220707
+        },
+        {
+          "variant": "rank03",
+          "category": "Продукты питания",
+          "rows": 4549,
+          "positives": 1272,
+          "ap": 0.8842942480147671
+        },
+        {
+          "variant": "rank03",
+          "category": "Спорт и отдых",
+          "rows": 4319,
+          "positives": 1122,
+          "ap": 0.728394173864743
+        },
+        {
+          "variant": "rank03",
+          "category": "Строительство и ремонт",
+          "rows": 4559,
+          "positives": 979,
+          "ap": 0.7859698300917375
+        },
+        {
+          "variant": "rank03",
+          "category": "Товары для животных",
+          "rows": 4560,
+          "positives": 1611,
+          "ap": 0.8991916588568871
+        },
+        {
+          "variant": "rank03",
+          "category": "Хобби и творчество",
+          "rows": 4339,
+          "positives": 1990,
+          "ap": 0.9229968603003068
+        },
+        {
+          "variant": "rank03",
+          "category": "Электроника",
+          "rows": 4526,
+          "positives": 760,
+          "ap": 0.7509467303062727
+        },
+        {
+          "variant": "rank03",
+          "category": "Ювелирные изделия",
+          "rows": 4540,
+          "positives": 578,
+          "ap": 0.5927379142407188
+        }
+      ],
+      "macro_category_ap": 0.7773227174196632
+    }
+  ]
+}

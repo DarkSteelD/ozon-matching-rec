@@ -1,0 +1,102 @@
+[
+  {
+    "variant": "rularge_hand",
+    "fold": "fold_01",
+    "prauc": 0.7897317128692375,
+    "rows": 91157,
+    "positives": 23262
+  },
+  {
+    "variant": "rubase_hand_control",
+    "fold": "fold_01",
+    "prauc": 0.7870335369979405,
+    "rows": 91157,
+    "positives": 23262
+  },
+  {
+    "variant": "final_combo_control",
+    "fold": "fold_01",
+    "prauc": 0.8519562324109398,
+    "rows": 91157,
+    "positives": 23262
+  },
+  {
+    "variant": "final_combo_plus_rularge_rank_10pct",
+    "fold": "fold_01",
+    "prauc": 0.8514331201874544,
+    "rows": 91157,
+    "positives": 23262
+  },
+  {
+    "variant": "negative_permuted_rularge",
+    "fold": "fold_01",
+    "prauc": 0.25427074397828564,
+    "rows": 91157,
+    "positives": 23262
+  },
+  {
+    "variant": "rularge_hand",
+    "fold": "fold_02",
+    "prauc": 0.7946784199097463,
+    "rows": 91474,
+    "positives": 23600
+  },
+  {
+    "variant": "rubase_hand_control",
+    "fold": "fold_02",
+    "prauc": 0.7964777307351374,
+    "rows": 91474,
+    "positives": 23600
+  },
+  {
+    "variant": "final_combo_control",
+    "fold": "fold_02",
+    "prauc": 0.8603744078842861,
+    "rows": 91474,
+    "positives": 23600
+  },
+  {
+    "variant": "final_combo_plus_rularge_rank_10pct",
+    "fold": "fold_02",
+    "prauc": 0.8595302883741567,
+    "rows": 91474,
+    "positives": 23600
+  },
+  {
+    "variant": "negative_permuted_rularge",
+    "fold": "fold_02",
+    "prauc": 0.25894758766363024,
+    "rows": 91474,
+    "positives": 23600
+  },
+  {
+    "variant": "final_combo_control",
+    "fold": "mean_01_02",
+    "prauc": 0.8561653201476129,
+    "std": 0.005952548962421467
+  },
+  {
+    "variant": "final_combo_plus_rularge_rank_10pct",
+    "fold": "mean_01_02",
+    "prauc": 0.8554817042808056,
+    "std": 0.005725562533225144
+  },
+  {
+    "variant": "negative_permuted_rularge",
+    "fold": "mean_01_02",
+    "prauc": 0.25660916582095794,
+    "std": 0.003307027884456651
+  },
+  {
+    "variant": "rubase_hand_control",
+    "fold": "mean_01_02",
+    "prauc": 0.791755633866539,
+    "std": 0.006678053434411415
+  },
+  {
+    "variant": "rularge_hand",
+    "fold": "mean_01_02",
+    "prauc": 0.792205066389492,
+    "std": 0.0034978500928870195
+  }
+]

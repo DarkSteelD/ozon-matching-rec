@@ -1,0 +1,16 @@
+{
+  "data": "/home/dzkhomidov/matching-work/data/hand_pairs.parquet",
+  "model": "/home/dzkhomidov/matching-work/ckpt_disk/rubase_llmfull_e2",
+  "max_len": 384,
+  "content_budget": 381,
+  "modes": ["prefix", "headtail", "middle"],
+  "stage1_folds": ["fold_01", "fold_02"],
+  "stage2_folds": ["fold_03", "fold_04"],
+  "epochs": 2,
+  "batch_size": 256,
+  "learning_rate": 0.00002,
+  "seed": 20260814,
+  "gate_delta_each_fold": 0.001,
+  "host": "avi-gn-fsk35",
+  "physical_gpu": 0
+}

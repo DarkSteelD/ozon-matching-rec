@@ -1,0 +1,9 @@
+{
+  "variant": "len384",
+  "fold": "fold_04",
+  "steps": 2142,
+  "train_rows": 274246,
+  "eval_rows": 91408,
+  "max_len": 384,
+  "runtime_seconds": 678.4505174160004
+}

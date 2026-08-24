@@ -1,0 +1,46 @@
+{
+  "base_zip": "/home/dzkhomidov/matching-work/container/ecup_matching_consolidated_v2.zip",
+  "base_zip_sha256": "7c115e7dd77653b4d19ecef80cf6772202e2e79fc690005a3970d0a68bc48bad",
+  "metadata": {
+    "image": "odsai/ecup26-matching-baseline:1.0",
+    "entry_point": "python -u run.py"
+  },
+  "models": [
+    {
+      "path": "models/student",
+      "max_len": 384,
+      "weight": 1.0,
+      "texts": "prio"
+    }
+  ],
+  "files": {
+    "metadata.json": {
+      "bytes": 83,
+      "sha256": "6b544b0fb38853da684458e6a261be2e9022490f63b3e19db86a08d8ae3f006c"
+    },
+    "models/student/config.json": {
+      "bytes": 1024,
+      "sha256": "708d0cbea1a5e433c3a1a0ad637272eb77ab279bb3946488fc5cf90021b6c500"
+    },
+    "models/student/model.safetensors": {
+      "bytes": 355731962,
+      "sha256": "77c0617a0b966d870d6a92877ad803e15788ebda8b2708466e617bcb14668c50"
+    },
+    "models/student/tokenizer.json": {
+      "bytes": 3573819,
+      "sha256": "0056bd523ec76698e322acfbd03277cc7b21ed9f61186cc996a80f7bb0067a50"
+    },
+    "models/student/tokenizer_config.json": {
+      "bytes": 380,
+      "sha256": "4462f2399527c65c2eaaa75bf548f35fd0bf321f28c2d48e52b409767b6f4c86"
+    },
+    "models.json": {
+      "bytes": 77,
+      "sha256": "cc3f1ab5d54f2aec00d21a981a59a6a429eec9adcf4d6a7fa1cfdae8b8990c67"
+    },
+    "run.py": {
+      "bytes": 10746,
+      "sha256": "79261ab3531c416fb29f07181179a358cc8268b613f5e011a8ba381fb983b49b"
+    }
+  }
+}

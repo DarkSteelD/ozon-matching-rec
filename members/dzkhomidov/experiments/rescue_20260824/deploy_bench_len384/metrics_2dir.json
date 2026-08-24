@@ -1,0 +1,16 @@
+{
+  "host": "avi-ling-gpu03",
+  "physical_gpu": 1,
+  "model": "/home/dzkhomidov/matching-work/rescue_20260824/deploy_bench_len384/model",
+  "pairs": 365654,
+  "directions": 2,
+  "max_len": 384,
+  "batch_size": 512,
+  "build_seconds": 270.60331062041223,
+  "inference_seconds": 629.199196764268,
+  "total_seconds": 906.8731438079849,
+  "pairs_per_second": 581.1418734804802,
+  "torch_peak_allocated_mib": 3600.62060546875,
+  "torch_peak_reserved_mib": 5550.0,
+  "prediction_sha256_float32": "2ae70e0626ad8e4ead0b89ae3df4dbbaecf7701795d483e3c8fe67b5e381cafe"
+}

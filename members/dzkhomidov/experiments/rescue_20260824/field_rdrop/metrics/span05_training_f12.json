@@ -1,0 +1,20 @@
+[
+  {
+    "fold": "fold_01",
+    "train_rows": 274497,
+    "eval_rows": 91157,
+    "batches": 2144,
+    "consistency_mean": 0.016215905621639146,
+    "runtime_s": 972.2808949947357,
+    "retained_chars": 0.9500059088343528
+  },
+  {
+    "fold": "fold_02",
+    "train_rows": 274180,
+    "eval_rows": 91474,
+    "batches": 2142,
+    "consistency_mean": 0.015600279309890337,
+    "runtime_s": 965.8599426746368,
+    "retained_chars": 0.9500059088343528
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "baseline_macro_category_ap": 0.7836883500692678,
+  "decisions": [
+    {
+      "variant": "field05",
+      "fold_deltas": {
+        "fold_01": 0.0012070967349391282,
+        "fold_02": 0.001293477692842604
+      },
+      "pooled_macro_category_ap_delta": 0.0012663761080986546,
+      "gate": "GO"
+    },
+    {
+      "variant": "negative05",
+      "fold_deltas": {
+        "fold_01": -0.00012694119713019258,
+        "fold_02": -0.0018271027723596456
+      },
+      "pooled_macro_category_ap_delta": -0.0009868493435354342,
+      "gate": "NO_GO"
+    }
+  ]
+}

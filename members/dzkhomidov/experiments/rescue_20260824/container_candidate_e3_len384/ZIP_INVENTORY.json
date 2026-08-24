@@ -1,0 +1,23 @@
+{
+  "zip_sha256": "fefd9f7ed5c05a846df0f7311bb5cbf4941e4b1693a1014630eb9561c70aec1b",
+  "zip_bytes": 327732321,
+  "testzip": null,
+  "entries": [
+    "metadata.json",
+    "models.json",
+    "run.py",
+    "models/student/config.json",
+    "models/student/model.safetensors",
+    "models/student/tokenizer.json",
+    "models/student/tokenizer_config.json"
+  ],
+  "uncompressed": {
+    "metadata.json": 83,
+    "models.json": 77,
+    "run.py": 10746,
+    "models/student/config.json": 1024,
+    "models/student/model.safetensors": 355731962,
+    "models/student/tokenizer.json": 3573819,
+    "models/student/tokenizer_config.json": 380
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "rows": 365654,
+  "negatives": 271764,
+  "ce_oof_mean_neg": 0.09356588658825307,
+  "name_jaccard_mean_neg": 0.38359681819298636,
+  "attr_conflict_rate_neg": 0.6924758246125314
+}

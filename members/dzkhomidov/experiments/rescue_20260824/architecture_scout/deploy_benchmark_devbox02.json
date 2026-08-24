@@ -1,0 +1,16 @@
+{
+  "host": "avi-ix-devbox02",
+  "gpu": "NVIDIA H100 PCIe",
+  "rows": 100000,
+  "directional_passes": 200000,
+  "max_length": 224,
+  "batch_size": 512,
+  "tokenize_seconds": 25.116165081970394,
+  "inference_seconds": 24.840728290379047,
+  "total_seconds": 49.95689337234944,
+  "pairs_per_second_two_direction": 2001.725752933805,
+  "peak_memory_bytes": 1900574720,
+  "model_parameter_count": 117641089,
+  "checkpoint_bytes": 470592698,
+  "estimated_seconds_365654_pairs_two_direction": 182.66937889173062
+}

@@ -1,0 +1,283 @@
+{
+  "args": {
+    "data": "/home/dzkhomidov/matching-work/rescue_20260824/hard_negative/hand_features.parquet",
+    "init": "/home/dzkhomidov/matching-work/ckpt_disk/rubase_llmfull_e2",
+    "output": "/home/dzkhomidov/matching-work/rescue_20260824/hard_negative",
+    "folds": "fold_01,fold_02",
+    "variants": "hard2,hard4,random2,random4",
+    "coverage": 0.1,
+    "max_len": 224,
+    "epochs": 2,
+    "bs": 192,
+    "lr": 2e-05,
+    "seed": 20260814
+  },
+  "runs": [
+    {
+      "fold": "fold_01",
+      "variant": "hard2",
+      "runtime_seconds": 365.7895257472992
+    },
+    {
+      "fold": "fold_01",
+      "variant": "hard4",
+      "runtime_seconds": 364.7439968585968
+    },
+    {
+      "fold": "fold_01",
+      "variant": "random2",
+      "runtime_seconds": 364.7066617012024
+    },
+    {
+      "fold": "fold_01",
+      "variant": "random4",
+      "runtime_seconds": 364.53375244140625
+    },
+    {
+      "fold": "fold_02",
+      "variant": "hard2",
+      "runtime_seconds": 364.4813334941864
+    },
+    {
+      "fold": "fold_02",
+      "variant": "hard4",
+      "runtime_seconds": 363.82818365097046
+    },
+    {
+      "fold": "fold_02",
+      "variant": "random2",
+      "runtime_seconds": 363.7379207611084
+    },
+    {
+      "fold": "fold_02",
+      "variant": "random4",
+      "runtime_seconds": 363.643483877182
+    }
+  ],
+  "selection": {
+    "fold_01": {
+      "hard": 20388,
+      "random": 20388,
+      "by_category": [
+        {
+          "category": "Аптека",
+          "negatives": 12669,
+          "selected": 1267
+        },
+        {
+          "category": "Автотовары",
+          "negatives": 11754,
+          "selected": 1175
+        },
+        {
+          "category": "Строительство и ремонт",
+          "negatives": 10593,
+          "selected": 1059
+        },
+        {
+          "category": "Музыкальные инструменты",
+          "negatives": 10375,
+          "selected": 1038
+        },
+        {
+          "category": "Бытовая химия",
+          "negatives": 6899,
+          "selected": 690
+        },
+        {
+          "category": "Канцелярские товары",
+          "negatives": 8619,
+          "selected": 862
+        },
+        {
+          "category": "Спорт и отдых",
+          "negatives": 9920,
+          "selected": 992
+        },
+        {
+          "category": "Галантерея и аксессуары",
+          "negatives": 11256,
+          "selected": 1126
+        },
+        {
+          "category": "Электроника",
+          "negatives": 11688,
+          "selected": 1169
+        },
+        {
+          "category": "Хобби и творчество",
+          "negatives": 7126,
+          "selected": 713
+        },
+        {
+          "category": "Дом и сад",
+          "negatives": 9557,
+          "selected": 956
+        },
+        {
+          "category": "Детские товары",
+          "negatives": 5722,
+          "selected": 572
+        },
+        {
+          "category": "Одежда",
+          "negatives": 15351,
+          "selected": 1535
+        },
+        {
+          "category": "Товары для животных",
+          "negatives": 8782,
+          "selected": 878
+        },
+        {
+          "category": "Обувь",
+          "negatives": 12513,
+          "selected": 1251
+        },
+        {
+          "category": "Ювелирные изделия",
+          "negatives": 12416,
+          "selected": 1242
+        },
+        {
+          "category": "Мебель",
+          "negatives": 11707,
+          "selected": 1171
+        },
+        {
+          "category": "Продукты питания",
+          "negatives": 10061,
+          "selected": 1006
+        },
+        {
+          "category": "Красота и гигиена",
+          "negatives": 8303,
+          "selected": 830
+        },
+        {
+          "category": "Бытовая техника",
+          "negatives": 8558,
+          "selected": 856
+        }
+      ],
+      "hard_ce_mean": 0.25649826914165197,
+      "random_ce_mean": 0.09319333508681578,
+      "hard_name_mean": 0.6294707369402106,
+      "random_name_mean": 0.384185079001062,
+      "hard_conflict_rate": 0.9651265450264862,
+      "random_conflict_rate": 0.6948695310967236
+    },
+    "fold_02": {
+      "hard": 20389,
+      "random": 20389,
+      "by_category": [
+        {
+          "category": "Обувь",
+          "negatives": 12370,
+          "selected": 1237
+        },
+        {
+          "category": "Галантерея и аксессуары",
+          "negatives": 11232,
+          "selected": 1123
+        },
+        {
+          "category": "Товары для животных",
+          "negatives": 8799,
+          "selected": 880
+        },
+        {
+          "category": "Бытовая техника",
+          "negatives": 8631,
+          "selected": 863
+        },
+        {
+          "category": "Спорт и отдых",
+          "negatives": 9873,
+          "selected": 987
+        },
+        {
+          "category": "Электроника",
+          "negatives": 11383,
+          "selected": 1138
+        },
+        {
+          "category": "Музыкальные инструменты",
+          "negatives": 10450,
+          "selected": 1045
+        },
+        {
+          "category": "Одежда",
+          "negatives": 15493,
+          "selected": 1549
+        },
+        {
+          "category": "Дом и сад",
+          "negatives": 9731,
+          "selected": 973
+        },
+        {
+          "category": "Детские товары",
+          "negatives": 5782,
+          "selected": 578
+        },
+        {
+          "category": "Ювелирные изделия",
+          "negatives": 12140,
+          "selected": 1214
+        },
+        {
+          "category": "Автотовары",
+          "negatives": 11846,
+          "selected": 1185
+        },
+        {
+          "category": "Мебель",
+          "negatives": 11718,
+          "selected": 1172
+        },
+        {
+          "category": "Аптека",
+          "negatives": 12776,
+          "selected": 1278
+        },
+        {
+          "category": "Продукты питания",
+          "negatives": 9960,
+          "selected": 996
+        },
+        {
+          "category": "Красота и гигиена",
+          "negatives": 8311,
+          "selected": 831
+        },
+        {
+          "category": "Строительство и ремонт",
+          "negatives": 10682,
+          "selected": 1068
+        },
+        {
+          "category": "Хобби и творчество",
+          "negatives": 7131,
+          "selected": 713
+        },
+        {
+          "category": "Канцелярские товары",
+          "negatives": 8686,
+          "selected": 869
+        },
+        {
+          "category": "Бытовая химия",
+          "negatives": 6896,
+          "selected": 690
+        }
+      ],
+      "hard_ce_mean": 0.2600510245475502,
+      "random_ce_mean": 0.09443005526460346,
+      "hard_name_mean": 0.6307833688519539,
+      "random_name_mean": 0.38084832594528384,
+      "hard_conflict_rate": 0.9628721369365835,
+      "random_conflict_rate": 0.6910589043111481
+    }
+  }
+}

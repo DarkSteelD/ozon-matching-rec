@@ -1,0 +1,5 @@
+category,n_audited,n_decisive_0_1,n_unsure_minus1,audit_flips,audited_positive,audited_negative,baseline_ap_original_on_selected,baseline_ap_audited_on_selected,status
+Обувь,74,63,11,46,9,54,0.967140911868296,0.3764565699995044,checked_selection_biased
+Одежда,58,51,7,45,2,49,0.8953928765370368,0.24285714285714285,checked_selection_biased
+Галантерея и аксессуары,62,51,11,44,2,49,0.992306497664871,0.5769230769230769,checked_selection_biased
+Ювелирные изделия,9,8,1,4,2,6,1.0,0.26785714285714285,checked_selection_biased

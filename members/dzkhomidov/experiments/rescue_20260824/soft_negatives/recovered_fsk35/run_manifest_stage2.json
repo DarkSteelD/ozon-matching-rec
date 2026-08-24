@@ -1,0 +1,384 @@
+{
+  "args": {
+    "data": "/home/dzkhomidov/matching-work/data/hand_pairs.parquet",
+    "oof_root": "/home/dzkhomidov/matching-work/preds_disk/ce_rubase_e2_len224",
+    "init": "/home/dzkhomidov/matching-work/ckpt_disk/rubase_llmfull_e2",
+    "output": "/home/dzkhomidov/matching-work/rescue_20260824/soft_negatives",
+    "folds": "fold_03,fold_04",
+    "variants": "baseline,hard050,random050",
+    "coverage": 0.1,
+    "max_len": 224,
+    "epochs": 2,
+    "batch_size": 192,
+    "lr": 2e-05,
+    "seed": 20260814
+  },
+  "selection": {
+    "fold_03": {
+      "hard_count": 20361,
+      "random_count": 20361,
+      "categories": [
+        {
+          "category": "Обувь",
+          "train_negatives": 12369,
+          "selected": 1237,
+          "hard_oof_mean": 0.3633862434599838,
+          "hard_oof_min": 0.1431877,
+          "random_oof_mean": 0.04855343573160875
+        },
+        {
+          "category": "Галантерея и аксессуары",
+          "train_negatives": 11243,
+          "selected": 1124,
+          "hard_oof_mean": 0.500442335613879,
+          "hard_oof_min": 0.24508502,
+          "random_oof_mean": 0.0759451838345196
+        },
+        {
+          "category": "Товары для животных",
+          "train_negatives": 8823,
+          "selected": 882,
+          "hard_oof_mean": 0.6557308846145125,
+          "hard_oof_min": 0.33111975,
+          "random_oof_mean": 0.10933609013605443
+        },
+        {
+          "category": "Бытовая техника",
+          "train_negatives": 8525,
+          "selected": 852,
+          "hard_oof_mean": 0.7182280336619719,
+          "hard_oof_min": 0.48047867,
+          "random_oof_mean": 0.14817079545774647
+        },
+        {
+          "category": "Спорт и отдых",
+          "train_negatives": 9777,
+          "selected": 978,
+          "hard_oof_mean": 0.6370016070347647,
+          "hard_oof_min": 0.38815406,
+          "random_oof_mean": 0.12957812733128832
+        },
+        {
+          "category": "Электроника",
+          "train_negatives": 11608,
+          "selected": 1161,
+          "hard_oof_mean": 0.48896890205857013,
+          "hard_oof_min": 0.22541659,
+          "random_oof_mean": 0.07648822058570198
+        },
+        {
+          "category": "Музыкальные инструменты",
+          "train_negatives": 10364,
+          "selected": 1036,
+          "hard_oof_mean": 0.43023907631274133,
+          "hard_oof_min": 0.1422319,
+          "random_oof_mean": 0.058725928667953675
+        },
+        {
+          "category": "Одежда",
+          "train_negatives": 15444,
+          "selected": 1544,
+          "hard_oof_mean": 0.42808822021373055,
+          "hard_oof_min": 0.21337718,
+          "random_oof_mean": 0.061513282467616524
+        },
+        {
+          "category": "Дом и сад",
+          "train_negatives": 9783,
+          "selected": 978,
+          "hard_oof_mean": 0.6230659873312884,
+          "hard_oof_min": 0.34246159,
+          "random_oof_mean": 0.10087437138036809
+        },
+        {
+          "category": "Детские товары",
+          "train_negatives": 5732,
+          "selected": 573,
+          "hard_oof_mean": 0.9056445902966841,
+          "hard_oof_min": 0.79438496,
+          "random_oof_mean": 0.21600186879581154
+        },
+        {
+          "category": "Ювелирные изделия",
+          "train_negatives": 12298,
+          "selected": 1230,
+          "hard_oof_mean": 0.4217549657154471,
+          "hard_oof_min": 0.21866935,
+          "random_oof_mean": 0.07486697021951218
+        },
+        {
+          "category": "Автотовары",
+          "train_negatives": 11717,
+          "selected": 1172,
+          "hard_oof_mean": 0.35178808471843004,
+          "hard_oof_min": 0.18010667,
+          "random_oof_mean": 0.09303367495733789
+        },
+        {
+          "category": "Мебель",
+          "train_negatives": 11679,
+          "selected": 1168,
+          "hard_oof_mean": 0.4098216451455479,
+          "hard_oof_min": 0.19072403,
+          "random_oof_mean": 0.06528038529965752
+        },
+        {
+          "category": "Аптека",
+          "train_negatives": 12749,
+          "selected": 1275,
+          "hard_oof_mean": 0.16198909647843138,
+          "hard_oof_min": 0.00941259,
+          "random_oof_mean": 0.014973415301960788
+        },
+        {
+          "category": "Продукты питания",
+          "train_negatives": 9964,
+          "selected": 996,
+          "hard_oof_mean": 0.5154583977811246,
+          "hard_oof_min": 0.16344544,
+          "random_oof_mean": 0.07106923108433737
+        },
+        {
+          "category": "Красота и гигиена",
+          "train_negatives": 8220,
+          "selected": 822,
+          "hard_oof_mean": 0.7314340119343065,
+          "hard_oof_min": 0.51683933,
+          "random_oof_mean": 0.16591220530413628
+        },
+        {
+          "category": "Строительство и ремонт",
+          "train_negatives": 10638,
+          "selected": 1064,
+          "hard_oof_mean": 0.5619836831015037,
+          "hard_oof_min": 0.30569732,
+          "random_oof_mean": 0.09825068148496242
+        },
+        {
+          "category": "Хобби и творчество",
+          "train_negatives": 7042,
+          "selected": 704,
+          "hard_oof_mean": 0.8023457338494318,
+          "hard_oof_min": 0.53485548,
+          "random_oof_mean": 0.12399776134943173
+        },
+        {
+          "category": "Канцелярские товары",
+          "train_negatives": 8678,
+          "selected": 868,
+          "hard_oof_mean": 0.7137452386751152,
+          "hard_oof_min": 0.51409537,
+          "random_oof_mean": 0.15893776616359448
+        },
+        {
+          "category": "Бытовая химия",
+          "train_negatives": 6972,
+          "selected": 697,
+          "hard_oof_mean": 0.83479171794835,
+          "hard_oof_min": 0.61508787,
+          "random_oof_mean": 0.15809982398852226
+        }
+      ],
+      "validation_rows_used_in_selection": 0
+    },
+    "fold_04": {
+      "hard_count": 20394,
+      "random_count": 20394,
+      "categories": [
+        {
+          "category": "Обувь",
+          "train_negatives": 12395,
+          "selected": 1240,
+          "hard_oof_mean": 0.3617337769193548,
+          "hard_oof_min": 0.14804719,
+          "random_oof_mean": 0.05346730242741936
+        },
+        {
+          "category": "Галантерея и аксессуары",
+          "train_negatives": 11176,
+          "selected": 1118,
+          "hard_oof_mean": 0.4975260509123435,
+          "hard_oof_min": 0.24220563,
+          "random_oof_mean": 0.0682626253756708
+        },
+        {
+          "category": "Товары для животных",
+          "train_negatives": 8789,
+          "selected": 879,
+          "hard_oof_mean": 0.6680885059613196,
+          "hard_oof_min": 0.33111975,
+          "random_oof_mean": 0.11098783492605231
+        },
+        {
+          "category": "Бытовая техника",
+          "train_negatives": 8516,
+          "selected": 852,
+          "hard_oof_mean": 0.7097228634389672,
+          "hard_oof_min": 0.46854749,
+          "random_oof_mean": 0.1484514776643193
+        },
+        {
+          "category": "Спорт и отдых",
+          "train_negatives": 9781,
+          "selected": 978,
+          "hard_oof_mean": 0.6543331869222905,
+          "hard_oof_min": 0.41158381,
+          "random_oof_mean": 0.12500591235173825
+        },
+        {
+          "category": "Электроника",
+          "train_negatives": 11683,
+          "selected": 1168,
+          "hard_oof_mean": 0.4913634244349315,
+          "hard_oof_min": 0.22405544,
+          "random_oof_mean": 0.07129078581335613
+        },
+        {
+          "category": "Музыкальные инструменты",
+          "train_negatives": 10412,
+          "selected": 1041,
+          "hard_oof_mean": 0.4345694682324688,
+          "hard_oof_min": 0.13660839,
+          "random_oof_mean": 0.07644678134486073
+        },
+        {
+          "category": "Одежда",
+          "train_negatives": 15530,
+          "selected": 1553,
+          "hard_oof_mean": 0.42242622394075985,
+          "hard_oof_min": 0.20946968,
+          "random_oof_mean": 0.06184145513200257
+        },
+        {
+          "category": "Дом и сад",
+          "train_negatives": 9827,
+          "selected": 983,
+          "hard_oof_mean": 0.6314535113224821,
+          "hard_oof_min": 0.34598863,
+          "random_oof_mean": 0.10591668620549338
+        },
+        {
+          "category": "Детские товары",
+          "train_negatives": 5840,
+          "selected": 584,
+          "hard_oof_mean": 0.9092575696061643,
+          "hard_oof_min": 0.79438496,
+          "random_oof_mean": 0.241956948989726
+        },
+        {
+          "category": "Ювелирные изделия",
+          "train_negatives": 12280,
+          "selected": 1228,
+          "hard_oof_mean": 0.4127370761726384,
+          "hard_oof_min": 0.21733753,
+          "random_oof_mean": 0.0664826092345277
+        },
+        {
+          "category": "Автотовары",
+          "train_negatives": 11735,
+          "selected": 1174,
+          "hard_oof_mean": 0.3534350852640544,
+          "hard_oof_min": 0.18126321,
+          "random_oof_mean": 0.091509127044293
+        },
+        {
+          "category": "Мебель",
+          "train_negatives": 11726,
+          "selected": 1173,
+          "hard_oof_mean": 0.41570066203751066,
+          "hard_oof_min": 0.19072403,
+          "random_oof_mean": 0.07042380019607841
+        },
+        {
+          "category": "Аптека",
+          "train_negatives": 12677,
+          "selected": 1268,
+          "hard_oof_mean": 0.16586625125394325,
+          "hard_oof_min": 0.01001357,
+          "random_oof_mean": 0.016566929313880128
+        },
+        {
+          "category": "Продукты питания",
+          "train_negatives": 10029,
+          "selected": 1003,
+          "hard_oof_mean": 0.5153152449451645,
+          "hard_oof_min": 0.16451646,
+          "random_oof_mean": 0.0713480866899302
+        },
+        {
+          "category": "Красота и гигиена",
+          "train_negatives": 8175,
+          "selected": 818,
+          "hard_oof_mean": 0.7146051648410757,
+          "hard_oof_min": 0.49227968,
+          "random_oof_mean": 0.15593534019559904
+        },
+        {
+          "category": "Строительство и ремонт",
+          "train_negatives": 10606,
+          "selected": 1061,
+          "hard_oof_mean": 0.5498026679264845,
+          "hard_oof_min": 0.29421496,
+          "random_oof_mean": 0.09499120686145149
+        },
+        {
+          "category": "Хобби и творчество",
+          "train_negatives": 7126,
+          "selected": 713,
+          "hard_oof_mean": 0.7952612532678823,
+          "hard_oof_min": 0.52122748,
+          "random_oof_mean": 0.12454863443197758
+        },
+        {
+          "category": "Канцелярские товары",
+          "train_negatives": 8613,
+          "selected": 861,
+          "hard_oof_mean": 0.7108419376074331,
+          "hard_oof_min": 0.50891018,
+          "random_oof_mean": 0.16124914492450643
+        },
+        {
+          "category": "Бытовая химия",
+          "train_negatives": 6992,
+          "selected": 699,
+          "hard_oof_mean": 0.8432140806294707,
+          "hard_oof_min": 0.63703084,
+          "random_oof_mean": 0.15763202344778252
+        }
+      ],
+      "validation_rows_used_in_selection": 0
+    }
+  },
+  "runs": [
+    {
+      "fold": "fold_03",
+      "variant": "baseline",
+      "runtime_seconds": 364.9215958118439
+    },
+    {
+      "fold": "fold_03",
+      "variant": "hard050",
+      "runtime_seconds": 364.0736644268036
+    },
+    {
+      "fold": "fold_03",
+      "variant": "random050",
+      "runtime_seconds": 364.7318732738495
+    },
+    {
+      "fold": "fold_04",
+      "variant": "baseline",
+      "runtime_seconds": 363.7864429950714
+    },
+    {
+      "fold": "fold_04",
+      "variant": "hard050",
+      "runtime_seconds": 363.7946901321411
+    },
+    {
+      "fold": "fold_04",
+      "variant": "random050",
+      "runtime_seconds": 362.98412013053894
+    }
+  ]
+}

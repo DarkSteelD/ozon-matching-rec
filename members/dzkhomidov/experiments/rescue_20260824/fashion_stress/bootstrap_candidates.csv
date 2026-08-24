@@ -1,0 +1,225 @@
+category,slice,alternative,four_fold_supported,positive_delta_all_folds,median_collapse_le_m05,selected_for_bootstrap
+Обувь,all,knrm_name_v2,True,False,False,True
+Обувь,all,zs_llm_blend,True,False,False,True
+Обувь,name_exact,knrm_name_v2,True,False,True,False
+Обувь,name_exact,zs_llm_blend,True,False,True,False
+Обувь,name_near,knrm_name_v2,False,False,False,False
+Обувь,name_near,zs_llm_blend,False,False,False,False
+Обувь,name_other,knrm_name_v2,True,False,False,False
+Обувь,name_other,zs_llm_blend,True,False,False,False
+Обувь,attrs_one_missing,knrm_name_v2,False,False,False,False
+Обувь,attrs_one_missing,zs_llm_blend,False,False,False,False
+Обувь,attrs_present,knrm_name_v2,True,False,False,False
+Обувь,attrs_present,zs_llm_blend,True,False,False,False
+Обувь,brand_agree,knrm_name_v2,True,False,False,False
+Обувь,brand_agree,zs_llm_blend,True,False,False,False
+Обувь,brand_conflict,knrm_name_v2,True,False,False,False
+Обувь,brand_conflict,zs_llm_blend,True,False,False,False
+Обувь,brand_one_missing,knrm_name_v2,True,False,True,False
+Обувь,brand_one_missing,zs_llm_blend,True,False,True,False
+Обувь,model_agree,knrm_name_v2,False,False,False,False
+Обувь,model_agree,zs_llm_blend,False,False,False,False
+Обувь,model_both_missing,knrm_name_v2,False,False,False,False
+Обувь,model_both_missing,zs_llm_blend,False,False,False,False
+Обувь,model_conflict,knrm_name_v2,True,False,False,False
+Обувь,model_conflict,zs_llm_blend,True,False,False,False
+Обувь,model_one_missing,knrm_name_v2,True,False,True,False
+Обувь,model_one_missing,zs_llm_blend,True,False,True,False
+Обувь,article_agree,knrm_name_v2,False,False,False,False
+Обувь,article_agree,zs_llm_blend,False,False,False,False
+Обувь,article_both_missing,knrm_name_v2,True,False,True,False
+Обувь,article_both_missing,zs_llm_blend,True,False,True,False
+Обувь,article_conflict,knrm_name_v2,False,False,False,False
+Обувь,article_conflict,zs_llm_blend,False,False,False,False
+Обувь,article_one_missing,knrm_name_v2,True,False,False,False
+Обувь,article_one_missing,zs_llm_blend,True,False,False,False
+Обувь,size_comparable_agree,knrm_name_v2,True,False,False,False
+Обувь,size_comparable_agree,zs_llm_blend,True,False,False,False
+Обувь,size_comparable_mismatch,knrm_name_v2,True,False,False,False
+Обувь,size_comparable_mismatch,zs_llm_blend,True,False,False,False
+Обувь,size_not_comparable,knrm_name_v2,True,False,False,False
+Обувь,size_not_comparable,zs_llm_blend,True,False,False,False
+Обувь,numeric_conflict,knrm_name_v2,False,False,False,False
+Обувь,numeric_conflict,zs_llm_blend,False,False,False,False
+Обувь,numeric_missing,knrm_name_v2,True,False,False,False
+Обувь,numeric_missing,zs_llm_blend,True,False,False,False
+Обувь,numeric_overlap,knrm_name_v2,True,False,False,False
+Обувь,numeric_overlap,zs_llm_blend,True,False,False,False
+Обувь,text_long,knrm_name_v2,True,False,False,False
+Обувь,text_long,zs_llm_blend,True,False,False,False
+Обувь,text_medium,knrm_name_v2,True,False,False,False
+Обувь,text_medium,zs_llm_blend,True,False,False,False
+Обувь,text_short_both,knrm_name_v2,False,False,False,False
+Обувь,text_short_both,zs_llm_blend,False,False,False,False
+Обувь,text_very_long,knrm_name_v2,False,False,False,False
+Обувь,text_very_long,zs_llm_blend,False,False,False,False
+Обувь,text_asymmetric,knrm_name_v2,True,False,True,False
+Обувь,text_asymmetric,zs_llm_blend,True,False,True,False
+Одежда,all,knrm_name_v2,True,False,False,True
+Одежда,all,zs_llm_blend,True,False,False,True
+Одежда,name_exact,knrm_name_v2,True,False,False,False
+Одежда,name_exact,zs_llm_blend,True,False,False,False
+Одежда,name_near,knrm_name_v2,False,False,False,False
+Одежда,name_near,zs_llm_blend,False,False,False,False
+Одежда,name_other,knrm_name_v2,True,False,False,False
+Одежда,name_other,zs_llm_blend,True,False,False,False
+Одежда,attrs_one_missing,knrm_name_v2,False,False,False,False
+Одежда,attrs_one_missing,zs_llm_blend,False,False,False,False
+Одежда,attrs_present,knrm_name_v2,True,False,False,False
+Одежда,attrs_present,zs_llm_blend,True,False,False,False
+Одежда,brand_agree,knrm_name_v2,True,False,False,False
+Одежда,brand_agree,zs_llm_blend,True,False,False,False
+Одежда,brand_conflict,knrm_name_v2,True,False,False,False
+Одежда,brand_conflict,zs_llm_blend,True,False,False,False
+Одежда,brand_one_missing,knrm_name_v2,True,False,False,False
+Одежда,brand_one_missing,zs_llm_blend,True,False,False,False
+Одежда,model_agree,knrm_name_v2,True,False,False,False
+Одежда,model_agree,zs_llm_blend,True,False,False,False
+Одежда,model_both_missing,knrm_name_v2,False,False,False,False
+Одежда,model_both_missing,zs_llm_blend,False,False,False,False
+Одежда,model_conflict,knrm_name_v2,True,False,False,False
+Одежда,model_conflict,zs_llm_blend,True,False,False,False
+Одежда,model_one_missing,knrm_name_v2,True,False,False,False
+Одежда,model_one_missing,zs_llm_blend,True,False,False,False
+Одежда,article_agree,knrm_name_v2,False,False,False,False
+Одежда,article_agree,zs_llm_blend,False,False,False,False
+Одежда,article_both_missing,knrm_name_v2,True,False,False,False
+Одежда,article_both_missing,zs_llm_blend,True,False,False,False
+Одежда,article_conflict,knrm_name_v2,False,False,False,False
+Одежда,article_conflict,zs_llm_blend,False,False,False,False
+Одежда,article_one_missing,knrm_name_v2,True,False,False,False
+Одежда,article_one_missing,zs_llm_blend,True,False,False,False
+Одежда,size_comparable_agree,knrm_name_v2,True,False,False,False
+Одежда,size_comparable_agree,zs_llm_blend,True,False,False,False
+Одежда,size_comparable_mismatch,knrm_name_v2,True,False,False,False
+Одежда,size_comparable_mismatch,zs_llm_blend,True,False,False,False
+Одежда,size_not_comparable,knrm_name_v2,True,False,False,False
+Одежда,size_not_comparable,zs_llm_blend,True,False,False,False
+Одежда,numeric_conflict,knrm_name_v2,True,False,False,False
+Одежда,numeric_conflict,zs_llm_blend,True,False,False,False
+Одежда,numeric_missing,knrm_name_v2,True,False,False,False
+Одежда,numeric_missing,zs_llm_blend,True,False,False,False
+Одежда,numeric_overlap,knrm_name_v2,True,False,False,False
+Одежда,numeric_overlap,zs_llm_blend,True,False,False,False
+Одежда,text_long,knrm_name_v2,True,False,False,False
+Одежда,text_long,zs_llm_blend,True,False,False,False
+Одежда,text_medium,knrm_name_v2,True,False,False,False
+Одежда,text_medium,zs_llm_blend,True,False,False,False
+Одежда,text_short_both,knrm_name_v2,False,False,False,False
+Одежда,text_short_both,zs_llm_blend,False,False,False,False
+Одежда,text_very_long,knrm_name_v2,False,False,False,False
+Одежда,text_very_long,zs_llm_blend,False,False,False,False
+Одежда,text_asymmetric,knrm_name_v2,True,False,False,False
+Одежда,text_asymmetric,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,all,knrm_name_v2,True,False,False,True
+Галантерея и аксессуары,all,zs_llm_blend,True,False,False,True
+Галантерея и аксессуары,name_exact,knrm_name_v2,True,False,True,False
+Галантерея и аксессуары,name_exact,zs_llm_blend,True,False,True,False
+Галантерея и аксессуары,name_near,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,name_near,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,name_other,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,name_other,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,attrs_one_missing,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,attrs_one_missing,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,attrs_present,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,attrs_present,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,brand_agree,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,brand_agree,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,brand_conflict,knrm_name_v2,True,False,True,False
+Галантерея и аксессуары,brand_conflict,zs_llm_blend,True,False,True,False
+Галантерея и аксессуары,brand_one_missing,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,brand_one_missing,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,model_agree,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,model_agree,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,model_both_missing,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,model_both_missing,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,model_conflict,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,model_conflict,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,model_one_missing,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,model_one_missing,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,article_agree,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,article_agree,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,article_both_missing,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,article_both_missing,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,article_conflict,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,article_conflict,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,article_one_missing,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,article_one_missing,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,size_comparable_agree,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,size_comparable_agree,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,size_comparable_mismatch,knrm_name_v2,True,False,True,False
+Галантерея и аксессуары,size_comparable_mismatch,zs_llm_blend,True,False,True,False
+Галантерея и аксессуары,size_not_comparable,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,size_not_comparable,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,numeric_conflict,knrm_name_v2,True,False,True,False
+Галантерея и аксессуары,numeric_conflict,zs_llm_blend,True,False,True,False
+Галантерея и аксессуары,numeric_missing,knrm_name_v2,True,False,True,False
+Галантерея и аксессуары,numeric_missing,zs_llm_blend,True,False,True,False
+Галантерея и аксессуары,numeric_overlap,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,numeric_overlap,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,text_long,knrm_name_v2,True,False,True,False
+Галантерея и аксессуары,text_long,zs_llm_blend,True,False,True,False
+Галантерея и аксессуары,text_medium,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,text_medium,zs_llm_blend,True,False,False,False
+Галантерея и аксессуары,text_short_both,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,text_short_both,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,text_very_long,knrm_name_v2,False,False,False,False
+Галантерея и аксессуары,text_very_long,zs_llm_blend,False,False,False,False
+Галантерея и аксессуары,text_asymmetric,knrm_name_v2,True,False,False,False
+Галантерея и аксессуары,text_asymmetric,zs_llm_blend,True,False,False,False
+Ювелирные изделия,all,knrm_name_v2,True,False,False,True
+Ювелирные изделия,all,zs_llm_blend,True,False,False,True
+Ювелирные изделия,name_exact,knrm_name_v2,False,False,False,False
+Ювелирные изделия,name_exact,zs_llm_blend,False,False,False,False
+Ювелирные изделия,name_near,knrm_name_v2,False,False,False,False
+Ювелирные изделия,name_near,zs_llm_blend,False,False,False,False
+Ювелирные изделия,name_other,knrm_name_v2,True,False,False,False
+Ювелирные изделия,name_other,zs_llm_blend,True,False,False,False
+Ювелирные изделия,attrs_one_missing,knrm_name_v2,False,False,False,False
+Ювелирные изделия,attrs_one_missing,zs_llm_blend,False,False,False,False
+Ювелирные изделия,attrs_present,knrm_name_v2,True,False,False,False
+Ювелирные изделия,attrs_present,zs_llm_blend,True,False,False,False
+Ювелирные изделия,brand_agree,knrm_name_v2,True,False,False,False
+Ювелирные изделия,brand_agree,zs_llm_blend,True,False,False,False
+Ювелирные изделия,brand_conflict,knrm_name_v2,True,False,False,False
+Ювелирные изделия,brand_conflict,zs_llm_blend,True,False,False,False
+Ювелирные изделия,brand_one_missing,knrm_name_v2,True,False,True,False
+Ювелирные изделия,brand_one_missing,zs_llm_blend,True,False,True,False
+Ювелирные изделия,model_agree,knrm_name_v2,True,False,False,False
+Ювелирные изделия,model_agree,zs_llm_blend,True,False,False,False
+Ювелирные изделия,model_both_missing,knrm_name_v2,True,False,False,False
+Ювелирные изделия,model_both_missing,zs_llm_blend,True,False,False,False
+Ювелирные изделия,model_conflict,knrm_name_v2,True,False,False,False
+Ювелирные изделия,model_conflict,zs_llm_blend,True,False,False,False
+Ювелирные изделия,model_one_missing,knrm_name_v2,True,False,True,False
+Ювелирные изделия,model_one_missing,zs_llm_blend,True,False,True,False
+Ювелирные изделия,article_agree,knrm_name_v2,False,False,False,False
+Ювелирные изделия,article_agree,zs_llm_blend,False,False,False,False
+Ювелирные изделия,article_both_missing,knrm_name_v2,False,False,False,False
+Ювелирные изделия,article_both_missing,zs_llm_blend,False,False,False,False
+Ювелирные изделия,article_conflict,knrm_name_v2,True,False,False,False
+Ювелирные изделия,article_conflict,zs_llm_blend,True,False,False,False
+Ювелирные изделия,article_one_missing,knrm_name_v2,True,False,True,False
+Ювелирные изделия,article_one_missing,zs_llm_blend,True,False,True,False
+Ювелирные изделия,size_comparable_agree,knrm_name_v2,True,False,False,False
+Ювелирные изделия,size_comparable_agree,zs_llm_blend,True,False,False,False
+Ювелирные изделия,size_comparable_mismatch,knrm_name_v2,True,False,True,False
+Ювелирные изделия,size_comparable_mismatch,zs_llm_blend,True,False,True,False
+Ювелирные изделия,size_not_comparable,knrm_name_v2,True,False,False,False
+Ювелирные изделия,size_not_comparable,zs_llm_blend,True,False,False,False
+Ювелирные изделия,numeric_conflict,knrm_name_v2,True,False,False,False
+Ювелирные изделия,numeric_conflict,zs_llm_blend,True,False,False,False
+Ювелирные изделия,numeric_missing,knrm_name_v2,True,False,False,False
+Ювелирные изделия,numeric_missing,zs_llm_blend,True,False,False,False
+Ювелирные изделия,numeric_overlap,knrm_name_v2,True,False,False,False
+Ювелирные изделия,numeric_overlap,zs_llm_blend,True,False,False,False
+Ювелирные изделия,text_long,knrm_name_v2,True,False,False,False
+Ювелирные изделия,text_long,zs_llm_blend,True,False,False,False
+Ювелирные изделия,text_medium,knrm_name_v2,True,False,False,False
+Ювелирные изделия,text_medium,zs_llm_blend,True,False,False,False
+Ювелирные изделия,text_short_both,knrm_name_v2,False,False,False,False
+Ювелирные изделия,text_short_both,zs_llm_blend,False,False,False,False
+Ювелирные изделия,text_very_long,knrm_name_v2,True,False,False,False
+Ювелирные изделия,text_very_long,zs_llm_blend,True,False,False,False
+Ювелирные изделия,text_asymmetric,knrm_name_v2,True,False,True,False
+Ювелирные изделия,text_asymmetric,zs_llm_blend,True,False,True,False

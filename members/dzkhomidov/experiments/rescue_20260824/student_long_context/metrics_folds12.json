@@ -1,0 +1,50 @@
+{
+  "rows": [
+    {
+      "fold": "fold_01",
+      "variant": "len224",
+      "macro_ap": 0.799785149941078,
+      "pooled_ap": 0.8496697310234012,
+      "delta_macro": 0.0,
+      "delta_pooled": 0.0
+    },
+    {
+      "fold": "fold_01",
+      "variant": "len384",
+      "macro_ap": 0.8021085802300008,
+      "pooled_ap": 0.8507941010515164,
+      "delta_macro": 0.00232343028892279,
+      "delta_pooled": 0.0011243700281152735
+    },
+    {
+      "fold": "fold_02",
+      "variant": "len224",
+      "macro_ap": 0.8044475161041234,
+      "pooled_ap": 0.8582209789904376,
+      "delta_macro": 0.0,
+      "delta_pooled": 0.0
+    },
+    {
+      "fold": "fold_02",
+      "variant": "len384",
+      "macro_ap": 0.8074909612249064,
+      "pooled_ap": 0.8594859120936752,
+      "delta_macro": 0.003043445120783028,
+      "delta_pooled": 0.0012649331032376088
+    }
+  ],
+  "means": {
+    "len224": {
+      "macro_ap": 0.8021163330226007,
+      "pooled_ap": 0.8539453550069194,
+      "delta_macro": 0.0,
+      "delta_pooled": 0.0
+    },
+    "len384": {
+      "macro_ap": 0.8047997707274536,
+      "pooled_ap": 0.8551400065725958,
+      "delta_macro": 0.002683437704852909,
+      "delta_pooled": 0.0011946515656764412
+    }
+  }
+}

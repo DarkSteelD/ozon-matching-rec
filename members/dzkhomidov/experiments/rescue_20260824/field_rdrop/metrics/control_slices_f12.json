@@ -1,0 +1,730 @@
+[
+  {
+    "variant": "bce2view",
+    "slice": "all",
+    "rows": 182631,
+    "positives": 46862,
+    "ap": 0.8414168471769072
+  },
+  {
+    "variant": "bce2view",
+    "slice": "either_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8628438228438229
+  },
+  {
+    "variant": "bce2view",
+    "slice": "one_side_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8628438228438229
+  },
+  {
+    "variant": "bce2view",
+    "slice": "field_key_overlap_lt025",
+    "rows": 177140,
+    "positives": 45261,
+    "ap": 0.8410180773045915
+  },
+  {
+    "variant": "bce2view",
+    "slice": "field_count_asymmetry_ge2",
+    "rows": 65188,
+    "positives": 17971,
+    "ap": 0.8369743379159366
+  },
+  {
+    "variant": "bce2view",
+    "slice": "text_length_asymmetry_ge2",
+    "rows": 60552,
+    "positives": 16058,
+    "ap": 0.827810008972021
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Автотовары",
+    "rows": 9446,
+    "positives": 1678,
+    "ap": 0.7185307970297902
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Аптека",
+    "rows": 9141,
+    "positives": 672,
+    "ap": 0.8747238183612971
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Бытовая техника",
+    "rows": 8817,
+    "positives": 3186,
+    "ap": 0.8412786071219671
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Бытовая химия",
+    "rows": 8737,
+    "positives": 4026,
+    "ap": 0.903801385960287
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Галантерея и аксессуары",
+    "rows": 8935,
+    "positives": 1485,
+    "ap": 0.7159988782637946
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Детские товары",
+    "rows": 8862,
+    "positives": 4982,
+    "ap": 0.9149269319586139
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Дом и сад",
+    "rows": 9009,
+    "positives": 2365,
+    "ap": 0.8338806433047916
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Канцелярские товары",
+    "rows": 8742,
+    "positives": 2983,
+    "ap": 0.814082455817366
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Красота и гигиена",
+    "rows": 8519,
+    "positives": 3127,
+    "ap": 0.8279426599952572
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Мебель",
+    "rows": 9148,
+    "positives": 1353,
+    "ap": 0.704903032093229
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Музыкальные инструменты",
+    "rows": 8811,
+    "positives": 1902,
+    "ap": 0.8565151722341127
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Обувь",
+    "rows": 9104,
+    "positives": 889,
+    "ap": 0.5187911293893162
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Одежда",
+    "rows": 11723,
+    "positives": 1355,
+    "ap": 0.5427763605208529
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Продукты питания",
+    "rows": 9130,
+    "positives": 2475,
+    "ap": 0.8898004696317736
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Спорт и отдых",
+    "rows": 8736,
+    "positives": 2295,
+    "ap": 0.7407497284081315
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Строительство и ремонт",
+    "rows": 9054,
+    "positives": 1983,
+    "ap": 0.8021867799746496
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Товары для животных",
+    "rows": 9094,
+    "positives": 3213,
+    "ap": 0.9021343317957755
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Хобби и творчество",
+    "rows": 8827,
+    "positives": 4134,
+    "ap": 0.931230669598346
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Электроника",
+    "rows": 9432,
+    "positives": 1595,
+    "ap": 0.7622293999458762
+  },
+  {
+    "variant": "bce2view",
+    "slice": "category:Ювелирные изделия",
+    "rows": 9364,
+    "positives": 1164,
+    "ap": 0.5772837499801284
+  },
+  {
+    "variant": "field05",
+    "slice": "all",
+    "rows": 182631,
+    "positives": 46862,
+    "ap": 0.8425578311478492
+  },
+  {
+    "variant": "field05",
+    "slice": "either_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8558993783993782
+  },
+  {
+    "variant": "field05",
+    "slice": "one_side_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8558993783993782
+  },
+  {
+    "variant": "field05",
+    "slice": "field_key_overlap_lt025",
+    "rows": 177140,
+    "positives": 45261,
+    "ap": 0.8421225485892392
+  },
+  {
+    "variant": "field05",
+    "slice": "field_count_asymmetry_ge2",
+    "rows": 65188,
+    "positives": 17971,
+    "ap": 0.8380745334777497
+  },
+  {
+    "variant": "field05",
+    "slice": "text_length_asymmetry_ge2",
+    "rows": 60552,
+    "positives": 16058,
+    "ap": 0.8290023285562025
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Автотовары",
+    "rows": 9446,
+    "positives": 1678,
+    "ap": 0.720344028620973
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Аптека",
+    "rows": 9141,
+    "positives": 672,
+    "ap": 0.8733594643576605
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Бытовая техника",
+    "rows": 8817,
+    "positives": 3186,
+    "ap": 0.843524919265996
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Бытовая химия",
+    "rows": 8737,
+    "positives": 4026,
+    "ap": 0.9041664271422302
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Галантерея и аксессуары",
+    "rows": 8935,
+    "positives": 1485,
+    "ap": 0.7184213606493294
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Детские товары",
+    "rows": 8862,
+    "positives": 4982,
+    "ap": 0.9159112111033492
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Дом и сад",
+    "rows": 9009,
+    "positives": 2365,
+    "ap": 0.8341318275599144
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Канцелярские товары",
+    "rows": 8742,
+    "positives": 2983,
+    "ap": 0.8140620079790413
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Красота и гигиена",
+    "rows": 8519,
+    "positives": 3127,
+    "ap": 0.8291791595486115
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Мебель",
+    "rows": 9148,
+    "positives": 1353,
+    "ap": 0.7060366812885303
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Музыкальные инструменты",
+    "rows": 8811,
+    "positives": 1902,
+    "ap": 0.8577168163280038
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Обувь",
+    "rows": 9104,
+    "positives": 889,
+    "ap": 0.5219353421906631
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Одежда",
+    "rows": 11723,
+    "positives": 1355,
+    "ap": 0.546436060570064
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Продукты питания",
+    "rows": 9130,
+    "positives": 2475,
+    "ap": 0.8898891801652917
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Спорт и отдых",
+    "rows": 8736,
+    "positives": 2295,
+    "ap": 0.7421230762012211
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Строительство и ремонт",
+    "rows": 9054,
+    "positives": 1983,
+    "ap": 0.8028359375078337
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Товары для животных",
+    "rows": 9094,
+    "positives": 3213,
+    "ap": 0.9025429168261733
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Хобби и творчество",
+    "rows": 8827,
+    "positives": 4134,
+    "ap": 0.9315763249887613
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Электроника",
+    "rows": 9432,
+    "positives": 1595,
+    "ap": 0.7626313048153568
+  },
+  {
+    "variant": "field05",
+    "slice": "category:Ювелирные изделия",
+    "rows": 9364,
+    "positives": 1164,
+    "ap": 0.5822704764383282
+  },
+  {
+    "variant": "span05",
+    "slice": "all",
+    "rows": 182631,
+    "positives": 46862,
+    "ap": 0.8417182122268084
+  },
+  {
+    "variant": "span05",
+    "slice": "either_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8468181818181817
+  },
+  {
+    "variant": "span05",
+    "slice": "one_side_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8468181818181817
+  },
+  {
+    "variant": "span05",
+    "slice": "field_key_overlap_lt025",
+    "rows": 177140,
+    "positives": 45261,
+    "ap": 0.8412888214499248
+  },
+  {
+    "variant": "span05",
+    "slice": "field_count_asymmetry_ge2",
+    "rows": 65188,
+    "positives": 17971,
+    "ap": 0.8375531550428241
+  },
+  {
+    "variant": "span05",
+    "slice": "text_length_asymmetry_ge2",
+    "rows": 60552,
+    "positives": 16058,
+    "ap": 0.8292688883479113
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Автотовары",
+    "rows": 9446,
+    "positives": 1678,
+    "ap": 0.7188905058677446
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Аптека",
+    "rows": 9141,
+    "positives": 672,
+    "ap": 0.8740861147978323
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Бытовая техника",
+    "rows": 8817,
+    "positives": 3186,
+    "ap": 0.843469325483792
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Бытовая химия",
+    "rows": 8737,
+    "positives": 4026,
+    "ap": 0.9038492483091041
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Галантерея и аксессуары",
+    "rows": 8935,
+    "positives": 1485,
+    "ap": 0.7162884264513593
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Детские товары",
+    "rows": 8862,
+    "positives": 4982,
+    "ap": 0.9148167237456817
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Дом и сад",
+    "rows": 9009,
+    "positives": 2365,
+    "ap": 0.8350073840113346
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Канцелярские товары",
+    "rows": 8742,
+    "positives": 2983,
+    "ap": 0.8132049023087716
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Красота и гигиена",
+    "rows": 8519,
+    "positives": 3127,
+    "ap": 0.8287198060600834
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Мебель",
+    "rows": 9148,
+    "positives": 1353,
+    "ap": 0.7049669406895878
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Музыкальные инструменты",
+    "rows": 8811,
+    "positives": 1902,
+    "ap": 0.8571044708606043
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Обувь",
+    "rows": 9104,
+    "positives": 889,
+    "ap": 0.5246869569197128
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Одежда",
+    "rows": 11723,
+    "positives": 1355,
+    "ap": 0.540979342203096
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Продукты питания",
+    "rows": 9130,
+    "positives": 2475,
+    "ap": 0.8882802950068374
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Спорт и отдых",
+    "rows": 8736,
+    "positives": 2295,
+    "ap": 0.7416067239951286
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Строительство и ремонт",
+    "rows": 9054,
+    "positives": 1983,
+    "ap": 0.8021936423164624
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Товары для животных",
+    "rows": 9094,
+    "positives": 3213,
+    "ap": 0.9016088382604517
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Хобби и творчество",
+    "rows": 8827,
+    "positives": 4134,
+    "ap": 0.9307923912058685
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Электроника",
+    "rows": 9432,
+    "positives": 1595,
+    "ap": 0.7594673591069929
+  },
+  {
+    "variant": "span05",
+    "slice": "category:Ювелирные изделия",
+    "rows": 9364,
+    "positives": 1164,
+    "ap": 0.5766659043832456
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "all",
+    "rows": 182631,
+    "positives": 46862,
+    "ap": 0.8408752118324883
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "either_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8427059052059049
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "one_side_attrs_empty",
+    "rows": 39,
+    "positives": 13,
+    "ap": 0.8427059052059049
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "field_key_overlap_lt025",
+    "rows": 177140,
+    "positives": 45261,
+    "ap": 0.8403975258239493
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "field_count_asymmetry_ge2",
+    "rows": 65188,
+    "positives": 17971,
+    "ap": 0.8364270505213242
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "text_length_asymmetry_ge2",
+    "rows": 60552,
+    "positives": 16058,
+    "ap": 0.8282260696461099
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Автотовары",
+    "rows": 9446,
+    "positives": 1678,
+    "ap": 0.7206441904504375
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Аптека",
+    "rows": 9141,
+    "positives": 672,
+    "ap": 0.87306005760942
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Бытовая техника",
+    "rows": 8817,
+    "positives": 3186,
+    "ap": 0.8413140069542322
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Бытовая химия",
+    "rows": 8737,
+    "positives": 4026,
+    "ap": 0.9031159445849621
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Галантерея и аксессуары",
+    "rows": 8935,
+    "positives": 1485,
+    "ap": 0.7143954966915147
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Детские товары",
+    "rows": 8862,
+    "positives": 4982,
+    "ap": 0.9135018946559286
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Дом и сад",
+    "rows": 9009,
+    "positives": 2365,
+    "ap": 0.830703193739736
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Канцелярские товары",
+    "rows": 8742,
+    "positives": 2983,
+    "ap": 0.8124977123943258
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Красота и гигиена",
+    "rows": 8519,
+    "positives": 3127,
+    "ap": 0.8291450280780199
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Мебель",
+    "rows": 9148,
+    "positives": 1353,
+    "ap": 0.7032141472998266
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Музыкальные инструменты",
+    "rows": 8811,
+    "positives": 1902,
+    "ap": 0.8548220543957903
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Обувь",
+    "rows": 9104,
+    "positives": 889,
+    "ap": 0.5171709410773593
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Одежда",
+    "rows": 11723,
+    "positives": 1355,
+    "ap": 0.5409121268610932
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Продукты питания",
+    "rows": 9130,
+    "positives": 2475,
+    "ap": 0.8871135246946353
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Спорт и отдых",
+    "rows": 8736,
+    "positives": 2295,
+    "ap": 0.7433062859953407
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Строительство и ремонт",
+    "rows": 9054,
+    "positives": 1983,
+    "ap": 0.8025964645124317
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Товары для животных",
+    "rows": 9094,
+    "positives": 3213,
+    "ap": 0.901419794730164
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Хобби и творчество",
+    "rows": 8827,
+    "positives": 4134,
+    "ap": 0.9305914501179002
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Электроника",
+    "rows": 9432,
+    "positives": 1595,
+    "ap": 0.7622096883049401
+  },
+  {
+    "variant": "mismatch05",
+    "slice": "category:Ювелирные изделия",
+    "rows": 9364,
+    "positives": 1164,
+    "ap": 0.5745092264424035
+  }
+]

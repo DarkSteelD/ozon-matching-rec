@@ -1,0 +1,4 @@
+runner_pid=1212887
+host=avi-ling-gpu03
+gpu=physical1
+launched=2026-08-24T10:16:51+03:00

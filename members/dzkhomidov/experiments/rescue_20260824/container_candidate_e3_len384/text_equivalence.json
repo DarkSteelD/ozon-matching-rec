@@ -1,0 +1,25 @@
+{
+  "pairs": 365654,
+  "needed_ids": 711304,
+  "retained_items": 711304,
+  "mismatches": {
+    "t1": 0,
+    "t2": 0,
+    "p1": 0,
+    "p2": 0,
+    "penalty_flags": 0
+  },
+  "hashes": {
+    "old_t1": "e05319239f9ac4fd9f2128433c05ebdabef2e67b5bdcb4122e158eb3a3727077",
+    "old_t2": "f4a1c75c1ed819e06c7f16e450ce2c147fb4ba8cc94c33798e6f5f7e1dd7e2fa",
+    "old_p1": "8fdbdad852d8c778f65e7c38d38a2c30aeba10a02e9324ac470fb6881affbeb7",
+    "old_p2": "6c59e80a1d52b1bee1711379266308c2d04ad94910c7f2bef9525b3868734feb",
+    "new_t1": "e05319239f9ac4fd9f2128433c05ebdabef2e67b5bdcb4122e158eb3a3727077",
+    "new_t2": "f4a1c75c1ed819e06c7f16e450ce2c147fb4ba8cc94c33798e6f5f7e1dd7e2fa",
+    "new_p1": "8fdbdad852d8c778f65e7c38d38a2c30aeba10a02e9324ac470fb6881affbeb7",
+    "new_p2": "6c59e80a1d52b1bee1711379266308c2d04ad94910c7f2bef9525b3868734feb",
+    "old_penalty_flags": "b01a2d7260bcabb6cc393abd7d87e6176573865aea1f74d68f022fc70cb338b9",
+    "new_penalty_flags": "b01a2d7260bcabb6cc393abd7d87e6176573865aea1f74d68f022fc70cb338b9"
+  },
+  "runtime_seconds": 547.1353676319122
+}

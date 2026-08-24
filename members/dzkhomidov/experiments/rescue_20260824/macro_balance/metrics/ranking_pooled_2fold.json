@@ -1,0 +1,8 @@
+{
+  "spearman": 0.9983501513630862,
+  "mean_absolute_rank_change": 2097.764913952177,
+  "median_absolute_rank_change": 1450.0,
+  "rows_moved_at_least_1pct": 75361,
+  "rows_moved_at_least_1pct_fraction": 0.41264078935120546,
+  "top_decile_jaccard": 0.9342335186656077
+}

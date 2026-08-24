@@ -1,0 +1,46 @@
+{
+  "args": {
+    "data": "/home/dzkhomidov/matching-work/data/hand_pairs.parquet",
+    "init": "/home/dzkhomidov/matching-work/ckpt_disk/rubase_llmfull_e2",
+    "output": "/home/dzkhomidov/matching-work/rescue_20260824/unit_normalization",
+    "folds": "fold_01,fold_02",
+    "variants": "baseline,normalized,corrupt",
+    "max_len": 224,
+    "epochs": 2,
+    "bs": 192,
+    "lr": 2e-05,
+    "seed": 20260814
+  },
+  "runs": [
+    {
+      "variant": "baseline",
+      "fold": "fold_01",
+      "runtime_seconds": 366.18875002861023
+    },
+    {
+      "variant": "baseline",
+      "fold": "fold_02",
+      "runtime_seconds": 364.2428729534149
+    },
+    {
+      "variant": "normalized",
+      "fold": "fold_01",
+      "runtime_seconds": 364.40056896209717
+    },
+    {
+      "variant": "normalized",
+      "fold": "fold_02",
+      "runtime_seconds": 364.7672998905182
+    },
+    {
+      "variant": "corrupt",
+      "fold": "fold_01",
+      "runtime_seconds": 364.7477970123291
+    },
+    {
+      "variant": "corrupt",
+      "fold": "fold_02",
+      "runtime_seconds": 364.5206563472748
+    }
+  ]
+}

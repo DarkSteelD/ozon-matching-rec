@@ -1,0 +1,54 @@
+{
+  "stage": "folds12",
+  "gate_threshold": 0.001,
+  "gate_pass": false,
+  "fold_metrics": [
+    {
+      "fold": "fold_01",
+      "baseline": 0.799520145149527,
+      "global10": 0.7993601657696515,
+      "category10": 0.7993742635257963,
+      "category_delta_baseline": -0.00014588162373063707,
+      "category_delta_global": 1.409775614480413e-05
+    },
+    {
+      "fold": "fold_02",
+      "baseline": 0.804344600830835,
+      "global10": 0.8044442974554895,
+      "category10": 0.8047249696181382,
+      "category_delta_baseline": 0.0003803687873031869,
+      "category_delta_global": 0.00028067216264870964
+    }
+  ],
+  "mean_fold_metrics": {
+    "baseline": 0.801932372990181,
+    "global10": 0.8019022316125706,
+    "category10": 0.8020496165719673,
+    "category_delta_baseline": 0.00011724358178627492,
+    "category_delta_global": 0.0001473849593967569
+  },
+  "pooled_fold_prauc": [
+    {
+      "fold": "fold_01",
+      "baseline": 0.8493723483604234,
+      "global10": 0.8485077536155071,
+      "category10": 0.8486734560046143
+    },
+    {
+      "fold": "fold_02",
+      "baseline": 0.8583072396838624,
+      "global10": 0.8572412279717168,
+      "category10": 0.8574739886518226
+    }
+  ],
+  "paired_category_bootstrap95": {
+    "category_delta_baseline": [
+      -0.0003283459045688208,
+      0.0005804183574863505
+    ],
+    "category_delta_global": [
+      -0.00036090973216660975,
+      0.0006021491296810371
+    ]
+  }
+}

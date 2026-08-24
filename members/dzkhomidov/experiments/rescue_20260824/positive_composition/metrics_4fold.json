@@ -1,0 +1,164 @@
+{
+  "rows": [
+    {
+      "fold": "fold_01",
+      "variant": "e2_len224",
+      "macro_ap": 0.7994499617263326,
+      "pooled_ap": 0.8493838982416274
+    },
+    {
+      "fold": "fold_01",
+      "variant": "e3_len224",
+      "macro_ap": 0.8015275496103863,
+      "pooled_ap": 0.851552260641878
+    },
+    {
+      "fold": "fold_01",
+      "variant": "e2_len384",
+      "macro_ap": 0.8017455633231465,
+      "pooled_ap": 0.8503105153002524
+    },
+    {
+      "fold": "fold_01",
+      "variant": "e3_len384",
+      "macro_ap": 0.8041205319681085,
+      "pooled_ap": 0.8524177235058975
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e2_len224",
+      "macro_ap": 0.8040792093565822,
+      "pooled_ap": 0.8579460964157003
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e3_len224",
+      "macro_ap": 0.8058745902078416,
+      "pooled_ap": 0.8596798958089886
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e2_len384",
+      "macro_ap": 0.8074454859653797,
+      "pooled_ap": 0.8594141505884493
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e3_len384",
+      "macro_ap": 0.8087229217710933,
+      "pooled_ap": 0.8609486358784664
+    },
+    {
+      "fold": "fold_03",
+      "variant": "e2_len224",
+      "macro_ap": 0.7993715040796635,
+      "pooled_ap": 0.8514014990368485
+    },
+    {
+      "fold": "fold_03",
+      "variant": "e3_len224",
+      "macro_ap": 0.8012928653941419,
+      "pooled_ap": 0.852724281319167
+    },
+    {
+      "fold": "fold_03",
+      "variant": "e2_len384",
+      "macro_ap": 0.8028316594644551,
+      "pooled_ap": 0.8528320131464942
+    },
+    {
+      "fold": "fold_03",
+      "variant": "e3_len384",
+      "macro_ap": 0.8048643026497613,
+      "pooled_ap": 0.8542615243352115
+    },
+    {
+      "fold": "fold_04",
+      "variant": "e2_len224",
+      "macro_ap": 0.8020554813767958,
+      "pooled_ap": 0.8528744902751826
+    },
+    {
+      "fold": "fold_04",
+      "variant": "e3_len224",
+      "macro_ap": 0.8023609459233336,
+      "pooled_ap": 0.8539771204516075
+    },
+    {
+      "fold": "fold_04",
+      "variant": "e2_len384",
+      "macro_ap": 0.8038675586873814,
+      "pooled_ap": 0.8540297839294074
+    },
+    {
+      "fold": "fold_04",
+      "variant": "e3_len384",
+      "macro_ap": 0.8045738746901184,
+      "pooled_ap": 0.8548623589145201
+    }
+  ],
+  "effects": [
+    {
+      "fold": "fold_01",
+      "epoch3_at_224_macro": 0.0020775878840536555,
+      "context_at_e2_macro": 0.0022956015968138566,
+      "composition_macro": 0.004670570241775862,
+      "epoch3_at_384_macro": 0.0023749686449620055,
+      "interaction_macro": 0.0002973807609083501,
+      "composition_pooled": 0.003033825264270096
+    },
+    {
+      "fold": "fold_02",
+      "epoch3_at_224_macro": 0.0017953808512594094,
+      "context_at_e2_macro": 0.0033662766087975138,
+      "composition_macro": 0.004643712414511114,
+      "epoch3_at_384_macro": 0.0012774358057136004,
+      "interaction_macro": -0.000517945045545809,
+      "composition_pooled": 0.003002539462766074
+    },
+    {
+      "fold": "fold_03",
+      "epoch3_at_224_macro": 0.001921361314478398,
+      "context_at_e2_macro": 0.0034601553847916078,
+      "composition_macro": 0.005492798570097768,
+      "epoch3_at_384_macro": 0.00203264318530616,
+      "interaction_macro": 0.00011128187082776186,
+      "composition_pooled": 0.0028600252983630448
+    },
+    {
+      "fold": "fold_04",
+      "epoch3_at_224_macro": 0.00030546454653779254,
+      "context_at_e2_macro": 0.0018120773105855248,
+      "composition_macro": 0.0025183933133225977,
+      "epoch3_at_384_macro": 0.000706316002737073,
+      "interaction_macro": 0.0004008514561992804,
+      "composition_pooled": 0.001987868639337531
+    }
+  ],
+  "means": {
+    "e2_len224": {
+      "macro_ap": 0.8012390391348436,
+      "pooled_ap": 0.8529014959923397
+    },
+    "e3_len224": {
+      "macro_ap": 0.8027639877839259,
+      "pooled_ap": 0.8544833895554103
+    },
+    "e2_len384": {
+      "macro_ap": 0.8039725668600906,
+      "pooled_ap": 0.8541466157411508
+    },
+    "e3_len384": {
+      "macro_ap": 0.8055704077697704,
+      "pooled_ap": 0.8556225606585238
+    }
+  },
+  "effect_means": {
+    "epoch3_at_224_macro": 0.0015249486490823139,
+    "context_at_e2_macro": 0.0027335277252471257,
+    "composition_macro": 0.0043313686349268354,
+    "epoch3_at_384_macro": 0.0015978409096797097,
+    "interaction_macro": 7.289226059739584e-05,
+    "composition_pooled": 0.0027210646661841864
+  }
+}

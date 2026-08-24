@@ -1,0 +1,35 @@
+{
+  "status": "checked",
+  "verdict": {
+    "reproducible_local_collapse_slices_exist": "positive",
+    "independent_saved_channel_recovers_collapse_consistently": "negative",
+    "manual_rule_ready": "negative",
+    "hidden_composition_identified": "inconclusive"
+  },
+  "strongest_reproducible_collapses": [
+    {"category": "Обувь", "slice": "text_asymmetric", "median_coverage": 0.127232, "median_baseline_ap": 0.389117, "median_delta_vs_category": -0.187332},
+    {"category": "Обувь", "slice": "name_exact", "median_coverage": 0.054133, "median_baseline_ap": 0.435717, "median_delta_vs_category": -0.137569},
+    {"category": "Галантерея и аксессуары", "slice": "size_comparable_mismatch", "median_coverage": 0.031484, "median_baseline_ap": 0.566458, "median_delta_vs_category": -0.170090},
+    {"category": "Галантерея и аксессуары", "slice": "text_long", "median_coverage": 0.127065, "median_baseline_ap": 0.620248, "median_delta_vs_category": -0.124259},
+    {"category": "Ювелирные изделия", "slice": "article_one_missing", "median_coverage": 0.707619, "median_baseline_ap": 0.518708, "median_delta_vs_category": -0.092170},
+    {"category": "Ювелирные изделия", "slice": "size_comparable_mismatch", "median_coverage": 0.377249, "median_baseline_ap": 0.535117, "median_delta_vs_category": -0.087806}
+  ],
+  "independent_channel_confirmation": {
+    "candidate_collapse_slices_positive_all_four_folds": 0,
+    "fixed_blend": "0.9 * rank(final_stack_all) + 0.1 * rank(alternative)",
+    "alternatives": ["zs_llm_blend", "knrm_name_v2"]
+  },
+  "prevalence_shift": {
+    "Обувь": {"weighted_local_expectation": 0.402059, "public_baseline_ap": 0.096523},
+    "Одежда": {"weighted_local_expectation": 0.425014, "public_baseline_ap": 0.110842},
+    "Галантерея и аксессуары": {"weighted_local_expectation": 0.471523, "public_baseline_ap": 0.242188},
+    "Ювелирные изделия": {"weighted_local_expectation": 0.239469, "public_baseline_ap": 0.286565}
+  },
+  "human_audit": {
+    "records_joined": 203,
+    "decisive_0_1": 173,
+    "unsure_minus1": 30,
+    "flips_among_decisive": 139,
+    "selection_bias": true
+  }
+}

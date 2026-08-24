@@ -1,0 +1,32 @@
+{
+  "baseline_macro_category_ap": 0.7810640189417011,
+  "decisions": [
+    {
+      "variant": "rank01",
+      "fold_deltas": {
+        "fold_01": -0.000352818682806344,
+        "fold_02": -0.0004049528456189222
+      },
+      "pooled_macro_category_ap_delta": -0.00031703379350156435,
+      "gate": "NO_GO"
+    },
+    {
+      "variant": "rank03",
+      "fold_deltas": {
+        "fold_01": -0.0014458327087349954,
+        "fold_02": -0.0008777903996695091
+      },
+      "pooled_macro_category_ap_delta": -0.001143304015690294,
+      "gate": "NO_GO"
+    },
+    {
+      "variant": "random03",
+      "fold_deltas": {
+        "fold_01": -0.000466826639869633,
+        "fold_02": -0.0009884543958523784
+      },
+      "pooled_macro_category_ap_delta": -0.0006212860789766017,
+      "gate": "NO_GO"
+    }
+  ]
+}

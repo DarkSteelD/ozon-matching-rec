@@ -1,0 +1,26 @@
+[
+  {
+    "fold": "fold_01",
+    "train_rows": 274497,
+    "eval_rows": 91157,
+    "batches": 2144,
+    "valid_pair_batches": 2144,
+    "pairs_total": 141222,
+    "pairs_per_batch_mean": 65.86847014925372,
+    "pairs_per_batch_min": 42,
+    "pairs_per_batch_max": 88,
+    "runtime_s": 354.7990620136261
+  },
+  {
+    "fold": "fold_02",
+    "train_rows": 274180,
+    "eval_rows": 91474,
+    "batches": 2142,
+    "valid_pair_batches": 2142,
+    "pairs_total": 140577,
+    "pairs_per_batch_mean": 65.62885154061625,
+    "pairs_per_batch_min": 44,
+    "pairs_per_batch_max": 91,
+    "runtime_s": 356.1787509918213
+  }
+]

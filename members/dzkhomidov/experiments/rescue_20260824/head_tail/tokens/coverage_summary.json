@@ -1,0 +1,16 @@
+{
+  "rows": 365654,
+  "runtime_seconds": 63.197871923446655,
+  "any_trunc": 48092,
+  "both_trunc": 22402,
+  "any_trunc_fraction": 0.1315232432846352,
+  "both_trunc_fraction": 0.06126556799597434,
+  "total_len_quantiles": {
+    "0.5": 232.0,
+    "0.75": 322.0,
+    "0.9": 405.0,
+    "0.95": 452.0,
+    "0.99": 572.0
+  },
+  "prefix_native_check_rows": 128
+}

@@ -1,0 +1,110 @@
+{
+  "rows": [
+    {
+      "fold": "fold_01",
+      "variant": "e2_len224",
+      "macro_ap": 0.7994499617263326,
+      "pooled_ap": 0.8493838982416274
+    },
+    {
+      "fold": "fold_01",
+      "variant": "e3_len224",
+      "macro_ap": 0.8015275496103861,
+      "pooled_ap": 0.851552260641878
+    },
+    {
+      "fold": "fold_01",
+      "variant": "e2_len384",
+      "macro_ap": 0.8017455633231465,
+      "pooled_ap": 0.8503105153002524
+    },
+    {
+      "fold": "fold_01",
+      "variant": "e3_len384",
+      "macro_ap": 0.8041205319681085,
+      "pooled_ap": 0.8524177235058975
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e2_len224",
+      "macro_ap": 0.8040792093565822,
+      "pooled_ap": 0.8579460964157003
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e3_len224",
+      "macro_ap": 0.8058745902078416,
+      "pooled_ap": 0.8596798958089886
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e2_len384",
+      "macro_ap": 0.8074454859653798,
+      "pooled_ap": 0.8594141505884493
+    },
+    {
+      "fold": "fold_02",
+      "variant": "e3_len384",
+      "macro_ap": 0.8087229217710933,
+      "pooled_ap": 0.8609486358784664
+    }
+  ],
+  "effects": [
+    {
+      "fold": "fold_01",
+      "epoch3_at_224_macro": 0.0020775878840534334,
+      "context_at_e2_macro": 0.0022956015968138566,
+      "composition_macro": 0.004670570241775862,
+      "epoch3_at_384_macro": 0.0023749686449620055,
+      "interaction_macro": 0.00029738076090857213,
+      "epoch3_at_224_pooled": 0.002168362400250534,
+      "context_at_e2_pooled": 0.0009266170586249567,
+      "composition_pooled": 0.003033825264270096,
+      "epoch3_at_384_pooled": 0.002107208205645139,
+      "interaction_pooled": -6.115419460539506e-05
+    },
+    {
+      "fold": "fold_02",
+      "epoch3_at_224_macro": 0.0017953808512594094,
+      "context_at_e2_macro": 0.003366276608797625,
+      "composition_macro": 0.004643712414511114,
+      "epoch3_at_384_macro": 0.0012774358057134894,
+      "interaction_macro": -0.00051794504554592,
+      "epoch3_at_224_pooled": 0.0017337993932883267,
+      "context_at_e2_pooled": 0.0014680541727489782,
+      "composition_pooled": 0.003002539462766074,
+      "epoch3_at_384_pooled": 0.0015344852900170958,
+      "interaction_pooled": -0.0001993141032712309
+    }
+  ],
+  "means": {
+    "e2_len224": {
+      "macro_ap": 0.8017645855414575,
+      "pooled_ap": 0.8536649973286639
+    },
+    "e3_len224": {
+      "macro_ap": 0.8037010699091138,
+      "pooled_ap": 0.8556160782254333
+    },
+    "e2_len384": {
+      "macro_ap": 0.8045955246442631,
+      "pooled_ap": 0.8548623329443508
+    },
+    "e3_len384": {
+      "macro_ap": 0.8064217268696009,
+      "pooled_ap": 0.8566831796921819
+    }
+  },
+  "effect_means": {
+    "epoch3_at_224_macro": 0.0019364843676564214,
+    "context_at_e2_macro": 0.0028309391028057407,
+    "composition_macro": 0.004657141328143488,
+    "epoch3_at_384_macro": 0.0018262022253377475,
+    "interaction_macro": -0.00011028214231867395,
+    "epoch3_at_224_pooled": 0.0019510808967694304,
+    "context_at_e2_pooled": 0.0011973356156869674,
+    "composition_pooled": 0.003018182363518085,
+    "epoch3_at_384_pooled": 0.0018208467478311174,
+    "interaction_pooled": -0.00013023414893831298
+  }
+}

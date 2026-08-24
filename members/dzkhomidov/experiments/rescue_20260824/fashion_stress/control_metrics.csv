@@ -1,0 +1,65 @@
+category,fold,variant,metric,delta_vs_baseline,status,delta_std_20_permutations
+Обувь,fold_01,final_stack_all,0.5788291810730476,0.0,checked,
+Обувь,fold_01,positive_control_target,1.0,0.4211708189269524,checked,
+Обувь,fold_01,permuted_knrm_name_v2,0.5365950177227,-0.04223416335034755,checked,0.011288489564939169
+Обувь,fold_01,permuted_zs_llm_blend,0.5339784261241373,-0.04485075494891029,checked,0.013810672031900832
+Обувь,fold_02,final_stack_all,0.5802672270769795,0.0,checked,
+Обувь,fold_02,positive_control_target,1.0,0.41973277292302047,checked,
+Обувь,fold_02,permuted_knrm_name_v2,0.5359973483277793,-0.04426987874920024,checked,0.01233076205044459
+Обувь,fold_02,permuted_zs_llm_blend,0.5366156297067811,-0.04365159737019837,checked,0.009695999355255093
+Обувь,fold_03,final_stack_all,0.5896732952561569,0.0,checked,
+Обувь,fold_03,positive_control_target,1.0,0.41032670474384314,checked,
+Обувь,fold_03,permuted_knrm_name_v2,0.5454536959866987,-0.04421959926945822,checked,0.014102728691721099
+Обувь,fold_03,permuted_zs_llm_blend,0.5422580541300583,-0.04741524112609846,checked,0.011808566423899181
+Обувь,fold_04,final_stack_all,0.5677430507557529,0.0,checked,
+Обувь,fold_04,positive_control_target,1.0,0.43225694924424707,checked,
+Обувь,fold_04,permuted_knrm_name_v2,0.5411935116937481,-0.026549539062004912,checked,0.01534860470962085
+Обувь,fold_04,permuted_zs_llm_blend,0.5362092309619723,-0.031533819793780636,checked,0.011215478542243399
+Одежда,fold_01,final_stack_all,0.6027141252324629,0.0,checked,
+Одежда,fold_01,positive_control_target,1.0,0.3972858747675371,checked,
+Одежда,fold_01,permuted_knrm_name_v2,0.573614234442175,-0.029099890790287953,checked,0.008386470855032503
+Одежда,fold_01,permuted_zs_llm_blend,0.570286943468023,-0.032427181764439934,checked,0.009604940135515688
+Одежда,fold_02,final_stack_all,0.5915063221796568,0.0,checked,
+Одежда,fold_02,positive_control_target,1.0,0.4084936778203432,checked,
+Одежда,fold_02,permuted_knrm_name_v2,0.5584361853466334,-0.033070136833023386,checked,0.008958524373906868
+Одежда,fold_02,permuted_zs_llm_blend,0.5627256640940732,-0.028780658085583593,checked,0.009202221987631586
+Одежда,fold_03,final_stack_all,0.5846048518693114,0.0,checked,
+Одежда,fold_03,positive_control_target,1.0,0.41539514813068856,checked,
+Одежда,fold_03,permuted_knrm_name_v2,0.5512570865598054,-0.03334776530950602,checked,0.006483355514413885
+Одежда,fold_03,permuted_zs_llm_blend,0.5524641550057452,-0.03214069686356626,checked,0.010222759760120713
+Одежда,fold_04,final_stack_all,0.6083261187793046,0.0,checked,
+Одежда,fold_04,positive_control_target,1.0,0.39167388122069535,checked,
+Одежда,fold_04,permuted_knrm_name_v2,0.5834919808293495,-0.02483413794995512,checked,0.00893945804553999
+Одежда,fold_04,permuted_zs_llm_blend,0.5866250344127915,-0.021701084366513156,checked,0.008550792430732134
+Галантерея и аксессуары,fold_01,final_stack_all,0.7361477362250285,0.0,checked,
+Галантерея и аксессуары,fold_01,positive_control_target,1.0,0.2638522637749715,checked,
+Галантерея и аксессуары,fold_01,permuted_knrm_name_v2,0.7088865463745808,-0.02726118985044764,checked,0.0057640189484202
+Галантерея и аксессуары,fold_01,permuted_zs_llm_blend,0.7068545183850851,-0.029293217839943382,checked,0.007980008387276713
+Галантерея и аксессуары,fold_02,final_stack_all,0.7513778845996302,0.0,checked,
+Галантерея и аксессуары,fold_02,positive_control_target,1.0,0.24862211540036983,checked,
+Галантерея и аксессуары,fold_02,permuted_knrm_name_v2,0.7255286915522682,-0.025849193047362024,checked,0.004194656031129703
+Галантерея и аксессуары,fold_02,permuted_zs_llm_blend,0.7266041224021232,-0.024773762197506977,checked,0.006830425085110981
+Галантерея и аксессуары,fold_03,final_stack_all,0.736946530132057,0.0,checked,
+Галантерея и аксессуары,fold_03,positive_control_target,1.0,0.263053469867943,checked,
+Галантерея и аксессуары,fold_03,permuted_knrm_name_v2,0.7121330272980247,-0.024813502834032237,checked,0.005493288808074586
+Галантерея и аксессуары,fold_03,permuted_zs_llm_blend,0.7113536079501871,-0.025592922181869943,checked,0.006975690457864841
+Галантерея и аксессуары,fold_04,final_stack_all,0.7401005371038498,0.0,checked,
+Галантерея и аксессуары,fold_04,positive_control_target,1.0,0.2598994628961502,checked,
+Галантерея и аксессуары,fold_04,permuted_knrm_name_v2,0.7154087384157022,-0.024691798688147637,checked,0.007585425789464783
+Галантерея и аксессуары,fold_04,permuted_zs_llm_blend,0.7171010065442482,-0.022999530559601623,checked,0.005930685671627506
+Ювелирные изделия,fold_01,final_stack_all,0.6390750489255224,0.0,checked,
+Ювелирные изделия,fold_01,positive_control_target,1.0,0.36092495107447764,checked,
+Ювелирные изделия,fold_01,permuted_knrm_name_v2,0.594991660755696,-0.04408338816982636,checked,0.009951181105566467
+Ювелирные изделия,fold_01,permuted_zs_llm_blend,0.6025915681194872,-0.0364834808060351,checked,0.010801814844068568
+Ювелирные изделия,fold_02,final_stack_all,0.587881977930299,0.0,checked,
+Ювелирные изделия,fold_02,positive_control_target,1.0,0.41211802206970105,checked,
+Ювелирные изделия,fold_02,permuted_knrm_name_v2,0.5427782578230161,-0.045103720107282835,checked,0.008720464930601043
+Ювелирные изделия,fold_02,permuted_zs_llm_blend,0.5442420335755414,-0.043639944354757564,checked,0.010035605844596802
+Ювелирные изделия,fold_03,final_stack_all,0.6351403327602787,0.0,checked,
+Ювелирные изделия,fold_03,positive_control_target,1.0,0.3648596672397213,checked,
+Ювелирные изделия,fold_03,permuted_knrm_name_v2,0.5925390674488771,-0.042601265311401605,checked,0.007328417168061901
+Ювелирные изделия,fold_03,permuted_zs_llm_blend,0.5981032661146858,-0.037037066645592885,checked,0.009853670822107963
+Ювелирные изделия,fold_04,final_stack_all,0.6067626481236219,0.0,checked,
+Ювелирные изделия,fold_04,positive_control_target,1.0,0.3932373518763781,checked,
+Ювелирные изделия,fold_04,permuted_knrm_name_v2,0.5738525048380935,-0.032910143285528395,checked,0.008365947526187792
+Ювелирные изделия,fold_04,permuted_zs_llm_blend,0.5651090918139356,-0.04165355630968622,checked,0.0086275600503013
