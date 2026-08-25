@@ -1,0 +1,23 @@
+{
+  "status": "READY",
+  "model_alias": "ce_rubase_len384",
+  "source_checkpoint": "rubase_llmfull_e2",
+  "tokenizer_max_length": 384,
+  "num_labels": 1,
+  "model_safetensors_sha256": "0a90825fbeb584fda7dfb3faded702b302b338aa3b0d8e4dc8217be77d0399f6",
+  "files": {
+    "config.json": {"bytes": 969, "sha256": "7ac471b7daa2628be40469ffc90000c903556b6412e8e9a0d26ebc0a38baa126"},
+    "model.safetensors": {"bytes": 711440380, "sha256": "0a90825fbeb584fda7dfb3faded702b302b338aa3b0d8e4dc8217be77d0399f6"},
+    "special_tokens_map.json": {"bytes": 125, "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"},
+    "tokenizer.json": {"bytes": 3573554, "sha256": "aa68ce2535cea6f63667df615622150c10a72aae14e5ec44285edc4d1c88708a"},
+    "tokenizer_config.json": {"bytes": 1271, "sha256": "0eb95891c3de474ec9ea0cd665b43f1e9fdd3604f76e8d66b3f85e9b301232a1"},
+    "vocab.txt": {"bytes": 1649718, "sha256": "78106a3d3ae8600d1ba573b967b9bb731d2c2282957cbc6e26ab20935c3da02b"}
+  },
+  "validation": {
+    "rows": 365654,
+    "folds": 4,
+    "mean_fold_prauc": 0.8453186520777625,
+    "pooled_prauc": 0.8451513595154213,
+    "macro_category_prauc": 0.7939953946046746
+  }
+}
