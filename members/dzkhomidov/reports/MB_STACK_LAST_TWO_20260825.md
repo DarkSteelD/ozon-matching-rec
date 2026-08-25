@@ -1,6 +1,8 @@
 # Matching: две последние ODS-посылки `mb_stack`
 
 Срез ODS: 2026-08-25 22:25 MSK. Метрика — macro PR-AUC по 20 категориям.
+Live leaderboard endpoint: команда `Roma Bazuka` занимает **15-е место из 133**
+со score **0.5124546791** после 26 посылок.
 
 | Посылка | ODS ID | Macro PR-AUC | Решение |
 |---|---|---:|---|
@@ -54,4 +56,3 @@
 - ODS files: 604,642,124 и 604,643,058 bytes; ETag `2566cbee79ba0d274ab58793b75631d0` и `5f31ca26397f3f1f45bfbf7f475a5211`.
 - Оба ZIP имеют одинаковые 12 members; кроме `run.py` и `artifact.json`, CRC/size всех members совпадают.
 - Live quota после этих посылок: 2 сегодня, 79 всего.
-
