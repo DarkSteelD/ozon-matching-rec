@@ -1,0 +1,4 @@
+[
+  {"path": "model_ce1",      "max_len": 512, "weight": 0.85, "batch": 96, "texts": "prio",  "cost": 1.0},
+  {"path": "model_pretrain", "max_len": 512, "weight": 0.15, "batch": 96, "texts": "plain", "cost": 1.0}
+]

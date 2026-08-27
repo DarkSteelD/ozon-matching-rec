@@ -248,9 +248,13 @@ def build(args, device, tokenizer):
     у мультимодальных вариантов есть башня зрения, которая для пар текстов
     мёртвый груз — её замораживаем, чтобы не тратить на неё состояния AdamW.
     """
-    kwargs = {"num_labels": args.num_labels}
-    if args.bf16_weights:
-        kwargs["dtype"] = torch.bfloat16
+    # Тип весов задаём ЯВНО. Без этого from_pretrained наследует его из конфига
+    # чекпоинта, а фолдовые модели мы сохраняем через model.half() — и в их
+    # конфиг попадает float16. Обучение в чистом fp16 без масштабирования потерь
+    # даёт nan с первого же шага: у fp16 узкий диапазон экспоненты, градиенты
+    # переполняются. Один такой прогон мы уже потеряли.
+    kwargs = {"num_labels": args.num_labels,
+              "dtype": torch.bfloat16 if args.bf16_weights else torch.float32}
     try:
         model = AutoModelForSequenceClassification.from_pretrained(
             args.init or args.model, **kwargs)
@@ -291,6 +295,12 @@ def build(args, device, tokenizer):
                 frozen += param.numel()
         if frozen:
             print(f"  заморожена башня зрения: {frozen/1e6:.0f}M параметров", flush=True)
+    # Страховка на будущее: fp16-веса при обучении — это гарантированный nan,
+    # и лучше упасть сразу, чем сжечь на этом четыре часа.
+    dtype = next(model.parameters()).dtype
+    if dtype == torch.float16:
+        raise SystemExit("веса загрузились в float16 — обучение в нём даст nan; "
+                         "проверьте dtype в конфиге чекпоинта")
     model = model.to(device)
     if args.grad_checkpoint:
         model.gradient_checkpointing_enable()
