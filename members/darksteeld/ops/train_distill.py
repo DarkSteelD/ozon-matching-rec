@@ -27,6 +27,7 @@ import numpy as np
 import polars as pl
 import torch
 
+from batching import LengthBucketBatches
 from pair_budget import fit_pair
 from torch.utils.data import DataLoader, Dataset
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -49,64 +50,20 @@ class Pairs(Dataset):
         self.t1 = frame["text1"].to_list()
         self.t2 = frame["text2"].to_list()
         self.y = frame["soft_target"].to_numpy().astype("float32")
+        self.w = (frame["weight"].to_numpy().astype("float32")
+                  if "weight" in frame.columns
+                  else np.ones(len(self.y), dtype="float32"))
 
     def __len__(self) -> int:
         return len(self.y)
 
     def __getitem__(self, i):
-        return self.t1[i], self.t2[i], self.y[i]
-
-
-class LengthBucketBatches(torch.utils.data.Sampler):
-    """Батчи из пар близкой длины: борьба с добивкой пустыми токенами.
-
-    Батч добивается до самой длинной пары в нём, поэтому при случайном
-    перемешивании один длинный экземпляр растягивает весь батч. Замер на 40
-    тысячах пар: при батче 16 обрабатывается в 1.82 раза больше токенов, чем
-    полезных, то есть 45% вычислений уходит в пустоту. Группировка по длине
-    снижает этот множитель до 1.11.
-
-    Полная сортировка по длине убила бы случайность и связала бы состав батча
-    с длиной. Поэтому сортируем не весь корпус, а окно из window батчей: внутри
-    окна длины сближаются, но само окно набирается случайно, и порядок готовых
-    батчей потом ещё раз перемешивается.
-
-    Длина считается в ТОКЕНАХ, а не в символах. Символьный прокси проще, но
-    добивка идёт по токенам, и на нём множитель выходит 1.25 вместо 1.11 —
-    треть выигрыша теряется. Разовая токенизация фолда стоит около полутора
-    минут против полутора часов обучения, так что размен очевиден.
-    """
-
-    def __init__(self, lengths, batch_size, window=50, seed=0):
-        self.lengths = np.asarray(lengths)
-        self.batch_size = batch_size
-        self.window = window
-        self.seed = seed
-        self.epoch = 0
-
-    def __iter__(self):
-        rng = np.random.default_rng(self.seed + self.epoch)
-        self.epoch += 1
-        order = rng.permutation(len(self.lengths))
-        span = self.batch_size * self.window
-        batches = []
-        for start in range(0, len(order), span):
-            chunk = order[start:start + span]
-            chunk = chunk[np.argsort(self.lengths[chunk], kind="stable")]
-            for at in range(0, len(chunk), self.batch_size):
-                batch = chunk[at:at + self.batch_size]
-                if len(batch) == self.batch_size:      # drop_last
-                    batches.append(batch.tolist())
-        rng.shuffle(batches)
-        return iter(batches)
-
-    def __len__(self):
-        return len(self.lengths) // self.batch_size
+        return self.t1[i], self.t2[i], self.y[i], self.w[i]
 
 
 def collate(batch, tokenizer, max_len, pad_multiple=0, budget_attrs=False,
             swap=False):
-    t1, t2, y = zip(*batch)
+    t1, t2, y, w = zip(*batch)
     if swap:
         # «А дубль Б» и «Б дубль А» — одно утверждение, но модель видит порядок
         # фиксированным: у ModernBERT нет сегментных эмбеддингов, и половины
@@ -125,7 +82,8 @@ def collate(batch, tokenizer, max_len, pad_multiple=0, budget_attrs=False,
     encoded = tokenizer(list(t1), list(t2), truncation=True, max_length=max_len,
                         padding=True, pad_to_multiple_of=pad_multiple or None,
                         return_tensors="pt")
-    return encoded, torch.tensor(y, dtype=torch.float32)
+    return (encoded, torch.tensor(y, dtype=torch.float32),
+            torch.tensor(w, dtype=torch.float32))
 
 
 def make_optimizer(model, args):
@@ -163,6 +121,32 @@ def make_optimizer(model, args):
 
 
 def fit(model, tokenizer, frame, args, device):
+    if args.error_weights:
+        # Второй этап: примеры, на которых модель ошиблась вне обучения, весят
+        # больше. Ошибка берётся из OOF, то есть из предсказаний модели, которая
+        # этих пар не видела — иначе вес считался бы по подогнанным ответам и
+        # усиливал бы не трудные примеры, а запомненные.
+        oof = pl.read_parquet(args.error_weights).select("id1", "id2", "score")
+        before = frame.height
+        frame = frame.join(oof, on=["id1", "id2"], how="left")
+        missing = frame["score"].null_count()
+        frame = frame.with_columns(
+            (1.0 + args.error_alpha
+             * (pl.col("target").cast(pl.Float64) - pl.col("score")).abs().fill_null(0.0)
+             ).alias("weight")).drop("score")
+        w = frame["weight"]
+        print(f"  веса по ошибкам OOF: медиана {w.median():.3f}, максимум {w.max():.3f}, "
+              f"без предсказания {missing} из {before}", flush=True)
+
+    if args.duplicate_swapped:
+        # Материализуем оба порядка как отдельные примеры, а не переставляем
+        # случайно: так каждая пара гарантированно видна в обе стороны, и число
+        # шагов не зависит от жребия.
+        swapped = frame.with_columns(pl.col("text2").alias("text1"),
+                                     pl.col("text1").alias("text2"))
+        frame = pl.concat([frame, swapped.select(frame.columns)])
+        print(f"  оба порядка: {frame.height:,} примеров", flush=True)
+
     dataset = Pairs(frame)
     common = dict(num_workers=args.workers, pin_memory=True,
                   collate_fn=lambda b: collate(b, tokenizer, args.max_len,
@@ -195,28 +179,36 @@ def fit(model, tokenizer, frame, args, device):
     # шаге ради проверки на inf. Отключён. Объект оставлен: при enabled=False
     # все его методы — сквозные, и структура цикла не меняется.
     scaler = torch.amp.GradScaler(device.type, enabled=False)
-    loss_fn = torch.nn.BCEWithLogitsLoss()
+    # reduction="none": вес примера умножается поштучно. При единичных весах
+    # результат совпадает с обычным усреднением, так что путь один на оба режима.
+    loss_fn = torch.nn.BCEWithLogitsLoss(reduction="none")
     # Компилируем обёртку, а не подменяем модель: параметры у них общие, поэтому
     # оптимизатор, обрезка градиента, предсказание и сохранение продолжают
     # работать с исходным модулем и ничего не знают про inductor. Предсказание
     # намеренно идёт по НЕскомпилированной модели — там формы батчей гуляют, и
     # статичная компиляция пересобиралась бы на каждой новой длине.
-    trained = (torch.compile(model, dynamic=not args.pad_multiple)
+    # mode="reduce-overhead" включает CUDA-графы: вся последовательность ядер
+    # записывается один раз и запускается одним вызовом. На малом батче запуск
+    # сотен ядер на каждом шаге стоит заметной доли времени, и графы её убирают.
+    trained = (torch.compile(model, dynamic=not args.pad_multiple,
+                             mode=args.compile_mode or None)
                if args.compile else model)
     if args.compile:
-        print(f"  модель скомпилирована (dynamic={not args.pad_multiple})", flush=True)
+        print(f"  модель скомпилирована (dynamic={not args.pad_multiple}, "
+              f"mode={args.compile_mode or 'по умолчанию'})", flush=True)
     model.train()
     seen, started = 0, time.time()
     for epoch in range(args.epochs):
-        for encoded, y in loader:
+        for encoded, y, w in loader:
             encoded = {k: v.to(device, non_blocking=True) for k, v in encoded.items()}
             y = y.to(device, non_blocking=True)
+            w = w.to(device, non_blocking=True)
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device.type, dtype=torch.bfloat16,
                                 enabled=device.type == "cuda"):
                 logits = trained(**encoded).logits
                 logits = logits[:, 1] - logits[:, 0] if logits.shape[-1] == 2 else logits[:, 0]
-                loss = loss_fn(logits.float(), y)
+                loss = (loss_fn(logits.float(), y) * w).sum() / w.sum()
             scaler.scale(loss).backward()
             scaler.unscale_(optimizer)
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -259,8 +251,28 @@ def build(args, device, tokenizer):
     kwargs = {"num_labels": args.num_labels}
     if args.bf16_weights:
         kwargs["dtype"] = torch.bfloat16
-    model = AutoModelForSequenceClassification.from_pretrained(
-        args.init or args.model, **kwargs)
+    try:
+        model = AutoModelForSequenceClassification.from_pretrained(
+            args.init or args.model, **kwargs)
+    except (RuntimeError, ValueError) as problem:
+        # Чекпоинт претрена несёт голову на два логита, а просят один. Грузить с
+        # ignore_mismatched_sizes значило бы выбросить обученную голову. Этого не
+        # требуется: скор всегда считался как logit1 - logit0, а это линейная
+        # функция, и один логит с весами (W1 - W0) вычисляет ровно её же. Сворачиваем
+        # голову вместо переинициализации — предобучение сохраняется целиком.
+        if args.num_labels != 1 or "mismatched" not in str(problem):
+            raise
+        source = AutoModelForSequenceClassification.from_pretrained(
+            args.init or args.model, num_labels=2)
+        model = AutoModelForSequenceClassification.from_pretrained(
+            args.init or args.model, num_labels=1, ignore_mismatched_sizes=True)
+        with torch.no_grad():
+            head_in, head_out = source.classifier, model.classifier
+            head_out.weight.copy_(head_in.weight[1:2] - head_in.weight[0:1])
+            if head_in.bias is not None and head_out.bias is not None:
+                head_out.bias.copy_(head_in.bias[1:2] - head_in.bias[0:1])
+        del source
+        print("  голова свёрнута из двух логитов в один: W = W1 - W0", flush=True)
     # У мультимодальных конфигов (Qwen3.5) верхний уровень — обёртка, и
     # pad_token_id живёт в text_config; на верхнем уровне атрибута нет вовсе,
     # поэтому обращение к нему падает с AttributeError, а не возвращает None.
@@ -301,6 +313,13 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--seed", type=int, default=20260814)
     parser.add_argument("--optimizer", choices=["adamw", "adan", "nadam"], default="adamw")
+    parser.add_argument("--duplicate-swapped", action="store_true",
+                        help="добавить каждую пару и в обратном порядке (A,B) и (B,A)")
+    parser.add_argument("--error-weights", type=Path, default=None,
+                        help="паркет с OOF-предсказаниями (id1,id2,score): примеры "
+                             "с ошибкой получают больший вес. Второй этап обучения")
+    parser.add_argument("--error-alpha", type=float, default=2.0,
+                        help="во сколько раз усиливать максимально ошибочный пример")
     parser.add_argument("--swap-augment", action="store_true",
                         help="случайно менять товары местами: задача симметрична, "
                              "а модель видит порядок фиксированным")
@@ -312,6 +331,8 @@ def main() -> None:
                              "блок сравнения выживает в 100%% случаев против 7.5%%")
     parser.add_argument("--compile", action="store_true",
                         help="torch.compile обучающего прохода: на RuModernBERT +59%%")
+    parser.add_argument("--compile-mode", default="",
+                        help="режим torch.compile: reduce-overhead включает CUDA-графы")
     parser.add_argument("--pad-multiple", type=int, default=0,
                         help="дополнять длину батча до кратной N. Делает формы "
                              "статичными, из-за чего компиляция даёт лучшие ядра")

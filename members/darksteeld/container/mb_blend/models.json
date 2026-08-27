@@ -1,0 +1,6 @@
+[
+  {"path": "model_fold_01", "max_len": 224, "weight": 1.0, "batch": 256, "texts": "prio"},
+  {"path": "model_fold_02", "max_len": 224, "weight": 1.0, "batch": 256, "texts": "prio"},
+  {"path": "model_fold_03", "max_len": 224, "weight": 1.0, "batch": 256, "texts": "prio"},
+  {"path": "model_fold_04", "max_len": 224, "weight": 1.0, "batch": 256, "texts": "prio"}
+]

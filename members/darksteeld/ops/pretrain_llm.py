@@ -25,8 +25,11 @@ import time
 from pathlib import Path
 
 import numpy as np
+import pyarrow.compute as pc
 import pyarrow.parquet as pq
 import torch
+
+from batching import LengthBucketBatches
 from torch.utils.data import DataLoader, Dataset
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
@@ -55,8 +58,17 @@ class LlmPairs(Dataset):
         return a, b, self.target[i]
 
 
-def collate(batch, tokenizer, max_len, pad_multiple=0):
+def collate(batch, tokenizer, max_len, pad_multiple=0, swap=False):
     t1, t2, y = zip(*batch)
+    if swap:
+        # Зеркальная аугментация. Здесь именно случайная перестановка, а не
+        # удвоение обоих порядков: корпус в 11.19M пар проходится один раз, и
+        # при жребии половина пар и так достаётся модели в одну сторону,
+        # половина в другую. Удвоение дало бы то же покрытие ценой ещё
+        # шестнадцати часов.
+        flip = torch.rand(len(t1)) < 0.5
+        t1, t2 = (tuple(b if f else a for a, b, f in zip(t1, t2, flip)),
+                  tuple(a if f else b for a, b, f in zip(t1, t2, flip)))
     encoded = tokenizer(list(t1), list(t2), truncation=True, max_length=max_len,
                         padding=True,
                         pad_to_multiple_of=pad_multiple or None,
@@ -85,6 +97,11 @@ def main() -> None:
     parser.add_argument("--freeze-vision", action="store_true")
     parser.add_argument("--grad-checkpoint", action="store_true")
     parser.add_argument("--optimizer", choices=["adamw", "nadam"], default="adamw")
+    parser.add_argument("--num-labels", type=int, default=2)
+    parser.add_argument("--swap-augment", action="store_true",
+                        help="зеркальная аугментация: случайно менять товары местами")
+    parser.add_argument("--length-buckets", action="store_true",
+                        help="батчи из пар близкой длины: снимает добивку пустыми токенами")
     parser.add_argument("--compile", action="store_true", help="torch.compile модели")
     parser.add_argument("--pad-multiple", type=int, default=0,
                         help="дополнять длину батча до кратной N (тензорные ядра "
@@ -129,7 +146,7 @@ def main() -> None:
         tokenizer.pad_token = tokenizer.eos_token
     # sdpa вместо eager-внимания: та же математика, но матрица внимания не
     # материализуется целиком — на bs 256 x len 160 это разница между 19 ГБ и ~10 ГБ
-    kwargs = {"num_labels": 2, "attn_implementation": "sdpa"}
+    kwargs = {"num_labels": args.num_labels, "attn_implementation": "sdpa"}
     if args.bf16_weights:
         kwargs["dtype"] = torch.bfloat16
     try:
@@ -165,12 +182,28 @@ def main() -> None:
         model = torch.compile(model, dynamic=dynamic)
         print(f"модель скомпилирована (dynamic={dynamic}); первые шаги медленные",
               flush=True)
-    loader = DataLoader(LlmPairs(texts, sorted_ids, order, id1, id2, target),
-                        batch_size=args.bs, shuffle=True, num_workers=args.workers,
-                        drop_last=True, pin_memory=True, persistent_workers=True,
-                        prefetch_factor=4,
-                        collate_fn=lambda b: collate(b, tokenizer, args.max_len,
-                                                     args.pad_multiple))
+    dataset = LlmPairs(texts, sorted_ids, order, id1, id2, target)
+    common = dict(num_workers=args.workers, pin_memory=True,
+                  persistent_workers=True, prefetch_factor=4,
+                  collate_fn=lambda b: collate(b, tokenizer, args.max_len,
+                                               args.pad_multiple, args.swap_augment))
+    if args.length_buckets:
+        # Длина в символах, а не в токенах: токенизировать 11 миллионов пар
+        # заранее слишком дорого, а длину строк pyarrow считает векторно по
+        # всему справочнику разом. Символьный прокси снимает 31% добивки против
+        # 38% у точного — разницу не окупить лишними минутами токенизации.
+        started = time.time()
+        per_text = np.asarray(pc.utf8_length(texts).to_numpy(zero_copy_only=False))
+        rows1 = order[np.searchsorted(sorted_ids, id1)]
+        rows2 = order[np.searchsorted(sorted_ids, id2)]
+        lengths = per_text[rows1] + per_text[rows2]
+        print(f"длины посчитаны за {time.time() - started:.0f} с; "
+              f"медиана {int(np.median(lengths))} символов", flush=True)
+        loader = DataLoader(dataset, batch_sampler=LengthBucketBatches(
+            lengths, args.bs, seed=args.seed), **common)
+    else:
+        loader = DataLoader(dataset, batch_size=args.bs, shuffle=True,
+                            drop_last=True, **common)
     total = len(loader) * args.epochs
     trainable = [p for p in model.parameters() if p.requires_grad]
     # fused=True собирает обновление всех тензоров в одно ядро CUDA. У модели
@@ -200,7 +233,11 @@ def main() -> None:
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast("cuda", dtype=torch.bfloat16):
                 logits = model(**encoded).logits
-                loss = loss_fn((logits[:, 1] - logits[:, 0]).float(), y)
+                # Одна голова или две — скор один и тот же: при двух это
+                # разность логитов, при одной сам логит.
+                margin = (logits[:, 1] - logits[:, 0] if logits.shape[-1] == 2
+                          else logits[:, 0])
+                loss = loss_fn(margin.float(), y)
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             optimizer.step(); schedule.step()
