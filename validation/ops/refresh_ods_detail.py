@@ -110,7 +110,7 @@ def main() -> None:
         )
         (DETAIL_REPORTS / "ODS_CATEGORY_DETAIL_LATEST.md").write_text(detail_md, encoding="utf-8")
         with (DETAIL_REPORTS / "ODS_CATEGORY_DETAIL_LATEST.csv").open("w", newline="", encoding="utf-8") as handle:
-            writer = csv.writer(handle)
+            writer = csv.writer(handle, lineterminator="\n")
             writer.writerow(["category", "baseline", "latest", "delta"])
             writer.writerows(category_rows)
 
