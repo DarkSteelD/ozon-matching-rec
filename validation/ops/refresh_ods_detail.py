@@ -118,9 +118,17 @@ def main() -> None:
         print("matching ODS detail: refreshed (commit skipped)")
         return
     subprocess.run(["git", "add", "--", *[str(path.relative_to(REPO)) for path in MANAGED]], cwd=REPO, check=True)
-    staged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet", "--", *[str(path.relative_to(REPO)) for path in MANAGED]],
+        cwd=REPO,
+    )
     if staged.returncode == 1:
-        subprocess.run(["git", "commit", "-m", "Refresh matching ODS leaderboard detail"], cwd=REPO, check=True)
+        subprocess.run(
+            ["git", "commit", "--only", "-m", "Refresh matching ODS leaderboard detail", "--",
+             *[str(path.relative_to(REPO)) for path in MANAGED]],
+            cwd=REPO,
+            check=True,
+        )
         print("matching ODS detail: refreshed and committed")
     elif staged.returncode == 0:
         print("matching ODS detail: no staged changes")
