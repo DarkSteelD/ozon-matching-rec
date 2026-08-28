@@ -43,6 +43,7 @@ result-JSON (`make leaderboard`); (2) сгенерировать `validation/TOP
 ```bash
 python validation/ops/pull_public_lb.py [--commit]   # -> PUBLIC_LEADERBOARD.md
 python validation/ops/refresh_ods_detail.py           # полный срез + commit при изменении
+python validation/ops/hourly_ods_detail.py            # + safe push + Telegram при изменении
 ```
 
 Тянет публичный лидерборд всех команд (нужна кука `~/.config/ecup-agent/ods_cookie`),

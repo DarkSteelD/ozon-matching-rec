@@ -1,0 +1,8 @@
+[Unit]
+Description=Refresh, push and announce matching ODS leaderboard detail
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/dzkhomidov/ozon-hack/repos/ozon-matching-rec
+ExecStart=/usr/bin/flock -n %t/matching-lb-refresh.lock /usr/bin/python3 validation/ops/hourly_ods_detail.py
+TimeoutStartSec=5min
