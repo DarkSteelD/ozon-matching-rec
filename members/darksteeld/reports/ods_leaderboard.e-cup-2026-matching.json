@@ -503,9 +503,9 @@
     "type": "submission"
    },
    {
-    "id": "f50746a9-d300-42bf-92f3-5bb25bd537f1",
+    "id": "1816190f-e2ee-4e64-9cd3-c345b77171bb",
     "metrics": {
-     "total_prauc": 0.5175335572
+     "total_prauc": 0.5178899416
     },
     "place": 18,
     "team": {
@@ -1068,7 +1068,7 @@
     "team": {
      "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T12:33:21.548Z",
+     "last_submission_dt": "2026-08-28T20:32:51.040Z",
      "members": [
       {
        "avatar": "",
@@ -1079,7 +1079,7 @@
       }
      ],
      "name": "не пустили в клуб клуб",
-     "submissions_count": 19
+     "submissions_count": 20
     },
     "type": "submission"
    },
