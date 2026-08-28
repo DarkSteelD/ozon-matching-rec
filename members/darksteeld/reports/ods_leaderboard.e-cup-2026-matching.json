@@ -511,7 +511,7 @@
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T19:47:37.578Z",
+     "last_submission_dt": "2026-08-28T20:29:37.768Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
@@ -522,7 +522,7 @@
       }
      ],
      "name": "Artem Khimin",
-     "submissions_count": 38
+     "submissions_count": 40
     },
     "type": "submission"
    },
@@ -823,7 +823,7 @@
     "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T16:56:26.918Z",
+     "last_submission_dt": "2026-08-28T20:27:54.439Z",
      "members": [
       {
        "avatar": "",
@@ -855,7 +855,7 @@
       }
      ],
      "name": "guala",
-     "submissions_count": 19
+     "submissions_count": 21
     },
     "type": "submission"
    },
