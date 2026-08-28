@@ -35,7 +35,10 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from pair_budget import fit_pair
 
 T0 = time.time()
-TIME_BUDGET = 17 * 60  # запас 3 минуты внутри 20-минутного лимита проверки
+TIME_BUDGET = 15 * 60  # запас 5 минут внутри 20-минутного лимита проверки.
+# Пять, а не три: посылка с бюджетом 17 минут скор получила, но потом падала
+# по таймауту, то есть трёх минут на загрузку моделей и сборку текстов не
+# хватало. Работа теперь вдвое меньше, так что запас берём с избытком.
 ATTRS_LIMIT = 800
 
 PRIO = ['бренд', 'модель', 'артикул', 'код товара', 'партномер', 'цвет',
@@ -176,7 +179,7 @@ def build_plain_texts(matches, id2name, id2cat, id2attr):
     return ([cache[i] for i in matches["id1"]], [cache[i] for i in matches["id2"]])
 
 
-def score(spec, left, right, device):
+def score(spec, left, right, device, deadline=None):
     tokenizer = AutoTokenizer.from_pretrained(spec["path"])
     if spec.get("budget_attrs"):
         # Модель обучалась с обрезкой хвостов атрибутов вместо конца пары.
@@ -207,9 +210,9 @@ def score(spec, left, right, device):
             picked = order[start:start + batch]
             # Если по текущей скорости не укладываемся, режем длину. Батчи
             # отсортированы, так что урезается только дорогой хвост.
-            if done > 20000 and max_len > 144:
+            if done > 5000 and max_len > 144:
                 rate = done / (time.time() - started)
-                if elapsed() + (total - done) / rate > TIME_BUDGET * 0.95:
+                if elapsed() + (total - done) / rate > (deadline or TIME_BUDGET * 0.95):
                     max_len = max(144, int(max_len * 0.75))
                     print(f"режу max_len -> {max_len} (прошло {elapsed():.0f}с)",
                           flush=True)
@@ -259,58 +262,77 @@ def main() -> None:
         plain_left, plain_right = build_plain_texts(matches, id2name, id2cat, id2attr)
     print(f"{len(prio_left)} пар, тексты собраны, прошло {elapsed():.0f}с", flush=True)
 
-    ranks, weights, raw_scores = [], [], {}
-    model_cost = None
-    for number, spec in enumerate(specs):
-        # Защита по времени: если по стоимости предыдущей модели видно, что
-        # следующая выведет за бюджет, она пропускается. Лучше отдать бленд из
-        # трёх моделей, чем не отдать ничего. Первая считается всегда.
-        if number > 0 and model_cost is not None \
-                and elapsed() + model_cost * spec.get("cost", 1.0) * 1.1 > TIME_BUDGET:
-            print(f"защита по времени: пропускаю {spec['path']} "
-                  f"(прошло {elapsed():.0f}с)", flush=True)
-            continue
-        started_model = time.time()
-        plain = spec.get("texts", "prio") == "plain"
-        predicted = score(spec, plain_left if plain else prio_left,
-                          plain_right if plain else prio_right, device)
-        # Стоимость нормируем на заявленную относительную: следующая модель может
-        # быть дороже или дешевле, и сравнивать надо приведённые величины.
-        model_cost = (time.time() - started_model) / spec.get("cost", 1.0)
-        # Ранги, а не сырые вероятности: штраф ниже умножает на 0.25, и на
-        # лидерборде +0.00233 измерен именно на этой комбинации.
-        rank = pd.Series(predicted).rank().to_numpy() / len(predicted)
-        # Ключ — номер модели в models.json, а не порядок в списке: защита по
-        # времени может пропустить модель, и тогда позиции разъедутся.
-        raw_scores[number] = predicted
-        ranks.append(rank * spec.get("weight", 1.0))
-        weights.append(spec.get("weight", 1.0))
-        print(f"{spec['path']} готов, прошло {elapsed():.0f}с", flush=True)
-
     routes = {c: i for i, spec in enumerate(specs) for c in spec.get("categories", [])}
-    if routes:
-        # Категорийная маршрутизация: в перечисленных категориях берём скор
-        # назначенной модели, в остальных — обычный бленд. Метрика соревнования
-        # это среднее PR-AUC по категориям, поэтому внутри категории важен лишь
-        # порядок, а шкалы между категориями согласовывать не нужно.
+    pair_category = np.array([id2cat.get(i) or "" for i in matches["id1"]])
+    total_pairs = len(pair_category)
+    routed_any = (np.isin(pair_category, list(routes)) if routes
+                  else np.zeros(total_pairs, dtype=bool))
+    blend_mask = ~routed_any
+
+    # Каждая пара нужна ровно одной ветке: в маршрутизированных категориях ответ
+    # даёт назначенная модель, в остальных — бленд. Считать все модели на всех
+    # парах значит выбросить большую часть работы, а бюджет здесь 17 минут.
+    todo = {}
+    for number, spec in enumerate(specs):
+        want = (blend_mask.copy() if spec.get("weight", 0.0) > 0
+                else np.zeros(total_pairs, dtype=bool))
+        own = spec.get("categories") or []
+        if own:
+            want |= np.isin(pair_category, own)
+        if want.any():
+            todo[number] = np.flatnonzero(want)
+    planned = sum(len(v) for v in todo.values())
+    naive = total_pairs * len(specs)
+    print(f"к счёту {planned} пар вместо {naive} "
+          f"({planned / max(1, naive):.0%} работы)", flush=True)
+
+    ranks, weights, raw_scores = [], [], {}
+    remaining = planned
+    for number, spec in enumerate(specs):
+        if number not in todo:
+            print(f"{spec['path']}: ни одной пары, пропускаю", flush=True)
+            continue
+        index = todo[number]
+        plain = spec.get("texts", "prio") == "plain"
+        source_left = plain_left if plain else prio_left
+        source_right = plain_right if plain else prio_right
+        # Долю бюджета делим пропорционально числу пар: одна модель не должна
+        # съесть время, отведённое следующей.
+        deadline = elapsed() + (TIME_BUDGET * 0.95 - elapsed()) * len(index) / max(1, remaining)
+        part = score(spec, [source_left[i] for i in index],
+                     [source_right[i] for i in index], device, deadline)
+        remaining -= len(index)
+        predicted = np.full(total_pairs, np.nan)
+        predicted[index] = part
+        raw_scores[number] = predicted
+        if spec.get("weight", 0.0) > 0:
+            rank = np.zeros(total_pairs)
+            rank[index] = pd.Series(part).rank().to_numpy() / len(part)
+            ranks.append(rank * spec["weight"])
+            weights.append(spec["weight"])
+        print(f"{spec['path']} готов на {len(index)} парах, "
+              f"прошло {elapsed():.0f}с", flush=True)
+
+    # Незакрытые пары получают 0.5: до этого доходит только если модель совсем
+    # не отработала, и лучше ровная середина, чем NaN в ответе.
+    final = np.full(total_pairs, 0.5, dtype=np.float64)
+    if ranks:
         blended = np.sum(ranks, axis=0) / np.sum(weights)
-        final = np.asarray(blended, dtype=np.float64)
-        pair_category = np.array([id2cat.get(i) or "" for i in matches["id1"]])
-        for category, index in routes.items():
-            if index not in raw_scores:
-                print(f"  {category}: модель пропущена защитой по времени, "
-                      f"остаётся общий бленд", flush=True)
-                continue
-            picked = pair_category == category
-            if picked.any():
-                # ранг внутри категории: сохраняем порядок выбранной модели
-                inside = raw_scores[index][picked]
-                order = np.argsort(np.argsort(inside)) + 1
-                final[picked] = order / len(order)
-                print(f"  {category}: {int(picked.sum())} пар отданы "
-                      f"{specs[index]['path']}", flush=True)
-    else:
-        final = np.asarray(np.sum(ranks, axis=0) / np.sum(weights), dtype=np.float64)
+        final[blend_mask] = blended[blend_mask]
+    for category, number in routes.items():
+        picked = pair_category == category
+        if not picked.any():
+            continue
+        scored = raw_scores.get(number)
+        if scored is None or np.isnan(scored[picked]).any():
+            print(f"  {category}: скор недоступен, остаётся 0.5", flush=True)
+            continue
+        # ранг внутри категории: сохраняем порядок выбранной модели
+        order = np.argsort(np.argsort(scored[picked])) + 1
+        final[picked] = order / len(order)
+        print(f"  {category}: {int(picked.sum())} пар отданы "
+              f"{specs[number]['path']}", flush=True)
+
     mask = np.array(penalty)
     if mask.any():
         final[mask] *= 0.25
