@@ -503,15 +503,15 @@
     "type": "submission"
    },
    {
-    "id": "1816190f-e2ee-4e64-9cd3-c345b77171bb",
+    "id": "e213ca69-2655-4257-9305-bd2ed1f308ba",
     "metrics": {
-     "total_prauc": 0.5178899416
+     "total_prauc": 0.5182933215
     },
     "place": 18,
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T20:29:37.768Z",
+     "last_submission_dt": "2026-08-28T20:56:13.723Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
@@ -522,7 +522,7 @@
       }
      ],
      "name": "Artem Khimin",
-     "submissions_count": 40
+     "submissions_count": 41
     },
     "type": "submission"
    },
@@ -767,63 +767,15 @@
     "type": "submission"
    },
    {
-    "id": "90f93084-75c3-45ce-9c77-a5360080fffe",
+    "id": "17ed104b-455b-4bb0-a69e-82f8381518e6",
     "metrics": {
-     "total_prauc": 0.4993476956
+     "total_prauc": 0.499453782
     },
     "place": 29,
     "team": {
-     "id": "f68be1f5-dc4b-4e14-8e3e-638a26faf7b7",
-     "is_member": false,
-     "last_submission_dt": "2026-08-25T17:19:22.421Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "Дарий Ершов",
-       "id": "882f2bc5-b100-461b-bc3d-775db36141b7",
-       "is_active": true,
-       "username": "lc986bf55434d"
-      }
-     ],
-     "name": "C2W",
-     "submissions_count": 8
-    },
-    "type": "submission"
-   },
-   {
-    "id": "de840504-14a2-4509-9183-6a34bc591cd6",
-    "metrics": {
-     "total_prauc": 0.4984372801
-    },
-    "place": 30,
-    "team": {
-     "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
-     "is_member": false,
-     "last_submission_dt": "2026-08-28T14:55:54.747Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "c0504edb268d6",
-       "id": "5a796a91-60ac-473f-bc4b-f56c9dc63a35",
-       "is_active": true,
-       "username": "c0504edb268d6"
-      }
-     ],
-     "name": "antontsd",
-     "submissions_count": 22
-    },
-    "type": "submission"
-   },
-   {
-    "id": "0e708728-09ed-4621-8088-f00a5df3423e",
-    "metrics": {
-     "total_prauc": 0.4975513069
-    },
-    "place": 31,
-    "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T20:27:54.439Z",
+     "last_submission_dt": "2026-08-28T20:48:19.039Z",
      "members": [
       {
        "avatar": "",
@@ -855,7 +807,55 @@
       }
      ],
      "name": "guala",
-     "submissions_count": 21
+     "submissions_count": 22
+    },
+    "type": "submission"
+   },
+   {
+    "id": "90f93084-75c3-45ce-9c77-a5360080fffe",
+    "metrics": {
+     "total_prauc": 0.4993476956
+    },
+    "place": 30,
+    "team": {
+     "id": "f68be1f5-dc4b-4e14-8e3e-638a26faf7b7",
+     "is_member": false,
+     "last_submission_dt": "2026-08-25T17:19:22.421Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "Дарий Ершов",
+       "id": "882f2bc5-b100-461b-bc3d-775db36141b7",
+       "is_active": true,
+       "username": "lc986bf55434d"
+      }
+     ],
+     "name": "C2W",
+     "submissions_count": 8
+    },
+    "type": "submission"
+   },
+   {
+    "id": "de840504-14a2-4509-9183-6a34bc591cd6",
+    "metrics": {
+     "total_prauc": 0.4984372801
+    },
+    "place": 31,
+    "team": {
+     "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T14:55:54.747Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "c0504edb268d6",
+       "id": "5a796a91-60ac-473f-bc4b-f56c9dc63a35",
+       "is_active": true,
+       "username": "c0504edb268d6"
+      }
+     ],
+     "name": "antontsd",
+     "submissions_count": 22
     },
     "type": "submission"
    },
@@ -1068,7 +1068,7 @@
     "team": {
      "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T20:32:51.040Z",
+     "last_submission_dt": "2026-08-28T12:33:21.548Z",
      "members": [
       {
        "avatar": "",
@@ -1079,7 +1079,7 @@
       }
      ],
      "name": "не пустили в клуб клуб",
-     "submissions_count": 20
+     "submissions_count": 19
     },
     "type": "submission"
    },
