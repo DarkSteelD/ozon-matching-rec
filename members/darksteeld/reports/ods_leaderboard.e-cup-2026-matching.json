@@ -184,7 +184,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T21:10:09.148Z",
+     "last_submission_dt": "2026-08-28T21:51:02.580Z",
      "members": [
       {
        "avatar": "",
@@ -223,7 +223,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 34
+     "submissions_count": 35
     },
     "type": "submission"
    },
@@ -767,15 +767,15 @@
     "type": "submission"
    },
    {
-    "id": "17ed104b-455b-4bb0-a69e-82f8381518e6",
+    "id": "0ccf17f1-64be-4c23-92eb-df281bb06f5e",
     "metrics": {
-     "total_prauc": 0.499453782
+     "total_prauc": 0.4995685671
     },
     "place": 29,
     "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T21:19:42.084Z",
+     "last_submission_dt": "2026-08-28T21:45:26.895Z",
      "members": [
       {
        "avatar": "",
@@ -807,7 +807,7 @@
       }
      ],
      "name": "guala",
-     "submissions_count": 24
+     "submissions_count": 25
     },
     "type": "submission"
    },
@@ -1426,11 +1426,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 142,
+  "places_total": 143,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 142,
-  "total": 142
+  "teams_total": 143,
+  "total": 143
  },
  "type": "public"
 }
