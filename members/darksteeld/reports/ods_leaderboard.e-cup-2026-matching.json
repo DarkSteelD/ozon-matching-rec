@@ -105,7 +105,7 @@
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T21:11:10.831Z",
+     "last_submission_dt": "2026-08-28T22:28:30.129Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,71 +116,16 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 75
+     "submissions_count": 76
     },
     "type": "submission"
    },
    {
-    "id": "53ce0238-5063-4afc-9339-bd9b3c922128",
+    "id": "9d338078-76fd-4586-b84e-9c8649f8ad7e",
     "metrics": {
-     "total_prauc": 0.5402624389
+     "total_prauc": 0.5414130949
     },
     "place": 5,
-    "team": {
-     "id": "ac4e5fd0-cc06-44fb-8616-a021ac8ab716",
-     "is_member": false,
-     "last_submission_dt": "2026-08-28T21:19:44.458Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/3a/20/3a2060c2226c3008f946562170f5cb3f.jpg",
-       "display_name": "Михаил Кондрашов",
-       "id": "4c3a84ad-0b00-4e72-95bb-90f686757f13",
-       "is_active": true,
-       "username": "g0462e791f387"
-      },
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/01/2b/012b2a64b67544087939748057c073a1.jpg",
-       "display_name": "Alexey Kolegov",
-       "id": "c5182059-80a0-4975-a2f8-2966292be7e3",
-       "is_active": true,
-       "username": "o0ab937e67424"
-      }
-     ],
-     "name": "Я РЫБОЛОВ ТЫ МОЙ УЛОВ",
-     "submissions_count": 57
-    },
-    "type": "submission"
-   },
-   {
-    "id": "fa777a86-3949-4330-a40c-375a0a1151de",
-    "metrics": {
-     "total_prauc": 0.538805449
-    },
-    "place": 6,
-    "team": {
-     "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
-     "is_member": false,
-     "last_submission_dt": "2026-08-28T07:31:16.747Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "Ivan Belogurov",
-       "id": "9296d840-6e28-4097-ac13-3e02bad76043",
-       "is_active": true,
-       "username": "da8fa0928d144"
-      }
-     ],
-     "name": "lazy67",
-     "submissions_count": 21
-    },
-    "type": "submission"
-   },
-   {
-    "id": "84cb1664-0e5d-4773-81ea-450ef9713f9e",
-    "metrics": {
-     "total_prauc": 0.5384920334
-    },
-    "place": 7,
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
@@ -224,6 +169,61 @@
      ],
      "name": "Roma Bazuka",
      "submissions_count": 35
+    },
+    "type": "submission"
+   },
+   {
+    "id": "53ce0238-5063-4afc-9339-bd9b3c922128",
+    "metrics": {
+     "total_prauc": 0.5402624389
+    },
+    "place": 6,
+    "team": {
+     "id": "ac4e5fd0-cc06-44fb-8616-a021ac8ab716",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T21:19:44.458Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/3a/20/3a2060c2226c3008f946562170f5cb3f.jpg",
+       "display_name": "Михаил Кондрашов",
+       "id": "4c3a84ad-0b00-4e72-95bb-90f686757f13",
+       "is_active": true,
+       "username": "g0462e791f387"
+      },
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/01/2b/012b2a64b67544087939748057c073a1.jpg",
+       "display_name": "Alexey Kolegov",
+       "id": "c5182059-80a0-4975-a2f8-2966292be7e3",
+       "is_active": true,
+       "username": "o0ab937e67424"
+      }
+     ],
+     "name": "Я РЫБОЛОВ ТЫ МОЙ УЛОВ",
+     "submissions_count": 57
+    },
+    "type": "submission"
+   },
+   {
+    "id": "fa777a86-3949-4330-a40c-375a0a1151de",
+    "metrics": {
+     "total_prauc": 0.538805449
+    },
+    "place": 7,
+    "team": {
+     "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T07:31:16.747Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "Ivan Belogurov",
+       "id": "9296d840-6e28-4097-ac13-3e02bad76043",
+       "is_active": true,
+       "username": "da8fa0928d144"
+      }
+     ],
+     "name": "lazy67",
+     "submissions_count": 21
     },
     "type": "submission"
    },
@@ -767,15 +767,15 @@
     "type": "submission"
    },
    {
-    "id": "0ccf17f1-64be-4c23-92eb-df281bb06f5e",
+    "id": "c58c9a75-06a5-449a-b376-da850f84949b",
     "metrics": {
-     "total_prauc": 0.4995685671
+     "total_prauc": 0.5035465083
     },
     "place": 29,
     "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T21:45:26.895Z",
+     "last_submission_dt": "2026-08-28T22:28:34.007Z",
      "members": [
       {
        "avatar": "",
@@ -807,7 +807,7 @@
       }
      ],
      "name": "guala",
-     "submissions_count": 25
+     "submissions_count": 26
     },
     "type": "submission"
    },
