@@ -105,7 +105,7 @@
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T11:48:10.424Z",
+     "last_submission_dt": "2026-08-28T21:11:10.831Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,7 +116,7 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 74
+     "submissions_count": 75
     },
     "type": "submission"
    },
@@ -263,7 +263,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T19:24:48.843Z",
+     "last_submission_dt": "2026-08-28T21:10:09.148Z",
      "members": [
       {
        "avatar": "",
@@ -302,7 +302,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 33
+     "submissions_count": 34
     },
     "type": "submission"
    },
@@ -503,15 +503,15 @@
     "type": "submission"
    },
    {
-    "id": "e213ca69-2655-4257-9305-bd2ed1f308ba",
+    "id": "7a234711-cf23-44a3-be3c-f57dfa42980b",
     "metrics": {
-     "total_prauc": 0.5182933215
+     "total_prauc": 0.5186093231
     },
     "place": 18,
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T20:56:13.723Z",
+     "last_submission_dt": "2026-08-28T21:01:23.597Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
@@ -522,7 +522,7 @@
       }
      ],
      "name": "Artem Khimin",
-     "submissions_count": 41
+     "submissions_count": 42
     },
     "type": "submission"
    },
@@ -775,7 +775,7 @@
     "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T20:48:19.039Z",
+     "last_submission_dt": "2026-08-28T21:02:56.174Z",
      "members": [
       {
        "avatar": "",
@@ -807,7 +807,7 @@
       }
      ],
      "name": "guala",
-     "submissions_count": 22
+     "submissions_count": 23
     },
     "type": "submission"
    },
