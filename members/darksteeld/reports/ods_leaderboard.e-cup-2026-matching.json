@@ -12,7 +12,7 @@
     "team": {
      "id": "edacd621-048e-47ef-9920-337f46a5e75a",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T15:26:58.440Z",
+     "last_submission_dt": "2026-08-28T19:03:45.763Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/de/2e/de2e99d6f3151664d867d8bc5dded9ef.jpg",
@@ -23,7 +23,7 @@
       }
      ],
      "name": "Radiance",
-     "submissions_count": 64
+     "submissions_count": 66
     },
     "type": "submission"
    },
@@ -36,7 +36,7 @@
     "team": {
      "id": "19ca8829-2d64-4dc2-a4eb-2aa8cadd4509",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T14:54:57.383Z",
+     "last_submission_dt": "2026-08-28T13:06:47.430Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/22/a7/22a7e339f14ca9bf209af89787ff2095.jpg",
@@ -68,7 +68,7 @@
       }
      ],
      "name": "FatBoost",
-     "submissions_count": 36
+     "submissions_count": 38
     },
     "type": "submission"
    },
@@ -81,7 +81,7 @@
     "team": {
      "id": "3b2ed80d-b0f0-44d9-99dc-908bc7a10f35",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T11:11:24.912Z",
+     "last_submission_dt": "2026-08-28T05:39:22.662Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/9b/b4/9bb4be3c3c4600f219630f95a45fa6bb.jpg",
@@ -92,20 +92,20 @@
       }
      ],
      "name": "-",
-     "submissions_count": 23
+     "submissions_count": 28
     },
     "type": "submission"
    },
    {
-    "id": "22b7efec-a60e-49e9-a0ae-eebc6861b95f",
+    "id": "749afee0-7c66-4e32-92ed-62e33d36a140",
     "metrics": {
-     "total_prauc": 0.5431580441
+     "total_prauc": 0.5476502894
     },
     "place": 4,
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T12:34:41.334Z",
+     "last_submission_dt": "2026-08-28T11:48:10.424Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,20 +116,20 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 69
+     "submissions_count": 74
     },
     "type": "submission"
    },
    {
-    "id": "227cf3dc-2f0e-4b0f-b32d-534db2a2a6ef",
+    "id": "53ce0238-5063-4afc-9339-bd9b3c922128",
     "metrics": {
-     "total_prauc": 0.5394027976
+     "total_prauc": 0.5402624389
     },
     "place": 5,
     "team": {
      "id": "ac4e5fd0-cc06-44fb-8616-a021ac8ab716",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T08:52:22.124Z",
+     "last_submission_dt": "2026-08-28T12:44:22.165Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/3a/20/3a2060c2226c3008f946562170f5cb3f.jpg",
@@ -147,7 +147,7 @@
       }
      ],
      "name": "Я РЫБОЛОВ ТЫ МОЙ УЛОВ",
-     "submissions_count": 51
+     "submissions_count": 56
     },
     "type": "submission"
    },
@@ -160,7 +160,7 @@
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T18:00:35.518Z",
+     "last_submission_dt": "2026-08-28T07:31:16.747Z",
      "members": [
       {
        "avatar": "",
@@ -171,20 +171,51 @@
       }
      ],
      "name": "lazy67",
-     "submissions_count": 19
+     "submissions_count": 21
     },
     "type": "submission"
    },
    {
-    "id": "ef548b82-cc39-48e3-957c-e9dd279a8655",
+    "id": "087dec01-cd0f-4579-9c6e-df6c84eb4890",
     "metrics": {
-     "total_prauc": 0.5319282477
+     "total_prauc": 0.535787276
     },
     "place": 7,
     "team": {
+     "id": "99589070-e1aa-4131-a476-66b9acec2fde",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T10:32:35.567Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "Арина Щучкина",
+       "id": "78ef82f4-216c-4b7e-8968-351a81ecf3e1",
+       "is_active": true,
+       "username": "lb202736be71b"
+      },
+      {
+       "avatar": "",
+       "display_name": "Камила Казимирзоева",
+       "id": "84a0a0d8-eb5a-4378-a772-4a7c34258192",
+       "is_active": true,
+       "username": "u4617c9ba5f43"
+      }
+     ],
+     "name": "дружная команда",
+     "submissions_count": 41
+    },
+    "type": "submission"
+   },
+   {
+    "id": "f00750e1-7a50-4365-8a56-e33e81136215",
+    "metrics": {
+     "total_prauc": 0.5350307919
+    },
+    "place": 8,
+    "team": {
      "id": "d73664b6-fedc-4888-bf31-c3980823e7dd",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T07:22:35.484Z",
+     "last_submission_dt": "2026-08-28T08:23:02.628Z",
      "members": [
       {
        "avatar": "",
@@ -195,20 +226,20 @@
       }
      ],
      "name": "ELABS",
-     "submissions_count": 8
+     "submissions_count": 9
     },
     "type": "submission"
    },
    {
-    "id": "baaeca4a-780b-47d1-8955-d242d174943d",
+    "id": "4297f14c-5ba4-4e4e-891b-71420079c5ec",
     "metrics": {
-     "total_prauc": 0.5309280113
+     "total_prauc": 0.5349234887
     },
-    "place": 8,
+    "place": 9,
     "team": {
      "id": "a071bc50-f3f7-41dc-a407-c144f57404c8",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T09:38:28.150Z",
+     "last_submission_dt": "2026-08-28T13:38:15.265Z",
      "members": [
       {
        "avatar": "",
@@ -219,264 +250,20 @@
       }
      ],
      "name": "455 база ответьте",
-     "submissions_count": 12
+     "submissions_count": 13
     },
     "type": "submission"
    },
    {
-    "id": "56bfac4f-0e32-4484-9975-1b3bc7d34933",
+    "id": "b8142aa8-df0b-4e9b-8304-75c4f3c0c673",
     "metrics": {
-     "total_prauc": 0.5237100238
-    },
-    "place": 9,
-    "team": {
-     "id": "275d5f15-2e55-4325-857d-31cc03b96b38",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T17:16:52.690Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "h7c62403215e2",
-       "id": "78bbca98-a0f6-4dec-a77e-7522fdc2a124",
-       "is_active": true,
-       "username": "h7c62403215e2"
-      },
-      {
-       "avatar": "",
-       "display_name": "w604e14d43ef5",
-       "id": "4e7510cc-6854-463a-8710-631720f62c48",
-       "is_active": true,
-       "username": "w604e14d43ef5"
-      }
-     ],
-     "name": "Олеговичи Ивановичи",
-     "submissions_count": 35
-    },
-    "type": "submission"
-   },
-   {
-    "id": "40273af5-56ff-4c96-b563-9844493dbe33",
-    "metrics": {
-     "total_prauc": 0.5223599785
+     "total_prauc": 0.5317505381
     },
     "place": 10,
     "team": {
-     "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T15:55:56.683Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
-       "display_name": "Artemiy Maslov",
-       "id": "ffbf9136-3160-4661-a714-4f46f6a50a2f",
-       "is_active": true,
-       "username": "a288cfb509b05"
-      }
-     ],
-     "name": "YOUNGPROMPT1337",
-     "submissions_count": 35
-    },
-    "type": "submission"
-   },
-   {
-    "id": "b8c18030-d87b-427d-8c85-73fbf4c91ac3",
-    "metrics": {
-     "total_prauc": 0.5218171976
-    },
-    "place": 11,
-    "team": {
-     "id": "91fc6bf1-4874-4438-bd14-e6c7051dcac7",
-     "is_member": false,
-     "last_submission_dt": "2026-08-22T04:53:03.018Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/10/ad/10ad4341b67c5309f62199a2dd745c00.jpg",
-       "display_name": "Кирилл Скобликов",
-       "id": "0c807ddd-347b-4b21-9443-848f79355330",
-       "is_active": true,
-       "username": "he7c541bc4781"
-      },
-      {
-       "avatar": "",
-       "display_name": "Ivan Parfenov",
-       "id": "821b9fd0-b5b0-459c-9d97-14a86ef61ae8",
-       "is_active": true,
-       "username": "i1add5fb79ef9"
-      }
-     ],
-     "name": "Ecom амбассадоры гигачат",
-     "submissions_count": 20
-    },
-    "type": "submission"
-   },
-   {
-    "id": "df9574ee-5d2a-425d-b0e6-08f857174430",
-    "metrics": {
-     "total_prauc": 0.5217319533
-    },
-    "place": 12,
-    "team": {
-     "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T17:22:17.735Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "j693820672d46",
-       "id": "da00fb6f-be60-41e3-a15c-2fed67c60c8e",
-       "is_active": true,
-       "username": "j693820672d46"
-      },
-      {
-       "avatar": "",
-       "display_name": "Олег Смирнов",
-       "id": "e16dc1cd-76ca-4318-a0e2-f29eedba5012",
-       "is_active": true,
-       "username": "ja9b7eb25158c"
-      },
-      {
-       "avatar": "",
-       "display_name": "Александр Чесноков",
-       "id": "1fc35d96-5529-4a3b-9522-7de298a5163d",
-       "is_active": true,
-       "username": "v545995403a35"
-      }
-     ],
-     "name": "uralmash mentality",
-     "submissions_count": 51
-    },
-    "type": "submission"
-   },
-   {
-    "id": "0d749681-2274-41ab-a59e-7d5d31b4aa1f",
-    "metrics": {
-     "total_prauc": 0.5210387608
-    },
-    "place": 13,
-    "team": {
-     "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T15:59:42.455Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "e3d38d3cf817a",
-       "id": "bcadc72f-8f2c-4e1d-95cb-29d1ab6b9cb2",
-       "is_active": true,
-       "username": "e3d38d3cf817a"
-      }
-     ],
-     "name": "IGF_ONLY",
-     "submissions_count": 3
-    },
-    "type": "submission"
-   },
-   {
-    "id": "6e4472bb-5a62-453e-b9ae-fab5774621da",
-    "metrics": {
-     "total_prauc": 0.5206137333
-    },
-    "place": 14,
-    "team": {
-     "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
-     "is_member": false,
-     "last_submission_dt": "2026-08-24T16:34:42.504Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/af/96/af96076fa2837f2c2f3d48c2e7ef6226.jpg",
-       "display_name": "Филин Матвей Викторович",
-       "id": "0eacdfc5-7a53-4959-a8a4-99da14d16c7d",
-       "is_active": true,
-       "username": "b70f1f633256b"
-      }
-     ],
-     "name": "Филин Матвей Викторович",
-     "submissions_count": 7
-    },
-    "type": "submission"
-   },
-   {
-    "id": "f50746a9-d300-42bf-92f3-5bb25bd537f1",
-    "metrics": {
-     "total_prauc": 0.5175335572
-    },
-    "place": 15,
-    "team": {
-     "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T15:10:23.656Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
-       "display_name": "Artem Khimin",
-       "id": "faad1241-129d-4d44-bd08-12f924d9926f",
-       "is_active": true,
-       "username": "pa655811a9f2c"
-      }
-     ],
-     "name": "Artem Khimin",
-     "submissions_count": 35
-    },
-    "type": "submission"
-   },
-   {
-    "id": "d6d4a98c-e1a9-440d-b80a-461a23ecae5b",
-    "metrics": {
-     "total_prauc": 0.5156887292
-    },
-    "place": 16,
-    "team": {
-     "id": "6af0748f-5002-4ad2-be48-24c14db722f5",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T16:21:23.726Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "CaPiTaN TvImSa",
-       "id": "23d7c4f5-5baf-41c7-b169-d2c2470c87d9",
-       "is_active": true,
-       "username": "i109105d246ca"
-      }
-     ],
-     "name": "CaPiTaN TvImSa",
-     "submissions_count": 12
-    },
-    "type": "submission"
-   },
-   {
-    "id": "7b5d5ddc-762a-4a61-aba5-db10fe2426fd",
-    "metrics": {
-     "total_prauc": 0.5142534208
-    },
-    "place": 17,
-    "team": {
-     "id": "c2cb2fd2-6cf9-4fc4-9618-191374b52393",
-     "is_member": false,
-     "last_submission_dt": "2026-08-25T14:21:57.701Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/a5/78/a578e3bd5c88b048f2afbdd683ae5ac7.jpg",
-       "display_name": "Сергей Катцын",
-       "id": "6350406d-c58d-4c69-8e14-0c48803738b3",
-       "is_active": true,
-       "username": "o2aceea54ed37"
-      }
-     ],
-     "name": "ICEQ",
-     "submissions_count": 11
-    },
-    "type": "submission"
-   },
-   {
-    "id": "009f5b47-a4be-493d-84bd-77d1ea755dcc",
-    "metrics": {
-     "total_prauc": 0.5135322713
-    },
-    "place": 18,
-    "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T15:23:58.809Z",
+     "last_submission_dt": "2026-08-28T19:24:48.843Z",
      "members": [
       {
        "avatar": "",
@@ -515,7 +302,299 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 30
+     "submissions_count": 33
+    },
+    "type": "submission"
+   },
+   {
+    "id": "56bfac4f-0e32-4484-9975-1b3bc7d34933",
+    "metrics": {
+     "total_prauc": 0.5237100238
+    },
+    "place": 11,
+    "team": {
+     "id": "275d5f15-2e55-4325-857d-31cc03b96b38",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T16:44:29.549Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "h7c62403215e2",
+       "id": "78bbca98-a0f6-4dec-a77e-7522fdc2a124",
+       "is_active": true,
+       "username": "h7c62403215e2"
+      },
+      {
+       "avatar": "",
+       "display_name": "w604e14d43ef5",
+       "id": "4e7510cc-6854-463a-8710-631720f62c48",
+       "is_active": true,
+       "username": "w604e14d43ef5"
+      }
+     ],
+     "name": "Олеговичи Ивановичи",
+     "submissions_count": 40
+    },
+    "type": "submission"
+   },
+   {
+    "id": "abd6254f-3e57-4005-92c4-3283a0224b3a",
+    "metrics": {
+     "total_prauc": 0.5235150884
+    },
+    "place": 12,
+    "team": {
+     "id": "bb69f871-edbc-4114-b222-f3a2d8bfe755",
+     "is_member": false,
+     "last_submission_dt": "2026-08-27T21:23:37.648Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "t2989d9fb2778",
+       "id": "8bb9a7e9-f9dc-4abd-adba-fc5ed8cbb13f",
+       "is_active": true,
+       "username": "t2989d9fb2778"
+      }
+     ],
+     "name": "TREN_FORCE",
+     "submissions_count": 5
+    },
+    "type": "submission"
+   },
+   {
+    "id": "9ebe5e1a-abb5-48bd-97fc-065feb3c62f9",
+    "metrics": {
+     "total_prauc": 0.523216292
+    },
+    "place": 13,
+    "team": {
+     "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T14:26:51.428Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "e3d38d3cf817a",
+       "id": "bcadc72f-8f2c-4e1d-95cb-29d1ab6b9cb2",
+       "is_active": true,
+       "username": "e3d38d3cf817a"
+      }
+     ],
+     "name": "IGF_ONLY",
+     "submissions_count": 9
+    },
+    "type": "submission"
+   },
+   {
+    "id": "c4e4d96a-325c-4bc4-a4e1-4a7aaae5c97e",
+    "metrics": {
+     "total_prauc": 0.5230596535
+    },
+    "place": 14,
+    "team": {
+     "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T12:21:39.229Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
+       "display_name": "Artemiy Maslov",
+       "id": "ffbf9136-3160-4661-a714-4f46f6a50a2f",
+       "is_active": true,
+       "username": "a288cfb509b05"
+      }
+     ],
+     "name": "YOUNGPROMPT1337",
+     "submissions_count": 40
+    },
+    "type": "submission"
+   },
+   {
+    "id": "b8c18030-d87b-427d-8c85-73fbf4c91ac3",
+    "metrics": {
+     "total_prauc": 0.5218171976
+    },
+    "place": 15,
+    "team": {
+     "id": "91fc6bf1-4874-4438-bd14-e6c7051dcac7",
+     "is_member": false,
+     "last_submission_dt": "2026-08-22T04:53:03.018Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/10/ad/10ad4341b67c5309f62199a2dd745c00.jpg",
+       "display_name": "Кирилл Скобликов",
+       "id": "0c807ddd-347b-4b21-9443-848f79355330",
+       "is_active": true,
+       "username": "he7c541bc4781"
+      },
+      {
+       "avatar": "",
+       "display_name": "Ivan Parfenov",
+       "id": "821b9fd0-b5b0-459c-9d97-14a86ef61ae8",
+       "is_active": true,
+       "username": "i1add5fb79ef9"
+      }
+     ],
+     "name": "Ecom амбассадоры гигачат",
+     "submissions_count": 20
+    },
+    "type": "submission"
+   },
+   {
+    "id": "df9574ee-5d2a-425d-b0e6-08f857174430",
+    "metrics": {
+     "total_prauc": 0.5217319533
+    },
+    "place": 16,
+    "team": {
+     "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T11:12:12.553Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "j693820672d46",
+       "id": "da00fb6f-be60-41e3-a15c-2fed67c60c8e",
+       "is_active": true,
+       "username": "j693820672d46"
+      },
+      {
+       "avatar": "",
+       "display_name": "Олег Смирнов",
+       "id": "e16dc1cd-76ca-4318-a0e2-f29eedba5012",
+       "is_active": true,
+       "username": "ja9b7eb25158c"
+      },
+      {
+       "avatar": "",
+       "display_name": "Александр Чесноков",
+       "id": "1fc35d96-5529-4a3b-9522-7de298a5163d",
+       "is_active": true,
+       "username": "v545995403a35"
+      }
+     ],
+     "name": "uralmash mentality",
+     "submissions_count": 60
+    },
+    "type": "submission"
+   },
+   {
+    "id": "6e4472bb-5a62-453e-b9ae-fab5774621da",
+    "metrics": {
+     "total_prauc": 0.5206137333
+    },
+    "place": 17,
+    "team": {
+     "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
+     "is_member": false,
+     "last_submission_dt": "2026-08-24T16:34:42.504Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/af/96/af96076fa2837f2c2f3d48c2e7ef6226.jpg",
+       "display_name": "Филин Матвей Викторович",
+       "id": "0eacdfc5-7a53-4959-a8a4-99da14d16c7d",
+       "is_active": true,
+       "username": "b70f1f633256b"
+      }
+     ],
+     "name": "Филин Матвей Викторович",
+     "submissions_count": 7
+    },
+    "type": "submission"
+   },
+   {
+    "id": "f50746a9-d300-42bf-92f3-5bb25bd537f1",
+    "metrics": {
+     "total_prauc": 0.5175335572
+    },
+    "place": 18,
+    "team": {
+     "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T19:47:37.578Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
+       "display_name": "Artem Khimin",
+       "id": "faad1241-129d-4d44-bd08-12f924d9926f",
+       "is_active": true,
+       "username": "pa655811a9f2c"
+      }
+     ],
+     "name": "Artem Khimin",
+     "submissions_count": 38
+    },
+    "type": "submission"
+   },
+   {
+    "id": "d6d4a98c-e1a9-440d-b80a-461a23ecae5b",
+    "metrics": {
+     "total_prauc": 0.5156887292
+    },
+    "place": 19,
+    "team": {
+     "id": "6af0748f-5002-4ad2-be48-24c14db722f5",
+     "is_member": false,
+     "last_submission_dt": "2026-08-27T16:21:23.726Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "CaPiTaN TvImSa",
+       "id": "23d7c4f5-5baf-41c7-b169-d2c2470c87d9",
+       "is_active": true,
+       "username": "i109105d246ca"
+      }
+     ],
+     "name": "CaPiTaN TvImSa",
+     "submissions_count": 12
+    },
+    "type": "submission"
+   },
+   {
+    "id": "7b5d5ddc-762a-4a61-aba5-db10fe2426fd",
+    "metrics": {
+     "total_prauc": 0.5142534208
+    },
+    "place": 20,
+    "team": {
+     "id": "c2cb2fd2-6cf9-4fc4-9618-191374b52393",
+     "is_member": false,
+     "last_submission_dt": "2026-08-27T20:52:49.099Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/a5/78/a578e3bd5c88b048f2afbdd683ae5ac7.jpg",
+       "display_name": "Сергей Катцын",
+       "id": "6350406d-c58d-4c69-8e14-0c48803738b3",
+       "is_active": true,
+       "username": "o2aceea54ed37"
+      }
+     ],
+     "name": "ICEQ",
+     "submissions_count": 12
+    },
+    "type": "submission"
+   },
+   {
+    "id": "5c85f08b-9722-4b98-9e22-8b4fc26f5681",
+    "metrics": {
+     "total_prauc": 0.5112394124
+    },
+    "place": 21,
+    "team": {
+     "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T04:23:57.997Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
+       "display_name": "Andrey Kuznetsov",
+       "id": "394432b4-18b5-4982-9cc8-dbf0b491710d",
+       "is_active": true,
+       "username": "dbf0b491710d"
+      }
+     ],
+     "name": "Andrey Kuznetsov",
+     "submissions_count": 28
     },
     "type": "submission"
    },
@@ -524,7 +603,7 @@
     "metrics": {
      "total_prauc": 0.5096624719
     },
-    "place": 19,
+    "place": 22,
     "team": {
      "id": "53078ac6-2527-4680-aeac-2b6e2c3a9cf8",
      "is_member": false,
@@ -548,7 +627,7 @@
     "metrics": {
      "total_prauc": 0.5095247122
     },
-    "place": 20,
+    "place": 23,
     "team": {
      "id": "79c00044-08a3-4b9d-a036-ce3d9fb77c9f",
      "is_member": false,
@@ -572,7 +651,7 @@
     "metrics": {
      "total_prauc": 0.5093050006
     },
-    "place": 21,
+    "place": 24,
     "team": {
      "id": "906a476a-8d2d-4b4f-835d-6f73e3264545",
      "is_member": false,
@@ -596,11 +675,11 @@
     "metrics": {
      "total_prauc": 0.5072100039
     },
-    "place": 22,
+    "place": 25,
     "team": {
      "id": "15d6c8cb-5bcf-449c-8072-8514a94b1bfb",
      "is_member": false,
-     "last_submission_dt": "2026-08-23T15:22:16.548Z",
+     "last_submission_dt": "2026-08-28T11:15:21.101Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/27/e5/27e562f1eaf6ab98e4573ee4e34c239e.jpg",
@@ -611,7 +690,31 @@
       }
      ],
      "name": "Tagir Analyzes",
-     "submissions_count": 29
+     "submissions_count": 30
+    },
+    "type": "submission"
+   },
+   {
+    "id": "e66c161d-790b-4894-a197-78e4ee3575dc",
+    "metrics": {
+     "total_prauc": 0.5060286244
+    },
+    "place": 26,
+    "team": {
+     "id": "969712e2-7b0b-454c-b8e7-c5b5ae26ae23",
+     "is_member": false,
+     "last_submission_dt": "2026-08-27T20:29:41.648Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "h715a8c2a395e",
+       "id": "b27f5f29-ea83-43db-8418-138cf4967c87",
+       "is_active": true,
+       "username": "h715a8c2a395e"
+      }
+     ],
+     "name": "h715a8c2a395e",
+     "submissions_count": 4
     },
     "type": "submission"
    },
@@ -620,7 +723,7 @@
     "metrics": {
      "total_prauc": 0.5053257638
     },
-    "place": 23,
+    "place": 27,
     "team": {
      "id": "f7b6f8c9-7e5b-4836-8990-8c6c296c3389",
      "is_member": false,
@@ -644,7 +747,7 @@
     "metrics": {
      "total_prauc": 0.5044528174
     },
-    "place": 24,
+    "place": 28,
     "team": {
      "id": "45c028f3-68aa-4fd1-bc1b-57fe2bb6ecf3",
      "is_member": false,
@@ -664,35 +767,11 @@
     "type": "submission"
    },
    {
-    "id": "07678bf7-eed5-4707-b694-2fda85081883",
-    "metrics": {
-     "total_prauc": 0.5020202164
-    },
-    "place": 25,
-    "team": {
-     "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
-     "is_member": false,
-     "last_submission_dt": "2026-08-26T16:27:40.826Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
-       "display_name": "Andrey Kuznetsov",
-       "id": "394432b4-18b5-4982-9cc8-dbf0b491710d",
-       "is_active": true,
-       "username": "dbf0b491710d"
-      }
-     ],
-     "name": "Andrey Kuznetsov",
-     "submissions_count": 25
-    },
-    "type": "submission"
-   },
-   {
     "id": "90f93084-75c3-45ce-9c77-a5360080fffe",
     "metrics": {
      "total_prauc": 0.4993476956
     },
-    "place": 26,
+    "place": 29,
     "team": {
      "id": "f68be1f5-dc4b-4e14-8e3e-638a26faf7b7",
      "is_member": false,
@@ -716,11 +795,11 @@
     "metrics": {
      "total_prauc": 0.4984372801
     },
-    "place": 27,
+    "place": 30,
     "team": {
      "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T07:02:44.763Z",
+     "last_submission_dt": "2026-08-28T14:55:54.747Z",
      "members": [
       {
        "avatar": "",
@@ -731,7 +810,7 @@
       }
      ],
      "name": "antontsd",
-     "submissions_count": 17
+     "submissions_count": 22
     },
     "type": "submission"
    },
@@ -740,11 +819,11 @@
     "metrics": {
      "total_prauc": 0.4975513069
     },
-    "place": 28,
+    "place": 31,
     "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T10:56:06.378Z",
+     "last_submission_dt": "2026-08-28T16:56:26.918Z",
      "members": [
       {
        "avatar": "",
@@ -776,7 +855,7 @@
       }
      ],
      "name": "guala",
-     "submissions_count": 17
+     "submissions_count": 19
     },
     "type": "submission"
    },
@@ -785,7 +864,7 @@
     "metrics": {
      "total_prauc": 0.4966407474
     },
-    "place": 29,
+    "place": 32,
     "team": {
      "id": "d712b80c-7142-4815-ac3a-4edc64bb88c0",
      "is_member": false,
@@ -805,70 +884,15 @@
     "type": "submission"
    },
    {
-    "id": "ff0c8f46-0381-48f7-8cca-150330bdc964",
+    "id": "cb9f6d6c-cf76-4141-a781-3e1e2245eff7",
     "metrics": {
-     "total_prauc": 0.4953252045
+     "total_prauc": 0.4960272359
     },
-    "place": 30,
-    "team": {
-     "id": "9a3e0ff6-b50c-40c0-a9f2-ea5be94fccd9",
-     "is_member": false,
-     "last_submission_dt": "2026-08-13T21:06:17.052Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/a6/28/a628b2e0e1e07b413d262233d56f4a21.jpg",
-       "display_name": "Валентин Рымский",
-       "id": "eb8a0c18-9cd5-4226-90e9-c6d524c4a0df",
-       "is_active": true,
-       "username": "c1220030ce34f"
-      },
-      {
-       "avatar": "",
-       "display_name": "Мальчик С пальчик",
-       "id": "436f40ee-1c29-4ede-a4cc-a847456c80ea",
-       "is_active": true,
-       "username": "e65637bdde25c"
-      }
-     ],
-     "name": "Owl Prime",
-     "submissions_count": 14
-    },
-    "type": "submission"
-   },
-   {
-    "id": "2ca7b583-a1be-4f58-8473-7a7c41e35a4c",
-    "metrics": {
-     "total_prauc": 0.4953120645
-    },
-    "place": 31,
-    "team": {
-     "id": "fc6a7348-ba62-482e-bc92-49e0d57e1c6d",
-     "is_member": false,
-     "last_submission_dt": "2026-08-25T10:49:28.649Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "e45aebc17d00a",
-       "id": "9006f6ca-bd92-44de-a4c8-475cc6fff591",
-       "is_active": true,
-       "username": "e45aebc17d00a"
-      }
-     ],
-     "name": "e45aebc17d00a",
-     "submissions_count": 9
-    },
-    "type": "submission"
-   },
-   {
-    "id": "b596e307-c19b-46a2-9c8e-e699fe4652c5",
-    "metrics": {
-     "total_prauc": 0.4946509693
-    },
-    "place": 32,
+    "place": 33,
     "team": {
      "id": "804d4696-a96f-489a-9f48-a0e691a9537c",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T10:51:30.212Z",
+     "last_submission_dt": "2026-08-28T17:35:03.917Z",
      "members": [
       {
        "avatar": "",
@@ -900,7 +924,62 @@
       }
      ],
      "name": "Вайбкодеры ИТМО",
-     "submissions_count": 35
+     "submissions_count": 40
+    },
+    "type": "submission"
+   },
+   {
+    "id": "ff0c8f46-0381-48f7-8cca-150330bdc964",
+    "metrics": {
+     "total_prauc": 0.4953252045
+    },
+    "place": 34,
+    "team": {
+     "id": "9a3e0ff6-b50c-40c0-a9f2-ea5be94fccd9",
+     "is_member": false,
+     "last_submission_dt": "2026-08-13T21:06:17.052Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/a6/28/a628b2e0e1e07b413d262233d56f4a21.jpg",
+       "display_name": "Валентин Рымский",
+       "id": "eb8a0c18-9cd5-4226-90e9-c6d524c4a0df",
+       "is_active": true,
+       "username": "c1220030ce34f"
+      },
+      {
+       "avatar": "",
+       "display_name": "Мальчик С пальчик",
+       "id": "436f40ee-1c29-4ede-a4cc-a847456c80ea",
+       "is_active": true,
+       "username": "e65637bdde25c"
+      }
+     ],
+     "name": "Owl Prime",
+     "submissions_count": 14
+    },
+    "type": "submission"
+   },
+   {
+    "id": "2ca7b583-a1be-4f58-8473-7a7c41e35a4c",
+    "metrics": {
+     "total_prauc": 0.4953120645
+    },
+    "place": 35,
+    "team": {
+     "id": "fc6a7348-ba62-482e-bc92-49e0d57e1c6d",
+     "is_member": false,
+     "last_submission_dt": "2026-08-25T10:49:28.649Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "e45aebc17d00a",
+       "id": "9006f6ca-bd92-44de-a4c8-475cc6fff591",
+       "is_active": true,
+       "username": "e45aebc17d00a"
+      }
+     ],
+     "name": "e45aebc17d00a",
+     "submissions_count": 9
     },
     "type": "submission"
    },
@@ -909,7 +988,7 @@
     "metrics": {
      "total_prauc": 0.494155375
     },
-    "place": 33,
+    "place": 36,
     "team": {
      "id": "96e0bd06-fe05-46d9-bf0f-60abc651d590",
      "is_member": false,
@@ -961,7 +1040,7 @@
     "metrics": {
      "total_prauc": 0.4939670989
     },
-    "place": 34,
+    "place": 37,
     "team": {
      "id": "bdda39c6-fa9a-4f7c-a827-07b404f9c1e8",
      "is_member": false,
@@ -981,15 +1060,63 @@
     "type": "submission"
    },
    {
-    "id": "46ad77f4-599e-416d-97fd-c784fe7a8427",
+    "id": "2a866b82-49a4-4f0c-ba19-1b7b46a13a1b",
     "metrics": {
-     "total_prauc": 0.4848638205
+     "total_prauc": 0.4895491493
     },
-    "place": 35,
+    "place": 38,
+    "team": {
+     "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T12:33:21.548Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "e539ae1535677",
+       "id": "4402c85e-1224-489c-a65a-d97d86a66235",
+       "is_active": true,
+       "username": "e539ae1535677"
+      }
+     ],
+     "name": "не пустили в клуб клуб",
+     "submissions_count": 19
+    },
+    "type": "submission"
+   },
+   {
+    "id": "481292b1-4058-4c23-8c8f-a7dcc6e53af3",
+    "metrics": {
+     "total_prauc": 0.4874706786
+    },
+    "place": 39,
+    "team": {
+     "id": "0b262001-e97b-4eb5-af18-dbc413068651",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T08:08:49.844Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/9b/57/9b576dfbacf9133b2c1f7a90bbfd9646.jpg",
+       "display_name": "Danil Kuznetsov",
+       "id": "05d29456-0c67-496a-b99a-64de4e738d85",
+       "is_active": true,
+       "username": "64de4e738d85"
+      }
+     ],
+     "name": "Danil Kuznetsov",
+     "submissions_count": 5
+    },
+    "type": "submission"
+   },
+   {
+    "id": "973abfc5-2792-424c-ade1-2bbd7e9db871",
+    "metrics": {
+     "total_prauc": 0.4853374993
+    },
+    "place": 40,
     "team": {
      "id": "26dc1c1e-f6b1-4f6e-b37f-e640413f1fad",
      "is_member": false,
-     "last_submission_dt": "2026-08-20T01:01:03.463Z",
+     "last_submission_dt": "2026-08-27T20:11:57.220Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/4d/48/4d48dc3521e102cff2f264dbb332cb2b.jpg",
@@ -1000,7 +1127,7 @@
       }
      ],
      "name": "Игорь Борисов",
-     "submissions_count": 21
+     "submissions_count": 24
     },
     "type": "submission"
    },
@@ -1009,11 +1136,11 @@
     "metrics": {
      "total_prauc": 0.4823883685
     },
-    "place": 36,
+    "place": 41,
     "team": {
      "id": "6adbcbe5-1958-4427-b61e-cd05a52d1801",
      "is_member": false,
-     "last_submission_dt": "2026-08-23T21:38:43.198Z",
+     "last_submission_dt": "2026-08-28T19:53:42.357Z",
      "members": [
       {
        "avatar": "",
@@ -1024,7 +1151,7 @@
       }
      ],
      "name": "zff2cd6ec9964",
-     "submissions_count": 8
+     "submissions_count": 9
     },
     "type": "submission"
    },
@@ -1033,7 +1160,7 @@
     "metrics": {
      "total_prauc": 0.4816630158
     },
-    "place": 37,
+    "place": 42,
     "team": {
      "id": "e7c0ec61-e71b-45c9-b566-be5ad86b1c94",
      "is_member": false,
@@ -1057,7 +1184,7 @@
     "metrics": {
      "total_prauc": 0.481512142
     },
-    "place": 38,
+    "place": 43,
     "team": {
      "id": "7fb9edcc-7980-419c-984f-025396a2cafb",
      "is_member": false,
@@ -1081,7 +1208,7 @@
     "metrics": {
      "total_prauc": 0.479197308
     },
-    "place": 39,
+    "place": 44,
     "team": {
      "id": "0b5d7b2d-253c-4d90-90b6-4f49c339c9de",
      "is_member": false,
@@ -1101,15 +1228,15 @@
     "type": "submission"
    },
    {
-    "id": "c9958c61-331e-4a24-8c20-8820f7a9c5d1",
+    "id": "50ad750c-7613-4264-a687-e7d4b83ee04f",
     "metrics": {
-     "total_prauc": 0.4789399523
+     "total_prauc": 0.4790429822
     },
-    "place": 40,
+    "place": 45,
     "team": {
      "id": "3c0f833e-da2e-48e6-943d-17e34cbd41d5",
      "is_member": false,
-     "last_submission_dt": "2026-08-27T15:17:32.238Z",
+     "last_submission_dt": "2026-08-28T19:16:04.751Z",
      "members": [
       {
        "avatar": "",
@@ -1120,7 +1247,7 @@
       }
      ],
      "name": "Кирюха",
-     "submissions_count": 30
+     "submissions_count": 34
     },
     "type": "submission"
    },
@@ -1129,7 +1256,7 @@
     "metrics": {
      "total_prauc": 0.4782777764
     },
-    "place": 41,
+    "place": 46,
     "team": {
      "id": "5710ddde-592e-447d-92db-7c412549534e",
      "is_member": false,
@@ -1153,7 +1280,7 @@
     "metrics": {
      "total_prauc": 0.4774238893
     },
-    "place": 42,
+    "place": 47,
     "team": {
      "id": "e3b400fc-a8e4-49d6-81b2-b31ddefc6589",
      "is_member": false,
@@ -1191,7 +1318,7 @@
     "metrics": {
      "total_prauc": 0.4768139131
     },
-    "place": 43,
+    "place": 48,
     "team": {
      "id": "c7e1b7ac-f649-48ba-84bc-35c52f0c4f82",
      "is_member": false,
@@ -1211,11 +1338,35 @@
     "type": "submission"
    },
    {
+    "id": "03d0c720-12a8-47bd-8453-342dcff5b01a",
+    "metrics": {
+     "total_prauc": 0.4763057479
+    },
+    "place": 49,
+    "team": {
+     "id": "1bd8409d-2777-48e7-af97-bd175cdc132a",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T17:52:21.477Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "Максим Сергеев",
+       "id": "946b1608-3eb1-475d-b982-39d00ca64fec",
+       "is_active": true,
+       "username": "x7e4bb48fc664"
+      }
+     ],
+     "name": "Flex",
+     "submissions_count": 4
+    },
+    "type": "submission"
+   },
+   {
     "id": "35b3dfee-ddf4-45de-b8ce-79276c49ce52",
     "metrics": {
      "total_prauc": 0.4713330403
     },
-    "place": 44,
+    "place": 50,
     "team": {
      "id": "b62fb5c7-cc7b-4c8f-ae79-78bc6908f760",
      "is_member": false,
@@ -1261,178 +1412,6 @@
      "submissions_count": 27
     },
     "type": "submission"
-   },
-   {
-    "id": "afa57ce0-0241-4819-a985-62b55412fd9b",
-    "metrics": {
-     "total_prauc": 0.4699713976
-    },
-    "place": 45,
-    "team": {
-     "id": "f18d9b89-fec2-47dd-bfef-ab365eea749f",
-     "is_member": false,
-     "last_submission_dt": "2026-08-21T12:23:29.115Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "nd8b33ea52266",
-       "id": "fd29aa24-672a-47ad-99c1-e645b46a0838",
-       "is_active": true,
-       "username": "nd8b33ea52266"
-      }
-     ],
-     "name": "nd8b33ea52266",
-     "submissions_count": 6
-    },
-    "type": "submission"
-   },
-   {
-    "id": "3858727e-4fb0-48eb-b94d-39ee589c83fe",
-    "metrics": {
-     "total_prauc": 0.4677838105
-    },
-    "place": 46,
-    "team": {
-     "id": "038ed515-8ea7-4703-b7b7-c92cb3d16f22",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T13:26:08.531Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "af2c4317f1521",
-       "id": "ff2ac354-98dd-49f3-a24d-06e3810bb9c6",
-       "is_active": true,
-       "username": "af2c4317f1521"
-      },
-      {
-       "avatar": "",
-       "display_name": "j5a83a5a3cdc2",
-       "id": "7922f3d2-92a6-489a-85da-28f0d8f19a87",
-       "is_active": true,
-       "username": "j5a83a5a3cdc2"
-      },
-      {
-       "avatar": "",
-       "display_name": "l6f3206fba7fd",
-       "id": "1140d395-16f1-4c3d-88b0-d80707a3c41d",
-       "is_active": true,
-       "username": "l6f3206fba7fd"
-      }
-     ],
-     "name": "ArtemSterkhov",
-     "submissions_count": 19
-    },
-    "type": "submission"
-   },
-   {
-    "id": "a3e36248-1936-4dc8-8bf9-101577ea2ca0",
-    "metrics": {
-     "total_prauc": 0.4677294288
-    },
-    "place": 47,
-    "team": {
-     "id": "e7fd97bd-8004-46bf-aebe-f6261aca37b3",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T08:01:45.673Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "powpow pow",
-       "id": "24634bd0-4ee7-4e80-899e-03d25837043b",
-       "is_active": true,
-       "username": "a51a405885f27"
-      },
-      {
-       "avatar": "",
-       "display_name": "lcbc0138085ef",
-       "id": "94fff737-2086-484d-b38f-9e37ee5b5a77",
-       "is_active": true,
-       "username": "lcbc0138085ef"
-      },
-      {
-       "avatar": "",
-       "display_name": "dina k",
-       "id": "8ff540e0-7cc3-4333-82c6-69064b9d6ed6",
-       "is_active": true,
-       "username": "t34589fbdbe7d"
-      }
-     ],
-     "name": "нью-йорк",
-     "submissions_count": 10
-    },
-    "type": "submission"
-   },
-   {
-    "id": "dd5b040a-bc32-420c-9aa6-83f235e97ed2",
-    "metrics": {
-     "total_prauc": 0.4669251253
-    },
-    "place": 48,
-    "team": {
-     "id": "525e657a-8426-4d1d-81e4-08b370356665",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T06:56:38.025Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "Валерий Гайдеек",
-       "id": "b1038c58-84a2-4fef-86ee-edee237cd0e4",
-       "is_active": true,
-       "username": "r514b2c4e8a41"
-      }
-     ],
-     "name": "valer4ik",
-     "submissions_count": 7
-    },
-    "type": "submission"
-   },
-   {
-    "id": "c57971a0-d15e-4262-8d45-43524abc547d",
-    "metrics": {
-     "total_prauc": 0.4666751557
-    },
-    "place": 49,
-    "team": {
-     "id": "2fac25cf-4607-4c8d-9f97-103eaed45018",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T15:24:49.453Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/96/5e/965ebd459e9540bf062fb0b58a44bcff.jpg",
-       "display_name": "maxim shepelev",
-       "id": "85190a10-e0ca-4738-abd4-36e1e879f91d",
-       "is_active": true,
-       "username": "p185df36126ac"
-      }
-     ],
-     "name": "mivelon",
-     "submissions_count": 11
-    },
-    "type": "submission"
-   },
-   {
-    "id": "21c65b73-de8c-4dec-8334-87a67e1a3738",
-    "metrics": {
-     "total_prauc": 0.4640616236
-    },
-    "place": 50,
-    "team": {
-     "id": "969712e2-7b0b-454c-b8e7-c5b5ae26ae23",
-     "is_member": false,
-     "last_submission_dt": "2026-08-27T16:07:36.527Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "h715a8c2a395e",
-       "id": "b27f5f29-ea83-43db-8418-138cf4967c87",
-       "is_active": true,
-       "username": "h715a8c2a395e"
-      }
-     ],
-     "name": "h715a8c2a395e",
-     "submissions_count": 3
-    },
-    "type": "submission"
    }
   ],
   "limit": 50,
@@ -1447,11 +1426,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 141,
+  "places_total": 142,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 141,
-  "total": 141
+  "teams_total": 142,
+  "total": 142
  },
  "type": "public"
 }
