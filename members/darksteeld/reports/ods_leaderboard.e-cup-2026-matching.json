@@ -228,15 +228,15 @@
     "type": "submission"
    },
    {
-    "id": "087dec01-cd0f-4579-9c6e-df6c84eb4890",
+    "id": "ae1f4200-f8d2-46dd-88a2-9fd58a1cca24",
     "metrics": {
-     "total_prauc": 0.535787276
+     "total_prauc": 0.5373794431
     },
     "place": 8,
     "team": {
      "id": "99589070-e1aa-4131-a476-66b9acec2fde",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T08:23:14.092Z",
+     "last_submission_dt": "2026-08-29T09:47:41.861Z",
      "members": [
       {
        "avatar": "",
@@ -254,7 +254,7 @@
       }
      ],
      "name": "дружная команда",
-     "submissions_count": 43
+     "submissions_count": 44
     },
     "type": "submission"
    },
