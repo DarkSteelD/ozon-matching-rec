@@ -812,11 +812,35 @@
     "type": "submission"
    },
    {
+    "id": "121e1fff-1c59-4cb6-8e8e-f2e04317ba0f",
+    "metrics": {
+     "total_prauc": 0.5030064329
+    },
+    "place": 30,
+    "team": {
+     "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
+     "is_member": false,
+     "last_submission_dt": "2026-08-28T23:20:15.962Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "e539ae1535677",
+       "id": "4402c85e-1224-489c-a65a-d97d86a66235",
+       "is_active": true,
+       "username": "e539ae1535677"
+      }
+     ],
+     "name": "не пустили в клуб клуб",
+     "submissions_count": 20
+    },
+    "type": "submission"
+   },
+   {
     "id": "90f93084-75c3-45ce-9c77-a5360080fffe",
     "metrics": {
      "total_prauc": 0.4993476956
     },
-    "place": 30,
+    "place": 31,
     "team": {
      "id": "f68be1f5-dc4b-4e14-8e3e-638a26faf7b7",
      "is_member": false,
@@ -840,7 +864,7 @@
     "metrics": {
      "total_prauc": 0.4984372801
     },
-    "place": 31,
+    "place": 32,
     "team": {
      "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
      "is_member": false,
@@ -864,7 +888,7 @@
     "metrics": {
      "total_prauc": 0.4966407474
     },
-    "place": 32,
+    "place": 33,
     "team": {
      "id": "d712b80c-7142-4815-ac3a-4edc64bb88c0",
      "is_member": false,
@@ -888,7 +912,7 @@
     "metrics": {
      "total_prauc": 0.4960272359
     },
-    "place": 33,
+    "place": 34,
     "team": {
      "id": "804d4696-a96f-489a-9f48-a0e691a9537c",
      "is_member": false,
@@ -933,7 +957,7 @@
     "metrics": {
      "total_prauc": 0.4953252045
     },
-    "place": 34,
+    "place": 35,
     "team": {
      "id": "9a3e0ff6-b50c-40c0-a9f2-ea5be94fccd9",
      "is_member": false,
@@ -964,7 +988,7 @@
     "metrics": {
      "total_prauc": 0.4953120645
     },
-    "place": 35,
+    "place": 36,
     "team": {
      "id": "fc6a7348-ba62-482e-bc92-49e0d57e1c6d",
      "is_member": false,
@@ -988,7 +1012,7 @@
     "metrics": {
      "total_prauc": 0.494155375
     },
-    "place": 36,
+    "place": 37,
     "team": {
      "id": "96e0bd06-fe05-46d9-bf0f-60abc651d590",
      "is_member": false,
@@ -1040,7 +1064,7 @@
     "metrics": {
      "total_prauc": 0.4939670989
     },
-    "place": 37,
+    "place": 38,
     "team": {
      "id": "bdda39c6-fa9a-4f7c-a827-07b404f9c1e8",
      "is_member": false,
@@ -1056,30 +1080,6 @@
      ],
      "name": "представитель группы лес",
      "submissions_count": 31
-    },
-    "type": "submission"
-   },
-   {
-    "id": "2a866b82-49a4-4f0c-ba19-1b7b46a13a1b",
-    "metrics": {
-     "total_prauc": 0.4895491493
-    },
-    "place": 38,
-    "team": {
-     "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
-     "is_member": false,
-     "last_submission_dt": "2026-08-28T12:33:21.548Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "e539ae1535677",
-       "id": "4402c85e-1224-489c-a65a-d97d86a66235",
-       "is_active": true,
-       "username": "e539ae1535677"
-      }
-     ],
-     "name": "не пустили в клуб клуб",
-     "submissions_count": 19
     },
     "type": "submission"
    },
