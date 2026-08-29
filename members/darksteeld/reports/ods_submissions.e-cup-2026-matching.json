@@ -14,6 +14,76 @@
   {
    "comment": "",
    "comments": [],
+   "created_at": "2026-08-29T19:55:59.050Z",
+   "file_name": "mb_berta_pre.zip",
+   "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/2eda60e5/mb_berta_pre.zip",
+   "files": [],
+   "id": "94b1afbc-70a8-425c-a9b2-28c32700cd79",
+   "is_disabled": false,
+   "is_final": false,
+   "metrics": {
+    "num_categories": 20,
+    "num_samples": 0,
+    "per_category_prauc": {
+     "Автотовары": 0.8114506938619901,
+     "Аптека": 0.6593038520834229,
+     "Бытовая техника": 0.5594235216371805,
+     "Бытовая химия": 0.6814764744273707,
+     "Галантерея и аксессуары": 0.32575835860953073,
+     "Детские товары": 0.5755043108257708,
+     "Дом и сад": 0.4671159125346042,
+     "Канцелярские товары": 0.41549478496597914,
+     "Красота и гигиена": 0.6103051869565899,
+     "Мебель": 0.348493694851894,
+     "Музыкальные инструменты": 0.5291100123239043,
+     "Обувь": 0.18284781798062555,
+     "Одежда": 0.174078462357915,
+     "Продукты питания": 0.6913448293595429,
+     "Спорт и отдых": 0.4278916619282484,
+     "Строительство и ремонт": 0.5531591450129294,
+     "Товары для животных": 0.6130981217022601,
+     "Хобби и творчество": 0.5947641696718394,
+     "Электроника": 0.4857082559525071,
+     "Ювелирные изделия": 0.29192423696026154
+    },
+    "skipped_categories": [],
+    "total_prauc": 0.49991267520021837
+   },
+   "result": "Success",
+   "status": "success",
+   "user": {
+    "avatar": "",
+    "display_name": "Roman Rudenko",
+    "id": "17b01260-d61f-4bb4-a7da-d91b675aeaa1",
+    "is_active": true,
+    "username": "y3689b25310fe"
+   }
+  },
+  {
+   "comment": "",
+   "comments": [],
+   "created_at": "2026-08-29T19:38:30.895Z",
+   "error_log": "",
+   "file_name": "mb_qwen_only.zip",
+   "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/127f5000/mb_qwen_only.zip",
+   "files": [],
+   "id": "0a38a267-f9b4-4712-83bd-47bdcb3be7b5",
+   "is_disabled": false,
+   "is_final": false,
+   "metrics": {},
+   "result": "Error: Container did not finish in time",
+   "status": "error",
+   "user": {
+    "avatar": "",
+    "display_name": "Roman Rudenko",
+    "id": "17b01260-d61f-4bb4-a7da-d91b675aeaa1",
+    "is_active": true,
+    "username": "y3689b25310fe"
+   }
+  },
+  {
+   "comment": "",
+   "comments": [],
    "created_at": "2026-08-29T16:33:51.009Z",
    "file_name": "mb_qwen_v2.zip",
    "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/f6e089b7/mb_qwen_v2.zip",
@@ -1838,5 +1908,5 @@
    }
   }
  ],
- "total": 38
+ "total": 40
 }

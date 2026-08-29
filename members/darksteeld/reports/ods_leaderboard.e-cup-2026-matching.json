@@ -81,7 +81,7 @@
     "team": {
      "id": "3b2ed80d-b0f0-44d9-99dc-908bc7a10f35",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T05:39:22.662Z",
+     "last_submission_dt": "2026-08-29T19:20:35.918Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/9b/b4/9bb4be3c3c4600f219630f95a45fa6bb.jpg",
@@ -92,7 +92,7 @@
       }
      ],
      "name": "-",
-     "submissions_count": 28
+     "submissions_count": 33
     },
     "type": "submission"
    },
@@ -129,7 +129,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T16:33:51.009Z",
+     "last_submission_dt": "2026-08-29T19:55:59.050Z",
      "members": [
       {
        "avatar": "",
@@ -168,7 +168,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 36
+     "submissions_count": 37
     },
     "type": "submission"
    },
@@ -212,7 +212,7 @@
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T07:31:16.747Z",
+     "last_submission_dt": "2026-08-29T18:27:39.119Z",
      "members": [
       {
        "avatar": "",
@@ -223,7 +223,7 @@
       }
      ],
      "name": "lazy67",
-     "submissions_count": 21
+     "submissions_count": 22
     },
     "type": "submission"
    },
@@ -267,7 +267,7 @@
     "team": {
      "id": "d73664b6-fedc-4888-bf31-c3980823e7dd",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T08:23:02.628Z",
+     "last_submission_dt": "2026-08-29T18:40:17.380Z",
      "members": [
       {
        "avatar": "",
@@ -278,7 +278,7 @@
       }
      ],
      "name": "ELABS",
-     "submissions_count": 9
+     "submissions_count": 11
     },
     "type": "submission"
    },
@@ -291,7 +291,7 @@
     "team": {
      "id": "a071bc50-f3f7-41dc-a407-c144f57404c8",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T13:38:15.265Z",
+     "last_submission_dt": "2026-08-29T17:51:36.275Z",
      "members": [
       {
        "avatar": "",
@@ -302,7 +302,7 @@
       }
      ],
      "name": "455 база ответьте",
-     "submissions_count": 13
+     "submissions_count": 14
     },
     "type": "submission"
    },
@@ -442,7 +442,7 @@
     "team": {
      "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T13:39:14.085Z",
+     "last_submission_dt": "2026-08-29T17:34:42.403Z",
      "members": [
       {
        "avatar": "",
@@ -467,7 +467,7 @@
       }
      ],
      "name": "uralmash mentality",
-     "submissions_count": 63
+     "submissions_count": 64
     },
     "type": "submission"
    },
@@ -535,7 +535,7 @@
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T11:50:34.412Z",
+     "last_submission_dt": "2026-08-29T19:44:08.430Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
@@ -546,7 +546,7 @@
       }
      ],
      "name": "Artem Khimin",
-     "submissions_count": 44
+     "submissions_count": 45
     },
     "type": "submission"
    },
@@ -559,7 +559,7 @@
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T14:12:36.108Z",
+     "last_submission_dt": "2026-08-29T20:00:22.896Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
@@ -570,7 +570,7 @@
       }
      ],
      "name": "Andrey Kuznetsov",
-     "submissions_count": 30
+     "submissions_count": 31
     },
     "type": "submission"
    },
@@ -727,7 +727,7 @@
     "team": {
      "id": "15d6c8cb-5bcf-449c-8072-8514a94b1bfb",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T16:01:48.796Z",
+     "last_submission_dt": "2026-08-29T19:17:36.268Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/27/e5/27e562f1eaf6ab98e4573ee4e34c239e.jpg",
@@ -738,7 +738,7 @@
       }
      ],
      "name": "Tagir Analyzes",
-     "submissions_count": 32
+     "submissions_count": 35
     },
     "type": "submission"
    },
@@ -1398,11 +1398,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 147,
+  "places_total": 148,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 147,
-  "total": 147
+  "teams_total": 148,
+  "total": 148
  },
  "type": "public"
 }
