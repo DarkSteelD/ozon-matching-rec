@@ -105,7 +105,7 @@
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T13:56:27.580Z",
+     "last_submission_dt": "2026-08-29T21:06:01.504Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,7 +116,7 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 79
+     "submissions_count": 80
     },
     "type": "submission"
    },
@@ -173,9 +173,9 @@
     "type": "submission"
    },
    {
-    "id": "18eaca71-66ad-4fb4-b47f-c67f414dd689",
+    "id": "1f21d2c4-ca86-4eef-9883-838184317ad5",
     "metrics": {
-     "total_prauc": 0.5407846866
+     "total_prauc": 0.5410498243
     },
     "place": 6,
     "team": {
@@ -212,7 +212,7 @@
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:21:27.113Z",
+     "last_submission_dt": "2026-08-29T21:17:19.651Z",
      "members": [
       {
        "avatar": "",
@@ -223,7 +223,7 @@
       }
      ],
      "name": "lazy67",
-     "submissions_count": 23
+     "submissions_count": 24
     },
     "type": "submission"
    },
