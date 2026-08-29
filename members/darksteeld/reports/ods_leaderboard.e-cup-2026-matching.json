@@ -370,7 +370,7 @@
     "team": {
      "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T14:26:51.428Z",
+     "last_submission_dt": "2026-08-29T01:26:40.398Z",
      "members": [
       {
        "avatar": "",
@@ -381,7 +381,7 @@
       }
      ],
      "name": "IGF_ONLY",
-     "submissions_count": 9
+     "submissions_count": 14
     },
     "type": "submission"
    },
@@ -575,15 +575,15 @@
     "type": "submission"
    },
    {
-    "id": "5c85f08b-9722-4b98-9e22-8b4fc26f5681",
+    "id": "772ecc53-869c-405e-b7a1-9333f82dba6e",
     "metrics": {
-     "total_prauc": 0.5112394124
+     "total_prauc": 0.5128078506
     },
     "place": 21,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T04:23:57.997Z",
+     "last_submission_dt": "2026-08-29T01:02:17.145Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
@@ -594,7 +594,7 @@
       }
      ],
      "name": "Andrey Kuznetsov",
-     "submissions_count": 28
+     "submissions_count": 29
     },
     "type": "submission"
    },
