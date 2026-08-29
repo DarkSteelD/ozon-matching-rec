@@ -105,7 +105,7 @@
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-28T22:28:30.129Z",
+     "last_submission_dt": "2026-08-29T02:53:41.463Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,7 +116,7 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 76
+     "submissions_count": 77
     },
     "type": "submission"
    },
