@@ -36,7 +36,7 @@
     "team": {
      "id": "19ca8829-2d64-4dc2-a4eb-2aa8cadd4509",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:19:26.946Z",
+     "last_submission_dt": "2026-08-29T22:06:49.346Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/22/a7/22a7e339f14ca9bf209af89787ff2095.jpg",
@@ -68,7 +68,7 @@
       }
      ],
      "name": "FatBoost",
-     "submissions_count": 39
+     "submissions_count": 40
     },
     "type": "submission"
    },
@@ -362,11 +362,35 @@
     "type": "submission"
    },
    {
+    "id": "831d7e52-328a-4597-abc3-3dd25237b7a3",
+    "metrics": {
+     "total_prauc": 0.5239886293
+    },
+    "place": 13,
+    "team": {
+     "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
+     "is_member": false,
+     "last_submission_dt": "2026-08-29T22:29:37.137Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
+       "display_name": "Artemiy Maslov",
+       "id": "ffbf9136-3160-4661-a714-4f46f6a50a2f",
+       "is_active": true,
+       "username": "a288cfb509b05"
+      }
+     ],
+     "name": "YOUNGPROMPT1337",
+     "submissions_count": 45
+    },
+    "type": "submission"
+   },
+   {
     "id": "1addce51-0e0f-4e2e-af4d-41c92a8a877d",
     "metrics": {
      "total_prauc": 0.523971815
     },
-    "place": 13,
+    "place": 14,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
@@ -390,7 +414,7 @@
     "metrics": {
      "total_prauc": 0.5235150884
     },
-    "place": 14,
+    "place": 15,
     "team": {
      "id": "bb69f871-edbc-4114-b222-f3a2d8bfe755",
      "is_member": false,
@@ -414,7 +438,7 @@
     "metrics": {
      "total_prauc": 0.523216292
     },
-    "place": 15,
+    "place": 16,
     "team": {
      "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
      "is_member": false,
@@ -430,30 +454,6 @@
      ],
      "name": "IGF_ONLY",
      "submissions_count": 14
-    },
-    "type": "submission"
-   },
-   {
-    "id": "c4e4d96a-325c-4bc4-a4e1-4a7aaae5c97e",
-    "metrics": {
-     "total_prauc": 0.5230596535
-    },
-    "place": 16,
-    "team": {
-     "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
-     "is_member": false,
-     "last_submission_dt": "2026-08-29T16:39:37.893Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
-       "display_name": "Artemiy Maslov",
-       "id": "ffbf9136-3160-4661-a714-4f46f6a50a2f",
-       "is_active": true,
-       "username": "a288cfb509b05"
-      }
-     ],
-     "name": "YOUNGPROMPT1337",
-     "submissions_count": 44
     },
     "type": "submission"
    },
@@ -847,7 +847,7 @@
     "team": {
      "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T12:27:10.532Z",
+     "last_submission_dt": "2026-08-29T22:13:08.868Z",
      "members": [
       {
        "avatar": "",
@@ -858,7 +858,7 @@
       }
      ],
      "name": "antontsd",
-     "submissions_count": 27
+     "submissions_count": 28
     },
     "type": "submission"
    },
