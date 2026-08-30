@@ -173,9 +173,9 @@
     "type": "submission"
    },
    {
-    "id": "1f21d2c4-ca86-4eef-9883-838184317ad5",
+    "id": "6fdf5954-bc0e-4fb8-98d3-ba5185e779b5",
     "metrics": {
-     "total_prauc": 0.5410498243
+     "total_prauc": 0.5411035235
     },
     "place": 6,
     "team": {
@@ -370,7 +370,7 @@
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:32:36.673Z",
+     "last_submission_dt": "2026-08-30T12:30:49.020Z",
      "members": [
       {
        "avatar": "",
@@ -381,7 +381,7 @@
       }
      ],
      "name": "oa5914c678088",
-     "submissions_count": 4
+     "submissions_count": 5
     },
     "type": "submission"
    },
