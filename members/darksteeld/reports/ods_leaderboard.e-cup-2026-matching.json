@@ -36,7 +36,7 @@
     "team": {
      "id": "19ca8829-2d64-4dc2-a4eb-2aa8cadd4509",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T22:06:49.346Z",
+     "last_submission_dt": "2026-08-30T07:56:26.719Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/22/a7/22a7e339f14ca9bf209af89787ff2095.jpg",
@@ -68,7 +68,7 @@
       }
      ],
      "name": "FatBoost",
-     "submissions_count": 40
+     "submissions_count": 41
     },
     "type": "submission"
    },
@@ -212,7 +212,7 @@
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T21:17:19.651Z",
+     "last_submission_dt": "2026-08-30T07:43:13.265Z",
      "members": [
       {
        "avatar": "",
@@ -223,7 +223,7 @@
       }
      ],
      "name": "lazy67",
-     "submissions_count": 24
+     "submissions_count": 25
     },
     "type": "submission"
    },
@@ -259,15 +259,15 @@
     "type": "submission"
    },
    {
-    "id": "f00750e1-7a50-4365-8a56-e33e81136215",
+    "id": "96531362-5cd4-4cd3-a223-0a8baefef23c",
     "metrics": {
-     "total_prauc": 0.5350307919
+     "total_prauc": 0.5353308626
     },
     "place": 9,
     "team": {
      "id": "d73664b6-fedc-4888-bf31-c3980823e7dd",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T06:53:51.992Z",
+     "last_submission_dt": "2026-08-30T07:28:08.459Z",
      "members": [
       {
        "avatar": "",
@@ -278,7 +278,7 @@
       }
      ],
      "name": "ELABS",
-     "submissions_count": 13
+     "submissions_count": 16
     },
     "type": "submission"
    },
@@ -418,7 +418,7 @@
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T00:31:33.907Z",
+     "last_submission_dt": "2026-08-30T07:38:56.923Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/af/96/af96076fa2837f2c2f3d48c2e7ef6226.jpg",
@@ -429,7 +429,7 @@
       }
      ],
      "name": "Филин Матвей Викторович",
-     "submissions_count": 9
+     "submissions_count": 11
     },
     "type": "submission"
    },
@@ -466,7 +466,7 @@
     "team": {
      "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T01:26:40.398Z",
+     "last_submission_dt": "2026-08-30T07:48:48.208Z",
      "members": [
       {
        "avatar": "",
@@ -477,7 +477,7 @@
       }
      ],
      "name": "IGF_ONLY",
-     "submissions_count": 14
+     "submissions_count": 17
     },
     "type": "submission"
    },
@@ -1188,7 +1188,7 @@
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T06:50:37.201Z",
+     "last_submission_dt": "2026-08-30T03:07:13.243Z",
      "members": [
       {
        "avatar": "",
@@ -1199,7 +1199,7 @@
       }
      ],
      "name": "nff83c496ec81",
-     "submissions_count": 2
+     "submissions_count": 1
     },
     "type": "submission"
    },
