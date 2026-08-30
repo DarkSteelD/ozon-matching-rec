@@ -15,6 +15,7 @@
    "comment": "",
    "comments": [],
    "created_at": "2026-08-30T18:50:29.580Z",
+   "error_log": "",
    "file_name": "mb_ce1_mrb.zip",
    "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/5a339068/mb_ce1_mrb.zip",
    "files": [],
@@ -22,8 +23,8 @@
    "is_disabled": false,
    "is_final": false,
    "metrics": {},
-   "result": "Running",
-   "status": "running",
+   "result": "Error: Container did not finish in time",
+   "status": "error",
    "user": {
     "avatar": "",
     "display_name": "Roman Rudenko",

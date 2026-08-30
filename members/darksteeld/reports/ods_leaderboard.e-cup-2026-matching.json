@@ -129,7 +129,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:32:57.518Z",
+     "last_submission_dt": "2026-08-30T18:50:29.580Z",
      "members": [
       {
        "avatar": "",
@@ -168,7 +168,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 38
+     "submissions_count": 39
     },
     "type": "submission"
    },
@@ -480,7 +480,7 @@
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T17:02:13.373Z",
+     "last_submission_dt": "2026-08-30T18:52:02.048Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
@@ -491,7 +491,7 @@
       }
      ],
      "name": "Andrey Kuznetsov",
-     "submissions_count": 35
+     "submissions_count": 36
     },
     "type": "submission"
    },
