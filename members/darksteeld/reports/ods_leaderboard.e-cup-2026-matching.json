@@ -504,7 +504,7 @@
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T03:11:05.798Z",
+     "last_submission_dt": "2026-08-30T16:28:26.956Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
@@ -515,7 +515,7 @@
       }
      ],
      "name": "Andrey Kuznetsov",
-     "submissions_count": 33
+     "submissions_count": 34
     },
     "type": "submission"
    },
@@ -551,11 +551,35 @@
     "type": "submission"
    },
    {
+    "id": "e3c3875c-5d77-485d-af10-24e943f5fc8a",
+    "metrics": {
+     "total_prauc": 0.5211402647
+    },
+    "place": 20,
+    "team": {
+     "id": "d4f09e2b-fdcc-44ea-8fab-a60156582fb5",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T16:18:30.173Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "k33b59748a9f1",
+       "id": "9d31dace-d948-4443-b2ad-d9604012d905",
+       "is_active": true,
+       "username": "k33b59748a9f1"
+      }
+     ],
+     "name": "MNOGO DGT",
+     "submissions_count": 1
+    },
+    "type": "submission"
+   },
+   {
     "id": "fbf9258e-07b9-4913-8fdc-4d8d9a5848dc",
     "metrics": {
      "total_prauc": 0.5189941706
     },
-    "place": 20,
+    "place": 21,
     "team": {
      "id": "5710ddde-592e-447d-92db-7c412549534e",
      "is_member": false,
@@ -579,7 +603,7 @@
     "metrics": {
      "total_prauc": 0.5186093231
     },
-    "place": 21,
+    "place": 22,
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
@@ -603,7 +627,7 @@
     "metrics": {
      "total_prauc": 0.5156887292
     },
-    "place": 22,
+    "place": 23,
     "team": {
      "id": "6af0748f-5002-4ad2-be48-24c14db722f5",
      "is_member": false,
@@ -627,7 +651,7 @@
     "metrics": {
      "total_prauc": 0.5142534208
     },
-    "place": 23,
+    "place": 24,
     "team": {
      "id": "c2cb2fd2-6cf9-4fc4-9618-191374b52393",
      "is_member": false,
@@ -651,7 +675,7 @@
     "metrics": {
      "total_prauc": 0.5111610166
     },
-    "place": 24,
+    "place": 25,
     "team": {
      "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
      "is_member": false,
@@ -675,7 +699,7 @@
     "metrics": {
      "total_prauc": 0.5111270121
     },
-    "place": 25,
+    "place": 26,
     "team": {
      "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
      "is_member": false,
@@ -699,7 +723,7 @@
     "metrics": {
      "total_prauc": 0.5096624719
     },
-    "place": 26,
+    "place": 27,
     "team": {
      "id": "53078ac6-2527-4680-aeac-2b6e2c3a9cf8",
      "is_member": false,
@@ -723,7 +747,7 @@
     "metrics": {
      "total_prauc": 0.5095247122
     },
-    "place": 27,
+    "place": 28,
     "team": {
      "id": "79c00044-08a3-4b9d-a036-ce3d9fb77c9f",
      "is_member": false,
@@ -747,7 +771,7 @@
     "metrics": {
      "total_prauc": 0.5093050006
     },
-    "place": 28,
+    "place": 29,
     "team": {
      "id": "906a476a-8d2d-4b4f-835d-6f73e3264545",
      "is_member": false,
@@ -771,7 +795,7 @@
     "metrics": {
      "total_prauc": 0.5073767961
     },
-    "place": 29,
+    "place": 30,
     "team": {
      "id": "15d6c8cb-5bcf-449c-8072-8514a94b1bfb",
      "is_member": false,
@@ -795,7 +819,7 @@
     "metrics": {
      "total_prauc": 0.5060286244
     },
-    "place": 30,
+    "place": 31,
     "team": {
      "id": "969712e2-7b0b-454c-b8e7-c5b5ae26ae23",
      "is_member": false,
@@ -819,7 +843,7 @@
     "metrics": {
      "total_prauc": 0.505629576
     },
-    "place": 31,
+    "place": 32,
     "team": {
      "id": "1bd8409d-2777-48e7-af97-bd175cdc132a",
      "is_member": false,
@@ -843,7 +867,7 @@
     "metrics": {
      "total_prauc": 0.5053257638
     },
-    "place": 32,
+    "place": 33,
     "team": {
      "id": "f7b6f8c9-7e5b-4836-8990-8c6c296c3389",
      "is_member": false,
@@ -867,7 +891,7 @@
     "metrics": {
      "total_prauc": 0.5044528174
     },
-    "place": 33,
+    "place": 34,
     "team": {
      "id": "45c028f3-68aa-4fd1-bc1b-57fe2bb6ecf3",
      "is_member": false,
@@ -891,7 +915,7 @@
     "metrics": {
      "total_prauc": 0.5035465083
     },
-    "place": 34,
+    "place": 35,
     "team": {
      "id": "bd00f6d4-6997-42fe-802d-60ea556763f8",
      "is_member": false,
@@ -936,7 +960,7 @@
     "metrics": {
      "total_prauc": 0.4993476956
     },
-    "place": 35,
+    "place": 36,
     "team": {
      "id": "f68be1f5-dc4b-4e14-8e3e-638a26faf7b7",
      "is_member": false,
@@ -960,7 +984,7 @@
     "metrics": {
      "total_prauc": 0.4966407474
     },
-    "place": 36,
+    "place": 37,
     "team": {
      "id": "d712b80c-7142-4815-ac3a-4edc64bb88c0",
      "is_member": false,
@@ -984,7 +1008,7 @@
     "metrics": {
      "total_prauc": 0.4960272359
     },
-    "place": 37,
+    "place": 38,
     "team": {
      "id": "804d4696-a96f-489a-9f48-a0e691a9537c",
      "is_member": false,
@@ -1029,7 +1053,7 @@
     "metrics": {
      "total_prauc": 0.4953252045
     },
-    "place": 38,
+    "place": 39,
     "team": {
      "id": "9a3e0ff6-b50c-40c0-a9f2-ea5be94fccd9",
      "is_member": false,
@@ -1060,7 +1084,7 @@
     "metrics": {
      "total_prauc": 0.4953120645
     },
-    "place": 39,
+    "place": 40,
     "team": {
      "id": "fc6a7348-ba62-482e-bc92-49e0d57e1c6d",
      "is_member": false,
@@ -1084,7 +1108,7 @@
     "metrics": {
      "total_prauc": 0.494155375
     },
-    "place": 40,
+    "place": 41,
     "team": {
      "id": "96e0bd06-fe05-46d9-bf0f-60abc651d590",
      "is_member": false,
@@ -1136,7 +1160,7 @@
     "metrics": {
      "total_prauc": 0.4939670989
     },
-    "place": 41,
+    "place": 42,
     "team": {
      "id": "bdda39c6-fa9a-4f7c-a827-07b404f9c1e8",
      "is_member": false,
@@ -1160,7 +1184,7 @@
     "metrics": {
      "total_prauc": 0.4874706786
     },
-    "place": 42,
+    "place": 43,
     "team": {
      "id": "0b262001-e97b-4eb5-af18-dbc413068651",
      "is_member": false,
@@ -1184,7 +1208,7 @@
     "metrics": {
      "total_prauc": 0.4861714267
     },
-    "place": 43,
+    "place": 44,
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
@@ -1208,7 +1232,7 @@
     "metrics": {
      "total_prauc": 0.4853374993
     },
-    "place": 44,
+    "place": 45,
     "team": {
      "id": "26dc1c1e-f6b1-4f6e-b37f-e640413f1fad",
      "is_member": false,
@@ -1232,7 +1256,7 @@
     "metrics": {
      "total_prauc": 0.4823883685
     },
-    "place": 45,
+    "place": 46,
     "team": {
      "id": "6adbcbe5-1958-4427-b61e-cd05a52d1801",
      "is_member": false,
@@ -1256,7 +1280,7 @@
     "metrics": {
      "total_prauc": 0.4816630158
     },
-    "place": 46,
+    "place": 47,
     "team": {
      "id": "e7c0ec61-e71b-45c9-b566-be5ad86b1c94",
      "is_member": false,
@@ -1280,7 +1304,7 @@
     "metrics": {
      "total_prauc": 0.481512142
     },
-    "place": 47,
+    "place": 48,
     "team": {
      "id": "7fb9edcc-7980-419c-984f-025396a2cafb",
      "is_member": false,
@@ -1304,7 +1328,7 @@
     "metrics": {
      "total_prauc": 0.479197308
     },
-    "place": 48,
+    "place": 49,
     "team": {
      "id": "0b5d7b2d-253c-4d90-90b6-4f49c339c9de",
      "is_member": false,
@@ -1328,7 +1352,7 @@
     "metrics": {
      "total_prauc": 0.4790640702
     },
-    "place": 49,
+    "place": 50,
     "team": {
      "id": "3c0f833e-da2e-48e6-943d-17e34cbd41d5",
      "is_member": false,
@@ -1346,30 +1370,6 @@
      "submissions_count": 39
     },
     "type": "submission"
-   },
-   {
-    "id": "d9d9b765-8dce-46da-99c2-b43e98bf9259",
-    "metrics": {
-     "total_prauc": 0.4778191141
-    },
-    "place": 50,
-    "team": {
-     "id": "9676eabb-a2e7-431b-8381-cb044eb1bfce",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T00:43:56.069Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "Tatyana Demyanova",
-       "id": "3958d306-6ddd-47f9-80b9-338a9bcee56b",
-       "is_active": true,
-       "username": "qede59564d081"
-      }
-     ],
-     "name": "Tatyana Demyanova",
-     "submissions_count": 42
-    },
-    "type": "submission"
    }
   ],
   "limit": 50,
@@ -1384,11 +1384,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 151,
+  "places_total": 152,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 151,
-  "total": 151
+  "teams_total": 152,
+  "total": 152
  },
  "type": "public"
 }
