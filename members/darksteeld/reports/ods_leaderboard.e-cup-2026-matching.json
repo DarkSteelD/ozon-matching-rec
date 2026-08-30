@@ -743,11 +743,35 @@
     "type": "submission"
    },
    {
+    "id": "6072bb6c-db05-433c-80bc-95dcac91fccf",
+    "metrics": {
+     "total_prauc": 0.5081641997
+    },
+    "place": 28,
+    "team": {
+     "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T05:41:55.544Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "c0504edb268d6",
+       "id": "5a796a91-60ac-473f-bc4b-f56c9dc63a35",
+       "is_active": true,
+       "username": "c0504edb268d6"
+      }
+     ],
+     "name": "antontsd",
+     "submissions_count": 29
+    },
+    "type": "submission"
+   },
+   {
     "id": "093241e6-2997-4a0f-8c72-41991b4a47dc",
     "metrics": {
      "total_prauc": 0.5072100039
     },
-    "place": 28,
+    "place": 29,
     "team": {
      "id": "15d6c8cb-5bcf-449c-8072-8514a94b1bfb",
      "is_member": false,
@@ -771,7 +795,7 @@
     "metrics": {
      "total_prauc": 0.5060286244
     },
-    "place": 29,
+    "place": 30,
     "team": {
      "id": "969712e2-7b0b-454c-b8e7-c5b5ae26ae23",
      "is_member": false,
@@ -795,7 +819,7 @@
     "metrics": {
      "total_prauc": 0.5053257638
     },
-    "place": 30,
+    "place": 31,
     "team": {
      "id": "f7b6f8c9-7e5b-4836-8990-8c6c296c3389",
      "is_member": false,
@@ -819,7 +843,7 @@
     "metrics": {
      "total_prauc": 0.5044528174
     },
-    "place": 31,
+    "place": 32,
     "team": {
      "id": "45c028f3-68aa-4fd1-bc1b-57fe2bb6ecf3",
      "is_member": false,
@@ -835,30 +859,6 @@
      ],
      "name": "M G",
      "submissions_count": 3
-    },
-    "type": "submission"
-   },
-   {
-    "id": "0558e526-0e64-4d19-b5ad-de45976c6dba",
-    "metrics": {
-     "total_prauc": 0.5040756153
-    },
-    "place": 32,
-    "team": {
-     "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
-     "is_member": false,
-     "last_submission_dt": "2026-08-29T22:13:08.868Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "c0504edb268d6",
-       "id": "5a796a91-60ac-473f-bc4b-f56c9dc63a35",
-       "is_active": true,
-       "username": "c0504edb268d6"
-      }
-     ],
-     "name": "antontsd",
-     "submissions_count": 28
     },
     "type": "submission"
    },
@@ -1132,11 +1132,35 @@
     "type": "submission"
    },
    {
+    "id": "1e10db5a-b2d8-4d13-b772-12798101154c",
+    "metrics": {
+     "total_prauc": 0.4891084283
+    },
+    "place": 41,
+    "team": {
+     "id": "1bd8409d-2777-48e7-af97-bd175cdc132a",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T05:08:08.923Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "Максим Сергеев",
+       "id": "946b1608-3eb1-475d-b982-39d00ca64fec",
+       "is_active": true,
+       "username": "x7e4bb48fc664"
+      }
+     ],
+     "name": "Flex",
+     "submissions_count": 6
+    },
+    "type": "submission"
+   },
+   {
     "id": "481292b1-4058-4c23-8c8f-a7dcc6e53af3",
     "metrics": {
      "total_prauc": 0.4874706786
     },
-    "place": 41,
+    "place": 42,
     "team": {
      "id": "0b262001-e97b-4eb5-af18-dbc413068651",
      "is_member": false,
@@ -1160,7 +1184,7 @@
     "metrics": {
      "total_prauc": 0.4861714267
     },
-    "place": 42,
+    "place": 43,
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
@@ -1184,7 +1208,7 @@
     "metrics": {
      "total_prauc": 0.4853374993
     },
-    "place": 43,
+    "place": 44,
     "team": {
      "id": "26dc1c1e-f6b1-4f6e-b37f-e640413f1fad",
      "is_member": false,
@@ -1200,30 +1224,6 @@
      ],
      "name": "Игорь Борисов",
      "submissions_count": 24
-    },
-    "type": "submission"
-   },
-   {
-    "id": "388358a0-d6c5-4da1-8f55-7c985887aade",
-    "metrics": {
-     "total_prauc": 0.4828908759
-    },
-    "place": 44,
-    "team": {
-     "id": "1bd8409d-2777-48e7-af97-bd175cdc132a",
-     "is_member": false,
-     "last_submission_dt": "2026-08-29T06:13:22.566Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "Максим Сергеев",
-       "id": "946b1608-3eb1-475d-b982-39d00ca64fec",
-       "is_active": true,
-       "username": "x7e4bb48fc664"
-      }
-     ],
-     "name": "Flex",
-     "submissions_count": 5
     },
     "type": "submission"
    },
