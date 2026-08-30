@@ -81,7 +81,7 @@
     "team": {
      "id": "3b2ed80d-b0f0-44d9-99dc-908bc7a10f35",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T17:13:42.092Z",
+     "last_submission_dt": "2026-08-30T17:31:36.506Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/9b/b4/9bb4be3c3c4600f219630f95a45fa6bb.jpg",
@@ -92,7 +92,7 @@
       }
      ],
      "name": "-",
-     "submissions_count": 34
+     "submissions_count": 35
     },
     "type": "submission"
    },
@@ -181,7 +181,7 @@
     "team": {
      "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T16:51:02.568Z",
+     "last_submission_dt": "2026-08-30T17:31:39.004Z",
      "members": [
       {
        "avatar": "",
@@ -206,7 +206,7 @@
       }
      ],
      "name": "uralmash mentality",
-     "submissions_count": 68
+     "submissions_count": 69
     },
     "type": "submission"
    },
@@ -345,11 +345,35 @@
     "type": "submission"
    },
    {
+    "id": "91d8048b-ccc9-4349-931c-880a0194b8ab",
+    "metrics": {
+     "total_prauc": 0.5288141577
+    },
+    "place": 12,
+    "team": {
+     "id": "d4f09e2b-fdcc-44ea-8fab-a60156582fb5",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T17:24:05.908Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "k33b59748a9f1",
+       "id": "9d31dace-d948-4443-b2ad-d9604012d905",
+       "is_active": true,
+       "username": "k33b59748a9f1"
+      }
+     ],
+     "name": "MNOGO DGT",
+     "submissions_count": 2
+    },
+    "type": "submission"
+   },
+   {
     "id": "06552133-aa14-4346-a772-c0ed9da41daa",
     "metrics": {
      "total_prauc": 0.5271915909
     },
-    "place": 12,
+    "place": 13,
     "team": {
      "id": "bb69f871-edbc-4114-b222-f3a2d8bfe755",
      "is_member": false,
@@ -373,7 +397,7 @@
     "metrics": {
      "total_prauc": 0.5267619031
     },
-    "place": 13,
+    "place": 14,
     "team": {
      "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
      "is_member": false,
@@ -397,7 +421,7 @@
     "metrics": {
      "total_prauc": 0.5257830463
     },
-    "place": 14,
+    "place": 15,
     "team": {
      "id": "275d5f15-2e55-4325-857d-31cc03b96b38",
      "is_member": false,
@@ -428,7 +452,7 @@
     "metrics": {
      "total_prauc": 0.5257780886
     },
-    "place": 15,
+    "place": 16,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
@@ -452,7 +476,7 @@
     "metrics": {
      "total_prauc": 0.5256939975
     },
-    "place": 16,
+    "place": 17,
     "team": {
      "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
      "is_member": false,
@@ -476,7 +500,7 @@
     "metrics": {
      "total_prauc": 0.525536083
     },
-    "place": 17,
+    "place": 18,
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
@@ -500,7 +524,7 @@
     "metrics": {
      "total_prauc": 0.5249284824
     },
-    "place": 18,
+    "place": 19,
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
@@ -524,7 +548,7 @@
     "metrics": {
      "total_prauc": 0.5218171976
     },
-    "place": 19,
+    "place": 20,
     "team": {
      "id": "91fc6bf1-4874-4438-bd14-e6c7051dcac7",
      "is_member": false,
@@ -547,30 +571,6 @@
      ],
      "name": "Ecom амбассадоры гигачат",
      "submissions_count": 20
-    },
-    "type": "submission"
-   },
-   {
-    "id": "e3c3875c-5d77-485d-af10-24e943f5fc8a",
-    "metrics": {
-     "total_prauc": 0.5211402647
-    },
-    "place": 20,
-    "team": {
-     "id": "d4f09e2b-fdcc-44ea-8fab-a60156582fb5",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T17:24:05.908Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "k33b59748a9f1",
-       "id": "9d31dace-d948-4443-b2ad-d9604012d905",
-       "is_active": true,
-       "username": "k33b59748a9f1"
-      }
-     ],
-     "name": "MNOGO DGT",
-     "submissions_count": 2
     },
     "type": "submission"
    },
