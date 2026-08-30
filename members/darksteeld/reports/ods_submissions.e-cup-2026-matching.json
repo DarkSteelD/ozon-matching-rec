@@ -14,6 +14,27 @@
   {
    "comment": "",
    "comments": [],
+   "created_at": "2026-08-30T20:10:57.235Z",
+   "file_name": "mb_ce1_mb224.zip",
+   "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/2d70302b/mb_ce1_mb224.zip",
+   "files": [],
+   "id": "68936fc5-9f14-423e-b86d-1a356c24ded1",
+   "is_disabled": false,
+   "is_final": false,
+   "metrics": {},
+   "result": "Running",
+   "status": "running",
+   "user": {
+    "avatar": "",
+    "display_name": "Roman Rudenko",
+    "id": "17b01260-d61f-4bb4-a7da-d91b675aeaa1",
+    "is_active": true,
+    "username": "y3689b25310fe"
+   }
+  },
+  {
+   "comment": "",
+   "comments": [],
    "created_at": "2026-08-30T19:52:17.329Z",
    "file_name": "mb_route_mega.zip",
    "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/4473ad46/mb_route_mega.zip",
@@ -348,7 +369,7 @@
    "files": [],
    "id": "9d338078-76fd-4586-b84e-9c8649f8ad7e",
    "is_disabled": false,
-   "is_final": false,
+   "is_final": true,
    "metrics": {
     "num_categories": 20,
     "num_samples": 0,
@@ -637,7 +658,7 @@
    "files": [],
    "id": "009f5b47-a4be-493d-84bd-77d1ea755dcc",
    "is_disabled": false,
-   "is_final": false,
+   "is_final": true,
    "metrics": {
     "num_categories": 20,
     "num_samples": 0,
@@ -2118,5 +2139,5 @@
    }
   }
  ],
- "total": 46
+ "total": 47
 }

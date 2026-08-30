@@ -73,9 +73,9 @@
     "type": "submission"
    },
    {
-    "id": "43fb1de3-1ad9-425c-8b01-0b9826fbba2f",
+    "id": "d6642ba0-c8fc-45b2-a8fd-d6e09773017a",
     "metrics": {
-     "total_prauc": 0.5490577178
+     "total_prauc": 0.5497116226
     },
     "place": 3,
     "team": {
@@ -160,7 +160,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T19:52:17.329Z",
+     "last_submission_dt": "2026-08-30T20:10:57.235Z",
      "members": [
       {
        "avatar": "",
@@ -199,7 +199,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 40
+     "submissions_count": 41
     },
     "type": "submission"
    },
@@ -751,7 +751,7 @@
     "team": {
      "id": "79c00044-08a3-4b9d-a036-ce3d9fb77c9f",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T20:08:52.130Z",
+     "last_submission_dt": "2026-08-30T19:20:21.407Z",
      "members": [
       {
        "avatar": "",
@@ -762,7 +762,7 @@
       }
      ],
      "name": "ribalka na zhivca",
-     "submissions_count": 18
+     "submissions_count": 17
     },
     "type": "submission"
    },
@@ -1260,7 +1260,7 @@
     "team": {
      "id": "e7fd97bd-8004-46bf-aebe-f6261aca37b3",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T19:38:46.044Z",
+     "last_submission_dt": "2026-08-30T20:14:56.728Z",
      "members": [
       {
        "avatar": "",
@@ -1285,7 +1285,7 @@
       }
      ],
      "name": "нью-йорк x MISIS",
-     "submissions_count": 16
+     "submissions_count": 17
     },
     "type": "submission"
    },
