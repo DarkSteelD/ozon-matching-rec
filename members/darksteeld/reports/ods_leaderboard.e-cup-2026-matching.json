@@ -775,7 +775,7 @@
     "team": {
      "id": "15d6c8cb-5bcf-449c-8072-8514a94b1bfb",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T10:06:46.918Z",
+     "last_submission_dt": "2026-08-30T10:32:15.328Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/27/e5/27e562f1eaf6ab98e4573ee4e34c239e.jpg",
@@ -786,7 +786,7 @@
       }
      ],
      "name": "Tagir Analyzes",
-     "submissions_count": 36
+     "submissions_count": 37
     },
     "type": "submission"
    },
