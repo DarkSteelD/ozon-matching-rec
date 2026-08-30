@@ -267,7 +267,7 @@
     "team": {
      "id": "d73664b6-fedc-4888-bf31-c3980823e7dd",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T23:17:23.790Z",
+     "last_submission_dt": "2026-08-30T06:53:51.992Z",
      "members": [
       {
        "avatar": "",
@@ -278,7 +278,7 @@
       }
      ],
      "name": "ELABS",
-     "submissions_count": 12
+     "submissions_count": 13
     },
     "type": "submission"
    },
@@ -346,7 +346,7 @@
     "team": {
      "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T23:09:10.162Z",
+     "last_submission_dt": "2026-08-30T06:45:52.067Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
@@ -357,7 +357,7 @@
       }
      ],
      "name": "YOUNGPROMPT1337",
-     "submissions_count": 46
+     "submissions_count": 49
     },
     "type": "submission"
    },
@@ -1188,7 +1188,7 @@
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T03:07:13.243Z",
+     "last_submission_dt": "2026-08-30T06:50:37.201Z",
      "members": [
       {
        "avatar": "",
@@ -1199,7 +1199,7 @@
       }
      ],
      "name": "nff83c496ec81",
-     "submissions_count": 1
+     "submissions_count": 2
     },
     "type": "submission"
    },
@@ -1324,15 +1324,15 @@
     "type": "submission"
    },
    {
-    "id": "50ad750c-7613-4264-a687-e7d4b83ee04f",
+    "id": "5a41d463-63bf-4433-ad38-a8c02780ce47",
     "metrics": {
-     "total_prauc": 0.4790429822
+     "total_prauc": 0.4790640702
     },
     "place": 49,
     "team": {
      "id": "3c0f833e-da2e-48e6-943d-17e34cbd41d5",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T03:46:48.330Z",
+     "last_submission_dt": "2026-08-30T05:57:32.558Z",
      "members": [
       {
        "avatar": "",
@@ -1343,7 +1343,7 @@
       }
      ],
      "name": "Кирюха",
-     "submissions_count": 37
+     "submissions_count": 38
     },
     "type": "submission"
    },
