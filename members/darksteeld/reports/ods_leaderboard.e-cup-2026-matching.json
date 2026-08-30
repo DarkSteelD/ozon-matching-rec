@@ -267,7 +267,7 @@
     "team": {
      "id": "d73664b6-fedc-4888-bf31-c3980823e7dd",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T18:40:17.380Z",
+     "last_submission_dt": "2026-08-29T23:17:23.790Z",
      "members": [
       {
        "avatar": "",
@@ -278,7 +278,7 @@
       }
      ],
      "name": "ELABS",
-     "submissions_count": 11
+     "submissions_count": 12
     },
     "type": "submission"
    },
@@ -338,11 +338,35 @@
     "type": "submission"
    },
    {
+    "id": "68dc1be3-cf98-40f3-a541-64a460210e90",
+    "metrics": {
+     "total_prauc": 0.5256939975
+    },
+    "place": 12,
+    "team": {
+     "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
+     "is_member": false,
+     "last_submission_dt": "2026-08-29T23:09:10.162Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
+       "display_name": "Artemiy Maslov",
+       "id": "ffbf9136-3160-4661-a714-4f46f6a50a2f",
+       "is_active": true,
+       "username": "a288cfb509b05"
+      }
+     ],
+     "name": "YOUNGPROMPT1337",
+     "submissions_count": 46
+    },
+    "type": "submission"
+   },
+   {
     "id": "01827825-e3d8-42f0-8dfa-700eb34c521e",
     "metrics": {
      "total_prauc": 0.5249284824
     },
-    "place": 12,
+    "place": 13,
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
@@ -358,30 +382,6 @@
      ],
      "name": "oa5914c678088",
      "submissions_count": 4
-    },
-    "type": "submission"
-   },
-   {
-    "id": "831d7e52-328a-4597-abc3-3dd25237b7a3",
-    "metrics": {
-     "total_prauc": 0.5239886293
-    },
-    "place": 13,
-    "team": {
-     "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
-     "is_member": false,
-     "last_submission_dt": "2026-08-29T22:29:37.137Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/6e/a5/6ea585c97082f15995848394f3cebefd.jpg",
-       "display_name": "Artemiy Maslov",
-       "id": "ffbf9136-3160-4661-a714-4f46f6a50a2f",
-       "is_active": true,
-       "username": "a288cfb509b05"
-      }
-     ],
-     "name": "YOUNGPROMPT1337",
-     "submissions_count": 45
     },
     "type": "submission"
    },
