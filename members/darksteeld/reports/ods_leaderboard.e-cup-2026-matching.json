@@ -73,9 +73,9 @@
     "type": "submission"
    },
    {
-    "id": "a083b39c-69f5-40f6-b63e-d2ac97767d84",
+    "id": "43fb1de3-1ad9-425c-8b01-0b9826fbba2f",
     "metrics": {
-     "total_prauc": 0.5480199985
+     "total_prauc": 0.5490577178
     },
     "place": 3,
     "team": {
