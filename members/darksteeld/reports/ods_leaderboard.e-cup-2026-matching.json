@@ -490,7 +490,7 @@
     "team": {
      "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:35:03.636Z",
+     "last_submission_dt": "2026-08-30T10:29:32.519Z",
      "members": [
       {
        "avatar": "",
@@ -515,7 +515,7 @@
       }
      ],
      "name": "uralmash mentality",
-     "submissions_count": 65
+     "submissions_count": 66
     },
     "type": "submission"
    },
@@ -767,9 +767,9 @@
     "type": "submission"
    },
    {
-    "id": "093241e6-2997-4a0f-8c72-41991b4a47dc",
+    "id": "26a93ac7-e420-4c96-a325-093b06f32089",
     "metrics": {
-     "total_prauc": 0.5072100039
+     "total_prauc": 0.5073767961
     },
     "place": 29,
     "team": {
