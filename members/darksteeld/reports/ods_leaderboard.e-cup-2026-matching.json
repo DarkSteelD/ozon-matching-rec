@@ -105,7 +105,7 @@
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T15:31:05.464Z",
+     "last_submission_dt": "2026-08-30T16:23:26.298Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,7 +116,7 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 82
+     "submissions_count": 83
     },
     "type": "submission"
    },
@@ -212,7 +212,7 @@
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T09:52:17.266Z",
+     "last_submission_dt": "2026-08-30T16:27:49.638Z",
      "members": [
       {
        "avatar": "",
@@ -223,7 +223,7 @@
       }
      ],
      "name": "lazy67",
-     "submissions_count": 26
+     "submissions_count": 27
     },
     "type": "submission"
    },
@@ -307,11 +307,49 @@
     "type": "submission"
    },
    {
+    "id": "9564a8dc-9025-4286-bdfd-aff5fe6ce6f0",
+    "metrics": {
+     "total_prauc": 0.5331887135
+    },
+    "place": 11,
+    "team": {
+     "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T16:11:02.994Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "j693820672d46",
+       "id": "da00fb6f-be60-41e3-a15c-2fed67c60c8e",
+       "is_active": true,
+       "username": "j693820672d46"
+      },
+      {
+       "avatar": "",
+       "display_name": "Олег Смирнов",
+       "id": "e16dc1cd-76ca-4318-a0e2-f29eedba5012",
+       "is_active": true,
+       "username": "ja9b7eb25158c"
+      },
+      {
+       "avatar": "",
+       "display_name": "Александр Чесноков",
+       "id": "1fc35d96-5529-4a3b-9522-7de298a5163d",
+       "is_active": true,
+       "username": "v545995403a35"
+      }
+     ],
+     "name": "uralmash mentality",
+     "submissions_count": 67
+    },
+    "type": "submission"
+   },
+   {
     "id": "06552133-aa14-4346-a772-c0ed9da41daa",
     "metrics": {
      "total_prauc": 0.5271915909
     },
-    "place": 11,
+    "place": 12,
     "team": {
      "id": "bb69f871-edbc-4114-b222-f3a2d8bfe755",
      "is_member": false,
@@ -335,7 +373,7 @@
     "metrics": {
      "total_prauc": 0.5267619031
     },
-    "place": 12,
+    "place": 13,
     "team": {
      "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
      "is_member": false,
@@ -359,7 +397,7 @@
     "metrics": {
      "total_prauc": 0.5257830463
     },
-    "place": 13,
+    "place": 14,
     "team": {
      "id": "275d5f15-2e55-4325-857d-31cc03b96b38",
      "is_member": false,
@@ -390,7 +428,7 @@
     "metrics": {
      "total_prauc": 0.5256939975
     },
-    "place": 14,
+    "place": 15,
     "team": {
      "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
      "is_member": false,
@@ -414,7 +452,7 @@
     "metrics": {
      "total_prauc": 0.525536083
     },
-    "place": 15,
+    "place": 16,
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
@@ -438,7 +476,7 @@
     "metrics": {
      "total_prauc": 0.5249284824
     },
-    "place": 16,
+    "place": 17,
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
@@ -462,7 +500,7 @@
     "metrics": {
      "total_prauc": 0.523971815
     },
-    "place": 17,
+    "place": 18,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
@@ -478,44 +516,6 @@
      ],
      "name": "Andrey Kuznetsov",
      "submissions_count": 33
-    },
-    "type": "submission"
-   },
-   {
-    "id": "ad39e101-4e22-4ae7-b07b-b3dc13b884cb",
-    "metrics": {
-     "total_prauc": 0.5230454881
-    },
-    "place": 18,
-    "team": {
-     "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T16:11:02.994Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "j693820672d46",
-       "id": "da00fb6f-be60-41e3-a15c-2fed67c60c8e",
-       "is_active": true,
-       "username": "j693820672d46"
-      },
-      {
-       "avatar": "",
-       "display_name": "Олег Смирнов",
-       "id": "e16dc1cd-76ca-4318-a0e2-f29eedba5012",
-       "is_active": true,
-       "username": "ja9b7eb25158c"
-      },
-      {
-       "avatar": "",
-       "display_name": "Александр Чесноков",
-       "id": "1fc35d96-5529-4a3b-9522-7de298a5163d",
-       "is_active": true,
-       "username": "v545995403a35"
-      }
-     ],
-     "name": "uralmash mentality",
-     "submissions_count": 67
     },
     "type": "submission"
    },
