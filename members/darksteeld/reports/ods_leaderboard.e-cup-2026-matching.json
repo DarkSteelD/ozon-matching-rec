@@ -81,7 +81,7 @@
     "team": {
      "id": "3b2ed80d-b0f0-44d9-99dc-908bc7a10f35",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T18:00:39.488Z",
+     "last_submission_dt": "2026-08-30T19:54:47.548Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/9b/b4/9bb4be3c3c4600f219630f95a45fa6bb.jpg",
@@ -92,7 +92,7 @@
       }
      ],
      "name": "-",
-     "submissions_count": 36
+     "submissions_count": 37
     },
     "type": "submission"
    },
@@ -160,7 +160,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T19:41:46.096Z",
+     "last_submission_dt": "2026-08-30T19:52:17.329Z",
      "members": [
       {
        "avatar": "",
@@ -199,7 +199,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 39
+     "submissions_count": 40
     },
     "type": "submission"
    },
@@ -281,7 +281,7 @@
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T16:27:49.638Z",
+     "last_submission_dt": "2026-08-30T19:57:46.019Z",
      "members": [
       {
        "avatar": "",
@@ -292,7 +292,7 @@
       }
      ],
      "name": "lazy67",
-     "submissions_count": 27
+     "submissions_count": 28
     },
     "type": "submission"
    },
@@ -1012,7 +1012,7 @@
     "team": {
      "id": "804d4696-a96f-489a-9f48-a0e691a9537c",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T06:13:33.977Z",
+     "last_submission_dt": "2026-08-30T19:55:11.103Z",
      "members": [
       {
        "avatar": "",
@@ -1044,7 +1044,7 @@
       }
      ],
      "name": "Вайбкодеры ИТМО",
-     "submissions_count": 41
+     "submissions_count": 42
     },
     "type": "submission"
    },
@@ -1398,11 +1398,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 153,
+  "places_total": 154,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 153,
-  "total": 153
+  "teams_total": 154,
+  "total": 154
  },
  "type": "public"
 }

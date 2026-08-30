@@ -14,6 +14,27 @@
   {
    "comment": "",
    "comments": [],
+   "created_at": "2026-08-30T19:52:17.329Z",
+   "file_name": "mb_route_mega.zip",
+   "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/4473ad46/mb_route_mega.zip",
+   "files": [],
+   "id": "5016818c-565d-48ab-bad9-0dbe6c36a6f1",
+   "is_disabled": false,
+   "is_final": false,
+   "metrics": {},
+   "result": "Running",
+   "status": "running",
+   "user": {
+    "avatar": "",
+    "display_name": "Roman Rudenko",
+    "id": "17b01260-d61f-4bb4-a7da-d91b675aeaa1",
+    "is_active": true,
+    "username": "y3689b25310fe"
+   }
+  },
+  {
+   "comment": "",
+   "comments": [],
    "created_at": "2026-08-30T19:41:46.096Z",
    "file_name": "route_best.zip",
    "file_url": "https://storage.yandexcloud.net/ds-ods/files/submissions/0d0183cf-8864-4331-88be-f78da0c68dd2/f658e172/route_best.zip",
@@ -21,9 +42,36 @@
    "id": "cacb1707-1f87-4d1f-9361-ce5352a84cdc",
    "is_disabled": false,
    "is_final": false,
-   "metrics": {},
-   "result": "Running",
-   "status": "running",
+   "metrics": {
+    "num_categories": 20,
+    "num_samples": 0,
+    "per_category_prauc": {
+     "Автотовары": 0.837665419143877,
+     "Аптека": 0.6807841713665708,
+     "Бытовая техника": 0.5911737319104847,
+     "Бытовая химия": 0.7040318452705859,
+     "Галантерея и аксессуары": 0.3481042921218889,
+     "Детские товары": 0.5846115722735393,
+     "Дом и сад": 0.48175161492969715,
+     "Канцелярские товары": 0.42035034543344907,
+     "Красота и гигиена": 0.6226266265123087,
+     "Мебель": 0.4293582604290899,
+     "Музыкальные инструменты": 0.578013926949073,
+     "Обувь": 0.18210815565821895,
+     "Одежда": 0.21472073715025677,
+     "Продукты питания": 0.8065618194129092,
+     "Спорт и отдых": 0.43058994124762684,
+     "Строительство и ремонт": 0.6338063351738569,
+     "Товары для животных": 0.6273867848995832,
+     "Хобби и творчество": 0.6054813950262525,
+     "Электроника": 0.6297319900154785,
+     "Ювелирные изделия": 0.37218332911907326
+    },
+    "skipped_categories": [],
+    "total_prauc": 0.539052114702191
+   },
+   "result": "Success",
+   "status": "success",
    "user": {
     "avatar": "",
     "display_name": "Roman Rudenko",
@@ -2043,5 +2091,5 @@
    }
   }
  ],
- "total": 45
+ "total": 46
 }
