@@ -97,9 +97,9 @@
     "type": "submission"
    },
    {
-    "id": "749afee0-7c66-4e32-92ed-62e33d36a140",
+    "id": "cb917cfa-51be-41c7-8f2c-e526e27b2536",
     "metrics": {
-     "total_prauc": 0.5476502894
+     "total_prauc": 0.5480056269
     },
     "place": 4,
     "team": {
@@ -466,7 +466,7 @@
     "team": {
      "id": "bb69f871-edbc-4114-b222-f3a2d8bfe755",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T14:30:40.416Z",
+     "last_submission_dt": "2026-08-30T15:39:51.537Z",
      "members": [
       {
        "avatar": "",
@@ -477,7 +477,7 @@
       }
      ],
      "name": "TREN_FORCE",
-     "submissions_count": 8
+     "submissions_count": 13
     },
     "type": "submission"
    },
