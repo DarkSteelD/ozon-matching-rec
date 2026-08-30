@@ -212,7 +212,7 @@
     "team": {
      "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T17:31:39.004Z",
+     "last_submission_dt": "2026-08-30T20:51:39.345Z",
      "members": [
       {
        "avatar": "",
@@ -237,7 +237,7 @@
       }
      ],
      "name": "uralmash mentality",
-     "submissions_count": 69
+     "submissions_count": 70
     },
     "type": "submission"
    },
@@ -417,9 +417,9 @@
     "type": "submission"
    },
    {
-    "id": "621434fc-75d3-4e48-a021-761d46a7c61f",
+    "id": "22f95ee3-5694-492d-802b-ea067542b3b9",
     "metrics": {
-     "total_prauc": 0.5258686762
+     "total_prauc": 0.5259256928
     },
     "place": 15,
     "team": {
@@ -751,7 +751,7 @@
     "team": {
      "id": "79c00044-08a3-4b9d-a036-ce3d9fb77c9f",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T20:45:53.653Z",
+     "last_submission_dt": "2026-08-30T20:52:54.631Z",
      "members": [
       {
        "avatar": "",
@@ -762,7 +762,7 @@
       }
      ],
      "name": "ribalka na zhivca",
-     "submissions_count": 18
+     "submissions_count": 19
     },
     "type": "submission"
    },
