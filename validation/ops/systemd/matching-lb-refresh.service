@@ -1,5 +1,5 @@
 [Unit]
-Description=Refresh, push and announce matching ODS leaderboard detail
+Description=Refresh/push matching ODS detail and announce submission changes
 
 [Service]
 Type=oneshot

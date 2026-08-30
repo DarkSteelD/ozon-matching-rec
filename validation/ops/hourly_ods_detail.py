@@ -1,4 +1,4 @@
-"""Hourly matching LB refresh: commit, push, then notify Telegram on change."""
+"""Matching LB refresh: commit/push every run, notify only on submission change."""
 from __future__ import annotations
 
 import hashlib
@@ -18,7 +18,7 @@ REPORT = REPO / "members/dzkhomidov/reports/ODS_CATEGORY_DETAIL_LATEST.md"
 SUBMISSIONS = REPO / "members/darksteeld/reports/ods_submissions.e-cup-2026-matching.json"
 LEADERBOARD = REPO / "members/darksteeld/reports/ods_leaderboard.e-cup-2026-matching.json"
 STATE = WORKSPACE / "run/matching_lb_last_notified.sha256"
-DEADLINE = datetime(2026, 9, 1, tzinfo=ZoneInfo("Europe/Moscow"))
+DEADLINE = datetime(2026, 8, 31, 11, tzinfo=ZoneInfo("Europe/Moscow"))
 
 
 def git(*args: str, capture: bool = False) -> str:
@@ -30,7 +30,16 @@ def git(*args: str, capture: bool = False) -> str:
 
 
 def report_digest() -> str:
-    return hashlib.sha256(REPORT.read_bytes()).hexdigest()
+    # The report also changes when our rank or its render timestamp changes.
+    # Telegram is about our submissions only: new rows or changed status/metrics.
+    submissions = json.loads(SUBMISSIONS.read_text())["submissions"]
+    payload = json.dumps(
+        sorted(submissions, key=lambda item: item["id"]),
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode()
+    return hashlib.sha256(payload).hexdigest()
 
 
 def build_message() -> str:
