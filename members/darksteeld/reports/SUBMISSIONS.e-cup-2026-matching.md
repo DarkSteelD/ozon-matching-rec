@@ -1,10 +1,11 @@
 # ODS submissions — e-cup-2026-matching
 
-Snapshot: 2026-08-30 19:40 UTC, 44 записей. Метрики: total_prauc.
+Snapshot: 2026-08-30 19:50 UTC, 45 записей. Метрики: total_prauc.
 Источник: `api.ods.ai/api/competitions/e-cup-2026-matching/submissions/`.
 
 | created_at | user | file / comment | status | final | total_prauc |
 |---|---|---|---|---|---|
+| 2026-08-30T19:41 | Roman Rudenko | route_best.zip | running |  |  |
 | 2026-08-30T19:16 | Roman Rudenko | mb_ce1_mrb.zip | error |  |  |
 | 2026-08-30T18:50 | Roman Rudenko | mb_ce1_mrb.zip | error |  |  |
 | 2026-08-30T18:25 | Roman Rudenko | mb_ce1_mrb.zip | error |  |  |
