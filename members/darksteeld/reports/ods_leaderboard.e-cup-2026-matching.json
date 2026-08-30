@@ -362,11 +362,35 @@
     "type": "submission"
    },
    {
+    "id": "98da002e-2bcf-4ec4-befa-a996fee8126f",
+    "metrics": {
+     "total_prauc": 0.525536083
+    },
+    "place": 13,
+    "team": {
+     "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T13:28:16.343Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/af/96/af96076fa2837f2c2f3d48c2e7ef6226.jpg",
+       "display_name": "Филин Матвей Викторович",
+       "id": "0eacdfc5-7a53-4959-a8a4-99da14d16c7d",
+       "is_active": true,
+       "username": "b70f1f633256b"
+      }
+     ],
+     "name": "Филин Матвей Викторович",
+     "submissions_count": 12
+    },
+    "type": "submission"
+   },
+   {
     "id": "01827825-e3d8-42f0-8dfa-700eb34c521e",
     "metrics": {
      "total_prauc": 0.5249284824
     },
-    "place": 13,
+    "place": 14,
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
@@ -390,7 +414,7 @@
     "metrics": {
      "total_prauc": 0.523971815
     },
-    "place": 14,
+    "place": 15,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
@@ -406,30 +430,6 @@
      ],
      "name": "Andrey Kuznetsov",
      "submissions_count": 33
-    },
-    "type": "submission"
-   },
-   {
-    "id": "109a485e-453d-486a-bd51-b044b35f1722",
-    "metrics": {
-     "total_prauc": 0.523797176
-    },
-    "place": 15,
-    "team": {
-     "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T13:28:16.343Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/af/96/af96076fa2837f2c2f3d48c2e7ef6226.jpg",
-       "display_name": "Филин Матвей Викторович",
-       "id": "0eacdfc5-7a53-4959-a8a4-99da14d16c7d",
-       "is_active": true,
-       "username": "b70f1f633256b"
-      }
-     ],
-     "name": "Филин Матвей Викторович",
-     "submissions_count": 12
     },
     "type": "submission"
    },
