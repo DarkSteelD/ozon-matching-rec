@@ -181,7 +181,7 @@
     "team": {
      "id": "ac4e5fd0-cc06-44fb-8616-a021ac8ab716",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T12:07:35.095Z",
+     "last_submission_dt": "2026-08-30T15:13:39.548Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/3a/20/3a2060c2226c3008f946562170f5cb3f.jpg",
@@ -199,7 +199,7 @@
       }
      ],
      "name": "Я РЫБОЛОВ ТЫ МОЙ УЛОВ",
-     "submissions_count": 62
+     "submissions_count": 63
     },
     "type": "submission"
    },
@@ -307,9 +307,9 @@
     "type": "submission"
    },
    {
-    "id": "ba81ae1d-2a2e-4fb6-8dae-4018bf74ce7e",
+    "id": "7512a1fd-ab7a-4e9c-b39b-8cf1a8661152",
     "metrics": {
-     "total_prauc": 0.5261039872
+     "total_prauc": 0.5267619031
     },
     "place": 11,
     "team": {
