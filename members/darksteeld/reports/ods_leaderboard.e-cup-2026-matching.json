@@ -36,7 +36,7 @@
     "team": {
      "id": "19ca8829-2d64-4dc2-a4eb-2aa8cadd4509",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T07:56:26.719Z",
+     "last_submission_dt": "2026-08-30T10:11:48.224Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/22/a7/22a7e339f14ca9bf209af89787ff2095.jpg",
@@ -68,7 +68,7 @@
       }
      ],
      "name": "FatBoost",
-     "submissions_count": 41
+     "submissions_count": 42
     },
     "type": "submission"
    },
@@ -559,7 +559,7 @@
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:17:04.644Z",
+     "last_submission_dt": "2026-08-30T10:14:14.605Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/bc/5b/bc5bcc37917d9c81c8b8fd8b430729b7.jpg",
@@ -570,7 +570,7 @@
       }
      ],
      "name": "Artem Khimin",
-     "submissions_count": 46
+     "submissions_count": 47
     },
     "type": "submission"
    },
@@ -1188,7 +1188,7 @@
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T10:09:29.639Z",
+     "last_submission_dt": "2026-08-30T09:49:47.891Z",
      "members": [
       {
        "avatar": "",
@@ -1199,7 +1199,7 @@
       }
      ],
      "name": "nff83c496ec81",
-     "submissions_count": 4
+     "submissions_count": 3
     },
     "type": "submission"
    },
