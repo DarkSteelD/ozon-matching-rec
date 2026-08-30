@@ -105,7 +105,7 @@
     "team": {
      "id": "e9ed5276-39b5-4f95-abdb-f551ef766423",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T21:06:01.504Z",
+     "last_submission_dt": "2026-08-30T14:58:18.815Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/2e/1d/2e1d341be1349bdedd69031edcb746c5.jpg",
@@ -116,7 +116,7 @@
       }
      ],
      "name": "Daniil Stepanov",
-     "submissions_count": 80
+     "submissions_count": 81
     },
     "type": "submission"
    },
@@ -307,11 +307,35 @@
     "type": "submission"
    },
    {
+    "id": "ba81ae1d-2a2e-4fb6-8dae-4018bf74ce7e",
+    "metrics": {
+     "total_prauc": 0.5261039872
+    },
+    "place": 11,
+    "team": {
+     "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T14:59:35.262Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "e3d38d3cf817a",
+       "id": "bcadc72f-8f2c-4e1d-95cb-29d1ab6b9cb2",
+       "is_active": true,
+       "username": "e3d38d3cf817a"
+      }
+     ],
+     "name": "IGF_ONLY",
+     "submissions_count": 19
+    },
+    "type": "submission"
+   },
+   {
     "id": "7eb8a9cc-2925-4c04-87b0-5c567969876e",
     "metrics": {
      "total_prauc": 0.5257830463
     },
-    "place": 11,
+    "place": 12,
     "team": {
      "id": "275d5f15-2e55-4325-857d-31cc03b96b38",
      "is_member": false,
@@ -342,7 +366,7 @@
     "metrics": {
      "total_prauc": 0.5256939975
     },
-    "place": 12,
+    "place": 13,
     "team": {
      "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
      "is_member": false,
@@ -366,7 +390,7 @@
     "metrics": {
      "total_prauc": 0.525536083
     },
-    "place": 13,
+    "place": 14,
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
@@ -390,7 +414,7 @@
     "metrics": {
      "total_prauc": 0.5249284824
     },
-    "place": 14,
+    "place": 15,
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
@@ -414,7 +438,7 @@
     "metrics": {
      "total_prauc": 0.523971815
     },
-    "place": 15,
+    "place": 16,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
@@ -438,7 +462,7 @@
     "metrics": {
      "total_prauc": 0.5235150884
     },
-    "place": 16,
+    "place": 17,
     "team": {
      "id": "bb69f871-edbc-4114-b222-f3a2d8bfe755",
      "is_member": false,
@@ -454,30 +478,6 @@
      ],
      "name": "TREN_FORCE",
      "submissions_count": 8
-    },
-    "type": "submission"
-   },
-   {
-    "id": "9ebe5e1a-abb5-48bd-97fc-065feb3c62f9",
-    "metrics": {
-     "total_prauc": 0.523216292
-    },
-    "place": 17,
-    "team": {
-     "id": "4c3b51fb-4dec-4879-ae79-93859ebcc065",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T07:48:48.208Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "e3d38d3cf817a",
-       "id": "bcadc72f-8f2c-4e1d-95cb-29d1ab6b9cb2",
-       "is_active": true,
-       "username": "e3d38d3cf817a"
-      }
-     ],
-     "name": "IGF_ONLY",
-     "submissions_count": 17
     },
     "type": "submission"
    },
@@ -815,35 +815,11 @@
     "type": "submission"
    },
    {
-    "id": "6da5df91-c194-4703-987f-c48f19e24f58",
+    "id": "29854ac8-a796-4611-a5e5-2250568673b4",
     "metrics": {
-     "total_prauc": 0.5053257638
+     "total_prauc": 0.505629576
     },
     "place": 31,
-    "team": {
-     "id": "f7b6f8c9-7e5b-4836-8990-8c6c296c3389",
-     "is_member": false,
-     "last_submission_dt": "2026-08-25T05:21:47.378Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/b0/3f/b03f9c7db2edbf8544ba1aef24b94caa.jpg",
-       "display_name": "Elisei Kirpichenko",
-       "id": "2f098643-682a-4560-b244-93e323419f36",
-       "is_active": true,
-       "username": "hf95a4c1cef35"
-      }
-     ],
-     "name": "xxxbar19",
-     "submissions_count": 21
-    },
-    "type": "submission"
-   },
-   {
-    "id": "f6d513f5-45fa-471a-88e1-51e9d79978fc",
-    "metrics": {
-     "total_prauc": 0.5048367313
-    },
-    "place": 32,
     "team": {
      "id": "1bd8409d-2777-48e7-af97-bd175cdc132a",
      "is_member": false,
@@ -859,6 +835,30 @@
      ],
      "name": "Flex",
      "submissions_count": 8
+    },
+    "type": "submission"
+   },
+   {
+    "id": "6da5df91-c194-4703-987f-c48f19e24f58",
+    "metrics": {
+     "total_prauc": 0.5053257638
+    },
+    "place": 32,
+    "team": {
+     "id": "f7b6f8c9-7e5b-4836-8990-8c6c296c3389",
+     "is_member": false,
+     "last_submission_dt": "2026-08-25T05:21:47.378Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/b0/3f/b03f9c7db2edbf8544ba1aef24b94caa.jpg",
+       "display_name": "Elisei Kirpichenko",
+       "id": "2f098643-682a-4560-b244-93e323419f36",
+       "is_active": true,
+       "username": "hf95a4c1cef35"
+      }
+     ],
+     "name": "xxxbar19",
+     "submissions_count": 21
     },
     "type": "submission"
    },
