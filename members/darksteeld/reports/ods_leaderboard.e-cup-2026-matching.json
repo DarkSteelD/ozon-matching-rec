@@ -418,7 +418,7 @@
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T07:38:56.923Z",
+     "last_submission_dt": "2026-08-30T13:28:16.343Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/af/96/af96076fa2837f2c2f3d48c2e7ef6226.jpg",
@@ -429,7 +429,7 @@
       }
      ],
      "name": "Филин Матвей Викторович",
-     "submissions_count": 11
+     "submissions_count": 12
     },
     "type": "submission"
    },
