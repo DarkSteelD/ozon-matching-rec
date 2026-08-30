@@ -1140,7 +1140,7 @@
     "team": {
      "id": "1bd8409d-2777-48e7-af97-bd175cdc132a",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T05:08:08.923Z",
+     "last_submission_dt": "2026-08-30T11:13:13.789Z",
      "members": [
       {
        "avatar": "",
@@ -1151,7 +1151,7 @@
       }
      ],
      "name": "Flex",
-     "submissions_count": 6
+     "submissions_count": 7
     },
     "type": "submission"
    },
@@ -1188,7 +1188,7 @@
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T09:49:47.891Z",
+     "last_submission_dt": "2026-08-30T11:18:11.234Z",
      "members": [
       {
        "avatar": "",
@@ -1199,7 +1199,7 @@
       }
      ],
      "name": "nff83c496ec81",
-     "submissions_count": 3
+     "submissions_count": 4
     },
     "type": "submission"
    },
@@ -1384,11 +1384,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 149,
+  "places_total": 150,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 149,
-  "total": 149
+  "teams_total": 150,
+  "total": 150
  },
  "type": "public"
 }
