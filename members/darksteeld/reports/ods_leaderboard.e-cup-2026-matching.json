@@ -81,7 +81,7 @@
     "team": {
      "id": "3b2ed80d-b0f0-44d9-99dc-908bc7a10f35",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T19:20:35.918Z",
+     "last_submission_dt": "2026-08-30T17:13:42.092Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/9b/b4/9bb4be3c3c4600f219630f95a45fa6bb.jpg",
@@ -92,7 +92,7 @@
       }
      ],
      "name": "-",
-     "submissions_count": 33
+     "submissions_count": 34
     },
     "type": "submission"
    },
@@ -173,11 +173,49 @@
     "type": "submission"
    },
    {
+    "id": "8e632745-d53b-4a58-87a0-b2ba917092ca",
+    "metrics": {
+     "total_prauc": 0.5414129346
+    },
+    "place": 6,
+    "team": {
+     "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T16:51:02.568Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "j693820672d46",
+       "id": "da00fb6f-be60-41e3-a15c-2fed67c60c8e",
+       "is_active": true,
+       "username": "j693820672d46"
+      },
+      {
+       "avatar": "",
+       "display_name": "Олег Смирнов",
+       "id": "e16dc1cd-76ca-4318-a0e2-f29eedba5012",
+       "is_active": true,
+       "username": "ja9b7eb25158c"
+      },
+      {
+       "avatar": "",
+       "display_name": "Александр Чесноков",
+       "id": "1fc35d96-5529-4a3b-9522-7de298a5163d",
+       "is_active": true,
+       "username": "v545995403a35"
+      }
+     ],
+     "name": "uralmash mentality",
+     "submissions_count": 68
+    },
+    "type": "submission"
+   },
+   {
     "id": "6fdf5954-bc0e-4fb8-98d3-ba5185e779b5",
     "metrics": {
      "total_prauc": 0.5411035235
     },
-    "place": 6,
+    "place": 7,
     "team": {
      "id": "ac4e5fd0-cc06-44fb-8616-a021ac8ab716",
      "is_member": false,
@@ -208,7 +246,7 @@
     "metrics": {
      "total_prauc": 0.538805449
     },
-    "place": 7,
+    "place": 8,
     "team": {
      "id": "be03378a-ae8a-435c-a55c-ecbf724cf3d9",
      "is_member": false,
@@ -232,7 +270,7 @@
     "metrics": {
      "total_prauc": 0.5373794431
     },
-    "place": 8,
+    "place": 9,
     "team": {
      "id": "99589070-e1aa-4131-a476-66b9acec2fde",
      "is_member": false,
@@ -263,7 +301,7 @@
     "metrics": {
      "total_prauc": 0.5353308626
     },
-    "place": 9,
+    "place": 10,
     "team": {
      "id": "d73664b6-fedc-4888-bf31-c3980823e7dd",
      "is_member": false,
@@ -287,7 +325,7 @@
     "metrics": {
      "total_prauc": 0.5349234887
     },
-    "place": 10,
+    "place": 11,
     "team": {
      "id": "a071bc50-f3f7-41dc-a407-c144f57404c8",
      "is_member": false,
@@ -303,44 +341,6 @@
      ],
      "name": "455 база ответьте",
      "submissions_count": 14
-    },
-    "type": "submission"
-   },
-   {
-    "id": "9564a8dc-9025-4286-bdfd-aff5fe6ce6f0",
-    "metrics": {
-     "total_prauc": 0.5331887135
-    },
-    "place": 11,
-    "team": {
-     "id": "8c523bb9-f0d4-4c51-9323-ae3016100560",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T16:51:02.568Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "j693820672d46",
-       "id": "da00fb6f-be60-41e3-a15c-2fed67c60c8e",
-       "is_active": true,
-       "username": "j693820672d46"
-      },
-      {
-       "avatar": "",
-       "display_name": "Олег Смирнов",
-       "id": "e16dc1cd-76ca-4318-a0e2-f29eedba5012",
-       "is_active": true,
-       "username": "ja9b7eb25158c"
-      },
-      {
-       "avatar": "",
-       "display_name": "Александр Чесноков",
-       "id": "1fc35d96-5529-4a3b-9522-7de298a5163d",
-       "is_active": true,
-       "username": "v545995403a35"
-      }
-     ],
-     "name": "uralmash mentality",
-     "submissions_count": 68
     },
     "type": "submission"
    },
@@ -424,11 +424,35 @@
     "type": "submission"
    },
    {
+    "id": "9fc66625-e591-442d-b4da-a876cd8b254e",
+    "metrics": {
+     "total_prauc": 0.5257780886
+    },
+    "place": 15,
+    "team": {
+     "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T17:02:13.373Z",
+     "members": [
+      {
+       "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
+       "display_name": "Andrey Kuznetsov",
+       "id": "394432b4-18b5-4982-9cc8-dbf0b491710d",
+       "is_active": true,
+       "username": "dbf0b491710d"
+      }
+     ],
+     "name": "Andrey Kuznetsov",
+     "submissions_count": 35
+    },
+    "type": "submission"
+   },
+   {
     "id": "68dc1be3-cf98-40f3-a541-64a460210e90",
     "metrics": {
      "total_prauc": 0.5256939975
     },
-    "place": 15,
+    "place": 16,
     "team": {
      "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
      "is_member": false,
@@ -452,7 +476,7 @@
     "metrics": {
      "total_prauc": 0.525536083
     },
-    "place": 16,
+    "place": 17,
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
@@ -476,7 +500,7 @@
     "metrics": {
      "total_prauc": 0.5249284824
     },
-    "place": 17,
+    "place": 18,
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
@@ -492,30 +516,6 @@
      ],
      "name": "oa5914c678088",
      "submissions_count": 5
-    },
-    "type": "submission"
-   },
-   {
-    "id": "1addce51-0e0f-4e2e-af4d-41c92a8a877d",
-    "metrics": {
-     "total_prauc": 0.523971815
-    },
-    "place": 18,
-    "team": {
-     "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T17:02:13.373Z",
-     "members": [
-      {
-       "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
-       "display_name": "Andrey Kuznetsov",
-       "id": "394432b4-18b5-4982-9cc8-dbf0b491710d",
-       "is_active": true,
-       "username": "dbf0b491710d"
-      }
-     ],
-     "name": "Andrey Kuznetsov",
-     "submissions_count": 35
     },
     "type": "submission"
    },
