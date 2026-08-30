@@ -647,11 +647,35 @@
     "type": "submission"
    },
    {
+    "id": "5ae7f6e5-7a4a-4a6a-9e38-bfde1adf0ebf",
+    "metrics": {
+     "total_prauc": 0.5111610166
+    },
+    "place": 24,
+    "team": {
+     "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T14:08:08.127Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "e539ae1535677",
+       "id": "4402c85e-1224-489c-a65a-d97d86a66235",
+       "is_active": true,
+       "username": "e539ae1535677"
+      }
+     ],
+     "name": "не пустили в клуб клуб",
+     "submissions_count": 23
+    },
+    "type": "submission"
+   },
+   {
     "id": "28943424-6794-4f69-b6f8-889139136c74",
     "metrics": {
      "total_prauc": 0.5111270121
     },
-    "place": 24,
+    "place": 25,
     "team": {
      "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
      "is_member": false,
@@ -675,7 +699,7 @@
     "metrics": {
      "total_prauc": 0.5096624719
     },
-    "place": 25,
+    "place": 26,
     "team": {
      "id": "53078ac6-2527-4680-aeac-2b6e2c3a9cf8",
      "is_member": false,
@@ -699,7 +723,7 @@
     "metrics": {
      "total_prauc": 0.5095247122
     },
-    "place": 26,
+    "place": 27,
     "team": {
      "id": "79c00044-08a3-4b9d-a036-ce3d9fb77c9f",
      "is_member": false,
@@ -723,7 +747,7 @@
     "metrics": {
      "total_prauc": 0.5093050006
     },
-    "place": 27,
+    "place": 28,
     "team": {
      "id": "906a476a-8d2d-4b4f-835d-6f73e3264545",
      "is_member": false,
@@ -739,30 +763,6 @@
      ],
      "name": "шеф",
      "submissions_count": 21
-    },
-    "type": "submission"
-   },
-   {
-    "id": "63e0b510-312e-4a67-b163-5d233c2e4fd4",
-    "metrics": {
-     "total_prauc": 0.5092794601
-    },
-    "place": 28,
-    "team": {
-     "id": "f13ed088-4e1c-49c2-a1c0-c2e92c38a574",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T14:08:08.127Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "e539ae1535677",
-       "id": "4402c85e-1224-489c-a65a-d97d86a66235",
-       "is_active": true,
-       "username": "e539ae1535677"
-      }
-     ],
-     "name": "не пустили в клуб клуб",
-     "submissions_count": 23
     },
     "type": "submission"
    },
