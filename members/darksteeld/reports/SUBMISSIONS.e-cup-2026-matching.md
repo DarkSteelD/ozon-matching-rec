@@ -1,13 +1,14 @@
 # ODS submissions — e-cup-2026-matching
 
-Snapshot: 2026-08-30 20:40 UTC, 49 записей. Метрики: total_prauc.
+Snapshot: 2026-08-30 20:50 UTC, 50 записей. Метрики: total_prauc.
 Источник: `api.ods.ai/api/competitions/e-cup-2026-matching/submissions/`.
 
 | created_at | user | file / comment | status | final | total_prauc |
 |---|---|---|---|---|---|
-| 2026-08-30T20:35 | Roman Rudenko | mb_ce1_mrb.zip | running |  |  |
+| 2026-08-30T20:47 | Roman Rudenko | mb_ce1_mb224_lin.zip | running |  |  |
+| 2026-08-30T20:35 | Roman Rudenko | mb_ce1_mrb.zip | error |  |  |
 | 2026-08-30T20:21 | Roman Rudenko | mb_ce1_mrb.zip | error |  |  |
-| 2026-08-30T20:10 | Roman Rudenko | mb_ce1_mb224.zip | success | ★ | 0.505143 |
+| 2026-08-30T20:10 | Roman Rudenko | mb_ce1_mb224.zip | success |  | 0.505143 |
 | 2026-08-30T19:52 | Roman Rudenko | mb_route_mega.zip | success | ★ | 0.541413 |
 | 2026-08-30T19:41 | Roman Rudenko | route_best.zip | success |  | 0.539052 |
 | 2026-08-30T19:16 | Roman Rudenko | mb_ce1_mrb.zip | error |  |  |
@@ -23,7 +24,7 @@ Snapshot: 2026-08-30 20:40 UTC, 49 записей. Метрики: total_prauc.
 | 2026-08-28T17:33 | Roman Rudenko | mb_topn.zip | success |  | 0.313985 |
 | 2026-08-28T08:54 | Roman Rudenko | mb_ce1_route2.zip | success |  | 0.531751 |
 | 2026-08-27T23:30 | Roman Rudenko | mb_ce1_route.zip | error |  | 0.531750 |
-| 2026-08-27T15:23 | Roman Rudenko | mb_ce1_soup.zip | success |  | 0.513532 |
+| 2026-08-27T15:23 | Roman Rudenko | mb_ce1_soup.zip | success | ★ | 0.513532 |
 | 2026-08-27T13:16 | Roman Rudenko | mb_ce1_fold01.zip | success |  | 0.502473 |
 | 2026-08-27T11:45 | Roman Rudenko | mb_pretrain512.zip | success |  | 0.511685 |
 | 2026-08-26T20:40 | Кирилл Брацун | mb_stack_fashion_boost.zip | success |  | 0.509553 |
