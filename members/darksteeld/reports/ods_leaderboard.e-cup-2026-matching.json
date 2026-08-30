@@ -775,7 +775,7 @@
     "team": {
      "id": "15d6c8cb-5bcf-449c-8072-8514a94b1bfb",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T19:17:36.268Z",
+     "last_submission_dt": "2026-08-30T10:06:46.918Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/27/e5/27e562f1eaf6ab98e4573ee4e34c239e.jpg",
@@ -786,7 +786,7 @@
       }
      ],
      "name": "Tagir Analyzes",
-     "submissions_count": 35
+     "submissions_count": 36
     },
     "type": "submission"
    },
@@ -1188,7 +1188,7 @@
     "team": {
      "id": "1351b11f-b96c-4fc4-b177-fbbbd102b3fa",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T09:49:47.891Z",
+     "last_submission_dt": "2026-08-30T10:09:29.639Z",
      "members": [
       {
        "avatar": "",
@@ -1199,7 +1199,7 @@
       }
      ],
      "name": "nff83c496ec81",
-     "submissions_count": 3
+     "submissions_count": 4
     },
     "type": "submission"
    },
