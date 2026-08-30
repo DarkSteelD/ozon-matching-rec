@@ -81,7 +81,7 @@
     "team": {
      "id": "3b2ed80d-b0f0-44d9-99dc-908bc7a10f35",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T17:31:36.506Z",
+     "last_submission_dt": "2026-08-30T18:00:39.488Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/9b/b4/9bb4be3c3c4600f219630f95a45fa6bb.jpg",
@@ -92,7 +92,7 @@
       }
      ],
      "name": "-",
-     "submissions_count": 35
+     "submissions_count": 36
     },
     "type": "submission"
    },
