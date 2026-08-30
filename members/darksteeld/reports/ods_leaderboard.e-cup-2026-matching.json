@@ -370,7 +370,7 @@
     "team": {
      "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:32:36.673Z",
+     "last_submission_dt": "2026-08-30T11:54:25.457Z",
      "members": [
       {
        "avatar": "",
@@ -381,7 +381,7 @@
       }
      ],
      "name": "oa5914c678088",
-     "submissions_count": 4
+     "submissions_count": 5
     },
     "type": "submission"
    },
@@ -551,11 +551,35 @@
     "type": "submission"
    },
    {
+    "id": "fbf9258e-07b9-4913-8fdc-4d8d9a5848dc",
+    "metrics": {
+     "total_prauc": 0.5189941706
+    },
+    "place": 20,
+    "team": {
+     "id": "5710ddde-592e-447d-92db-7c412549534e",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T11:47:06.515Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "r8a8777baee1a",
+       "id": "5655368a-ea6d-4602-a167-d907608d3151",
+       "is_active": true,
+       "username": "r8a8777baee1a"
+      }
+     ],
+     "name": "Perpetual Motion Squad",
+     "submissions_count": 9
+    },
+    "type": "submission"
+   },
+   {
     "id": "7a234711-cf23-44a3-be3c-f57dfa42980b",
     "metrics": {
      "total_prauc": 0.5186093231
     },
-    "place": 20,
+    "place": 21,
     "team": {
      "id": "9f8ea10b-c1a5-4daf-a57f-bfec07830778",
      "is_member": false,
@@ -579,7 +603,7 @@
     "metrics": {
      "total_prauc": 0.5156887292
     },
-    "place": 21,
+    "place": 22,
     "team": {
      "id": "6af0748f-5002-4ad2-be48-24c14db722f5",
      "is_member": false,
@@ -603,7 +627,7 @@
     "metrics": {
      "total_prauc": 0.5142534208
     },
-    "place": 22,
+    "place": 23,
     "team": {
      "id": "c2cb2fd2-6cf9-4fc4-9618-191374b52393",
      "is_member": false,
@@ -619,30 +643,6 @@
      ],
      "name": "ICEQ",
      "submissions_count": 12
-    },
-    "type": "submission"
-   },
-   {
-    "id": "2f7eb24c-5be0-439b-9b9c-249a8ec5432b",
-    "metrics": {
-     "total_prauc": 0.5122509516
-    },
-    "place": 23,
-    "team": {
-     "id": "5710ddde-592e-447d-92db-7c412549534e",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T03:09:21.324Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "r8a8777baee1a",
-       "id": "5655368a-ea6d-4602-a167-d907608d3151",
-       "is_active": true,
-       "username": "r8a8777baee1a"
-      }
-     ],
-     "name": "Perpetual Motion Squad",
-     "submissions_count": 8
     },
     "type": "submission"
    },
