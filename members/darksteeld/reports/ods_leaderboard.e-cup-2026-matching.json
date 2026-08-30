@@ -36,7 +36,7 @@
     "team": {
      "id": "19ca8829-2d64-4dc2-a4eb-2aa8cadd4509",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T10:11:48.224Z",
+     "last_submission_dt": "2026-08-30T18:36:11.111Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/ds-ods/files/cache/22/a7/22a7e339f14ca9bf209af89787ff2095.jpg",
@@ -68,7 +68,7 @@
       }
      ],
      "name": "FatBoost",
-     "submissions_count": 42
+     "submissions_count": 43
     },
     "type": "submission"
    },
@@ -129,7 +129,7 @@
     "team": {
      "id": "6b701a1b-e780-47f9-a22b-b572591d895d",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T18:25:59.029Z",
+     "last_submission_dt": "2026-08-29T20:32:57.518Z",
      "members": [
       {
        "avatar": "",
@@ -168,7 +168,7 @@
       }
      ],
      "name": "Roma Bazuka",
-     "submissions_count": 39
+     "submissions_count": 38
     },
     "type": "submission"
    },
@@ -417,11 +417,35 @@
     "type": "submission"
    },
    {
+    "id": "621434fc-75d3-4e48-a021-761d46a7c61f",
+    "metrics": {
+     "total_prauc": 0.5258686762
+    },
+    "place": 15,
+    "team": {
+     "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
+     "is_member": false,
+     "last_submission_dt": "2026-08-30T18:28:57.370Z",
+     "members": [
+      {
+       "avatar": "",
+       "display_name": "oa5914c678088",
+       "id": "79d04644-90e2-4a84-97e3-a46810bca15c",
+       "is_active": true,
+       "username": "oa5914c678088"
+      }
+     ],
+     "name": "oa5914c678088",
+     "submissions_count": 7
+    },
+    "type": "submission"
+   },
+   {
     "id": "7eb8a9cc-2925-4c04-87b0-5c567969876e",
     "metrics": {
      "total_prauc": 0.5257830463
     },
-    "place": 15,
+    "place": 16,
     "team": {
      "id": "275d5f15-2e55-4325-857d-31cc03b96b38",
      "is_member": false,
@@ -452,7 +476,7 @@
     "metrics": {
      "total_prauc": 0.5257780886
     },
-    "place": 16,
+    "place": 17,
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
@@ -476,7 +500,7 @@
     "metrics": {
      "total_prauc": 0.5256939975
     },
-    "place": 17,
+    "place": 18,
     "team": {
      "id": "84959cd3-86db-4657-beea-ddcc06cf0294",
      "is_member": false,
@@ -500,7 +524,7 @@
     "metrics": {
      "total_prauc": 0.525536083
     },
-    "place": 18,
+    "place": 19,
     "team": {
      "id": "35073eeb-ca10-4015-a736-e13e2b2d2136",
      "is_member": false,
@@ -516,30 +540,6 @@
      ],
      "name": "Филин Матвей Викторович",
      "submissions_count": 13
-    },
-    "type": "submission"
-   },
-   {
-    "id": "01827825-e3d8-42f0-8dfa-700eb34c521e",
-    "metrics": {
-     "total_prauc": 0.5249284824
-    },
-    "place": 19,
-    "team": {
-     "id": "2a632cc4-84c7-4b42-95c0-8a46c61d4708",
-     "is_member": false,
-     "last_submission_dt": "2026-08-30T17:57:11.784Z",
-     "members": [
-      {
-       "avatar": "",
-       "display_name": "oa5914c678088",
-       "id": "79d04644-90e2-4a84-97e3-a46810bca15c",
-       "is_active": true,
-       "username": "oa5914c678088"
-      }
-     ],
-     "name": "oa5914c678088",
-     "submissions_count": 6
     },
     "type": "submission"
    },
