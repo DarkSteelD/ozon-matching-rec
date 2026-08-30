@@ -504,7 +504,7 @@
     "team": {
      "id": "5135ed3f-0a53-4698-85a9-934bcb3b4775",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T16:28:26.956Z",
+     "last_submission_dt": "2026-08-30T17:02:13.373Z",
      "members": [
       {
        "avatar": "https://storage.yandexcloud.net/datasouls-ods/cache/54/9b/549b7ad49a4243e7851ffb014fc1f435.jpg",
@@ -515,7 +515,7 @@
       }
      ],
      "name": "Andrey Kuznetsov",
-     "submissions_count": 34
+     "submissions_count": 35
     },
     "type": "submission"
    },
@@ -751,7 +751,7 @@
     "team": {
      "id": "79c00044-08a3-4b9d-a036-ce3d9fb77c9f",
      "is_member": false,
-     "last_submission_dt": "2026-08-26T21:37:42.361Z",
+     "last_submission_dt": "2026-08-30T16:57:00.810Z",
      "members": [
       {
        "avatar": "",
@@ -762,7 +762,7 @@
       }
      ],
      "name": "ribalka na zhivca",
-     "submissions_count": 15
+     "submissions_count": 16
     },
     "type": "submission"
    },
@@ -1384,11 +1384,11 @@
   ],
   "offset": 0,
   "places_count": 50,
-  "places_total": 152,
+  "places_total": 153,
   "slug": "public",
   "teams_count": 50,
-  "teams_total": 152,
-  "total": 152
+  "teams_total": 153,
+  "total": 153
  },
  "type": "public"
 }
