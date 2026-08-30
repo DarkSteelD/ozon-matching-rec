@@ -236,7 +236,7 @@
     "team": {
      "id": "99589070-e1aa-4131-a476-66b9acec2fde",
      "is_member": false,
-     "last_submission_dt": "2026-08-29T20:29:06.672Z",
+     "last_submission_dt": "2026-08-30T08:39:28.911Z",
      "members": [
       {
        "avatar": "",
@@ -254,7 +254,7 @@
       }
      ],
      "name": "дружная команда",
-     "submissions_count": 46
+     "submissions_count": 47
     },
     "type": "submission"
    },
@@ -751,7 +751,7 @@
     "team": {
      "id": "a6300466-4ca3-4316-9c23-b924251cdb12",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T05:41:55.544Z",
+     "last_submission_dt": "2026-08-30T08:49:10.671Z",
      "members": [
       {
        "avatar": "",
@@ -762,7 +762,7 @@
       }
      ],
      "name": "antontsd",
-     "submissions_count": 29
+     "submissions_count": 30
     },
     "type": "submission"
    },
@@ -1332,7 +1332,7 @@
     "team": {
      "id": "3c0f833e-da2e-48e6-943d-17e34cbd41d5",
      "is_member": false,
-     "last_submission_dt": "2026-08-30T05:57:32.558Z",
+     "last_submission_dt": "2026-08-30T08:43:40.767Z",
      "members": [
       {
        "avatar": "",
@@ -1343,7 +1343,7 @@
       }
      ],
      "name": "Кирюха",
-     "submissions_count": 38
+     "submissions_count": 39
     },
     "type": "submission"
    },
