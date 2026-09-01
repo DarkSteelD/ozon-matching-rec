@@ -1,0 +1,4 @@
+[
+  {"path": "model_mb320",      "max_len": 320, "weight": 0.75, "batch": 192, "texts": "prio", "cost": 1.0, "budget_attrs": true},
+  {"path": "model_student384", "max_len": 384, "weight": 0.25, "batch": 128, "texts": "prio", "cost": 0.5}
+]

@@ -1,0 +1,81 @@
+{
+  "experiment": "mb_stack320",
+  "what": "стек: RuModernBERT-base на длине 320 с обрезкой хвостов атрибутов (вес 0.75) + student e3 len384 от dzkhomidov (вес 0.25), бленд рангов",
+  "models": {
+    "model_mb320": {
+      "base": "deepvk/RuModernBERT-base",
+      "heads": 2,
+      "max_len": 320,
+      "budget_attrs": true,
+      "origin": "усреднение весов четырёх фолдовых моделей прогона B (runs/budget320)",
+      "soup_drift_median": 0.0414,
+      "oof_mean_prauc": 0.864884,
+      "oof_macro": 0.816898
+    },
+    "model_student384": {
+      "base": "rubert-base",
+      "heads": 1,
+      "max_len": 384,
+      "sha256": "77c0617a0b966d870d6a92877ad803e15788ebda8b2708466e617bcb14668c50"
+    }
+  },
+  "experiment_decomposition": {
+    "note": "два эффекта разделены двумя прогонами на одних фолдах, оба устойчивы на 4 фолдах из 4",
+    "truncation_policy_at_224": {
+      "mean": -0.000758,
+      "macro": -0.001357,
+      "verdict": "обрезка хвостов атрибутов вместо конца пары ВРЕДИТ: блок сравнения сохраняется в 100% пар вместо 7.5%, но модель извлекает из длинного хвоста атрибутов больше, чем из явного вердикта"
+    },
+    "length_224_to_320": {
+      "mean": 0.002338,
+      "macro": 0.004788,
+      "verdict": "длина ПОМОГАЕТ и перекрывает вред политики"
+    },
+    "net_vs_previous": {
+      "mean": 0.00158,
+      "macro": 0.003431,
+      "folds": "4/4"
+    },
+    "untested_and_likely_better": "320 с обычной глобальной обрезкой: по разложению ожидается около 0.8656 среднее и 0.8183 макро"
+  },
+  "local_cv": {
+    "oof_mean_prauc": 0.864884,
+    "oof_macro_over_20_categories": 0.816898,
+    "previous_224_model": {
+      "mean": 0.863304,
+      "macro": 0.813467,
+      "leaderboard_in_stack": 0.5124546791
+    },
+    "control_A_base_rubert": 0.855566,
+    "control_ce_priodistill": 0.851713,
+    "control_dzkhomidov_ensemble_of_7": 0.856377
+  },
+  "honesty_warning": {
+    "what_is_measured": "0.864884 — честный OOF ОДНОЙ фолдовой модели прогона B",
+    "what_is_not": "качество супа и качество стека. Суп собран из моделей, вместе покрывающих все фолды, поэтому на наших парах он внутривыборочный. Вес 0.75/0.25 взят прежний, чтобы разница на лидерборде отражала смену модели, а не смену веса."
+  },
+  "timing": {
+    "measured_on": "RTX 5070 Ti, 50000 пар",
+    "total_seconds": 195,
+    "pairs_per_second": 256,
+    "breakdown": {
+      "тексты": 3,
+      "model_mb320": 140,
+      "model_student384": 52
+    },
+    "previous_stack_224": {
+      "total_seconds": 134,
+      "pairs_per_second": 373
+    },
+    "grader_hardware": "T4",
+    "guard": "TIME_BUDGET 17 минут. Если бюджета не хватит, отвалится student, и останется модель 320 в одиночку — она сама по себе сильнее всего, что мы отправляли",
+    "risk": "стек в 1.46 раза дороже прежнего, который на T4 уложился. Запас неизвестен, потому что время прошлых прогонов на проверке нам не видно"
+  },
+  "texts_verified": "prio-тексты контейнера после обрезки под 320 сверены с обучающими: 2000 из 2000 с обеих сторон, переполнений нет",
+  "size_penalty": {
+    "applied": true,
+    "factor": 0.25
+  },
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "5.15.1"
+}

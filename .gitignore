@@ -32,11 +32,19 @@ mlruns/
 # descends into it and the negation below can never fire.
 members/*/data/*
 !members/*/data/label_audit.jsonl
+!members/*/data/closure_verdicts.jsonl
 members/*/output/
 members/*/submissions/
 members/*/subs/
 members/*/artifacts/
 members/*/models/
+# Веса, которыми делимся с командой, лежат в git LFS — см. .gitattributes.
+# Исключение узкое: рядом лежат чужие архивы navec, им в репозитории не место.
+!members/darksteeld/models/
+members/darksteeld/models/*
+!members/darksteeld/models/README.md
+!members/darksteeld/models/rumodernbert_*/
+!members/darksteeld/models/rumodernbert_*/**
 members/*/mlruns/
 
 # Organizer baseline unpacked for code inspection (contains model weights)
@@ -50,6 +58,12 @@ members/*/baselines_ref/
 # уровень глубже (container/blend4/joint/model.pt), и правило с одной звёздочкой
 # их не ловило — в коммит уходило 2.6 ГБ весов.
 members/*/container/**/model.*
+# Токенизаторы и словари — часть артефакта модели, а не кода: один
+# tokenizer.json это 4.75 МБ почти одинакового JSON на каждый контейнер.
+members/*/container/**/tokenizer.json
+members/*/container/**/tokenizer_config.json
+members/*/container/**/special_tokens_map.json
+members/*/container/**/vocab.txt
 members/*/container/**/vendor/
 members/*/container/**/src/
 # отображение «сырой токен -> индекс» на 18 МБ; пересобирается

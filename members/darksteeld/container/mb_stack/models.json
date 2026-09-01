@@ -1,0 +1,4 @@
+[
+  {"path": "model_mb",         "max_len": 224, "weight": 0.75, "batch": 256, "texts": "prio", "cost": 1.0},
+  {"path": "model_student384", "max_len": 384, "weight": 0.25, "batch": 128, "texts": "prio", "cost": 0.7}
+]

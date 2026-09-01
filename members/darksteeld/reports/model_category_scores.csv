@@ -1,0 +1,641 @@
+model,base,format,trained_on,optimizer,lr,max_len,epochs,num_labels,init,aggregate,split,category,prauc,n_pairs,n_pos
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Одежда,0.618612,5777,664
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Ювелирные изделия,0.662248,4540,578
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Обувь,0.628755,4616,436
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Электроника,0.786366,4656,810
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Канцелярские товары,0.817531,4403,1484
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Бытовая химия,0.921236,4360,2099
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Ювелирные изделия,0.600218,4824,586
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Товары для животных,0.913246,4560,1611
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Спорт и отдых,0.76778,4417,1173
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Бытовая техника,0.864864,4508,1623
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Красота и гигиена,0.852418,4390,1607
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Аптека,0.896091,4520,339
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Строительство и ремонт,0.847243,4492,957
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Одежда,0.634933,5946,691
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Обувь,0.614925,4622,443
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Автотовары,0.751227,4660,822
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Мебель,0.786436,4583,680
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Бытовая химия,0.930086,4400,2043
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Галантерея и аксессуары,0.764118,4567,774
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Товары для животных,0.917176,4580,1638
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Детские товары,0.921117,4370,2410
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Бытовая техника,0.857468,4350,1571
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Автотовары,0.726048,4786,856
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Обувь,0.607709,4642,488
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Красота и гигиена,0.838828,4377,1549
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Автотовары,0.732469,4808,841
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Канцелярские товары,0.823879,4381,1468
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Детские товары,0.929991,4430,2460
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Товары для животных,0.91314,4537,1629
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Хобби и творчество,0.939475,4339,1990
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Одежда,0.612887,5837,675
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Мебель,0.794142,4565,673
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Мебель,0.805463,4648,717
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Ювелирные изделия,0.647784,4666,586
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Музыкальные инструменты,0.874633,4559,1056
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Ювелирные изделия,0.639946,4665,567
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Канцелярские товары,0.858716,4361,1515
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Электроника,0.814768,4593,822
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Продукты питания,0.899793,4572,1263
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Хобби и творчество,0.948723,4488,2144
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Продукты питания,0.901063,4581,1203
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Одежда,0.631882,5797,721
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Красота и гигиена,0.853762,4295,1595
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Бытовая химия,0.913435,4337,1983
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Дом и сад,0.858001,4573,1164
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Хобби и творчество,0.944227,4461,2028
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Аптека,0.885974,4621,333
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Продукты питания,0.892887,4549,1272
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Спорт и отдых,0.764553,4319,1122
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Аптека,0.893756,4598,318
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Музыкальные инструменты,0.904424,4447,992
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Бытовая техника,0.861168,4467,1615
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Товары для животных,0.913502,4534,1602
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Детские товары,0.929311,4432,2522
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Музыкальные инструменты,0.880517,4436,944
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Детские товары,0.927295,4329,2477
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Бытовая химия,0.922296,4339,2058
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Строительство и ремонт,0.815359,4559,979
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Галантерея и аксессуары,0.763875,4507,770
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Дом и сад,0.860138,4316,1133
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Строительство и ремонт,0.850766,4495,1004
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Электроника,0.804254,4906,835
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Галантерея и аксессуары,0.754346,4482,756
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Красота и гигиена,0.845677,4224,1532
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Автотовары,0.738395,4756,807
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Дом и сад,0.862362,4249,1110
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Бытовая техника,0.855752,4489,1595
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Электроника,0.806063,4526,760
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Аптека,0.879198,4546,338
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Канцелярские товары,0.829509,4290,1436
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Спорт и отдых,0.748948,4469,1133
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Мебель,0.797552,4570,686
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Продукты питания,0.903877,4582,1208
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Музыкальные инструменты,0.878373,4375,958
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Галантерея и аксессуары,0.762508,4428,715
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Строительство и ремонт,0.824671,4556,989
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_01,Обувь,0.606889,4482,446
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_02,Дом и сад,0.867153,4436,1201
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_03,Спорт и отдых,0.74388,4512,1172
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,val_fold_04,Хобби и творчество,0.944491,4389,2040
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Бытовая техника,0.858389,4467,1615
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Аптека,0.891566,4520,339
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Канцелярские товары,0.820683,4381,1468
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Детские товары,0.921452,4370,2410
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Автотовары,0.732522,4808,841
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Электроника,0.799592,4526,760
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Мебель,0.77786,4583,680
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Красота и гигиена,0.848811,4295,1595
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Красота и гигиена,0.836786,4377,1549
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Канцелярские товары,0.856886,4361,1515
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Красота и гигиена,0.854255,4390,1607
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Галантерея и аксессуары,0.760292,4428,715
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Мебель,0.793882,4648,717
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Бытовая техника,0.860659,4489,1595
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Красота и гигиена,0.842635,4224,1532
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Строительство и ремонт,0.84395,4495,1004
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Аптека,0.8821,4546,338
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Спорт и отдых,0.767851,4417,1173
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Спорт и отдых,0.765072,4319,1122
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Продукты питания,0.898517,4572,1263
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Автотовары,0.751213,4660,822
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Детские товары,0.928276,4430,2460
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Детские товары,0.92782,4329,2477
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Детские товары,0.930203,4432,2522
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Хобби и творчество,0.939003,4339,1990
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Канцелярские товары,0.813796,4403,1484
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Спорт и отдых,0.740023,4512,1172
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Ювелирные изделия,0.587075,4824,586
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Одежда,0.614113,5946,691
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Ювелирные изделия,0.627789,4665,567
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Бытовая химия,0.923888,4360,2099
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Дом и сад,0.86115,4436,1201
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Бытовая техника,0.857845,4350,1571
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Обувь,0.607973,4616,436
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Галантерея и аксессуары,0.763284,4507,770
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Товары для животных,0.912499,4537,1629
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Строительство и ремонт,0.841464,4492,957
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Аптека,0.877622,4621,333
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Бытовая химия,0.911421,4337,1983
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Галантерея и аксессуары,0.751277,4482,756
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Бытовая техника,0.864229,4508,1623
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Товары для животных,0.9147,4534,1602
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Строительство и ремонт,0.813195,4556,989
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Канцелярские товары,0.827049,4290,1436
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Электроника,0.80681,4906,835
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Бытовая химия,0.930677,4400,2043
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Продукты питания,0.905311,4582,1208
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Музыкальные инструменты,0.882087,4375,958
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Спорт и отдых,0.751848,4469,1133
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Аптека,0.895984,4598,318
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Товары для животных,0.915491,4580,1638
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Одежда,0.603866,5777,664
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Электроника,0.786891,4656,810
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Продукты питания,0.889055,4549,1272
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Бытовая химия,0.919955,4339,2058
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Электроника,0.812317,4593,822
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Музыкальные инструменты,0.903631,4447,992
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Обувь,0.588599,4642,488
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Дом и сад,0.861121,4316,1133
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Музыкальные инструменты,0.880123,4436,944
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Одежда,0.624592,5797,721
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Хобби и творчество,0.947284,4488,2144
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Продукты питания,0.899814,4581,1203
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Обувь,0.602978,4622,443
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Ювелирные изделия,0.660566,4540,578
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Хобби и творчество,0.942758,4461,2028
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Музыкальные инструменты,0.87651,4559,1056
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Строительство и ремонт,0.810932,4559,979
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Мебель,0.792098,4570,686
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Галантерея и аксессуары,0.761394,4567,774
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Автотовары,0.726405,4786,856
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Дом и сад,0.856212,4573,1164
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Ювелирные изделия,0.637656,4666,586
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Обувь,0.60112,4482,446
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Автотовары,0.735736,4756,807
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Хобби и творчество,0.94427,4389,2040
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_01,Товары для животных,0.91271,4560,1611
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_03,Одежда,0.59672,5837,675
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_04,Дом и сад,0.862124,4249,1110
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,val_fold_02,Мебель,0.780651,4565,673
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Дом и сад,0.860611,4573,1164
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Мебель,0.787509,4583,680
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Ювелирные изделия,0.670694,4540,578
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Строительство и ремонт,0.8174,4559,979
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Товары для животных,0.914542,4560,1611
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Бытовая техника,0.862737,4467,1615
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Продукты питания,0.897419,4549,1272
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Одежда,0.639238,5946,691
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Канцелярские товары,0.821774,4381,1468
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Аптека,0.885961,4621,333
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Электроника,0.813837,4526,760
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Автотовары,0.730509,4786,856
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Обувь,0.618592,4482,446
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Бытовая химия,0.917662,4337,1983
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Детские товары,0.92592,4430,2460
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Красота и гигиена,0.849857,4295,1595
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Хобби и творчество,0.939626,4339,1990
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Музыкальные инструменты,0.88114,4436,944
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Спорт и отдых,0.764166,4319,1122
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,val_fold_01,Галантерея и аксессуары,0.758558,4428,715
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Строительство и ремонт,0.725097,4559,979
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Канцелярские товары,0.734821,4381,1468
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Бытовая химия,0.873124,4337,1983
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Электроника,0.684543,4526,760
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Бытовая техника,0.806808,4467,1615
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Дом и сад,0.761903,4573,1164
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Красота и гигиена,0.800086,4295,1595
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Спорт и отдых,0.679064,4319,1122
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Одежда,0.496966,5946,691
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Товары для животных,0.873395,4560,1611
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Аптека,0.850867,4621,333
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Детские товары,0.86873,4430,2460
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Обувь,0.457116,4482,446
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Хобби и творчество,0.885217,4339,1990
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Автотовары,0.659897,4786,856
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Музыкальные инструменты,0.804887,4436,944
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Продукты питания,0.855673,4549,1272
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Мебель,0.650947,4583,680
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Ювелирные изделия,0.509837,4540,578
+berta_bi_pre_folds,sergeyzh/BERTA,bi-encoder,folds,adamw,1e-5/2e-4,512,1,1,berta_bi,none,val_fold_01,Галантерея и аксессуары,0.623679,4428,715
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Аптека,0.877014,4621,333
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Спорт и отдых,0.755033,4319,1122
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Одежда,0.602587,5946,691
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Электроника,0.784802,4526,760
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Бытовая химия,0.904484,4337,1983
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Товары для животных,0.909932,4560,1611
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Красота и гигиена,0.840641,4295,1595
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Музыкальные инструменты,0.86889,4436,944
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Обувь,0.599022,4482,446
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Продукты питания,0.892683,4549,1272
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Строительство и ремонт,0.808786,4559,979
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Мебель,0.76801,4583,680
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Канцелярские товары,0.796998,4381,1468
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Ювелирные изделия,0.630598,4540,578
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Детские товары,0.91545,4430,2460
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Дом и сад,0.842454,4573,1164
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Бытовая техника,0.853388,4467,1615
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Галантерея и аксессуары,0.723209,4428,715
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Автотовары,0.719337,4786,856
+berta_ce_folds,sergeyzh/BERTA,cross-encoder,folds,adan,2e-5,512,1,1,berta_ce,none,val_fold_01,Хобби и творчество,0.928283,4339,1990
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Автотовары,0.816384,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Аптека,0.649892,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Бытовая техника,0.572226,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Бытовая химия,0.685816,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Галантерея и аксессуары,0.348009,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Детские товары,0.584593,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Дом и сад,0.481771,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Канцелярские товары,0.42032,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Красота и гигиена,0.6226,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Мебель,0.370318,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Музыкальные инструменты,0.539778,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Обувь,0.182068,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Одежда,0.214466,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Продукты питания,0.682479,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Спорт и отдых,0.423109,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Строительство и ремонт,0.581724,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Товары для животных,0.627353,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Хобби и творчество,0.605424,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Электроника,0.479181,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,leaderboard,Ювелирные изделия,0.346191,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Автотовары,0.843286,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Аптека,0.677085,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Бытовая техника,0.587824,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Бытовая химия,0.685803,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Галантерея и аксессуары,0.237425,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Детские товары,0.513636,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Дом и сад,0.451771,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Канцелярские товары,0.399507,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Красота и гигиена,0.501088,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Мебель,0.410585,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Музыкальные инструменты,0.557445,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Обувь,0.094347,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Одежда,0.139412,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Продукты питания,0.778008,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Спорт и отдых,0.402786,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Строительство и ремонт,0.6282,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Товары для животных,0.589168,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Хобби и творчество,0.557279,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Электроника,0.612407,,
+mb_ce1_fold01,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,none,leaderboard,Ювелирные изделия,0.382398,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Автотовары,0.848265,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Аптека,0.686978,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Бытовая техника,0.596239,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Бытовая химия,0.699336,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Галантерея и аксессуары,0.248656,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Детские товары,0.536588,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Дом и сад,0.465295,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Канцелярские товары,0.412755,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Красота и гигиена,0.50896,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Мебель,0.441963,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Музыкальные инструменты,0.56858,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Обувь,0.098816,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Одежда,0.146769,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Продукты питания,0.78905,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Спорт и отдых,0.413983,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Строительство и ремонт,0.638735,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Товары для животных,0.602814,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Хобби и творчество,0.576424,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Электроника,0.61416,,
+mb_ce1_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,512,1,1,mb_llm_512,soup,leaderboard,Ювелирные изделия,0.376279,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Автотовары,0.851071,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Аптека,0.66293,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Бытовая техника,0.588507,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Бытовая химия,0.702579,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Галантерея и аксессуары,0.264722,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Детские товары,0.544599,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Дом и сад,0.450239,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Канцелярские товары,0.406958,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Красота и гигиена,0.506054,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Мебель,0.402022,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Музыкальные инструменты,0.577366,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Обувь,0.096341,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Одежда,0.130447,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Продукты питания,0.793061,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Спорт и отдых,0.4256,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Строительство и ремонт,0.621889,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Товары для животных,0.602651,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Хобби и творчество,0.601506,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Электроника,0.618536,,
+mb_soup,deepvk/RuModernBERT-base,cross-encoder,folds,adan,1e-4,224,2,2,mb_llm,soup,leaderboard,Ювелирные изделия,0.273487,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Автотовары,0.831185,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Аптека,0.683608,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Бытовая техника,0.583472,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Бытовая химия,0.686591,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Галантерея и аксессуары,0.246947,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Детские товары,0.526197,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Дом и сад,0.43328,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Канцелярские товары,0.405312,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Красота и гигиена,0.498868,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Мебель,0.422811,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Музыкальные инструменты,0.557902,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Обувь,0.093374,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Одежда,0.137298,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Продукты питания,0.77365,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Спорт и отдых,0.422057,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Строительство и ремонт,0.620603,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Товары для животных,0.584875,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Хобби и творчество,0.554709,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Электроника,0.564289,,
+rubase_student384,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,384,?,1,?,none,leaderboard,Ювелирные изделия,0.336311,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Автотовары,0.809716,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Аптека,0.653624,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Бытовая техника,0.552532,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Бытовая химия,0.645223,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Галантерея и аксессуары,0.248412,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Детские товары,0.492875,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Дом и сад,0.396494,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Канцелярские товары,0.384586,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Красота и гигиена,0.466985,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Мебель,0.344014,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Музыкальные инструменты,0.534221,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Обувь,0.09127,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Одежда,0.102361,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Продукты питания,0.755448,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Спорт и отдых,0.412932,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Строительство и ремонт,0.587266,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Товары для животных,0.563702,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Хобби и творчество,0.543907,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Электроника,0.579264,,
+rubase192,DeepPavlov/rubert-base-cased,cross-encoder,folds,?,?,192,?,?,?,none,leaderboard,Ювелирные изделия,0.27221,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Автотовары,0.252503,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Аптека,0.34515,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Бытовая техника,0.333959,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Бытовая химия,0.424262,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Галантерея и аксессуары,0.124195,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Детские товары,0.442515,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Дом и сад,0.218808,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Канцелярские товары,0.216046,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Красота и гигиена,0.371287,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Мебель,0.114308,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Музыкальные инструменты,0.332813,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Обувь,0.07141,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Одежда,0.080718,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Продукты питания,0.335489,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Спорт и отдых,0.254934,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Строительство и ремонт,0.27742,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Товары для животных,0.317105,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Хобби и творчество,0.342231,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Электроника,0.36167,,
+knrm_llm_pretrain,knrm,knrm,llm,?,?,?,?,-,-,none,leaderboard,Ювелирные изделия,0.048385,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Автотовары,0.360033,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Аптека,0.281721,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Бытовая техника,0.319271,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Бытовая химия,0.405718,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Галантерея и аксессуары,0.091395,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Детские товары,0.339073,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Дом и сад,0.196192,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Канцелярские товары,0.161116,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Красота и гигиена,0.317883,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Мебель,0.108649,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Музыкальные инструменты,0.279187,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Обувь,0.082835,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Одежда,0.080139,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Продукты питания,0.31359,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Спорт и отдых,0.211353,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Строительство и ремонт,0.2816,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Товары для животных,0.253842,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Хобби и творчество,0.284256,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Электроника,0.321233,,
+knrm_joint,knrm,knrm,folds,?,?,?,?,-,-,none,leaderboard,Ювелирные изделия,0.048379,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Автотовары,0.393868,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Аптека,0.293956,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Бытовая техника,0.370728,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Бытовая химия,0.380782,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Галантерея и аксессуары,0.062499,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Детские товары,0.267208,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Дом и сад,0.226284,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Канцелярские товары,0.147125,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Красота и гигиена,0.350895,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Мебель,0.174367,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Музыкальные инструменты,0.406269,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Обувь,0.067995,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Одежда,0.075954,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Продукты питания,0.446732,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Спорт и отдых,0.182275,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Строительство и ремонт,0.358187,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Товары для животных,0.306138,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Хобби и творчество,0.198778,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Электроника,0.415033,,
+lgbm_cheap,lightgbm,boosting,folds,-,?,-,?,-,-,none,leaderboard,Ювелирные изделия,0.020559,,
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Продукты питания,0.810057,4572,1263
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Товары для животных,0.860046,4537,1629
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Товары для животных,0.859756,4534,1602
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Автотовары,0.653753,4808,841
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Бытовая химия,0.849384,4337,1983
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Хобби и творчество,0.85881,4339,1990
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Бытовая химия,0.857733,4339,2058
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Галантерея и аксессуары,0.508664,4567,774
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Спорт и отдых,0.671899,4319,1122
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Спорт и отдых,0.655222,4469,1133
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Галантерея и аксессуары,0.507241,4507,770
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Спорт и отдых,0.666956,4417,1173
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Мебель,0.641753,4648,717
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Спорт и отдых,0.653275,4512,1172
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Автотовары,0.640831,4756,807
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Обувь,0.330803,4622,443
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Продукты питания,0.805583,4549,1272
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Одежда,0.423026,5777,664
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Электроника,0.70436,4526,760
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Обувь,0.348516,4616,436
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Музыкальные инструменты,0.788008,4436,944
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Товары для животных,0.858676,4580,1638
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Ювелирные изделия,0.467263,4540,578
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Галантерея и аксессуары,0.526421,4428,715
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Электроника,0.674282,4906,835
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Одежда,0.440718,5797,721
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Бытовая техника,0.78379,4489,1595
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Дом и сад,0.730711,4316,1133
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Аптека,0.788346,4546,338
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Товары для животных,0.846328,4560,1611
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Ювелирные изделия,0.402407,4824,586
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Аптека,0.794414,4598,318
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Канцелярские товары,0.704593,4361,1515
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Строительство и ремонт,0.706513,4556,989
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Красота и гигиена,0.765867,4295,1595
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Аптека,0.762978,4520,339
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Канцелярские товары,0.685536,4403,1484
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Дом и сад,0.766249,4436,1201
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Бытовая химия,0.864247,4400,2043
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Канцелярские товары,0.688334,4381,1468
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Хобби и творчество,0.866695,4488,2144
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Строительство и ремонт,0.712963,4492,957
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Продукты питания,0.81748,4581,1203
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Автотовары,0.646506,4786,856
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Аптека,0.773989,4621,333
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Мебель,0.628199,4583,680
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Красота и гигиена,0.739585,4377,1549
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Бытовая техника,0.780956,4350,1571
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Автотовары,0.666973,4660,822
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Продукты питания,0.797177,4582,1208
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Мебель,0.637375,4570,686
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Дом и сад,0.736169,4573,1164
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Строительство и ремонт,0.747802,4495,1004
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Дом и сад,0.740044,4249,1110
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Мебель,0.660998,4565,673
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Детские товары,0.855143,4430,2460
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Красота и гигиена,0.754053,4224,1532
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Хобби и творчество,0.860668,4461,2028
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Музыкальные инструменты,0.822214,4447,992
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Бытовая техника,0.772034,4467,1615
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Строительство и ремонт,0.715539,4559,979
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Детские товары,0.868082,4329,2477
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Галантерея и аксессуары,0.512908,4482,756
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Бытовая химия,0.869606,4360,2099
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Обувь,0.333203,4642,488
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Красота и гигиена,0.760548,4390,1607
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Электроника,0.677121,4593,822
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Музыкальные инструменты,0.803598,4559,1056
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Ювелирные изделия,0.421366,4665,567
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Одежда,0.414365,5837,675
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Одежда,0.424883,5946,691
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Электроника,0.642553,4656,810
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Детские товары,0.848338,4370,2410
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_01,Обувь,0.333049,4482,446
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Музыкальные инструменты,0.796157,4375,958
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_04,Хобби и творчество,0.86898,4389,2040
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Бытовая техника,0.79179,4508,1623
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Ювелирные изделия,0.436697,4666,586
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_02,Детские товары,0.853638,4432,2522
+mb_pretrain512,deepvk/RuModernBERT-base,cross-encoder,llm,adamw,3e-5?,512,1,1,-,none,val_fold_03,Канцелярские товары,0.673221,4290,1436
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Строительство и ремонт,0.707077,4492,957
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Галантерея и аксессуары,0.547658,4482,756
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Одежда,0.44251,5797,721
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Музыкальные инструменты,0.779341,4436,944
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Галантерея и аксессуары,0.546478,4567,774
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Красота и гигиена,0.751541,4224,1532
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Продукты питания,0.810902,4549,1272
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Дом и сад,0.733888,4573,1164
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Бытовая техника,0.774307,4489,1595
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Музыкальные инструменты,0.788443,4559,1056
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Одежда,0.421496,5837,675
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Продукты питания,0.808963,4582,1208
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Товары для животных,0.849556,4534,1602
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Детские товары,0.852675,4430,2460
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Спорт и отдых,0.665531,4319,1122
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Электроника,0.659805,4656,810
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Электроника,0.67172,4906,835
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Хобби и творчество,0.873246,4389,2040
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Бытовая химия,0.863706,4400,2043
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Канцелярские товары,0.699189,4403,1484
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Красота и гигиена,0.737442,4377,1549
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Спорт и отдых,0.659208,4469,1133
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Галантерея и аксессуары,0.538768,4428,715
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Красота и гигиена,0.766164,4295,1595
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Обувь,0.346312,4482,446
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Товары для животных,0.849306,4537,1629
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Обувь,0.351455,4642,488
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Детские товары,0.857248,4432,2522
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Канцелярские товары,0.690454,4290,1436
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Мебель,0.636749,4648,717
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Канцелярские товары,0.719725,4361,1515
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Товары для животных,0.852558,4560,1611
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Автотовары,0.634271,4756,807
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Бытовая химия,0.864098,4339,2058
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Аптека,0.776455,4520,339
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Продукты питания,0.814387,4581,1203
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Красота и гигиена,0.762159,4390,1607
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Обувь,0.362235,4616,436
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Строительство и ремонт,0.700917,4556,989
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Одежда,0.438164,5777,664
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Аптека,0.787791,4621,333
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Бытовая техника,0.789798,4508,1623
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Бытовая техника,0.782126,4350,1571
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Бытовая химия,0.868357,4360,2099
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Продукты питания,0.811516,4572,1263
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Обувь,0.3473,4622,443
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Галантерея и аксессуары,0.537019,4507,770
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Музыкальные инструменты,0.808786,4447,992
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Спорт и отдых,0.662315,4512,1172
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Спорт и отдых,0.672487,4417,1173
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Ювелирные изделия,0.424875,4666,586
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Дом и сад,0.743862,4316,1133
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Бытовая техника,0.776246,4467,1615
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Детские товары,0.85308,4370,2410
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Дом и сад,0.753238,4249,1110
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Канцелярские товары,0.68977,4381,1468
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Автотовары,0.628847,4786,856
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Детские товары,0.862374,4329,2477
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Бытовая химия,0.854322,4337,1983
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Электроника,0.684608,4526,760
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Мебель,0.647182,4565,673
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Мебель,0.623914,4583,680
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Ювелирные изделия,0.406982,4824,586
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Электроника,0.680189,4593,822
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Мебель,0.611943,4570,686
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Дом и сад,0.771033,4436,1201
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Хобби и творчество,0.859269,4339,1990
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Аптека,0.80703,4546,338
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Аптека,0.815005,4598,318
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Товары для животных,0.842882,4580,1638
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Ювелирные изделия,0.46061,4540,578
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Одежда,0.428678,5946,691
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Хобби и творчество,0.86888,4488,2144
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_01,Строительство и ремонт,0.715459,4559,979
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Музыкальные инструменты,0.794721,4375,958
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Автотовары,0.634385,4808,841
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Строительство и ремонт,0.741089,4495,1004
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_03,Хобби и творчество,0.86265,4461,2028
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_02,Автотовары,0.658115,4660,822
+berta_pretrain_e1,sergeyzh/BERTA,cross-encoder,llm,adamw,2e-5,512,1,1,-,none,val_fold_04,Ювелирные изделия,0.425175,4665,567
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Ювелирные изделия,0.377726,4666,586
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Автотовары,0.63724,4756,807
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Аптека,0.792953,4546,338
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Мебель,0.56229,4648,717
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Спорт и отдых,0.616209,4512,1172
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Товары для животных,0.831013,4580,1638
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Бытовая техника,0.757082,4350,1571
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Музыкальные инструменты,0.769772,4375,958
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Электроника,0.602179,4906,835
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Галантерея и аксессуары,0.477159,4567,774
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Галантерея и аксессуары,0.501391,4428,715
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Аптека,0.794921,4621,333
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Спорт и отдых,0.62573,4319,1122
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Хобби и творчество,0.840115,4339,1990
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Дом и сад,0.710421,4436,1201
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Ювелирные изделия,0.33603,4824,586
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Дом и сад,0.716543,4316,1133
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Бытовая химия,0.850423,4337,1983
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Обувь,0.254243,4622,443
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Канцелярские товары,0.660581,4381,1468
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Товары для животных,0.853237,4534,1602
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Детские товары,0.837736,4430,2460
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Красота и гигиена,0.722206,4377,1549
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Обувь,0.276422,4616,436
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Строительство и ремонт,0.659827,4495,1004
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Ювелирные изделия,0.387833,4540,578
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Детские товары,0.845568,4329,2477
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Одежда,0.389528,5837,675
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Спорт и отдых,0.622249,4469,1133
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Канцелярские товары,0.646352,4290,1436
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Бытовая химия,0.859167,4360,2099
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Музыкальные инструменты,0.788286,4447,992
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Дом и сад,0.693697,4573,1164
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Мебель,0.519379,4570,686
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Продукты питания,0.805091,4572,1263
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Одежда,0.394424,5797,721
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Автотовары,0.636237,4808,841
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Одежда,0.382162,5946,691
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Продукты питания,0.81638,4581,1203
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Ювелирные изделия,0.348641,4665,567
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Галантерея и аксессуары,0.48869,4482,756
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Музыкальные инструменты,0.775341,4559,1056
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Мебель,0.549042,4583,680
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Бытовая химия,0.854321,4400,2043
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Бытовая химия,0.856505,4339,2058
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Электроника,0.585259,4656,810
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Дом и сад,0.711462,4249,1110
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Бытовая техника,0.752455,4489,1595
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Спорт и отдых,0.640567,4417,1173
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Обувь,0.294077,4642,488
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Строительство и ремонт,0.624372,4556,989
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Мебель,0.554443,4565,673
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Канцелярские товары,0.677625,4361,1515
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Одежда,0.380536,5777,664
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Хобби и творчество,0.840308,4461,2028
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Продукты питания,0.790204,4549,1272
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Товары для животных,0.837061,4560,1611
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Бытовая техника,0.759689,4467,1615
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Музыкальные инструменты,0.75529,4436,944
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Товары для животных,0.850838,4537,1629
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Электроника,0.609683,4593,822
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Автотовары,0.633871,4786,856
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Красота и гигиена,0.733587,4390,1607
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Красота и гигиена,0.763439,4295,1595
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Красота и гигиена,0.725878,4224,1532
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Автотовары,0.663692,4660,822
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Обувь,0.263601,4482,446
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Строительство и ремонт,0.648048,4559,979
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Детские товары,0.827516,4370,2410
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Хобби и творчество,0.84499,4389,2040
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Бытовая техника,0.759646,4508,1623
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Продукты питания,0.807141,4582,1208
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_03,Строительство и ремонт,0.634641,4492,957
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Аптека,0.777081,4520,339
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Аптека,0.776007,4598,318
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_01,Электроника,0.621751,4526,760
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Детские товары,0.845504,4432,2522
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Галантерея и аксессуары,0.477991,4507,770
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_04,Канцелярские товары,0.661281,4403,1484
+mrb_bi_pretrain,deepvk/RuModernBERT-base,bi-encoder,llm,adamw,2e-5/1e-3,512,1,1,-,none,val_fold_02,Хобби и творчество,0.847672,4488,2144

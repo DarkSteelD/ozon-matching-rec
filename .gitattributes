@@ -1,3 +1,2 @@
 members/dzkhomidov/datasets/**/*.parquet filter=lfs diff=lfs merge=lfs -text
-members/dzkhomidov/models/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
-members/kdbratsun/models/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
+members/*/models/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
